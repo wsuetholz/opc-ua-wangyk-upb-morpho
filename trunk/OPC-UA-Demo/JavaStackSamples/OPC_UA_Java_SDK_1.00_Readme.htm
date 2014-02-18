@@ -1,0 +1,700 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<title>UA SDK Readme</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Arial","sans-serif";
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Arial","sans-serif";
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.style1, li.style1, div.style1
+	{mso-style-name:style1;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.style2, li.style2, div.style2
+	{mso-style-name:style2;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p.style3, li.style3, div.style3
+	{mso-style-name:style3;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 3.0pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 0in 0in;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.style4, li.style4, div.style4
+	{mso-style-name:style4;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+p.style5, li.style5, div.style5
+	{mso-style-name:style5;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p.style6, li.style6, div.style6
+	{mso-style-name:style6;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p.mson, li.mson, div.mson
+	{mso-style-name:mson;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"MS Mincho";
+	mso-fareast-theme-font:minor-fareast;}
+span.style11
+	{mso-style-name:style11;
+	mso-style-unhide:no;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:265305756;
+	mso-list-template-ids:1898871786;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1813863982;
+	mso-list-template-ids:260737586;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+    .style1
+    {
+        padding: .75pt;
+	background: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+}
+    .style3
+    {
+	background-color: #FFFFFF;
+	width: 47pt;
+	font-size: x-small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+    .style4
+    {
+	width: 47pt;
+	font-size: x-small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style6 {
+	font-weight: bold;
+	text-align: center;
+	font-size: medium;
+}
+.style7 {
+	font-size: medium;
+}
+.style8 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style9 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+}
+.style10 {
+	font-size: x-small;
+}
+.style11 {
+	background-color: #FFFFFF;
+	font-size: x-small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: x-small;
+}
+.style14 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	padding: .75pt;
+}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="10242"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in;text-justify-trim:
+punctuation'>
+
+<div class=Section1>
+	<div class="style6">
+		<span class="style7">UA Java SDK 1.00.232.0 (Beta) Readme</span><br>
+		<span class="style7">March 26, 2009</span></div>
+	<p><b>Overview<br><br></b>The UA Java SDK is a set of interfaces, libraries 
+	and executables that allow developers to create UA applications in the Java 
+	programming environment.<br>This release of the Java SDK includes:</p>
+	<ul style="margin-top:0in" type="disc">
+		<li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in;
+     text-autospace:none'>
+		<span style='mso-fareast-font-family:"Times New Roman"'>Implementations of&nbsp; the UA Native Binary stack profile;<o:p></o:p></span></li>
+		<li class=MsoNormal style='mso-list:l1 level1 lfo3;tab-stops:list .5in;
+     text-autospace:none'>
+		<span style='mso-fareast-font-family:"Times New Roman"'>Simple Client and Server Applications;</span></li>
+	</ul>
+	<br class="style9"><span class="style9">The sample applications are
+available with source code.</span><b><br class="style9"><br class="style9">
+	<span class="style9">Release Notes<br></span>
+	<o:p><br class="style9"></o:p>
+	</b><span class="style9">
+	<o:p>Build 232.0 is the first release made available to all members.</o:p></span><o:p></o:p><span class="style9">This release of the SDK supports 
+the released versions of Parts 1 through 8 of the UA Specification. </span>
+	<o:p>&nbsp;<br><br class="style9"></o:p>
+	<span class="style9">The UA Specification is now 
+available on the OPC Foundation
+</span>
+	<a href="http://www.opcfoundation.org/Downloads.aspx?CM=1&amp;CN=KEY&amp;CI=288&amp;CU=146" class="style8">
+	<span class="style10">website</span></a>.<br><br class="style9">
+	<span class="style9">Users should use </span>
+	<a
+href="https://www.opcfoundation.org/mantis/main_page.php" class="style8">
+	<span class="style10">Mantis</span></a><span class="style9"> to report
+any issues/bugs. <br> </span><br class="style9"><span class="style9">This will also allow users to find issues identified by
+others.</span><strong><br class="style8"><br class="style9">
+	<span class="style9">Copyright and License 
+	Information</span><br class="style9"><br class="style9"></strong>
+	<span class="style9">The redistributables and 
+	source code are covered by the general OPC Foundation license agreement 
+	which can be found
+	</span>
+	<a href="http://www.opcfoundation.org/LicenseAgreement.aspx" class="style8">
+	<span class="style10">here</span></a>.<br><br class="style9">
+	<span class="style9">This license agreement will 
+	be replaced by one specific to the UA SDK before the SDK released. <br><br>
+	The Apache Logging Services library which is distributed with the stack is 
+	covered a license agreement which can be found
+	<a href="http://logging.apache.org/license.html">here</a>.<br><br>The Bouncy 
+	Castle Crypto API library which is distributed with the stack is covered a 
+	license agreement which can be found
+	<a href="http://www.bouncycastle.org/licence.html">here</a>.<br><br><strong>
+	Release Process<br></strong>
+	</span>
+	<br class="style9"><span class="style9">The release 
+    process is designed to balance the needs of different developers in 
+    different stages of development. The different stages are described in the 
+    following table:<br></span><br class="style9">
+	<table border=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;background:#F2F2F2;mso-shading:windowtext;
+ mso-pattern:gray-5 auto;mso-yfti-tbllook:1184'>
+		<tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+			<td valign=top style='padding:.75pt .75pt .75pt .75pt; height: 37px;' class="style4">Snapshot</td>
+			<td width=890 style='width:667.85pt;padding:.75pt .75pt .75pt .75pt; height: 37px;' class="style9">Snapshot builds are only minimally tested and are used to 
+  give developers quick access to new features and bug fixes. There may be 
+  backward compatibility issues and some features may be broken. Developers 
+  should not migrate to a snapshot build unless they need the feature and/or bug 
+  fixes. </td>
+		</tr>
+		<tr>
+			<td valign=top 
+         style='background-position: 0% 0%; padding:.75pt .75pt .75pt .75pt; background-image: none; background-repeat: repeat; background-attachment: scroll;' 
+         class="style3">Testing</td>
+			<td width=890 
+         style='background-position: 0% 0%; width:667.85pt; padding:.75pt .75pt .75pt .75pt; background-image: none; background-repeat: repeat; background-attachment: scroll;' 
+         class="style11">Testing builds are put through basic tests to ensure that 
+  nothing is broken but have not been tested for backward compatibility. All 
+  Stable and Final builds are posted first as Testing builds which gives 
+  developers a chance to check for issues which can be corrected quickly. Any 
+  changes will incorporated into a new revision and posted immediately. If no 
+  issues come up the last revision of a Testing build will be re-labeled as 
+  Stable or Final. Developers are encouraged to look at Testing builds and see 
+  if there are issues. Developers should not migrate to Testing builds unless 
+  they absolutely need the functionality or are participating in the testing 
+  process.</td>
+		</tr>
+		<tr style='mso-yfti-irow:1'>
+			<td valign=top 
+         style='background-position: 0% 0%; padding:.75pt .75pt .75pt .75pt; background-image: none; background-repeat: repeat; background-attachment: scroll;' 
+         class="style3">Stable</td>
+			<td width=890 
+         style='background-position: 0% 0%; width:667.85pt; padding:.75pt .75pt .75pt .75pt; background-image: none; background-repeat: repeat; background-attachment: scroll;' 
+         class="style11">Stable builds are put through basic tests to ensure that nothing 
+      is broken but have 
+      not been tested for backward compatibility. Stable builds are posted to give 
+      vendors a chance to verify that it works with existing products. Vendors who 
+      have products under development should migrate to stable builds as quickly as 
+      possible. If a vendor is already distributing products they may wish to use the 
+      sample applications to test for compatibility problems.</td>
+		</tr>
+		<tr style='mso-yfti-irow:2'>
+			<td valign=top style='padding:.75pt .75pt .75pt .75pt' class="style4">Final</td>
+			<td width=890 style='width:667.85pt;padding:.75pt .75pt .75pt .75pt' class="style9">Final builds are stable builds that have been verified by one or 
+      more vendors. Patches required to fix issues discovered while testing the stable 
+      build are applied but no other features are added. Vendors who have products 
+      under development should migrate to stable builds as quickly as possible. 
+			</td>
+		</tr>
+	</table>
+	<br><span class="style9">Each build is assigned a unique build 
+            number that may be qualified with a revision number. <br>The revision number 
+            indicates that patches were applied to a build.<br>Patches may be created to fix 
+            critical issues in final builds even if a newer build is available.<br>Vendors will 
+            need to upgrade to the newest version if they need fixes for stable or snapshot 
+            builds. <br>All files posted to the website or 
+            SharePoint will have the build stage and build number in the file name. For 
+            example: </span><span style='mso-fareast-font-family:"Times New Roman"' class="style9">OPC
+  UA Java SDK 1.00 Redistributable [232.0 Stable].zip<br></span>
+	<span class="style9">The major version of the SDK always 
+            matches the major version of the latest specification that it supports. 
+		</span><br class="style9"><span class="style8"><span class="style10">The 
+            minor version is incremented each time new features are added after release.<br>If a previously posted build needs to 
+            be patched the revision number will be incremented. <br>For example, 218.1 is a 
+            patch applied to 218.0. <br><br><strong>Distribution<br></strong>
+	<br>The SDK is distributed in a
+number of different packages which are described in the table below:</span><br>
+	<o:p><span class="style10"><br></span></o:p>
+	</span>
+	<table border=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;background:#F2F2F2;mso-shading:windowtext;
+ mso-pattern:gray-5 auto;mso-yfti-tbllook:1184'>
+		<tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+			<td valign=top style='width:181pt; mso-fareast-font-family: "Times New Roman";' class="style14">OPC 
+  UA Java SDK 1.00 Redistributables</td>
+			<td width=890 style='width:667.85pt;padding:.75pt .75pt .75pt .75pt' class="style9">Contains the JAR files required by applications that use 
+  the SDK.</td>
+		</tr>
+		<tr style='mso-yfti-irow:3'>
+			<td valign=top 
+         style='width:181pt; mso-fareast-font-family: "Times New Roman";' 
+         class="style1">OPC
+  UA Java SDK 1.00 Source Code</td>
+			<td width=890 
+         style='background-position: 0% 0%; width:667.85pt; padding:.75pt .75pt .75pt .75pt; background-image: none; background-repeat: repeat; background-attachment: scroll;' 
+         class="style11">Contains the source for the Java SDK</td>
+		</tr>
+		<tr style='mso-yfti-irow:4'>
+			<td valign=top style='width:181pt; mso-fareast-font-family: "Times New Roman";' class="style14">OPC
+  UA Java SDK 1.00 Samples</td>
+			<td width=890 style='width:667.85pt;padding:.75pt .75pt .75pt .75pt' class="style9">Contains the simple client and server applications.</td>
+		</tr>
+	</table>
+	<br><span class="style12">Known Issues<br></span><span class="style8">
+	<span class="style10"><br>These features are not included in the current release of
+the SDK:</span><o:p><span class="style10">&nbsp;</span></o:p></span><ul style='margin-top:0cm' type=disc>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>XML
+     Encoding</li>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>SOAP
+     / Web services</li>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>Complete sample
+     applications</li>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>Client
+     Library (Subscription, MonitoredItem, NodeCache)</li>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>Server
+     Library (NodeManager, DataSource, EventSource, DataHistorian,
+     EventHistorian)</li>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>Discovery
+     Server</li>
+		<li class=style9 style='mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'>IPv6 not supported.</li>
+	</ul>
+	<span class="style9"><br></span><span class="style12">Installation<br><br>
+	</span>
+	<o:p></o:p>
+	<span class="style9">The minimum Java requirement is Sun Microsystems Java 1.6.UA Java SDK has dependencies to following Java Libraries:</span><ul type=disc>
+		<li class=style9>Log4J
+     (1.2.15) - http://logging.apache.org/log4j/</li>
+		<li><span class="style9">Bouncy
+     Castle Crypto API (1.40) - </span>
+		<a href="http://www.bouncycastle.org/" class="style8">
+		<span class="style10">http://www.bouncycastle.org/</span></a></li>
+	</ul>
+	<span class="style9">
+	<o:p><br>Steps for developers that already have a Java development environment:</o:p></span></div>
+<ul>
+	<li class="style9">Unzip
+      OpcUa-xxx-SDK.zip</li>
+	<li class="style9">Include
+      OpcUa-xxx.jar to your java project</li>
+	<li class="style9">Include
+      dependencies to your java project (See above)</li>
+	<li class="style9">Unzip
+      OpcUa-xxx-Examples.zip</li>
+	<li class="style9">Run
+      Example1.java</li>
+</ul>
+<div class=Section1>
+
+	<span class="style9">
+	<o:p><br>Steps for developers that do not have a Java development environment:</o:p></span><ul>
+		<li><span class="style9">Download and&nbsp;Install Java 6.0 Update 13 
+		JDK&nbsp;at </span><a href="http://java.sun.com/"><span class="style10">http://java.sun.com/</span></a></li>
+		<li><span class="style9">Download and unzip Eclipse IDE for Java 
+		Developers at </span><a href="http://www.eclipse.org/downloads/">
+		<span class="style10">http://www.eclipse.org/downloads/</span></a></li>
+		<li class="style9">After welcome screen, select Java perspective 
+		(upper right hand corner)</li>
+		<li><span class="style9">Create new Project &quot;UA-Samples&quot; 
+		</span><br class="style9"><span class="style9">&nbsp;&nbsp;&nbsp; 
+		* File / New / Java Project</span></li>
+		<li><span class="style9">Add Jars OpcUa-XXX.jar, bcprov-jdk14-140.jar and 
+		log4j-1.2.15.jar to the project.</span><br class="style9">
+		<span class="style9">&nbsp;&nbsp;&nbsp; * Drag'n'drop&nbsp;OpcUa-XXX.jar 
+		and OpcUa-232.zip over &quot;UA-Examples&quot; in Eclipse.</span><br class="style9">
+		<span class="style9">&nbsp;&nbsp;&nbsp; * 
+		Unzip OpcUa-XXX-libs.zip.</span><br class="style9"><span class="style9">&nbsp;&nbsp;&nbsp; * Drag'n'drop&nbsp;bcprov-jdk14-140.jar 
+		and log4j-1.2.15.jar over &quot;UA-Examples&quot; in Eclipse.</span><br class="style9">
+		<span class="style9">&nbsp;&nbsp;&nbsp; 
+		* Select properties of &quot;UA-Examples&quot; in context menu.&nbsp;Press the button 
+		&quot;Java Build Path / Libraries / Add JARs&quot; and select the jars.&nbsp;&nbsp;&nbsp;
+		</span></li>
+		<li><span class="style9">Add the examples sources to the project.</span><br class="style9">
+		<span class="style9">&nbsp;&nbsp;&nbsp; 
+		* Unzip OpcUa-XXX-Samples.zip and Drag'n'drop &quot;org&quot;-folder over &quot;src&quot;-folder 
+		in Eclipse workspace.</span></li>
+		<li><span class="style9">Run the examples.</span><br class="style9">
+		<span class="style9">&nbsp;&nbsp;&nbsp; * 
+		ClientExample1 and ClientExample2 are to be run with ServerExamples1.
+		</span><br class="style9"><span class="style9">&nbsp;&nbsp;&nbsp; * ClientExample3 and ClientExample4 with UA 
+		Sample Server of the UA SDK.&nbsp;</span></li>
+	</ul>
+	<span style='font-f7) Added
+prototype for the UA Certificate Tool and software APIs.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='
+'>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'>
+
+	<span class="style12"><br>Sample Applications</span><span class="style9"><br>
+	<br>There are 1 server and 4 client 
+sample applications bundled with the SDK.<br>The samples only implement a 
+	single Test service.<br>The ClientExample1 and ClientExample2 are to be run 
+	with ServerExamples1.<br>The ClientExample3 and 
+	ClientExample4 with UA Sample Server of the UA SDK.<br>Note that the client 
+	certificate (ClientCert.der) must be installed in the trusted certificate store used by the 
+	UA Sample Server before connecting. </span><span class="style12">&nbsp;</span>&nbsp;<span class="style12"><br>
+	<br>Contributors<br><br></span><span class="style9">The OPC Foundation would like to
+acknowledge the contributions made by the following companies towards the
+development of this deliverable.</span></span></div>
+
+<span class="style8"><span class="style10"><br>Toni
+Kalajainen<br>VTT -
+Technical Research Centre of </span> <st1:country-region w:st="on"><st1:place w:st="on">
+<span class="style10">Finland</span></st1:place></st1:country-region></span><br>
+<span lang=FI style='mso-ansi-language:FI' class="style10">
+<a
+href="http://www.vtt.fi/" class="style8">http://www.vtt.fi</a></span><span
+lang=FI style='mso-ansi-language:FI'><o:p></o:p><span class="style8"><o:p><span class="style10">&nbsp;<br>
+</span></o:p><span class="style10"><br>Mikko Salonen</span></span></span><span lang=FI style='mso-ansi-language:
+FI' class="style9">, Mikko Salmenpera </span><span class="style9"><br>TUT – 
+</span> <st1:place w:st="on"><span class="style9"><st1:PlaceName
+ w:st="on">Tampere</st1:PlaceName></span> <span class="style9"> <st1:PlaceType w:st="on">University</st1:PlaceType></span></st1:place><span class="style9">
+of Technology<br></span><span
+lang=FI style='mso-ansi-language:FI'>
+<a href="http://www.tut.fi/" class="style8">
+<span
+lang=EN-US style='mso-ansi-language:EN-US' class="style10">http://www.tut.fi/</span></a></span><span class="style9"><o:p><br>
+<br></o:p>
+</span><span
+lang=FI style='mso-ansi-language:FI'><span class="style9">Jouni Aro<br>Prosys Oy<br>
+</span><o:p></o:p><span class="style10">
+<a href="http://www.prosys.fi/" class="style8">http://www.prosys.fi</a></span><br><o:p>
+<br></o:p></span><span class="style9">Tom Hannelius<br>Wapice Ltd</span><br><span lang=FI style='mso-ansi-language:
+FI'><span lang=EN-US style='mso-ansi-language:
+EN-US' class="style10"><a href="http://www.wapice.com/" class="style8">http://www.wapice.com/</a></span><span class="style9"><br>
+<br>Esa Salonen <br></span></span><span class="style9">Metso</span><br>
+<span class="style10"><a href="http://www.metso.com/" class="style8">http://www.metso.com/</a></span><span class="style9"><o:p>&nbsp;</o:p></span><span lang=FI style='mso-ansi-language:
+FI' class="style9"><br><br>Kari Suihkonen<br></span><span class="style9">Kone</span><br>
+<span class="style10"><a href="http://www.kone.com/" class="style8">http://www.kone.com</a></span><br>
+<span class="style9"><br>Daniel Großmann<br>Technische Universität München<br>
+</span><a class="style8" href="http://www.itm.tum.de/"><span class="style10">
+http://www.itm.tum.de/</span></a>&nbsp;<p class=style9>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+# Minimal Makefile for building JAVA examples
+# Author: Gerhard Gappmeier, ascolab GmbH (gerhard.gappmeier@ascolab.com)
+JAVAC=javac
+# windows classpath
+CLASSPATH=examples;build\Opc.Ua.Stack-1.00.232.0.jar;lib\log4j-1.2.15.jar;lib\bcprov-jdk14-140.jar
+RM=del
+EXAMPLESPATH=examples/org/opcfoundation/ua/examples
+
+# Implicit build rules
+.SUFFIXES: .class .java
+
+.java.class:
+	$(JAVAC) -cp $(CLASSPATH) "$<"
+
+# Build targets
+all: Example1 Example2 Example3 Example4
+
+Example1: $(EXAMPLESPATH)/ClientExample1.class
+
+Example2: $(EXAMPLESPATH)/ClientExample2.class
+
+Example3: $(EXAMPLESPATH)/ClientExample3.class
+
+Example4: $(EXAMPLESPATH)/ClientExample4.class
+
+# remove all built targets
+clean:
+	$(RM) $(EXAMPLESPATH)/ClientExample1.class $(EXAMPLESPATH)/ClientExample2.class $(EXAMPLESPATH)/ClientExample3.class $(EXAMPLESPATH)/ClientExample4.class
+
