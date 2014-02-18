@@ -1,0 +1,73 @@
+UA Stack Tasks and Todos
+------------------------ 
+
+* Document
+
+* Performance Tuning
+    Use profiler tool (JProfiler or jvisualvm) to search for performance bottle necks 
+    and to verify that there are no memory leaks.
+
+* Security 
+     Add missing security policies
+	     SecurityPolicy.Basic128
+	     SecurityPolicy.Basic192
+	     SecurityPolicy.Basic192Rsa15
+	     SecurityPolicy.Basic256Rsa15
+
+* Examples
+    Tutorial/Example How to generate certificate instance
+
+* Application 
+    Discover Server
+    SessionManager
+    SubscriptionManager
+    NodeManager
+
+* Interoperability
+    Test Java Client to C Server Service interoperability
+    Test Java Client to C# Server Service interoperability
+    Test C Client to Java Server Service interoperability
+    Test C# Client to Java Server Service interoperability
+    Test Java Client to C Server Session interoperability
+    Test Java Client to C# Server Session interoperability
+    Test C Client to Java Server Session interoperability
+    Test C# Client to Java Server Session interoperability
+
+* Soap 
+    SecureChannel
+    EndpointSecureChannel 
+ 
+* Serializer re-work
+    XML Serialization
+    EncodeableSerializer to smaller classes.
+        EncodeableSerializer is one huge class that initializes serializers for all classes.
+        This consumes memory and adds load time.
+        Refactor so that serializers are loaded on-demand.         
+    Support for 3rd party stub classes
+        The library at https://www.simantics.org/wiki/index.php/Datatype can solve this problem (and the one above)        
+    Make IEncodeables implement java.io.Serializable 
+ 
+* UnitTests
+     BinaryEncoder & BinaryDecoder
+     SecureChannelTcp
+     ...
+
+* Search and fix all TODO:s and XXX:s
+        
+* Client
+    Add Multi-Thread cipher encoder&Decoding to client (again)
+    SecureChannel reattachment doesn't work with C# (works with C)
+ 
+* Server Code
+    Sequence Number Wrapping (it doesn't work at 2^32 - 1024)
+    Remove RuntimeExceptions
+    (Done, jaro/Mantis #1210, build 305) Fix re-attaching to secure channel
+    Rewrite the state-class. 
+    Better errors
+      Better Error handling.
+      Better Error messages. 
+      (Done, jaro, build 305) Send StackFaults over the wire.
+    
+ 
+
+ 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="unittests"/>
+	<classpathentry kind="src" path="examples"/>
+	<classpathentry kind="src" path="testharness"/>
+	<classpathentry kind="src" path="codegen"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar" sourcepath="lib/log4j-1.2.15-src.zip"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk14-140.jar" sourcepath="lib/bcprov-jdk16-141.zip"/>
+	<classpathentry kind="lib" path="lib/commons-betwixt-0.8.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-core.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
