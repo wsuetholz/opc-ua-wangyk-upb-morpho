@@ -1,5 +1,0 @@
-https://www.digitalbond.com/scadapedia/protocols/opc-ua/  security issues
-http://www.ni.com/white-paper/13843/en/                    reasons
-https://www.opcfoundation.org/Default.aspx/UASDK/Files/The%20Benefits%20of%20UA.htm?MID=AboutOPC Benifits
-
-1111
