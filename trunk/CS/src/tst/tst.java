@@ -11,7 +11,7 @@ public class tst {
 	public static void main(String[] args) {
 
 		RequestHeader req = new RequestHeader();
-		NodeId id = new NodeId(9257);
+		NodeId id = new NodeId(69,9257);
 		req.setAuthenticatonToken(id);
 		System.out.print(MessageSecurityMode.class);
 		CryptoUtil cry = new CryptoUtil();

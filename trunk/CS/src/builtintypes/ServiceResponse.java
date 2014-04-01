@@ -3,6 +3,6 @@ package builtintypes;
 import core.ResponseHeader;
 
 public interface ServiceResponse {
-	ResponseHeader ResponseHeader();
+	ResponseHeader getResponseHeader();
 	void setResonseHeader(ResponseHeader ResponseHeader);
 }

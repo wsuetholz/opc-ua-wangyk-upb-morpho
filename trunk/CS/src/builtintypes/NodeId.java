@@ -6,29 +6,43 @@ import core.IdType;
 import java.lang.IllegalArgumentException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.UUID;
 
 public final class NodeId {
 	
-	public static final NodeId Zero = new NodeId(0);
-	public static final NodeId NULL_NUMERIC = new NodeId(0);
+	public static final NodeId Zero = new NodeId(0,UnsignedInteger.getFromBits(0));
+	public static final NodeId NULL = Zero;
+	public static final NodeId NULL_NUMERIC = new NodeId(0,UnsignedInteger.getFromBits(0));
 	IdType type;
+	final int namespaceIndex;
 	final Object value;
 	int hashCode;
 	
 	public static final NodeId ID = Identifiers.NodeId;
 	
 
-	public static NodeId get(IdType type, int value)
+	public static NodeId get(IdType type, int namespaceIndex, Object value)
 	{
 		if (type == IdType.Numeric) {
-			return new NodeId(value);
+			return new NodeId(namespaceIndex, (UnsignedInteger) value);
 			}
 		throw new IllegalArgumentException("Bad Type");
 	
 	}
-	public NodeId(int value2) {
+	public NodeId(int namespaceIndex, int value) {
 		// TODO Auto-generated constructor stub
-		this.value = value2;
+		this(namespaceIndex, UnsignedInteger.getFromBits(value));
+	}
+	
+	public NodeId(int namespaceIndex, UnsignedInteger value)
+	{
+		if (value == null) throw new IllegalArgumentException("Numeric NodeId cannot be null");
+		if (namespaceIndex<0 || namespaceIndex>65535) 
+			throw new IllegalArgumentException("namespaceIndex out of bounds");		
+		this.value = value;
+		this.namespaceIndex = namespaceIndex;
+		hashCode += 13*namespaceIndex + value.hashCode();
+		type = IdType.Numeric;
 	}
 	
 	public boolean isNullNodeId() {
@@ -67,6 +81,10 @@ public final class NodeId {
 		return value;
 	}
 	
+	public int getNamespaceIndex()
+	{
+		return namespaceIndex;
+	}
 	@Override
 	public int hashCode() {
 		return hashCode;
@@ -81,6 +99,7 @@ public final class NodeId {
 		if (obj instanceof NodeId) {
 			NodeId other = (NodeId) obj;
 			if (isNull(this) || isNull(other)) return isNull(this) == isNull(other); //handle null
+			if (other.namespaceIndex!=namespaceIndex || other.type!=type) return false;
 			if (this.value==other.value) return true;		
 			return other.value.equals(value);
 		} else
@@ -89,7 +108,8 @@ public final class NodeId {
 	
 	@Override
 	public String toString() {
-		if (type == IdType.Numeric) return "i="+value;	
+		String nsPart = namespaceIndex>0 ? "ns="+namespaceIndex+";" : "";
+		if (type == IdType.Numeric) return nsPart + "i="+value;	
 		return "error";
 	}
 	
@@ -126,13 +146,13 @@ public final class NodeId {
 		m = NONE_STRING.matcher(nodeIdRef);
 		if (m.matches()) {			
 			String obj = m.group(1);
-			return new NodeId(0);
+			return new NodeId(0,obj);
 		}
 		
 		m = NONE_INT.matcher(nodeIdRef);
 		if (m.matches()) {			
 			Integer obj = Integer.valueOf( m.group(1) );
-			return new NodeId(0);
+			return new NodeId(0,obj);
 		}
 	
 		
@@ -150,6 +170,7 @@ public final class NodeId {
 
 	static final Pattern INT_OPAQUE = Pattern.compile("ns=(\\d*);b=([0-9a-zA-Z\\+/=]*)");	
 	static final Pattern NONE_OPAQUE = Pattern.compile("b=([0-9a-zA-Z\\+/=]*)");
+	
 	
 	
 }

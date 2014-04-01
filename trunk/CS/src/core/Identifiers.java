@@ -30,6 +30,7 @@
 package core;
 
 import builtintypes.NodeId;
+import builtintypes.UnsignedInteger;
 
 
 public class Identifiers {
@@ -5395,7 +5396,7 @@ public class Identifiers {
 
 	static NodeId init(int value)
 	{
-		return new NodeId(value);
+		return new NodeId(0, UnsignedInteger.getFromBits(value));
 	}
 
 }

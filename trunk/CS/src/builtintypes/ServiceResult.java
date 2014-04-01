@@ -1,9 +1,21 @@
 package builtintypes;
+import java.util.Arrays;
+import java.util.Locale;
 
 import builtintypes.StatusCode;
+import common.ServiceResultException;
+import core.StatusCodes;
+
 
 public class ServiceResult<Throawble> {
-	
+	public static ServiceResult toServiceResult(Throwable t)
+	{
+		ServiceResult res = new ServiceResult();
+    	res.setCode(t instanceof ServiceResultException ? ((ServiceResultException)t).getStatusCode() : new StatusCode(StatusCodes.Bad_UnexpectedError));
+		res.setSymbolicId( res.toString() );
+    	res.setAdditionalInfo(Arrays.toString(t.getStackTrace()));		
+    	return res;
+	}
 	private StatusCode code;
 	private String symbolicId;
 	private String addtionalInfo;
