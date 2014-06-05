@@ -1,0 +1,189 @@
+\documentclass[]{llncs}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Implementation OPC UA on Secure Device}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\RequirePackage{filecontents}
+\setlength{\parskip}{\baselineskip}%
+\setlength{\parindent}{0pt}%
+\usepackage{enumitem}
+\begin{document}
+\title{Implementation Object Linking and Embedding for Processes Control Unified Architecture Specification on Secure Device} %titles have no end punctuation
+\author{Yuankui Wang (Matr.-Nr.: 6670785)}
+\institute{University of Paderborn \email{wangyk@mail.upb.de}}
+
+\maketitle
+
+\begin{abstract}
+
+Object Linking and Embedding for Process Control Unified Architecture, knows as OPC UA is the most recent released industry standard from OPC Foundation, which compared with his predecessors is equipped with a list of charming new features, with whose help OPC UA is capable of developing a common communication interface for devices which participate in automation system.Meanwhile, the technology of smart card is widely used in information security fields of finance, communication, personal and government identification, payment. Therefore it is meaningful and promising to develop OPC UA standard satisfied application on embedded smart card secure device, for the purpose of secure remote control, enterprise resource planning and etc.. The main goal of my master thesis is describing highlighting features of OPC Unified Architecture, especially in security domains, analyzing potential attacks and corresponding countermeasures taken by OPC Unified Architecture, evaluating performance of different possible security polices, studying smart card technology and security, constructing OPC UA communication stack on UICC smart card as card applet and at last designing a OPC UA standard based Smart Home system to illustrate the implementation of my thesis. 
+
+\end{abstract}
+
+\section{Introduction and Motivation}
+According to the \emph{Mobile Economy 2013} from \emph{Global System for Mobile Communications Association}, at the end of year 2013 there are over 3.2 billion mobile   subscribers in total, which means one half the population of the earth now enjoy the social and economic convenience brought by mobile technology. Moreover by 2017 700 million new subscribers are expected to be added. And the number of mobile subscriber will reach 4 billion in 2018. Mobil technology opens nowadays a promising market. 
+
+Mobile products  play an irreplaceable role at the heart of our  daily life. With the help of mobile technology, the user's world in many domains such as, education, financial transactions, health and etc. are inter-connected. Mobile users are enjoying the advantages of mobility. Services, like 24/7 monitored home security, full control about the management of home humidity and temperature, exist not only in science fiction film but also could be realized by today's technology.
+
+At the same time, mobility in industry and business world is also a critical  assert, which can not only increase efficiency and productivity but also drive new revenue generation and competitive advantage. The most convicting example here is Machine to Machine communication, that is also referred as M2M technology. In M2M communication, machines which are usually embedded with smart cards exchange gathered date with each other to accomplish common task using wireless or wire networks. M2M technology is widely employed in different industry spheres such as factory automation, remote access control and sensor monitoring. It boosts the efficiency of corresponding processes, offers centralized service support and date management, minimizes system response time.
+
+But in order to enjoy the aforementioned features, two tough issues must be resolved. First, how to achieve a common interface for the devices that participate in the system.  And second how to guarantee system security under different communication environments with variant date complexity.
+\section{Contents}
+In this master thesis, I am going to address solutions for questions mentioned in  section \emph{Introduction and Motivation} and  design a smart home system for the purpose of demonstration. In this smart home system, home owner using smart phone is capable of experiencing 24/7 home security service, remotely managing inner home environment parameters and assigning access permissions. This system consists of smart phones with Universal Integrated Circuit Cards (UICC  smart card), digital door locks, control devices, environment sensors and if necessary a central control computer. Moreover each device is equipped with smart card, which acts  not only as secure token, that saves  user credentials, but also is in charge of  construction and management of the devices' communication.
+
+In particular, I will introduce the newly released industry automation standards object linking and embedding for processes control unified architecture(OPC UA standards) to build a common communication interface for devices that are mentioned above and design communication stack for OPC UA standards on UICC smart card., whose  duties are: creation and management communication between OPC client/server application, message serialization and secure message exchange.
+
+
+\section{Implementation Resources}
+The communication stack  is developed as UICC applet, the UICC is a Java Card, which contains OS from Morpho. This OS is built on JavaCard 2.2.2 and GlobalPlatform.
+
+\noindent As develop and test IDE, Jacade (Java Applet Development Environment IDE) from Morpho is used.
+
+\noindent For OPC UA client application, the Android Platform is chosen.
+
+\noindent Devices which participate in demonstration scenario  are simulated by computer with MCR CardReader from Morpho.
+
+\section{Objectives}
+\begin{itemize}
+\item Introduce foundation technologies
+\item Review and compare potential solutions
+\item Summary of the advantages offered by OPC UA standards
+\item Summary of the benefits of UICC smart cards, protocol and applications
+\item Develop OPC UA communication stack as UICC Applet on smart card 
+\item Design  basic OPC UA server application for the purpose of demonstration 
+\item Design android App as OPC UA client application at the smart phone user side
+\item Simulate OTA server that realizes communication between smart cards
+\item Use aforementioned components to build a simulation system for Smart Home
+\item Analyze the stability of demonstration system
+\item Analyze performance of secure polices under different conditions
+\end{itemize}
+ 
+\section{Table of Contents}
+
+\begin{enumerate}
+	\item Introduction
+  	\begin{enumerate}[label*=\arabic*.]
+    	\item Motivation
+	\item Solution Idea
+    	\item Overview
+	\end{enumerate}
+	\item Foundation Technologies
+  	\begin{enumerate}[label*=\arabic*.]
+    	\item OPC UA Standards
+		\begin{enumerate}[label*=\arabic*.]
+		\item Overview
+		\item Compared with Old OPC Specifications
+		\item OPC Unified Architecture Structure
+		\item Secure Channel and Session
+		\item  OPC UA Communication Stack
+		\item Security Specifications
+		\end{enumerate}
+	\item Other Candidates
+    	\item UICC
+		\begin{enumerate}[label*=\arabic*.]
+		\item Overview
+		\item Application Protocol Date Unit
+		\item Over-The-Air
+		\end{enumerate}
+    	\item Java Card
+		\begin{enumerate}[label*=\arabic*.]
+		\item Overview
+		\item Application Model
+		\item Cryptographic functions
+		\end{enumerate}
+    	\item Android OS
+		\begin{enumerate}[label*=\arabic*.]
+		\item Overview 
+		\item Application Design
+		\item Security Model
+		\end{enumerate}
+	\end{enumerate}
+	\item Mobil Security Technologies
+  	\begin{enumerate}[label*=\arabic*.]
+    	\item Introduction in Mobil Technologies
+		\begin{enumerate}[label*=\arabic*.]
+		\item Overview
+		\item Security Mechanisms
+		\item Potential Threats
+		\end{enumerate}
+    	\item UICC Applet
+		\begin{enumerate}[label*=\arabic*.]
+		\item Overview
+		\item Application Concept
+		\item Security Model
+		\end{enumerate}
+    	\item Cryptography Background
+		\begin{enumerate}[label*=\arabic*.]
+		\item State-of-Art Conclusion
+		\item Trade off
+		\end{enumerate}
+	\end{enumerate}
+	\item Implementation 
+  	\begin{enumerate}[label*=\arabic*.]
+	\item Overview
+    	\item Implementation of Communication Stack
+		\begin{enumerate}[label*=\arabic*.]
+		\item Function Description
+		\item Security Policies
+		\item Configuration
+		\end{enumerate}
+    	\item OTA Server Simulation 
+		\begin{enumerate}[label*=\arabic*.]
+		\item Function Description
+		\end{enumerate}
+    	\item Basic OPC UA Server Application
+		\begin{enumerate}[label*=\arabic*.]
+		\item Function Description
+		\item Configuration
+		\end{enumerate}
+    	\item Basic OPC UA Client Application
+		\begin{enumerate}[label*=\arabic*.]
+		\item Function Description
+		\item Configuration
+		\end{enumerate}
+    	\item Test
+    	\item Performance and Trade-off Analysis
+    	\item Summary
+	\end{enumerate}
+	\item Thesis Conclusion
+	\item Future Work
+	\item Reference
+\end{enumerate}
+
+\section{Time plan}
+The master thesis would be registered before 31.05.2014 and expected finished before 31.10.2014.
+\begin{itemize}
+\item State-of-the-Art and literature review		\hfill 01.05.2014 to 10.05.2014
+\item Design communication stack on UICC card 		 \hfill 10.05.2014 to 25.06.2014
+\item OPC UA client/server prototype 		\hfill 25.06.2014 to 15.08.2014
+\item Integration and test		\hfill 15.08.2014 to 10.09.2014
+\item Analysis of different possible security policies \hfill 10.09.2014 to 30.09.2014
+\item Performance analysis for secure protocols \hfill 30.09.2014 to 15.10.2014
+\item Final thesis \hfill 15.10.2014 to 31.10.2014
+\end{itemize}
+
+\section{Literature}
+Eckert, C:IT-Sicherheit (2008)
+
+Wolfgang, R and Wolfgang, E: Handbuch der chipkarten (2008)
+
+OPC Foundation: Opc unified architecture specification part2 security model 1.01.(February 6.2009)
+
+OPC Foundation: Opc unified architecture specification part3 address space model 1.01. (February 6.2009)
+
+OPC Foundation: Opc unified architecture specification part4 services 1.01.(February 6.2009)
+
+OPC Foundation: Opc unified architecture specification part6 mappings 1.01.(February 6.2009)
+\end{document}
+
