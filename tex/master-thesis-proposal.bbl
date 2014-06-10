@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ref1}
+{Stefan-Helmut Leitner and Wolfgang Mahnk}:
+\newblock Opc ua-service-oriented architecture for industrial applications
+
+\bibitem{Ref4}
+{Wikipedia contributors}:
+\newblock {OPC Unified Architecture}.
+\newblock \url{http://en.wikipedia.org/wiki/OPC_Unified_Architecture}
+  [update;Februray 5,2014].
+
+\bibitem{Ref2}
+{Mariusz Postol (CAS), Voytek J. Janisz (ABB), Claude M Lafond (ABB), Jim Luth
+  (OPC Foundation)}:
+\newblock Implementation of the opc ua information model for analyzers
+
+\bibitem{O3}
+{OPC Foundation}:
+\newblock Opc unified architecture specification part3 address space model
+  1.01.
+\newblock (February 6.2009)
+
+\bibitem{O4}
+{OPC Foundation}:
+\newblock Opc unified architecture specification part4 services 1.01.
+\newblock (February 6.2009)
+
+\bibitem{O1}
+{OPC Foundation}:
+\newblock Opc unified architecture specification part1 overview and concepts
+  1.02.
+\newblock (July 10.2012)
+
+\bibitem{O2}
+{OPC Foundation}:
+\newblock Opc unified architecture specification part2 security model 1.01.
+\newblock (February 6.2009)
+
+\bibitem{O6}
+{OPC Foundation}:
+\newblock Opc unified architecture specification part6 mappings 1.01.
+\newblock (February 6.2009)
+
+\bibitem{Ref3}
+SID:
+\newblock Mqtt vs opc-ua: Das http der industrie 4.0?
+\newblock
+  \url{http://dennisseidel.de/the-http-for-industrie-4-0-mqtt-vs-opc-ua-german}
+  [update;2013].
+
+\bibitem{Ref5}
+{Wikipedia contributors}:
+\newblock {Constrained Application Protocol}.
+\newblock \url{http://en.wikipedia.org/wiki/Constrained_Application_Protocol}
+  [update;Februray 8,2014].
+
+\bibitem{handbuch}
+{Wolfgang Rankl und Wolfgang Effing}:
+\newblock Handbuch der chipkarten - 5. deutsche auflage.
+\newblock (2008)
+
+\bibitem{ramGP}
+{GlobalPlatform Card}:
+\newblock Remote application management over http card specification v2.2 –
+  amendment b.
+\newblock (March 2012)
+
+\end{thebibliography}

@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{WE}
+Wilson, E.O.:
+\newblock The relation between caste ratios and division of labor in the ant
+  genus pheidole.
+\newblock Journal of Insect Behavior \textbf{3} (1990)  159--168
+
+\bibitem{DOL}
+Bonabeau, E., S.A.T.G., J.L., D.:
+\newblock The relation between caste ratios and division of labor in the ant
+  genus pheidole.
+\newblock Biocomputing and Emergent Computation (1997)  36--45
+
+\bibitem{TR}
+Kuchar, J., Yang, L.:
+\newblock review of conflict detection and resolution modeling methods.
+\newblock IEEE Transactions on Intellingent Transportation Systems \textbf{1}
+  (2000)  179--189
+
+\bibitem{D}
+Lalish, E.:
+\newblock Distributed reactive collision avoidance.
+\newblock Autonomous Robots archive \textbf{32} (2012)  207--226
+
+\bibitem{Dnew}
+Lalish, E., Morgansen, K.A.:
+\newblock Decentralized reactive collision avoidance for multivehicle systems.
+\newblock Conference on Decision and Control - CDC (2008)  1218--1224
+
+\bibitem{no}
+Wei~Ren, Beard, R., Atkins, E.:
+\newblock A survey of consensus problems in multi-agent coordination.
+\newblock American Control Conference, 2005. Proceedings of the 2005 \textbf{3}
+  (2005)  1859--1864
+
+\bibitem{C}
+Olfati-Saber, R. Thayer Sch. of~Eng., D.C.H.N.:
+\newblock Consensus and cooperation in networked multi-agent systems.
+\newblock Proceedings of the IEEE \textbf{95} (2012)  215--233
+
+\end{thebibliography}
