@@ -185,8 +185,75 @@ With sophisticated communication protocol using Application Protocol Data Units(
 
 In ISO/IEC 7816 standards family,  the smart card's fundamental properties and functionalities are defined.
 
-\subsubsection{Smart Card Operation System}
-\subsubsection{}
+
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.2\textwidth]{scc.jpg}
+		\caption[ ]{Smart Card Software Components\cite{jcadg}}
+	\label{fig:scc}
+\end{figure}
+
+\subsubsection{Smart Card Software Components}
+As illustrated in figure~\ref{fig:scc}, one typical smart card software includes Card Operation System, native services such as I/O operation and memory management, Java Card Runtime Environment(JCRE) which consists of Java card  Virtual Machine and Framework that is in charge of dispatching APDU, applet management, and at last other optional industry specific extensions\cite{jcadg}
+
+
+
+\subsubsection{Message Exchange with APDU}
+Application Protocol Data Unit, or APDU for short, is used  to perform data exchange between smart card and CAD. There are two categories of APDU, namely command APDU and response APDU. Command APDU structure and response APDU structure are described in Table~\ref{table:capdu} and Table~\ref{table:rapdu} respectively\cite{handbuch}. 
+
+\begin{table}[ht]
+\caption{Command APDU Structure}
+\centering
+\begin{tabular}{ c c c}
+\hline\hline
+ CLA &class byte identifying application  & mandatory \\[0.5ex]
+ INS &instruction byte representing the actual command  & mandatory \\
+ P1 &parameter 1 used to provide more command information & mandatory \\
+ P2 &parameter 2 used to provide more command information& mandatory \\
+ Lc field &the length of data received by card & mandatory \\
+ data field &data sent to card& optional \\
+Le field &the length of data sent by card \\
+\hline
+\end{tabular}
+\label{table:capdu}
+\end{table}
+
+\begin{table}[ht]
+\caption{Command APDU Structure}
+\centering
+\begin{tabular}{ c c c}
+\hline\hline
+ data field & length decided by Le of preceding command  APDU  & mandatory \\[0.5ex]
+ SW1 &state word 1 also called return code 1  & mandatory \\
+ SW2 &state word 2 also called return code 2& mandatory \\
+\hline
+\end{tabular}
+\label{table:rapdu}
+\end{table}
+\subsubsection{Secure Messaging}
+Since all communication between smart card and terminal is based on digital electrical pulse performed on card I/O line, attacker can easily record all communication information and and try to recover sensitive use credential data. Therefore secure messaging mechanism is proposed and used to protect against aforementioned message eavesdropping, to grantee authenticity and confidentiality of exchanged information.
+
+In secure message mechanism, both message sender and receiver muss have decided common used cryptographic algorithms and corresponding pre-shared keys. Especially in telecommunication domain in accordance with ISO/IEC 7816-4\cite{handbuch}, TLV(Type-lengthl-valuse)-formed data, which encapsulates relative user information, is used to ensure secure messaging.
+
+\subsection{GlobalPlatform and Remote Application Management}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.2\textwidth]{gp_1.jpg}
+		\caption[ ]{Card Operation System Architecture\cite{gp}}
+	\label{fig:gp_1}
+\end{figure}
+GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. It is now widely accepted and used as industry standard for managing Java Applet based application on Javacard Operation System in several domains, such  as in communication industries and payment company\cite{gp}. 
+
+As shown in figure~\ref{fig:gp_1},  the GlobalPlatform card architecture contains for essential parts. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offers customers various functionalities and services. The security domain, which is usually associated with particular application and knowns as on-card representatives  of off-card  authorities. And at last,  OPEN framework\cite{gp}.
+
+\subsubsection{OPEN - GlobalPlatform Environment}
+OPEN provides API  to applications, performs APDU dispatching  job and also is in charge of application selection as  well as logical channel management\cite{gp}. Logical channel is designed to enable the data exchange between multi application and terminal. Each opened logical channel will handle message regard of one particular application.  Moreover one special logic channel named basic channel is always opened. In order to ensure  card security, OPEN is designed to support mechanisms for data integrity, confidential ,  authentication and resource availability.
+\subsection{Java Card}
+\subsection{Cryptography}
+\subsubsection{Secure Channel Protocol}
+In particular, GlobalPlatform has designed a set of secure mechanisms knows secure channel  protocol to guarantee aforementioned secure messaging. It grantees confidentiality of exchange information and offers integrity check and authentication services. Secure Channel Protocol also applies a cryptographic exchange process to let smart card and  off-card entities to perform entity authentication with each other. 
 \section{Implementation Scenario}
  \begin{figure}[!htbp]
 	\centering
@@ -200,6 +267,7 @@ Figure~\ref{fig:SmartHome} describes the basic structure and functionalities of 
 
 In the implementation scenario, OPC UA clients are Universal Integrated Circuit Card (UICC)  based phone user and in home allocated senor. OPC UA server is a secure hard device, that is in charge of communication management with phone use and implementation of OPC UA server application code. Environment date is measured periodically by sensors and each room is locked, only the client, who is authenticated by server and holds enough authority can enter. It is assumed that handy users are in an open environment at mean while senors in home have a relative secure wifi connection with OPC UA server. Smart card that is applied in this scenario also acts as security token for OPC UA client, which contains credential information like encryption keys. certificates and digital signature. Moreover the communication stack is developed and integrated on smart card, which means without corresponding UICC card, OPC UA client and server are not able to appropriately finish their work.
  \begin{figure}[ht]
+
 	\centering
 	\includegraphics[width=1\textwidth]{softwareStructure}
 		\caption[ ]{OPC UA Client Server Based On TCP/IP or APDU}
