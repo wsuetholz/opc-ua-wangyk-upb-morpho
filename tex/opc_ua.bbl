@@ -50,6 +50,16 @@ SID:
 \newblock Handbuch der chipkarten - 5. deutsche auflage.
 \newblock (2008)
 
+\bibitem{jcadg}
+{Sun Microsystems}:
+\newblock Java card applet developers' guide.
+\newblock (July 1998)
+
+\bibitem{gp}
+{GlobalPlatform}:
+\newblock Globalplattform card specification.
+\newblock (January 2011)
+
 \bibitem{ramGP}
 {GlobalPlatform Card}:
 \newblock Remote application management over http card specification v2.2 –
