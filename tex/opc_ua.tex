@@ -58,7 +58,7 @@ The whole OPC Unified Architecture specification can be divided into three main 
 \subsubsection{OPC UA Client Server Structure}
  OPC UA standards apply the classic client server architecture, where server is in charge of managing functionalities and data information from a particular machine device, for instance temperature data from a remove allocated sensor. Meanwhile client possesses the ability to query information from server and to let sever perform predefined operations.
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.00\textwidth]{cs.jpg}
 		\caption[ ]{OPC UA Client Server Structure\cite{O1}}
@@ -72,7 +72,7 @@ In OPC Unified Architecture on server stored information that can be visited by 
 One of the charming features provided by OPC UA is \emph{Event Notifications}. With the help of \emph{Event Notification}, OPC UA servers are allowed immediately after some conditions, which is normally set  by a client, are satisfied to publish data and   send this data  to that  particular  client. In this way, clients can for instance discovery failures within client-server-communication quickly and recover as soon as possible, which in return minimizes the lost to the smallest possible amount and also clients are able to observe the subscribed data more precisely and find the pink elephant as fast as possible.
 
 \subsubsection{Standard OPC UA Server}
-\begin{figure}[t]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{server.jpg}
 		\caption[ ]{OPC UA Server Structure\cite{O1}}
@@ -81,7 +81,7 @@ One of the charming features provided by OPC UA is \emph{Event Notifications}. W
 In figure~\ref{fig:server}, the structure of one standard OPC UA Server is described. It includes three main parts, server application, internal API and communication stack. In server application part,  functionalists which are offered by OPC UA standards are realized, such as \emph{Event Notification} and other basic server services like, processing request from connected client, data encryption and decryption and subscription process. Moreover, \emph{Real objects} managed by server here are referred as physical field devices or software application that is only maintained internally. \emph{Node} in \emph{Address Space} can be understood as \emph{Real Ojbects} that are related with each other according to one specific hierarchy.  \emph{View}, which is pictured as a part of address space, presents objects that can be browsed by particular clients. The main  task for  communication stack  is to establish secure communication session based on secure channel between OPC UA client and server.   Typically communication messages which are exchanged frequently among clients and servers are, request-, notification- message from client and   corresponding   response-, publish message from server. At last, an internal API connection the server application and the communication stack.
 
 \subsubsection{Standard OPC UA Client}
-\begin{figure}[t]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.1\textwidth]{client.jpg}
 		\caption[ ]{OPC UA Client Structure\cite{O1}}
@@ -92,7 +92,7 @@ Figure~\ref{fig:client} pictures one simple OPC UA client containing client appl
 
 \subsubsection{Secure Channel and Session}
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{opc_ua_cs_comm.jpg}
 		\caption[ ]{OPC UA Client Server Communication\cite{O2}}
@@ -104,7 +104,7 @@ Since some data exchanged between client and server could be extreme precious an
 
 Figure~\ref{fig:opc_ua_cs_comm} pictures the typical security communication architecture of OPC UA. As shown in~\ref{fig:opc_ua_cs_comm}, the communication between OPC UA client and server is established above a secure channel, which is active during the whole application session and in this session, the state information, such as subscriptions from client, user credentials, is maintained. The secure channel is established only after successful validation of both client and server certificates and it provides necessary mechanisms to support confidentiality, message integrity and application authentication. On top of secure channel, is an application level session between OPC UA client and server, whose responsibilities are to transmit data information and commands. This session is also in charge of managing security policies like user authorization and authentication. It should be pointed out that, even a secure channel is out of work for some reasons, the session is still valid and OPC UA client and server involved in aforementioned session can still re-establish the broken secure channel. A secure transport layer is guaranteed by encryption and signatures methods provided by platform that supports OPC UA structure.
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{opc_ua_shs.jpg}
 		\caption[ ]{OPC UA Client Server Security Handshake\cite{O2}}
@@ -112,7 +112,7 @@ Figure~\ref{fig:opc_ua_cs_comm} pictures the typical security communication arch
 \end{figure}
 \subsubsection{Security Handshake}
 Security handshake as below explains with some details about how secure channel and session are established.OPC UA client initiates the first \emph{OpenSecureChannel} request and waits the response from server. Messages exchanged during the process of construction secure channel between client and server are encrypted using asymmetric encryption and signature algorithms. But some security protocols that could be applied according to OPC UA standard, are not using an asymmetric message encryption algorithm to encrypt to request/response messages. Instead, they apply AsymmetricKeyWrapAlgorithm to encrypt symmetric keys and use symmetric encryption algorithm with encrypted keys to encrypt messages. After a successful construction of secure channel, OPC UA client sends \emph{CreateSession} request and waits for server response. Messages transported during this procedure are encrypted with symmetric encryption algorithms and signed with client/server signing key.
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{opc_ua_commstack.jpg}
 		\caption[ ]{OPC UA Client Server Communication Stack\cite{O2}}
@@ -126,14 +126,14 @@ UA Application layer realizes client and server code. Serialization layer togeth
 
 Knowing the essential parts of OPC UA communication stack, in the following subsections the establishment, re-establishment and close of communication channel are explained.
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.75\textwidth]{opc_ua_messchunk.jpg}
 		\caption[ ]{Message Chunk Structure\cite{O2}}
 	\label{fig:opc_ua_messchunk}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{tcp_1.jpg}
 		\caption[ ]{Establish TCP/IP Connection\cite{O6}}
@@ -142,7 +142,7 @@ Knowing the essential parts of OPC UA communication stack, in the following subs
 
 \subsubsection{Establishment of communication channel}
 As the first step to create TCP/IP connection, this process is always initialized by OPC UA client. OPC UA client initiates his socket and sends \emph{helloMessage}, that includes supported buffer size which specifies the message chunk size used for future communication, to the target OPC UA server. After receiving greeting message, OPC UA server answers the request for establishing TCP/IP connection with acknowledge message and reports negotiated buffer size to his own secure channel layer. Moreover during the creation of communication channel process, the greeting \emph{hallo} and answering \emph{acknowledgment} messages could only be sent once. If OPC UA client or server receives them more than one, error will be reported and corresponding communication socket will be closed. Even thought server application code does not have to work during the negotiation of secure channel process, it should provide the communication stack all his trusted certificates which help communication stack to verify the identity of the other communication partner. 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{tcp_2.jpg}
 		\caption[ ]{Close TCP/IP Connection\cite{O6}}
@@ -150,7 +150,7 @@ As the first step to create TCP/IP connection, this process is always initialize
 \end{figure}
 \subsubsection{Close TCP/IP Connection}
 This process is done when OPC UA server receives \emph{CloseSecureChannel} request from OPC UA client. During this process, server releases all the resource taken by corresponding secure channel and sends none response.
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{tcp_3.jpg}
 		\caption[ ]{Recover Secure Channel\cite{O6}}
@@ -202,7 +202,7 @@ As illustrated in figure~\ref{fig:scc}, one typical smart card software includes
 \subsubsection{Message Exchange with APDU}
 Application Protocol Data Unit, or APDU for short, is used  to perform data exchange between smart card and CAD. There are two categories of APDU, namely command APDU and response APDU. Command APDU structure and response APDU structure are described in Table~\ref{table:capdu} and Table~\ref{table:rapdu} respectively\cite{handbuch}. 
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \caption{Command APDU Structure}
 \centering
 \begin{tabular}{ c c c}
@@ -250,19 +250,50 @@ As shown in figure~\ref{fig:gp_1},  the GlobalPlatform card architecture contain
 
 \subsubsection{OPEN - GlobalPlatform Environment}
 OPEN provides API  to applications, performs APDU dispatching  job and also is in charge of application selection as  well as logical channel management\cite{gp}. Logical channel is designed to enable the data exchange between multi application and terminal. Each opened logical channel will handle message regard of one particular application.  Moreover one special logic channel named basic channel is always opened. In order to ensure  card security, OPEN is designed to support mechanisms for data integrity, confidential ,  authentication and resource availability.
-\subsection{Java Card}
-\subsection{Cryptography}
 \subsubsection{Secure Channel Protocol}
 In particular, GlobalPlatform has designed a set of secure mechanisms knows secure channel  protocol to guarantee aforementioned secure messaging. It grantees confidentiality of exchange information and offers integrity check and authentication services. Secure Channel Protocol also applies a cryptographic exchange process to let smart card and  off-card entities to perform entity authentication with each other. 
+\subsection{Java Card}
+Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, it also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, for instance limited memory resource.
+
+But in contrast with Java VM, Java Card VM is actually divided into two parts, the on-card part, which is in charge of bytecode execution, class as well as object management and secure data  exchange, the off-card part, which is the real Java Converter.
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{jcvm.jpg}
+		\caption[ ]{Java Card VM Components\cite{jcadg}}
+	\label{fig:jcvm}
+\end{figure}
+As illustrated in figure~\ref{fig:jcvm}, a complied Java applet (.cap file) is generated by off-card Converter based on corresponding Java class file and executed by on-card Java Card Runtime Environment. 
+
+\subsubsection{Language Specification}
+Apart from above mentioned Java Card VM, compared with original Java language, Java card has many unique features.
+Since current smart card does not support multitasking, therefore threads are not backed up in Java Card. Also garbage collection  is performed by VM, as a result function \emph{finalize()} is not supported. Moreover as smart card memory space and process ability is limited, programmer can only use three main primitive types, namely byte, short and boolean. Furthermore only one-dimensional array is offered. Nonetheless Java card language supports all features  of inheritance  and all Java language security, for example, private access modifiers as well as bytecode verification\cite{jcadg}.
+
+\subsubsection{Transaction Integrity}
+One of the most import features of Java Card technology is that Java Card Runtime Environment ensures the integrity of transaction, which means even a unexpected loss of power on smart card, the ongoing transactions' integrity is also  protected using  following schema\cite{handbuch}:
+\begin{verbatim}
+// Transaction Starts
+JCSystem.beginTranscation();
+
+doSomething
+
+//Transaction Ends
+JCSystem.commitTransaction();
+\end{verbatim}
+Only when JCRE finishes method \emph{JCSystem.commitTranscation()}, this corresponding transaction is finished and submitted. Otherwise JCRE will throw transaction exception and reset data that involved in this broken transaction.
+\subsubsection{Java Applet}
+\subsection{Cryptography Foundations}
+\subsection{Android}
+
+\section{State of Art}
 \section{Implementation Scenario}
  \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.2\textwidth]{SmartHome}
+	\includegraphics[width=1\textwidth]{SmartHome}
 		\caption[ ]{Smart Home}
 	\label{fig:SmartHome}
 \end{figure}
-Figure~\ref{fig:SmartHome} describes the basic structure and functionalities of Smart Home. Central Controller also named as OPC UA Server is in charge of monitoring predefined environment variables, for instance, home temperature, luminance and how much water the pet has, and taking corresponding behaviors, such as opening windows, turning off the heating or notifying pet owner that puppy needs water. With the help of such services a more comfortable living condition is created in an automated way. Also OPC UA Server controls access right of entering each room, which means only authenticated users with enough authority can open the door. Moreover the root user, namely the owner of this house, is capable of assigning the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care while he/she is away. At the same time, root user won't worry about the person, who promises feeding pet, entries the forbidden room. At last, every single action taken by the OPC UA Server is recorded and is available for future use. 
 
+Figure~\ref{fig:SmartHome} describes the basic structure and functionalities of Smart Home. Central Controller also named as OPC UA Server is in charge of monitoring predefined environment variables, for instance, home temperature, luminance and how much water the pet has, and taking corresponding behaviors, such as opening windows, turning off the heating or notifying pet owner that puppy needs water. With the help of such services a more comfortable living condition is created in an automated way. Also OPC UA Server controls access right of entering each room, which means only authenticated users with enough authority can open the door. Moreover the root user, namely the owner of this house, is capable of assigning the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care while he/she is away. At the same time, root user won't worry about the person, who promises feeding pet, entries the forbidden room. At last, every single action taken by the OPC UA Server is recorded and is available for future use. 
 
 
 In the implementation scenario, OPC UA clients are Universal Integrated Circuit Card (UICC)  based phone user and in home allocated senor. OPC UA server is a secure hard device, that is in charge of communication management with phone use and implementation of OPC UA server application code. Environment date is measured periodically by sensors and each room is locked, only the client, who is authenticated by server and holds enough authority can enter. It is assumed that handy users are in an open environment at mean while senors in home have a relative secure wifi connection with OPC UA server. Smart card that is applied in this scenario also acts as security token for OPC UA client, which contains credential information like encryption keys. certificates and digital signature. Moreover the communication stack is developed and integrated on smart card, which means without corresponding UICC card, OPC UA client and server are not able to appropriately finish their work.
