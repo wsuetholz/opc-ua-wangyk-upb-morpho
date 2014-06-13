@@ -371,8 +371,9 @@ Figure~\ref{fig:apsd} illustrates a typical communication flow between administr
 Server here refers sensors, control device as well digital locks that together build up the smart home system. Each server controls exactly one above-mentioned secure device and take subscription as well as publish corresponding notification to authenticated subscriber. The server structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic server like subscription and notification mentioned before, an internal API, that translate OPC UA instructions into APDU, and a on smart card integrated communication stack, that is responsible for user authentication, secure message exchange and so on.
 
 \subsubsection{Implementation Aspect}
+Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selections of various class API and software modules, that can be applied to design as well as develop complete Java Card Applet and also can be used for debugging. When it comes to test with Java Card Applet, apart from using regular cell phone with UICC card, on where particular applet is installed, MCR smart card reader or Java  virtual card together with iCardReader, UTE can be applied. iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment is  
 
-
+\subsubsection{Objective}
 
 
 \bibliography{opc_ua}
