@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.6)  13 JUN 2014 20:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  16 JUN 2014 15:30
 entering extended mode
 **opc_ua.tex
-(D:\opc_ua\tex\opc_ua.tex
+(C:\workspace\opc_ua\tex\opc_ua.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(D:\opc_ua\tex\llncs.cls
+(C:\workspace\opc_ua\tex\llncs.cls
 Document Class: llncs 2010/07/12 v2.17 
  LaTeX document class for Lecture Notes in Computer Science
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -81,9 +81,9 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \colbreak@box=\box51
 \multicol@sort@counter=\count95
 )
-(D:\opc_ua\tex\aliascnt.sty
+(C:\workspace\opc_ua\tex\aliascnt.sty
 Package: aliascnt 2009/09/08 v1.3 Alias counter (HO)
- (D:\opc_ua\tex\remreset.sty))
+ (C:\workspace\opc_ua\tex\remreset.sty))
 \c@chapter=\count96
 LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
 LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
@@ -194,7 +194,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
 eX document
 )
-(D:\opc_ua\tex\opc_ua.aux)
+(C:\workspace\opc_ua\tex\opc_ua.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -234,158 +234,169 @@ Overfull \hbox (6.18265pt too wide) in paragraph at lines 43--44
 uni-fied ar-chi-tec-ture(OPC
  []
 
-[2] <cs.jpg, id=15, 538.26094pt x 170.13562pt>
+[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 60.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 60.
+ <cs.jpg, id=15, 538.26094pt x 170.13562pt>
 File: cs.jpg Graphic file (type jpg)
  <use cs.jpg>
-Package pdftex.def Info: cs.jpg used on input line 63.
+Package pdftex.def Info: cs.jpg used on input line 84.
 (pdftex.def)             Requested size: 347.12354pt x 109.71974pt.
- [3 <D:/opc_ua/tex/cs.jpg>] <server.jpg, id=19, 536.0025pt x 424.58624pt>
+ [3]
+<server.jpg, id=19, 536.0025pt x 424.58624pt>
 File: server.jpg Graphic file (type jpg)
  <use server.jpg>
-Package pdftex.def Info: server.jpg used on input line 77.
+Package pdftex.def Info: server.jpg used on input line 98.
 (pdftex.def)             Requested size: 347.12354pt x 274.96712pt.
-
-<client.jpg, id=20, 508.90125pt x 231.86626pt>
+ [4 <C:/workspace/opc_ua/tex/cs.jpg>] [5 <C:/workspace/opc_ua/tex/server.jpg>]
+<client.jpg, id=26, 508.90125pt x 231.86626pt>
 File: client.jpg Graphic file (type jpg)
  <use client.jpg>
-Package pdftex.def Info: client.jpg used on input line 86.
+Package pdftex.def Info: client.jpg used on input line 107.
 (pdftex.def)             Requested size: 381.838pt x 173.98062pt.
 
-Overfull \hbox (34.71446pt too wide) in paragraph at lines 86--87
+Overfull \hbox (34.71446pt too wide) in paragraph at lines 107--108
  [][] 
  []
 
-[4] [5 <D:/opc_ua/tex/server.jpg> <D:/opc_ua/tex/client.jpg>]
 <opc_ua_cs_comm.jpg, id=27, 485.56406pt x 263.48438pt>
 File: opc_ua_cs_comm.jpg Graphic file (type jpg)
 
 <use opc_ua_cs_comm.jpg>
-Package pdftex.def Info: opc_ua_cs_comm.jpg used on input line 97.
+Package pdftex.def Info: opc_ua_cs_comm.jpg used on input line 118.
 (pdftex.def)             Requested size: 329.7663pt x 178.94185pt.
- [6 <D:/opc_ua/tex/opc_ua_cs_comm.jpg>]
+ [6 <C:/workspace/opc_ua/tex/client.jpg>]
 <opc_ua_shs.jpg, id=31, 551.81157pt x 389.95688pt>
 File: opc_ua_shs.jpg Graphic file (type jpg)
  <use opc_ua_shs.jpg>
-Package pdftex.def Info: opc_ua_shs.jpg used on input line 109.
+Package pdftex.def Info: opc_ua_shs.jpg used on input line 130.
 (pdftex.def)             Requested size: 347.12354pt x 245.31711pt.
 
 <opc_ua_commstack.jpg, id=32, 536.75531pt x 387.69844pt>
 File: opc_ua_commstack.jpg Graphic file (type jpg)
 
 <use opc_ua_commstack.jpg>
-Package pdftex.def Info: opc_ua_commstack.jpg used on input line 117.
+Package pdftex.def Info: opc_ua_commstack.jpg used on input line 138.
 (pdftex.def)             Requested size: 347.12354pt x 250.7291pt.
- [7 <D:/opc_ua/tex/opc_ua_shs.jpg>]
-<opc_ua_messchunk.jpg, id=37, 514.92375pt x 367.3725pt>
+ [7 <C:/workspace/opc_ua/tex/opc_ua_cs_comm.jpg>]
+[8 <C:/workspace/opc_ua/tex/opc_ua_shs.jpg>]
+<opc_ua_messchunk.jpg, id=40, 514.92375pt x 367.3725pt>
 File: opc_ua_messchunk.jpg Graphic file (type jpg)
 
 <use opc_ua_messchunk.jpg>
-Package pdftex.def Info: opc_ua_messchunk.jpg used on input line 131.
+Package pdftex.def Info: opc_ua_messchunk.jpg used on input line 152.
 (pdftex.def)             Requested size: 260.34265pt x 185.74306pt.
- <tcp_1.jpg, id=38, 558.58687pt x 275.52937pt>
+ <tcp_1.jpg, id=41, 558.58687pt x 275.52937pt>
 File: tcp_1.jpg Graphic file (type jpg)
 
 <use tcp_1.jpg>
-Package pdftex.def Info: tcp_1.jpg used on input line 138.
+Package pdftex.def Info: tcp_1.jpg used on input line 159.
 (pdftex.def)             Requested size: 347.12354pt x 171.22583pt.
- <tcp_2.jpg, id=39, 529.98pt x 213.79875pt>
+ <tcp_2.jpg, id=42, 529.98pt x 213.79875pt>
 File: tcp_2.jpg Graphic file (type jpg)
  <use tcp_2.jpg>
-Package pdftex.def Info: tcp_2.jpg used on input line 147.
+Package pdftex.def Info: tcp_2.jpg used on input line 168.
 (pdftex.def)             Requested size: 347.12354pt x 140.0343pt.
 
-Overfull \hbox (4.76013pt too wide) in paragraph at lines 144--151
+Overfull \hbox (4.76013pt too wide) in paragraph at lines 165--172
  \OT1/cmr/bx/n/10 Es-tab-lish-ment of com-mu-ni-ca-tion chan-nel[] \OT1/cmr/m/n
 /10 As the first step to cre-ate TCP/IP
  []
 
-[8 <D:/opc_ua/tex/opc_ua_commstack.jpg>] [9 <D:/opc_ua/tex/opc_ua_messchunk.jpg
-> <D:/opc_ua/tex/tcp_1.jpg>] <tcp_3.jpg, id=46, 599.99156pt x 404.26031pt>
+<tcp_3.jpg, id=43, 599.99156pt x 404.26031pt>
 File: tcp_3.jpg Graphic file (type jpg)
-
-<use tcp_3.jpg>
-Package pdftex.def Info: tcp_3.jpg used on input line 155.
+ <use tcp_3.jpg>
+Package pdftex.def Info: tcp_3.jpg used on input line 176.
 (pdftex.def)             Requested size: 347.12354pt x 233.8913pt.
- [10 <D:/opc_ua/tex/tcp_2.jpg>] [11 <D:/opc_ua/tex/tcp_3.jpg>]
-<scc.jpg, id=53, 436.63126pt x 304.13625pt>
+ [9 <C:/workspace/opc_ua/tex/opc_ua_commstack.jpg>] [10 <C:/workspace/opc_ua/te
+x/opc_ua_messchunk.jpg> <C:/workspace/opc_ua/tex/tcp_1.jpg>] [11 <C:/workspace/
+opc_ua/tex/tcp_2.jpg> <C:/workspace/opc_ua/tex/tcp_3.jpg>] [12]
+<scc.jpg, id=56, 436.63126pt x 304.13625pt>
 File: scc.jpg Graphic file (type jpg)
  <use scc.jpg>
-Package pdftex.def Info: scc.jpg used on input line 192.
+Package pdftex.def Info: scc.jpg used on input line 211.
 (pdftex.def)             Requested size: 416.54718pt x 290.1483pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 192--193
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 208.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 208.
-[12] [13 <D:/opc_ua/tex/scc.jpg>] <gp_1.jpg, id=61, 490.83376pt x 475.02469pt>
-File: gp_1.jpg Graphic file (type jpg)
+[13 <C:/workspace/opc_ua/tex/scc.jpg>]
+Overfull \hbox (24.0705pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/n/10 keys. In telecom-mu-ni-ca-tion do-main in ac-cor-dance with ISO
+/IEC 7816-4[9], TLV(Type-
+ []
 
-<use gp_1.jpg>
-Package pdftex.def Info: gp_1.jpg used on input line 243.
+<gp_1.jpg, id=61, 490.83376pt x 475.02469pt>
+File: gp_1.jpg Graphic file (type jpg)
+ <use gp_1.jpg>
+Package pdftex.def Info: gp_1.jpg used on input line 260.
 (pdftex.def)             Requested size: 416.54718pt x 403.14227pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 243--244
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 260--261
  [][] 
  []
 
-[14] [15 <D:/opc_ua/tex/gp_1.jpg>] <jcvm.jpg, id=68, 330.48468pt x 205.5178pt>
+[14] [15 <C:/workspace/opc_ua/tex/gp_1.jpg>]
+<jcvm.jpg, id=68, 330.48468pt x 205.5178pt>
 File: jcvm.jpg Graphic file (type jpg)
-
-<use jcvm.jpg>
-Package pdftex.def Info: jcvm.jpg used on input line 261.
+ <use jcvm.jpg>
+Package pdftex.def Info: jcvm.jpg used on input line 279.
 (pdftex.def)             Requested size: 347.12354pt x 215.8722pt.
- [16 <D:/opc_ua/tex/jcvm.jpg>] [17]
-<homeoverview.jpg, id=76, 1342.01375pt x 706.64pt>
+ [16] [17 <C:/workspace/opc_ua/tex/jcvm.jpg>] <homeoverview.jpg, id=76, 1342.01
+375pt x 706.64pt>
 File: homeoverview.jpg Graphic file (type jpg)
- <use homeoverview.jpg>
-Package pdftex.def Info: homeoverview.jpg used on input line 304.
+
+<use homeoverview.jpg>
+Package pdftex.def Info: homeoverview.jpg used on input line 322.
 (pdftex.def)             Requested size: 416.54718pt x 219.3257pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 304--305
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 322--323
  [][] 
  []
 
-[18 <D:/opc_ua/tex/homeoverview.jpg>]
-<csoverview.pdf, id=80, 487.8225pt x 347.79938pt>
+[18] <csoverview.pdf, id=80, 487.8225pt x 347.79938pt>
 File: csoverview.pdf Graphic file (type pdf)
  <use csoverview.pdf>
-Package pdftex.def Info: csoverview.pdf used on input line 317.
+Package pdftex.def Info: csoverview.pdf used on input line 335.
 (pdftex.def)             Requested size: 381.838pt x 272.23767pt.
 
-Overfull \hbox (34.71446pt too wide) in paragraph at lines 317--318
+Overfull \hbox (34.71446pt too wide) in paragraph at lines 335--336
  [][] 
  []
 
-[19] <clientStructure.pdf, id=87, 551.05875pt x 424.58624pt>
+
+Underfull \vbox (badness 4036) has occurred while \output is active []
+
+ [19 <C:/workspace/opc_ua/tex/homeoverview.jpg>] [20 <C:/workspace/opc_ua/tex/c
+soverview.pdf>] <clientStructure.pdf, id=96, 551.05875pt x 424.58624pt>
 File: clientStructure.pdf Graphic file (type pdf)
 
 <use clientStructure.pdf>
-Package pdftex.def Info: clientStructure.pdf used on input line 347.
+Package pdftex.def Info: clientStructure.pdf used on input line 366.
 (pdftex.def)             Requested size: 347.12354pt x 267.46483pt.
- [20 <D:/opc_ua/tex/csoverview.pdf>]
-<apsd.jpg, id=99, 563.85657pt x 532.23843pt>
+ <apsd.jpg, id=97, 563.85657pt x 532.23843pt>
 File: apsd.jpg Graphic file (type jpg)
- <use apsd.jpg>
-Package pdftex.def Info: apsd.jpg used on input line 355.
+
+<use apsd.jpg>
+Package pdftex.def Info: apsd.jpg used on input line 374.
 (pdftex.def)             Requested size: 416.54718pt x 393.19244pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 355--356
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 374--375
  [][] 
  []
 
-[21 <D:/opc_ua/tex/clientStructure.pdf>] [22 <D:/opc_ua/tex/apsd.jpg>]
-<serverStructure.pdf, id=113, 551.05875pt x 532.99126pt>
+[21] [22 <C:/workspace/opc_ua/tex/clientStructure.pdf>] [23 <C:/workspace/opc_u
+a/tex/apsd.jpg>] <serverStructure.pdf, id=114, 551.05875pt x 532.99126pt>
 File: serverStructure.pdf Graphic file (type pdf)
 
 <use serverStructure.pdf>
-Package pdftex.def Info: serverStructure.pdf used on input line 367.
+Package pdftex.def Info: serverStructure.pdf used on input line 386.
 (pdftex.def)             Requested size: 312.40906pt x 302.17348pt.
- [23 <D:/opc_ua/tex/serverStructure.pdf>]
-(D:\opc_ua\tex\opc_ua.bbl
+ [24 <C:/workspace/opc_ua/tex/serverStructure.pdf>]
+(C:\workspace\opc_ua\tex\opc_ua.bbl
 Underfull \hbox (badness 5924) in paragraph at lines 38--42
 []\OT1/cmr/m/n/9 Wikipedia con-trib-u-tors:  Con-strained Ap-pli-ca-tion Pro-to
 -col.  $\OT1/cmtt/m/n/9 http : / /$
@@ -398,29 +409,27 @@ Missing character: There is no § in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
-[24]) [25] (D:\opc_ua\tex\opc_ua.aux) ) 
+) [25] (C:\workspace\opc_ua\tex\opc_ua.aux) ) 
 Here is how much of TeX's memory you used:
- 1916 strings out of 493921
- 24509 string characters out of 3144883
- 86927 words of memory out of 3000000
- 5200 multiletter control sequences out of 15000+200000
+ 1917 strings out of 493921
+ 24672 string characters out of 3144871
+ 86937 words of memory out of 3000000
+ 5201 multiletter control sequences out of 15000+200000
  7970 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,10n,43p,1465b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmtt9.pfb>
-Output written on opc_ua.pdf (25 pages, 1545393 bytes).
+ 29i,11n,43p,1460b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt9.pfb>
+Output written on opc_ua.pdf (25 pages, 1530027 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
