@@ -24,7 +24,7 @@
 
 \begin{abstract}
 
-Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the most recent released industry standard from OPC Foundation, which compared with his predecessors is equipped with a list of charming new features, with whose help OPC UA is capable of developing a common communication interface for devices which participate in automation system.Meanwhile, the technology of smart card is widely used in information security fields of finance, communication, personal and government identification, payment. Therefore it is meaningful and promising to develop OPC UA standard satisfying application on embedded smart card secure device, for the purpose of secure remote control, enterprise resource planning and etc. Since the storage and compute capacity of chip card is limited, OPC UA product will consist of two essential parts, namely client/server application code, realized as Android or other application, and communication stack, realized as Javacard Applet based on Remote Application Management from GlobalPlatform. The implemented demonstration scenarios and corresponding analysis show the possibility of developing OPC UA standard satisfying application on devices embedded with smart card to benefit customers. 
+Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the most recent released industry standard from OPC Foundation, which compared with his predecessors is equipped with a list of charming new features, with whose help OPC UA is capable of developing a common communication interface for devices which participate in automation system.Meanwhile, the technology of smart card is widely used in information security fields of finance, communication, personal and government identification, payment. Therefore it is meaningful and promising to develop OPC UA standard compliant application on embedded smart card secure device, for the purpose of secure remote control, enterprise resource planning and etc. Since the storage and compute capacity of chip card is limited, OPC UA product will consist of two essential parts, namely client/server application code, realized as Android or other application, and communication stack, realized as Javacard Applet based on Remote Application Management from GlobalPlatform. The implemented demonstration scenarios and corresponding analysis show the possibility of developing OPC UA standard compliant application on devices embedded with smart card to benefit customers. 
 \end{abstract}
 
 \section{Introduction and Motivation}
@@ -40,7 +40,7 @@ But in order to enjoy the aforementioned features, two tough issues must be reso
 \subsection{Solution Idea}
 In this master thesis, I am going to address solutions for questions mentioned in  section \emph{Introduction and Motivation} and  design a smart home system for the purpose of demonstration. In this smart home system, home owner using smart phone is capable of experiencing 24/7 home security service, remotely managing inner home environment parameters and assigning access permissions. This system consists of smart phones with Universal Integrated Circuit Cards (UICC  smart card), digital door locks, control devices and environment sensors. Moreover each device is equipped with smart card, which acts not only as secure token, that saves  user credentials, but also is in charge of communication management with other device.
 
-In particular, I will introduce the newly released industry automation standards object linking and embedding for processes control unified architecture(OPC UA standards) to build a common communication interface for devices that are mentioned above and design a OPC UA specification satisfying communication stack on UICC smart card., whose duties are: creation and management communication between OPC client/server application, entity authentication and secure message exchange.
+In particular, I will introduce the newly released industry automation standards object linking and embedding for processes control unified architecture(OPC UA standards) to build a common communication interface for devices that are mentioned above and design a OPC UA specification compliant communication stack on UICC smart card., whose duties are: creation and management communication between OPC client/server application, entity authentication and secure message exchange.
 
 \subsection{Paper Structure}
 At first, in the second chapter I will present the fundamental technologies which will be frequently mentioned in this paper. Secondly the state of art, for instances mobile security,  home remote control technologies, Remote Application Management from GlobalPlatform will be introduced, which act together as cornerstone for my implementation scenario. In the fourth section, I am going to focus on  UICC mobile security  and base on UICC framework build a  OPC UA standards scarifying communication stack  as Javacard Applet with the help of GlobalPlatform  specifications. In the next implementation chapter, I will present how my  demonstration scenario can be realized. As sixth and seventh chapter,  test and performance analysis will be describe to show the reliability and security of my proposal.
@@ -161,7 +161,7 @@ Knowing the essential parts of OPC UA communication stack, in the following subs
 	\label{fig:tcp_1}
 \end{figure}
 
-\subsubsection{Establishment of communication channel}
+\paragraph{Establishment of communication channel}
 As the first step to create TCP/IP connection, this process is normally initialized by OPC UA client. OPC UA client initiates his socket and sends \emph{helloMessage}, that includes supported buffer size which specifies the message chunk size used for future communication, to the target OPC UA server. After receiving greeting message, OPC UA server answers the request for establishing TCP/IP connection with acknowledge message and reports suggested buffer size to his own secure channel layer. Moreover during the creation of communication channel, the greeting \emph{hallo} and answering \emph{acknowledgment} messages could only be sent once. If OPC UA client or server receives more than one above-mentioned message from a same sender, error will be reported and corresponding communication socket will be closed.
 \begin{figure}[!htbp]
 	\centering
@@ -169,7 +169,7 @@ As the first step to create TCP/IP connection, this process is normally initiali
 		\caption[ ]{Close TCP/IP Connection\cite{O6}}
 	\label{fig:tcp_2}
 \end{figure}
-\subsubsection{Close TCP/IP Connection}
+\paragraph{Close TCP/IP Connection}
 This process is done when OPC UA server receives \emph{CloseSecureChannel} request from OPC UA client. During this process, server releases all the resource taken by corresponding secure channel and sends none response.
 \begin{figure}[!htbp]
 	\centering
@@ -178,7 +178,7 @@ This process is done when OPC UA server receives \emph{CloseSecureChannel} reque
 	\label{fig:tcp_3}
 \end{figure}
 
-\subsubsection{Recover Secure Channel}
+\paragraph{Recover Secure Channel}
 
 
 Whenever error occurs during TCP/IP connection between OPC UA client and server, client will try to periodically re-establish it until the session is closed or the lifetime of security token goes to an end. Also it should be pointed out that the buffer size defined by corrupt secure channel should not be changed during this error recover process.
@@ -200,9 +200,26 @@ Another member from Internet of Things is Constrained Application Protocol (CoAP
 The Universal Integrated Circuit Card is the smart card used in mobile terminals in GSM and UMTS networks. It enables authenticated subscriber to join the network with their mobile terminals and at the same time protects essential user data. UICC acts  also most time as the secure token, which stores and protects subscriber's confidential information. Moreover, as a 32bit processor, UICC is also capable of processing necessary  encryption and  decryption algorithms\cite{uiccDef}.
 
 \subsubsection{Smart Card}
-Smart Card, whose characteristic feature is an integrated circuit that is embedded in a chip card, which is capable of performing data process, information storage and message transmitting\cite{handbuch}. The most charming feature of smart card is that, sensitive user's credential data such as certificates, encryption keys, digital signature along with other precious user information can only be accessed though a serial interface, which stands under  strict control of the card operation system. This characteristic provides strong  protection against  unauthorized data access and ensure confidentiality of on card stored information. Therefor smart cards are widely used in applications that require strong protection.
+Smart Card, whose characteristic feature is an integrated circuit that is embedded in a chip card, which is capable of performing data process, information storage and message transmitting\cite{handbuch}. The most charming feature of smart card is that, sensitive user's credential data such as certificates, encryption keys, digital signature along with other precious user information can only be accessed though a serial interface, which stands under  strict control of the card operation system. This characteristic provides strong  protection against  unauthorized data access and ensures the confidentiality of on card stored information. Therefor smart cards are widely used in applications that require strong protection.
 
 With sophisticated communication protocol using Application Protocol Data Units(APDU), smart card and Card Accepting Device(CAD) are able to process secure message exchange. Smart card is also able to process cryptographic algorithms on hardware. Nowadays, it supports symmetric key algorithms like DES, triple DES; standard public key cryptography for instance RSA, hash functions such as commonly SHA-1\cite{handbuch}. More powerful microprocessor on chip card is, the speed performance is better.  
+
+\begin{table}[ht]
+\caption{ISO/IEC 7816\cite{handbuch}}
+\centering
+\begin{tabular}{ c c }
+ ISO7816 document & Description  \\[1ex]
+\hline\hline
+ ISO 7816-1&Physical characteristics   \\
+ISO 7816-2&Dimensions and location of the contacts   \\
+ ISO 7816-3& Electronic signals and transmission protocols   \\
+ISO 7816-4&Industry commands for interchange  \\
+ISO 7816-5& Number system and registration procedure for application identifiers \\
+ISO 7816-6& Interindustry data elements  \\
+\hline
+\end{tabular}
+\label{table:rapdu}
+\end{table}
 
 In ISO/IEC 7816 standards family,  the smart card's fundamental properties and functionalities are defined.
 
@@ -216,7 +233,11 @@ In ISO/IEC 7816 standards family,  the smart card's fundamental properties and f
 \subsubsection{Smart Card Software Components}
 As illustrated in figure~\ref{fig:scc}, one typical smart card software includes Card Operation System, native services such as I/O operation and memory management, Java Card Runtime Environment(JCRE) that consists of Java card  Virtual Machine and Framework who is in charge of dispatching APDU as well as applet management, installed applet and at last other optional industry specific extensions\cite{jcadg}
 
-\subsubsection{Message Exchange with APDU}
+\subsubsection{Data Exchange with Smart Card}
+The communication protocol between smart card and terminal is described as Master-Slave relationship\cite{handbuch}, that means terminal device knowns as Master processes unidirectional control over its slave, namely smart card. Once Master-Slave relationship is established, each communication will be initialized by Master and Slave only reacts based on Master's command. 
+
+When a smart card is inserted in a terminal, Master will send its Slave a RESET command which causes smart card to perform a Power-on-Reset behavior. After this Power-on-Reset, smart card informs Master using Answer-to-Rest (ATR) message about card state and communication parameters. In the next step, if necessary terminal will generate a Protocol Type Select (PTS) command, which is used to choose communication protocol and parameters suggest by smart card. After a successful negotiation, smart card and terminal are able to exchange date using Application Protocol Data Unit.
+  
 Application Protocol Data Unit, or APDU for short, is used  to perform data exchange between smart card and CAD. There are two categories of APDU, namely command APDU and response APDU. Command APDU structure and response APDU structure are described in Table~\ref{table:capdu} and Table~\ref{table:rapdu} respectively\cite{handbuch}. 
 
 \begin{table}[!htbp]
@@ -249,9 +270,9 @@ Le field &the length of data sent by card \\
 \label{table:rapdu}
 \end{table}
 \subsubsection{Secure Messaging}
-Since all communication between smart card and terminal is based on digital electrical pulse performed on card I/O line, attacker can easily record all communication information and and try to recover sensitive use credential data. Therefore secure messaging mechanism is proposed and used to protect against aforementioned message eavesdropping, to ensure authenticity and confidentiality of exchanged information.
+Since all communication between smart card and terminal is based on digital electrical pulse performed on card I/O line, attacker can easily record all communication information and and recover it. Therefore secure messaging mechanism is proposed and used to protect against aforementioned message eavesdropping, to ensure authenticity and confidentiality of exchanged information.
 
-In secure message mechanism, both message sender and receiver muss have decided common used cryptographic algorithms and corresponding pre-shared keys. In telecommunication domain in accordance with ISO/IEC 7816-4\cite{handbuch}, TLV(Type-lengthl-valuse)-formed data, which encapsulates relative user information, is used to perform secure messaging.
+In secure message mechanism, both message sender and receiver must agree on to be applied message cryptographic algorithms and corresponding pre-shared keys. In telecommunication domain in accordance with ISO/IEC 7816-4\cite{handbuch}, TLV(Type-lengthl-valuse)-formed data, which encapsulates relative user information, is used to perform secure messaging as data carrier.
 
 \subsection{GlobalPlatform and Remote Application Management}
 
@@ -261,33 +282,33 @@ In secure message mechanism, both message sender and receiver muss have decided 
 		\caption[ ]{Card Operation System Architecture\cite{gp}}
 	\label{fig:gp_1}
 \end{figure}
-GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. It is now widely accepted and used as industry standard for managing Java Applet based application on Javacard Operation System in several domains, such  as in communication industries and payment company\cite{gp}. 
+GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. It is now widely accepted and used as industry standard for managing Java Applet based application on Javacard Operation System in several domains, for instance in communication industries and payment company\cite{gp}. 
 
-As shown in figure~\ref{fig:gp_1},  the GlobalPlatform card architecture contains four essential parts. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offers customers various functionalities and services. The security domain (SD), which is usually associated with particular application and knowns as on-card representatives  of off-card  authorities. SD is in charge of message encryption as well as decryption, creation and validation of digital signature and handling keys used in cryptographic processes. The last component is OPEN framework\cite{gp}.
+As shown in figure~\ref{fig:gp_1},  the GlobalPlatform card architecture contains four essential parts. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offers customers various functionalities and services. The security domain (SD), that is usually associated with particular application and known as on-card representatives  of off-card  authorities. SD is in charge of message encryption as well as decryption, creation and validation of digital signature and handling keys used in cryptographic processes. The last component is OPEN framework\cite{gp}.
 
 \subsubsection{OPEN - GlobalPlatform Environment}
-OPEN provides APIs , including API for entity authentication, remote data exchange, secure channel configuration, for applications. It also performs APDU dispatching as well as is in charge of application selection and logical channel management\cite{gp}. Logical channel is designed to enable the data exchange between multi applications and terminal. Each opened logical channel will handle message regard of one application.  Moreover the special logic channel named basic channel is always opened. In order to ensure  card security, OPEN is designed to offer secure mechanisms such as,  user authentication , resource availability guarantee and secure channel protocol .
-\subsubsection{Secure Channel Protocol}
-In particular, GlobalPlatform has designed a set of secure mechanisms knows secure channel  protocol to provide secure messaging services. It guarantee confidentiality of exchanged information and offers date integrity check. Secure Channel Protocol also applies a cryptographic exchange process to let smart card and  off-card entities to perform entity authentication with each other. 
+OPEN provides various sets of APIs offering functionalities such as entity authentication, remote data exchange, secure channel configuration and remote application management. This framework also performs APDU dispatching as well as is application selection and logical channel management\cite{gp}. Logical channel is designed to enable the data exchange between multi applications and one terminal. Each opened logical channel will handle message regard of one application.  Moreover the special logic channel named basic channel is always opened. In order to ensure system security, OPEN supports secure mechanisms such as,  user authentication , resource availability guarantee and secure channel protocol .
+\paragraph{Secure Channel Protocol}
+In particular, GlobalPlatform has designed the secure mechanism: secure channel protocol, to guarantee a secure communication. It ensure confidentiality of exchanged information and offers date integrity check.  Moreover Secure Channel Protocol also introduces  a cryptographic exchange process to let smart card and off-card entities to perform entity authentication with each other. 
 
 \subsection{Java Card}
-Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, it also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, for instance limited memory resource.
+Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, it also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, like limited memory resource and computer ability.
 
-But in contrast with Java VM, Java Card VM is actually divided into two parts, the on-card part, which is in charge of bytecode execution, class as well as object management and secure data  exchange, the off-card part, which is the real Java Converter.
+In contrast with Java VM, Java Card VM consists of two parts, the on-card part, which is in charge of bytecode execution, class as well as object management and secure data exchange, the off-card part, which is the real Java Converter.
  \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{jcvm.jpg}
 		\caption[ ]{Java Card VM Components\cite{jcadg}}
 	\label{fig:jcvm}
 \end{figure}
-As illustrated in figure~\ref{fig:jcvm}, a complied Java applet (.cap file) is generated by off-card Converter based on corresponding Java class file and executed by on-card Java Card Runtime Environment. 
+As illustrated in figure~\ref{fig:jcvm}, a complied Java applet (.cap file) is generated by off-card Converter based on inputed Java class file and executed by on-card Java Card Runtime Environment (JCRE). 
 
 \subsubsection{Language Specification}
 Apart from above mentioned Java Card VM, compared with original Java language, Java card has many unique features.
-Since current smart card does not support multitasking, therefore threads are not backed up in Java Card. Also garbage collection  is performed by VM, as a result function \emph{finalize()} is not supported. Moreover as smart card memory space and process ability is limited, programmer can only use three main primitive types, namely byte, short and boolean. Furthermore only one-dimensional array is offered. Nonetheless Java card language supports all features  of inheritance  and all Java language security, for example, private access modifiers as well as bytecode verification\cite{jcadg}.
+Since current smart card does not support multitasking, therefore threads are not backed up in Java Card. Also garbage collection  is performed by VM, as a result function \emph{finalize()} is not supported. Moreover because on smart card, memory space and process ability is limited, as a result programmer can only use three main primitive types, namely byte, short and boolean. Furthermore only one-dimensional array is offered. Nonetheless Java card language supports all features of inheritance and provides all Java language security features, for example, private access modifiers as well as bytecode verification\cite{jcadg}.
 
 \subsubsection{Transaction Integrity}
-One of the most import features of Java Card technology is that Java Card Runtime Environment ensures the integrity of transaction, which means even a unexpected loss of power on smart card, the ongoing transactions' integrity is also  protected using  following schema\cite{handbuch}:
+One of the most import features of Java Card technology is that Java Card Runtime Environment ensures the integrity of transaction, which means even an unexpected loss of power occurs on smart card, the ongoing transactions' integrity is protected with the help of following schema\cite{handbuch}:
 \begin{verbatim}
 // Transaction Starts
 JCSystem.beginTranscation();
@@ -297,7 +318,7 @@ doSomething
 //Transaction Ends
 JCSystem.commitTransaction();
 \end{verbatim}
-Only when JCRE finishes method \emph{JCSystem.commitTranscation()}, this corresponding transaction is finished and submitted. Otherwise JCRE will throw transaction exception and reset data that involved in this broken transaction.
+Only when JCRE finishes running method \emph{JCSystem.commitTranscation()}, the corresponding transaction will be finished and submitted. Otherwise JCRE will throw transaction exception and reset data that involved in this broken transaction.
 
 \subsubsection{Persistent Object and Transient Object}
 In  the realm of Java Card, all objects are preserved in nonvolatile memory, which means this persistent object exits on smart card beyond the execution time of corresponding applet, as long as there exits a reference pointing to it. But also it is allowed to develop transient object on Java card. To be precisely, for instance class array object stays in nonvolatile memory space but in contrast one actual instance of array in stored in volatile memory\cite{handbuch}.
@@ -305,8 +326,8 @@ In  the realm of Java Card, all objects are preserved in nonvolatile memory, whi
 Java Card Applet refers to the Java Card language programmed code, which extends the class \emph{Applet} from package \emph{javacard.framework}. Meanwhile Java Card Applet should implement following four methods:
 \begin{itemize}
 \item\emph{install()}, this method must be implemented and be used to create an applet instance.
-\item\emph{process(APDU)}, the implementation of this method is also mandatory and use APDU as input parameter. In this method applet developer designs how to process APDU sent to this applet and which APDU response should be generated.
-\item \emph{select()}, when JCRE detects a SELECT APDU command, which is applied to select one installed applet, JCRE will call this method of corresponding applet.
+\item\emph{process(APDU)}, the implementation of this method is also mandatory and uses APDU as input parameter. In this method applet developer designs how to process APDU sent to this applet and which APDU response should be generated.
+\item \emph{select()}, when JCRE detects a SELECT APDU command, which is applied to select one installed applet, JCRE will call this method of to be selected applet.
 \item  \emph{deselect()}, this method is called by JCRE to inform corresponding applet that it is no longer selected by JCRE.
 \end{itemize}
 
@@ -391,10 +412,7 @@ Figure~\ref{fig:apsd} illustrates a typical communication flow between administr
 Server here refers sensors, control device as well digital locks that together build up the smart home system. Each server controls exactly one above-mentioned secure device and take subscription as well as publish corresponding notification to authenticated subscriber. The server structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic server like subscription and notification mentioned before, an internal API, that translate OPC UA instructions into APDU, and a on smart card integrated communication stack, that is responsible for user authentication, secure message exchange and so on.
 
 \subsubsection{Implementation Tool Support}
-Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class API and software modules, that can be applied to design complete Java Card Applet as well as to debug Java source. When it comes to running test with Java Card Applet, apart from using regular cell phone with UICC smart card, on where to be tested applet is installed, Morpho Card Reader (MCR) or Java virtual card together with iCardReader, Universal Test Environment (UTE) can be applied. iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment is integrated Test
-
-\subsubsection{Objective}
-
+Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class API and software modules, that can be applied to design complete Java Card Applet as well as to debug Java source. When it comes to running test with Java Card Applet, apart from using regular cell phone with UICC smart card, on where to be tested applet is installed, Morpho Card Reader (MCR) or Java virtual card together with iCardReader, Universal Test Environment (UTE) can be applied. To be more specifically, iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected with test PC using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment provided by Morpho uses Java languages developed test cases and test scenarios\footnote{Test scenario is a collection of relative test cases.} to simulate user cases and obverse related smart card reactions. In contrast with iCardreader, which can only send APDU command sequence to smart card, UTE integrates more software models that can be used to simulate such as security domain offered by other card application provider, and therefore can provide more sophisticate test environment.
 
 \bibliography{opc_ua}
 \bibliographystyle{splncs}
