@@ -302,17 +302,18 @@ Only when JCRE finishes method \emph{JCSystem.commitTranscation()}, this corresp
 \subsubsection{Persistent Object and Transient Object}
 In  the realm of Java Card, all objects are preserved in nonvolatile memory, which means this persistent object exits on smart card beyond the execution time of corresponding applet, as long as there exits a reference pointing to it. But also it is allowed to develop transient object on Java card. To be precisely, for instance class array object stays in nonvolatile memory space but in contrast one actual instance of array in stored in volatile memory\cite{handbuch}.
 \subsubsection{Java Card Applet}
-Java Card Applet refers to the Java Card language programmed code, which extends the class \emph{Applet} from package \emph{javacard.framework}. Meanwhile this Java Card Applet should implement following four methods:
+Java Card Applet refers to the Java Card language programmed code, which extends the class \emph{Applet} from package \emph{javacard.framework}. Meanwhile Java Card Applet should implement following four methods:
 \begin{itemize}
-\item\emph{install}, this method must be implemented and be used to create an applet instance.
-\item\emph{process}, the implementation of this method is also mandatory. In this method applet developer designs how to process APDU commands sent to this applet and which APDU response should be generated.
-\item \emph{select} method
-\item  \emph{deselect} method
+\item\emph{install()}, this method must be implemented and be used to create an applet instance.
+\item\emph{process(APDU)}, the implementation of this method is also mandatory and use APDU as input parameter. In this method applet developer designs how to process APDU sent to this applet and which APDU response should be generated.
+\item \emph{select()}, when JCRE detects a SELECT APDU command, which is applied to select one installed applet, JCRE will call this method of corresponding applet.
+\item  \emph{deselect()}, this method is called by JCRE to inform corresponding applet that it is no longer selected by JCRE.
 \end{itemize}
 
-After finishing programming one Applet, it comes to next phase, namely applet installation. This process takes place usually at the factory or office under the control of card issuer. When one applet is installed on smart card, it only directly communicates with JCRE and other installed applet classes. It should be pointed out, this installed Java Card applet is also aforementioned persistent object and stored in smart card nonvolatile memory space. In case that a newer version of same applet is installed, 
+After finishing programming one Applet, it comes to next phase, namely applet installation. This process takes place usually at the factory or office under the control of card issuer. When one applet is installed on smart card, it only directly communicates with JCRE and other installed applet classes. It should be pointed out, this installed Java Card applet is also belongs to \emph{persistent object} and stored in smart card nonvolatile memory space. Every Java Card Applet is assigned one unique Application ID, which is also known as AID.
 
-\subsection{Cryptography Foundations}
+\subsubsection{Cryptography}
+
 \subsection{Android}
 
 \section{State of Art}
@@ -389,8 +390,8 @@ Figure~\ref{fig:apsd} illustrates a typical communication flow between administr
 \end{figure}
 Server here refers sensors, control device as well digital locks that together build up the smart home system. Each server controls exactly one above-mentioned secure device and take subscription as well as publish corresponding notification to authenticated subscriber. The server structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic server like subscription and notification mentioned before, an internal API, that translate OPC UA instructions into APDU, and a on smart card integrated communication stack, that is responsible for user authentication, secure message exchange and so on.
 
-\subsubsection{Implementation Aspect}
-Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selections of various class API and software modules, that can be applied to design as well as develop complete Java Card Applet and also can be used for debugging. When it comes to test with Java Card Applet, apart from using regular cell phone with UICC card, on where particular applet is installed, MCR smart card reader or Java  virtual card together with iCardReader, UTE can be applied. iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment is integrated Test
+\subsubsection{Implementation Tool Support}
+Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class API and software modules, that can be applied to design complete Java Card Applet as well as to debug Java source. When it comes to running test with Java Card Applet, apart from using regular cell phone with UICC smart card, on where to be tested applet is installed, Morpho Card Reader (MCR) or Java virtual card together with iCardReader, Universal Test Environment (UTE) can be applied. iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment is integrated Test
 
 \subsubsection{Objective}
 
