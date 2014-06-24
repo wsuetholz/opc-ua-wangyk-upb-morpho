@@ -8,7 +8,7 @@
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{Implementation OPC UA on Secure Device}
+\rhead{Leveraging OPC UA Standards with Smart Card Technology for Secure Applications and Services}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage}
@@ -19,7 +19,7 @@
 \setlength{\parindent}{0pt}%
 \usepackage{enumitem}
 \begin{document}
-\title{Implementation Object Linking and Embedding for Processes Control Unified Architecture Specification on Secure Device} %titles have no end punctuation
+\title{Leveraging Object Linking and Embedding for Processes Control Unified Architecture Standards with Smart Card Technology for Secure Applications and Services} %titles have no end punctuation
 \author{Yuankui Wang (Matr.-Nr.: 6670785)}
 \institute{University of Paderborn \email{wangyk@mail.upb.de}}
 
@@ -27,8 +27,7 @@
 
 \begin{abstract}
 
-Object Linking and Embedding for Process Control Unified Architecture, knows as OPC UA is the most recent released industry standard from OPC Foundation, which compared with his predecessors is equipped with a list of charming new features, with whose help OPC UA is capable of developing a common communication interface for devices which participate in automation system.Meanwhile, the technology of smart card is widely used in information security fields of finance, communication, personal and government identification, payment. Therefore it is meaningful and promising to develop OPC UA standard satisfied application on embedded smart card secure device, for the purpose of secure remote control, enterprise resource planning and etc.. The main goal of my master thesis is describing highlighting features of OPC Unified Architecture, especially in security domains, analyzing potential attacks and corresponding countermeasures taken by OPC Unified Architecture, evaluating performance of different possible security polices, studying smart card technology and security, constructing OPC UA communication stack on UICC smart card as card applet and at last designing a OPC UA standard based Smart Home system to illustrate the implementation of my thesis. 
-
+Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the recent released industry standard from OPC Foundation, which compared with his predecessors is equipped with a list of charming new features, with whose help OPC UA is capable of developing a common communication interface for devices which participate in automation system. Meanwhile, the technology of smart card is widely used in information security fields of finance, communication, personal and government identification, payment. Therefore it is meaningful and promising to develop OPC UA standard compliant application on embedded smart card secure device, for the purpose of secure remote control, enterprise resource planning and etc. Since the storage and compute capacity of chip card is limited, OPC UA product will consist of two essential parts, namely client/server application code, realized as Android or other application, and communication stack, realized as Javacard Applet based on Remote Application Management from GlobalPlatform. The implemented demonstration scenarios and corresponding analysis show the possibility of developing OPC UA standard compliant application on devices embedded with smart card to benefit customers. 
 \end{abstract}
 
 \section{Introduction and Motivation}
@@ -40,13 +39,13 @@ At the same time, mobility in industry and business world is also a critical  as
 
 But in order to enjoy the aforementioned features, two tough issues must be resolved. First, how to achieve a common interface for the devices that participate in the system.  And second how to guarantee system security under different communication environments with variant date complexity.
 \section{Contents}
-In this master thesis, I am going to address solutions for questions mentioned in  section \emph{Introduction and Motivation} and  design a smart home system for the purpose of demonstration. In this smart home system, home owner using smart phone is capable of experiencing 24/7 home security service, remotely managing inner home environment parameters and assigning access permissions. This system consists of smart phones with Universal Integrated Circuit Cards (UICC  smart card), digital door locks, control devices, environment sensors and if necessary a central control computer. Moreover each device is equipped with smart card, which acts  not only as secure token, that saves  user credentials, but also is in charge of  construction and management of the devices' communication.
+In this master thesis, I am going to address solutions for questions mentioned in  section \emph{Introduction and Motivation} and  design a smart home system for the purpose of demonstration. In this smart home system, home owner using smart phone is capable of experiencing 24/7 home security service, remotely managing inner home environment parameters and assigning access permissions. This system consists of smart phones with Universal Integrated Circuit Cards (UICC  smart card), digital door locks, electronic home devices (such as coffee machine, air conditioner), environment sensors. Moreover each above mentioned  device is equipped with smart card, which acts not only as secure token, that saves  user credentials, but also is in charge of  construction and management of the communications with other devices.
 
-In particular, I will introduce the newly released industry automation standards object linking and embedding for processes control unified architecture(OPC UA standards) to build a common communication interface for devices that are mentioned above and design communication stack for OPC UA standards on UICC smart card., whose  duties are: creation and management communication between OPC client/server application, message serialization and secure message exchange.
+In particular, I will introduce the newly released industry automation standards object linking and embedding for processes control unified architecture(OPC UA standards) to build a application level communication interface for devices that are mentioned above and design communication stack for OPC UA standards on UICC smart card., whose  duties are: creation and management communication between OPC client/server application, entity authentication and secure messaging.
 
 
 \section{Implementation Resources}
-The communication stack  is developed as UICC applet, the UICC is a Java Card, which contains OS from Morpho. This OS is built on JavaCard 2.2.2 and GlobalPlatform.
+The communication stack  is developed as UICC applet, the UICC is a Java Card, which contains OS from Morpho. This OS is built based on JavaCard 2.2.2 and GlobalPlatform.
 
 \noindent As develop and test IDE, Jacade (Java Applet Development Environment IDE) from Morpho is used.
 
@@ -65,8 +64,9 @@ The communication stack  is developed as UICC applet, the UICC is a Java Card, w
 \item Design android App as OPC UA client application at the smart phone user side
 \item Simulate OTA server that realizes communication between smart cards
 \item Use aforementioned components to build a simulation system for Smart Home
-\item Analyze the stability of demonstration system
-\item Analyze performance of secure polices under different conditions
+\item Analyze the stability and performance of demonstration system
+\item With help of Attack-Tree-graph, analyze potential attacks and propose appropriate countermeasures
+
 \end{itemize}
  
 \section{Table of Contents}
@@ -109,9 +109,9 @@ The communication stack  is developed as UICC applet, the UICC is a Java Card, w
 		\item Security Model
 		\end{enumerate}
 	\end{enumerate}
-	\item Mobil Security Technologies
+	\item State of Art
   	\begin{enumerate}[label*=\arabic*.]
-    	\item Introduction in Mobil Technologies
+    	\item Javacard Security Technology
 		\begin{enumerate}[label*=\arabic*.]
 		\item Overview
 		\item Security Mechanisms
@@ -123,12 +123,29 @@ The communication stack  is developed as UICC applet, the UICC is a Java Card, w
 		\item Application Concept
 		\item Security Model
 		\end{enumerate}
+
+    	\item Home Secure Remote Control System
+		\begin{enumerate}[label*=\arabic*.]
+		\item Current Researches and standards
+		\item State-of-Art Conclusion
+		\end{enumerate}
+
     	\item Cryptography Background
 		\begin{enumerate}[label*=\arabic*.]
 		\item State-of-Art Conclusion
 		\item Trade off
 		\end{enumerate}
 	\end{enumerate}
+
+\item System Architecture Design 
+  	\begin{enumerate}[label*=\arabic*.]
+	\item Overall Architecture
+    	\item Communication Stack Architecture
+    	\item OPC UA Server Architecture 
+    	\item OPC UA Client Architecture
+    	\item Analysis and Argument
+	\end{enumerate}
+
 	\item Implementation 
   	\begin{enumerate}[label*=\arabic*.]
 	\item Overview
@@ -162,15 +179,16 @@ The communication stack  is developed as UICC applet, the UICC is a Java Card, w
 \end{enumerate}
 
 \section{Time plan}
-The master thesis would be registered before 31.05.2014 and expected finished before 31.10.2014.
+The master thesis would be registered before 31.06.2014 and expected finished around November 2014.
 \begin{itemize}
-\item State-of-the-Art and literature review		\hfill 01.05.2014 to 10.05.2014
-\item Design communication stack on UICC card 		 \hfill 10.05.2014 to 25.06.2014
-\item OPC UA client/server prototype 		\hfill 25.06.2014 to 15.08.2014
+\item State-of-the-Art and literature review		\hfill 15.06.2014 to 25.06.2014
+\item Software architecture design \hfill 25.06.2014 to 30.06.2014
+\item Design communication stack on UICC card 		 \hfill 01.07.2014 to 25.07.2014
+\item OPC UA client/server prototype 		\hfill 25.07.2014 to 15.08.2014
 \item Integration and test		\hfill 15.08.2014 to 10.09.2014
-\item Analysis of different possible security policies \hfill 10.09.2014 to 30.09.2014
-\item Performance analysis for secure protocols \hfill 30.09.2014 to 15.10.2014
-\item Final thesis \hfill 15.10.2014 to 31.10.2014
+\item System performance analysis \hfill 10.09.2014 to 30.09.2014
+\item Potential attacks and countermeasures \hfill 30.09.2014 to 25.10.2014
+\item Final thesis \hfill 25.10.2014 to 15.11.2014
 \end{itemize}
 
 \section{Literature}
