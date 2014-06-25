@@ -72,9 +72,9 @@
 \@writefile{toc}{\contentsline {subsubsection}{Data Exchange with Smart Card}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  }}{14}}
 \newlabel{fig:scc}{{11}{14}}
+\citation{chen}
 \citation{handbuch}
 \citation{handbuch}
-\citation{gp}
 \citation{gp}
 \citation{gp}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Command APDU Structure}}{15}}
@@ -86,40 +86,51 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  }}{16}}
 \newlabel{fig:gp_1}{{12}{16}}
 \citation{gp}
+\citation{gp}
 \citation{jcadg}
 \citation{jcadg}
 \citation{jcadg}
 \@writefile{toc}{\contentsline {subsubsection}{OPEN - GlobalPlatform Environment}{17}}
 \@writefile{toc}{\contentsline {paragraph}{Secure Channel Protocol}{17}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Java Card}{17}}
-\@writefile{toc}{\contentsline {subsubsection}{Language Specification}{17}}
-\citation{handbuch}
 \citation{handbuch}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  }}{18}}
 \newlabel{fig:jcvm}{{13}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{Language Specification}{18}}
 \@writefile{toc}{\contentsline {subsubsection}{Transaction Integrity}{18}}
+\citation{handbuch}
 \@writefile{toc}{\contentsline {subsubsection}{Persistent Object and Transient Object}{19}}
 \@writefile{toc}{\contentsline {subsubsection}{Java Card Applet}{19}}
-\@writefile{toc}{\contentsline {subsubsection}{Cryptography}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Android}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}State of Art}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Implementation Scenario}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overview}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  }}{20}}
-\newlabel{fig:SmartHome}{{14}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  }}{21}}
-\newlabel{fig:softwareStructure}{{15}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Software Structure}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{Javacard Cryptography}{19}}
+\citation{chen}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces package: \emph  {javacard.security}}}{20}}
+\newlabel{table:rapdu}{{5}{20}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces package: \emph  {javacardx.crypto}}}{20}}
+\newlabel{table:rapdu}{{6}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  }}{21}}
+\newlabel{fig:SmartHome}{{14}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Android}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}State of Art}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Implementation Scenario}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overview}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces  }}{22}}
+\newlabel{fig:softwareStructure}{{15}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Software Structure}{22}}
 \citation{ramGP}
 \citation{ramGP}
-\@writefile{toc}{\contentsline {subsubsection}{Client Structure}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  }}{23}}
-\newlabel{fig:clientStructure}{{16}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces  }}{24}}
-\newlabel{fig:apsd}{{17}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces  }}{25}}
-\newlabel{fig:serverStructure}{{18}{25}}
-\@writefile{toc}{\contentsline {subsubsection}{Server Structure}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{Client Structure}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces  }}{24}}
+\newlabel{fig:clientStructure}{{16}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces  }}{25}}
+\newlabel{fig:apsd}{{17}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces  }}{26}}
+\newlabel{fig:serverStructure}{{18}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{Server Structure}{27}}
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Tool Support}{27}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}System Design}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Communication Applet Design}{27}}
+\@writefile{toc}{\contentsline {subsubsection}{Interface between Applet and CAD}{27}}
+\@writefile{toc}{\contentsline {paragraph}{SELECT APDU}{27}}
 \bibdata{opc_ua}
 \bibcite{O1}{1}
 \bibcite{O3}{2}
@@ -131,7 +142,12 @@
 \bibcite{uiccDef}{8}
 \bibcite{handbuch}{9}
 \bibcite{jcadg}{10}
-\bibcite{gp}{11}
-\bibcite{ramGP}{12}
+\bibcite{chen}{11}
+\bibcite{gp}{12}
+\bibcite{ramGP}{13}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces SELECT command APDU}}{28}}
+\newlabel{select-apdu}{{7}{28}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces SELECT response APDU}}{28}}
+\newlabel{select-response-apdu}{{8}{28}}
+\@writefile{toc}{\contentsline {paragraph}{Entity Authentication}{28}}
 \bibstyle{splncs}
-\@writefile{toc}{\contentsline {subsubsection}{Implementation Tool Support}{26}}
