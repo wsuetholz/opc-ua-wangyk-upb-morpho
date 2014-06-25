@@ -95,7 +95,7 @@ One of the charming features provided by OPC UA is \emph{Event Notifications}. W
 \subsubsection{Standard OPC UA Server}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1\textwidth]{server.jpg}
+	\includegraphics[width=0.8\textwidth]{server.jpg}
 		\caption[ ]{OPC UA Server Structure\cite{O1}}
 	\label{fig:server}
 \end{figure}
@@ -104,7 +104,7 @@ In figure~\ref{fig:server}, the structure of one standard OPC UA Server is descr
 \subsubsection{Standard OPC UA Client}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.1\textwidth]{client.jpg}
+	\includegraphics[width=1.0\textwidth]{client.jpg}
 		\caption[ ]{OPC UA Client Structure\cite{O1}}
 	\label{fig:client}
 \end{figure}
@@ -115,7 +115,7 @@ Figure~\ref{fig:client} pictures one simple OPC UA client containing client appl
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{opc_ua_cs_comm.jpg}
+	\includegraphics[width=0.8\textwidth]{opc_ua_cs_comm.jpg}
 		\caption[ ]{OPC UA Client Server Communication\cite{O2}}
 	\label{fig:opc_ua_cs_comm}
 \end{figure}
@@ -218,21 +218,46 @@ ISO 7816-5& Number system and registration procedure for application identifiers
 ISO 7816-6& Interindustry data elements  \\
 \hline
 \end{tabular}
-\label{table:rapdu}
+\label{table:ISO7816}
 \end{table}
 
 In ISO/IEC 7816 standards family,  the smart card's fundamental properties and functionalities are defined.
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.2\textwidth]{scc.jpg}
+	\includegraphics[width=0.8\textwidth]{scc.jpg}
 		\caption[ ]{Smart Card Software Components\cite{jcadg}}
 	\label{fig:scc}
 \end{figure}
 
 \subsubsection{Smart Card Software Components}
 As illustrated in figure~\ref{fig:scc}, one typical smart card software includes Card Operation System, native services such as I/O operation and memory management, Java Card Runtime Environment(JCRE) that consists of Java card  Virtual Machine and Framework who is in charge of dispatching APDU as well as applet management, installed applet and at last other optional industry specific extensions\cite{jcadg}
+\subsubsection{Smart card File Management}
+One of smart card's characteristics is data storage media. But in contrast with other storage device, the most distinguishing feature of smart card file system is that, there exists no man-machine interface\cite{handbuch}, which means all files are addressed with help of hexadecimal codes and every single file process command is strictly based on this shema.
 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{file}
+		\caption[ ]{the internal structure of a file in smart card file management system\cite{handbuch}}
+	\label{fig:file}
+\end{figure}
+
+\paragraph{File Structure}
+As pictured in figure~\ref{fig:file}, files on smart card consist of two parts,  the header, which encapsulates administrative information such as, file structure and access conditions, the body, that stores real user data and is linked with file header using a pointer. This file management mechanism has its own advantage. To be more specifically, since file header and body are separately located, therefore even write/read error occurs in file body, file header, which is under normal circumstances never altered and saves essential access conditions, will not be affected, which in return provides better physical storage security.
+
+\paragraph{File Types}
+According to ISO/IEC 7816-4 specification, smart card offers two major file types, dedicated file (DF) and elementary file (EF). DF is also described as directory file, which contains lower-level DFs and EFs. And in EF, real user data is stored. Moreover there is a special DF, called master file (MF), which represents root directory of smart card file system and only selected by smart card OS. Figure~\ref{fig:file-structure} illustrates one possible architecture of smart card file system.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{file-structure}
+		\caption[ ]{File Tree on Smart Card\cite{handbuch}}
+	\label{fig:file-structure}
+\end{figure}
+
+\paragraph{PKCS{\#}15}
+As already shown, smart card not only is used as storage media but also acts as cryptographic token which offers enhanced security and privacy functionalities for other applications. The PKCS\#15 (Public key cryptography standards) specification\cite{pkcs}, which was proposed by RSA Inc. and is nowadays worldwide accepted, provide standards, that define how to store credential information such as cryptographic keys, certificates on smart card, and how to retrieve specified token with help from PKCS\#15 interpreter.
+ 
 \subsubsection{Data Exchange with Smart Card}
 The communication protocol between smart card and terminal is described as Master-Slave relationship\cite{handbuch}, that means terminal device knowns as Master processes unidirectional control over its slave, namely smart card. Once Master-Slave relationship is established, each communication will be initialized by Master and Slave only reacts based on Master's command. 
 
@@ -275,23 +300,6 @@ Since all communication between smart card and terminal is based on digital elec
 
 In secure message mechanism, both message sender and receiver must agree on to be applied message cryptographic algorithms and corresponding pre-shared keys. In telecommunication domain in accordance with ISO/IEC 7816-4\cite{handbuch}, TLV(Type-lengthl-valuse)-formed data, which encapsulates relative user information, is used to perform secure messaging as data carrier.
 
-\subsection{GlobalPlatform and Remote Application Management}
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1.2\textwidth]{gp_1.jpg}
-		\caption[ ]{Card Operation System Architecture\cite{gp}}
-	\label{fig:gp_1}
-\end{figure}
-GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. It is now widely accepted and used as industry standard for managing Java Applet based application on Javacard Operation System in several domains, for instance in communication industries and payment company\cite{gp}. 
-
-As shown in figure~\ref{fig:gp_1},  the GlobalPlatform card architecture contains four essential parts. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offers customers various functionalities and services. The security domain (SD), that is usually associated with particular application and known as on-card representatives  of off-card  authorities. SD is in charge of message encryption as well as decryption, creation and validation of digital signature and handling keys used in cryptographic processes. The last component is OPEN framework\cite{gp}.
-
-\subsubsection{OPEN - GlobalPlatform Environment}
-OPEN provides various sets of APIs offering functionalities such as entity authentication, remote data exchange, secure channel configuration and remote application management. This framework also performs APDU dispatching as well as is application selection and logical channel management\cite{gp}. Logical channel is designed to enable the data exchange between multi applications and one terminal. Each opened logical channel will handle message regard of one application.  Moreover the special logic channel named basic channel is always opened. In order to ensure system security, OPEN supports secure mechanisms such as,  user authentication , resource availability guarantee and secure channel protocol .
-\paragraph{Secure Channel Protocol}
-In particular, GlobalPlatform has designed the secure mechanism: secure channel protocol, to guarantee a secure communication. It ensure confidentiality of exchanged information and offers date integrity check.  Moreover Secure Channel Protocol also introduces  a cryptographic exchange process to let smart card and off-card entities to perform entity authentication with each other. 
-
 \subsection{Java Card}
 Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, it also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, like limited memory resource and computer ability.
 
@@ -332,7 +340,23 @@ Java Card Applet refers to the Java Card language programmed code, which extends
 \item  \emph{deselect()}, this method is called by JCRE to inform corresponding applet that it is no longer selected by JCRE.
 \end{itemize}
 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{applet-execution-states}
+		\caption[ ]{Javacard Applet Execution States\cite{handbuch}}
+	\label{fig:applet-execution-states}
+\end{figure}
 After finishing programming one Applet, it comes to next phase, namely applet installation. This process takes place usually at the factory or office under the control of card issuer. When one applet is installed on smart card, it only directly communicates with JCRE and other installed applet classes. It should be pointed out, this installed Java Card applet is also belongs to \emph{persistent object} and stored in smart card nonvolatile memory space. Every Java Card Applet is assigned one unique Application ID, which is also known as AID and be used by JCRE to \emph{register} and \emph{select} corresponding applet at run time.
+
+Figure~\ref{fig:applet-execution-states} pictures execution states transaction of Javacard applet. Furthermore figure~\ref{fig:apdu-command-processing} illustrates how JCRE selects and deselects one applet based on input APDU commands.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{apdu-command-processing}
+		\caption[ ]{APDU command processing\cite{handbuch}}
+	\label{fig:apdu-command-processing}
+\end{figure}
+
 
 \subsubsection{Javacard Cryptography}
 Javacard provides a list of APIs to support not only smart card application and data exchange security but also to reinforce other system's security by acting as essential security token. 
@@ -343,6 +367,20 @@ In order to ensure sure messaging between smart card and terminal following thre
 \item \emph{Message Integrity:} In order to protect exchanged message from unauthorized modification and to provide authenticity assurance, message authentication code (MAC) is calculated based on to be transfered data and integrated in that message.
 \end{itemize}
 Packages \emph{javacard.security} and \emph{javacardx.crypto} support aforementioned security mechanism with following class and interfaces\cite{chen}:
+
+\begin{table}[ht]
+\caption{package: \emph{javacardx.crypto}}
+\centering
+\begin{tabular}{lllll}
+\hline
+ Class or Interface & Function Description\\
+\hline\hline
+Cipher & Abstract class offers cryptographic cipher used for encryption and decryption\\
+KeyEncryption & Class provides implementation of keys\\
+\hline
+\end{tabular}
+\label{table:javacardx-crypto}
+\end{table}
 
 \begin{table}[ht]
 \caption{package: \emph{javacard.security}}
@@ -368,23 +406,40 @@ RandomData&Abstract class for generation of random data \\
 CrptoException& Exception class\\
 \hline
 \end{tabular}
-\label{table:rapdu}
+\label{table:javacard-security}
 \end{table}
 
-\begin{table}[ht]
-\caption{package: \emph{javacardx.crypto}}
-\centering
-\begin{tabular}{lllll}
-\hline
- Class or Interface & Function Description\\
-\hline\hline
-Cipher & Abstract class offers cryptographic cipher used for encryption and decryption\\
-KeyEncryption & Class provides implementation of keys\\
-\hline
-\end{tabular}
-\label{table:rapdu}
-\end{table}
 
+\subsection{GlobalPlatform and Remote Application Management}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{gp_1.jpg}
+		\caption[ ]{Card Operation System Architecture\cite{gp}}
+	\label{fig:gp_1}
+\end{figure}
+GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. It is now widely accepted and used as industry standard for managing Java Applet based application on Javacard Operation System in several domains, for instance in communication industries and payment company\cite{gp}. 
+
+As shown in figure~\ref{fig:gp_1},  the GlobalPlatform card architecture contains four essential parts. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offers customers various functionalities and services. The security domain (SD), that is usually associated with particular application and known as on-card representatives  of off-card  authorities. SD is in charge of message encryption as well as decryption, creation and validation of digital signature and handling keys used in cryptographic processes. The last component is OPEN framework\cite{gp}.
+
+\subsubsection{OPEN - GlobalPlatform Environment}
+OPEN provides various sets of APIs offering functionalities such as entity authentication, remote data exchange, secure channel configuration and remote application management. This framework also performs APDU dispatching as well as is application selection and logical channel management\cite{gp}. Logical channel is designed to enable the data exchange between multi applications and one terminal. Each opened logical channel will handle message regard of one application.  Moreover the special logic channel named basic channel is always opened. In order to ensure system security, OPEN supports secure mechanisms such as,  user authentication , resource availability guarantee and secure channel protocol .
+\paragraph{Secure Channel Protocol}
+In particular, GlobalPlatform has designed the secure mechanism: secure channel protocol, to guarantee a secure communication. It ensures confidentiality of exchanged information and offers date integrity check.  Moreover Secure Channel Protocol also introduces  a cryptographic exchange process to let smart card and off-card entities to perform entity authentication with each other. 
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{open-architecture.jpg}
+		\caption[ ]{OpenMobileAPI architecture overview\cite{open}}
+	\label{fig:open-architecture}
+\end{figure}
+
+\subsection{OpenMobileAPI}
+OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal and chip card, which can be used by on terminal installed mobile application to access recourse stored on smart card as well as call function provided by card applet. Moreover OpenMobileAPI offers security mechanisms such as access control, that can be applied for mutual authentication between application and secure element. Figure~\ref{fig:open-architecture} presents an architecture overview of OpenMobileAPI, which consist of three functional layers:
+ \begin{itemize}
+  \item \emph{Transport Layer:} This layer is in charge of providing secure elements access control services using APDUs and acts as cornerstone for other two layers.
+  \item \emph{Service Layer:} Abstract interfaces, that provide various functions such as secure storage, cryptographic services, are offered by this layer.
+  \item \emph{Application Layer:} Mobile applications which benefit from OpenMobileAPI lie in this layer.
+\end{itemize}
 
 \subsection{Android}
 
@@ -396,6 +451,7 @@ KeyEncryption & Class provides implementation of keys\\
 		\caption[ ]{Smart Home}
 	\label{fig:SmartHome}
 \end{figure}
+
 \subsection{Overview}
 Figure~\ref{fig:SmartHome} describes the basic structure and functionalities provided by implementation scenario-Smart Home.
 In each room , embedded with UICC smart card sensors which are in charge of monitoring environment variables, such as, home temperature, luminance and how much water the pet has, as well as embedded UICC smart card device controller whose responsibility is to control electric devices based on user's commands, such as opening windows, turning off the heating or starting to make coffee, are deployed. On each those sensor and control device an OPC UA server is installed, its major responsibility is controlling that corresponding device as well as data gathered by it.  Moreover each door in this scenario is equipped with a digital lock, that only allows people with enough authority to access. Also a OPC UA server exists on those locks and they are embedded with UICC smart card. Users in this scenario can be home owner or guests. Using embedded with UICC smart card cell phone and on this mobile terminal installed OPC UA client application, subscriber is capable of configuring sensor and control device , remote controlling aforementioned secure devices, viewing historical information recorded by corresponding facilities. With the help of such services a comfortable living condition is created in an automated way.  Moreover the root user, namely the owner of this house, is also able to assign the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care.
@@ -500,8 +556,41 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 }
 \end{table}
 
+\paragraph{Verify APDU}
+This APDU command and response set is used to let CommunicationStack applet verify identity of terminal user or application.
+
+\begin{table}[h]
+\caption{Verify command APDU}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
+0xB0 & 0x10 & 0x00 & 0x00 & Length of PIN data & PIN & N/A \\ \hline
+\end{tabular}
+}
+\label{verify-command-apdu}
+\end{table}
+Two categories of response APDUs are expected, success response APDU and fail response APDU.
+
+\begin{table}[h]
+\caption{Verify response APDU}
+\label{verify-response-apdu}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+Optional data & Status word & Description                                \\ \hline
+No data       & 0x9000      & Successful processing                      \\ \hline
+              & 0x6300      & Verification failed \\ \hline               
+\end{tabular}
+}
+\end{table}
+
 \paragraph{Entity Authentication}
-When CommunicationStack is successfully select by JCRE, it then comes to entity authentication phase, which consist of authentication process between UICC and OTA server as well as authentication process between UICC and OPC UA application code.
+When CommunicationStack is successfully select by JCRE, it then comes to entity authentication phase, which consists of authentication process between UICC and OTA server as well as authentication process between UICC and OPC UA application code.
+
+
+
+
 \bibliography{opc_ua}
 \bibliographystyle{splncs}
 
