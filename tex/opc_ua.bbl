@@ -55,6 +55,11 @@ SID:
 \newblock Java card applet developers' guide.
 \newblock (July 1998)
 
+\bibitem{pkcs}
+{RSA Laboratories}:
+\newblock Pkcs \#15 v1.1: Cryptographic token information syntax standard.
+\newblock (December 1999)
+
 \bibitem{chen}
 {Zhiqun Chen}:
 \newblock Java card technology for smart card.
@@ -64,6 +69,11 @@ SID:
 {GlobalPlatform}:
 \newblock Globalplattform card specification.
 \newblock (January 2011)
+
+\bibitem{open}
+{simalliance}:
+\newblock Open mobile api specification.
+\newblock (February 2014)
 
 \bibitem{ramGP}
 {GlobalPlatform Card}:
