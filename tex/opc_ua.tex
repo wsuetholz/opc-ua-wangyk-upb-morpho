@@ -236,9 +236,9 @@ As illustrated in figure~\ref{fig:scc}, one typical smart card software includes
 \subsubsection{Data Exchange with Smart Card}
 The communication protocol between smart card and terminal is described as Master-Slave relationship\cite{handbuch}, that means terminal device knowns as Master processes unidirectional control over its slave, namely smart card. Once Master-Slave relationship is established, each communication will be initialized by Master and Slave only reacts based on Master's command. 
 
-When a smart card is inserted in a terminal, Master will send its Slave a RESET command which causes smart card to perform a Power-on-Reset behavior. After this Power-on-Reset, smart card informs Master using Answer-to-Rest (ATR) message about card state and communication parameters. In the next step, if necessary terminal will generate a Protocol Type Select (PTS) command, which is used to choose communication protocol and parameters suggest by smart card. After a successful negotiation, smart card and terminal are able to exchange date using Application Protocol Data Unit.
+When a smart card is inserted in a terminal, Master will send its Slave a RESET command which causes smart card to perform a Power-on-Reset behavior. After this Power-on-Reset, smart card informs Master using Answer-to-Rest (ATR) message about card state and communication parameters. In the next step, if necessary terminal will generate a Protocol Type Select (PTS) command, which is used to choose communication protocol and parameters suggested by smart card. After a successful negotiation, smart card and terminal are able to exchange date using Application Protocol Data Unit.
   
-Application Protocol Data Unit, or APDU for short, is used  to perform data exchange between smart card and CAD. There are two categories of APDU, namely command APDU and response APDU. Command APDU structure and response APDU structure are described in Table~\ref{table:capdu} and Table~\ref{table:rapdu} respectively\cite{handbuch}. 
+Application Protocol Data Unit, or APDU for short, is used  to perform data exchange between smart card and CAD and its structures satisfy ISO 7816-4 specification\cite{chen}. There are two categories of APDU, namely command APDU and response APDU. Command APDU structure and response APDU structure are described in Table~\ref{table:capdu} and Table~\ref{table:rapdu} respectively\cite{handbuch}. 
 
 \begin{table}[!htbp]
 \caption{Command APDU Structure}
@@ -269,6 +269,7 @@ Le field &the length of data sent by card \\
 \end{tabular}
 \label{table:rapdu}
 \end{table}
+
 \subsubsection{Secure Messaging}
 Since all communication between smart card and terminal is based on digital electrical pulse performed on card I/O line, attacker can easily record all communication information and and recover it. Therefore secure messaging mechanism is proposed and used to protect against aforementioned message eavesdropping, to ensure authenticity and confidentiality of exchanged information.
 
@@ -331,9 +332,59 @@ Java Card Applet refers to the Java Card language programmed code, which extends
 \item  \emph{deselect()}, this method is called by JCRE to inform corresponding applet that it is no longer selected by JCRE.
 \end{itemize}
 
-After finishing programming one Applet, it comes to next phase, namely applet installation. This process takes place usually at the factory or office under the control of card issuer. When one applet is installed on smart card, it only directly communicates with JCRE and other installed applet classes. It should be pointed out, this installed Java Card applet is also belongs to \emph{persistent object} and stored in smart card nonvolatile memory space. Every Java Card Applet is assigned one unique Application ID, which is also known as AID.
+After finishing programming one Applet, it comes to next phase, namely applet installation. This process takes place usually at the factory or office under the control of card issuer. When one applet is installed on smart card, it only directly communicates with JCRE and other installed applet classes. It should be pointed out, this installed Java Card applet is also belongs to \emph{persistent object} and stored in smart card nonvolatile memory space. Every Java Card Applet is assigned one unique Application ID, which is also known as AID and be used by JCRE to \emph{register} and \emph{select} corresponding applet at run time.
 
-\subsubsection{Cryptography}
+\subsubsection{Javacard Cryptography}
+Javacard provides a list of APIs to support not only smart card application and data exchange security but also to reinforce other system's security by acting as essential security token. 
+In order to ensure sure messaging between smart card and terminal following three aspects must be considered:
+\begin{itemize}
+\item \emph{Entity Authentication:} Usually mutual authentication is applied to guarantee the authorities of both communication partners.
+\item \emph{Message Confidentiality:} The transfered information is encrypted using algorithms negotiated between two communication entities to ensure data privacy and security.
+\item \emph{Message Integrity:} In order to protect exchanged message from unauthorized modification and to provide authenticity assurance, message authentication code (MAC) is calculated based on to be transfered data and integrated in that message.
+\end{itemize}
+Packages \emph{javacard.security} and \emph{javacardx.crypto} support aforementioned security mechanism with following class and interfaces\cite{chen}:
+
+\begin{table}[ht]
+\caption{package: \emph{javacard.security}}
+\centering
+\begin{tabular}{lllll}
+\hline
+ Class or Interface & Function Description\\
+\hline\hline
+ Key &Interface for all keys   \\
+ SecrectKey &Interface for symmetric algorithms' keys\\
+DESKey & Interface for keys used for DES or two-key triple DES or three-key triple DES\\
+PrivateKey &Interface for private keys\\
+PublicKey & Interface for public keys\\
+RSAPrivateKey& Interface for keys used by RSA algorithm to sign data\\
+RSAPublicKey & Interface for keys used to verify signatures generated with RSA \\
+DSAKey& Interface for keys used by DSA\\ 
+DSAPrivateKey& Interface for keys to sign data with DSA algorithm\\
+DSAPublicKey& Interface for keys to verify signatures generated with DSA\\
+KeyBuilder& Factory class implemented to construct key objects\\
+MessageDigest& Abstract class for hashing algorithm\\
+Signature& Abstract class for signature algorithm\\
+RandomData&Abstract class for generation of random data \\
+CrptoException& Exception class\\
+\hline
+\end{tabular}
+\label{table:rapdu}
+\end{table}
+
+\begin{table}[ht]
+\caption{package: \emph{javacardx.crypto}}
+\centering
+\begin{tabular}{lllll}
+\hline
+ Class or Interface & Function Description\\
+\hline\hline
+Cipher & Abstract class offers cryptographic cipher used for encryption and decryption\\
+KeyEncryption & Class provides implementation of keys\\
+\hline
+\end{tabular}
+\label{table:rapdu}
+\end{table}
+
 
 \subsection{Android}
 
@@ -413,7 +464,44 @@ Server here refers sensors, control device as well digital locks that together b
 
 \subsubsection{Implementation Tool Support}
 Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class API and software modules, that can be applied to design complete Java Card Applet as well as to debug Java source. When it comes to running test with Java Card Applet, apart from using regular cell phone with UICC smart card, on where to be tested applet is installed, Morpho Card Reader (MCR) or Java virtual card together with iCardReader, Universal Test Environment (UTE) can be applied. To be more specifically, iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected with test PC using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment provided by Morpho uses Java languages developed test cases and test scenarios\footnote{Test scenario is a collection of relative test cases.} to simulate user cases and obverse related smart card reactions. In contrast with iCardreader, which can only send APDU command sequence to smart card, UTE integrates more software models that can be used to simulate such as security domain offered by other card application provider, and therefore can provide more sophisticate test environment.
+\section{System Design}
+\subsection{Communication Applet Design}
+\subsubsection {Interface between Applet and CAD}
+Before concrete implementation of Javacard Applet code, the interface, which in essence is a set of commond APDUs and corresponding response APDUs, between applet and CAD must be well defined.  The CommunicationStack support two categories commond APDU:
+ \begin{itemize}
+  \item The \emph{SELECT} Command APDU, which is used by JCRE to select CommunicationStack applet.
+  \item Other command APDUs, which are introduced in order to provide functionalists such as: entity authentication, message exchange as well as cipher negotiation and etc.
+\end{itemize}
 
+\paragraph{SELECT APDU}
+The header of this command APDU is fixed and \emph{Lc} indicates the length of CommunicationStack AID. In\emph{Data filed} real AID is saved.
+\begin{table}[h]
+\caption{SELECT command APDU}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
+0x00 & 0xA4 & 0x04 & 0x00 & 0x0A & \begin{tabular}[c]{@{}l@{}}0x00, 0x01, 0x02, 0x03, 0x04\\ 0x05, 0x06, 0x07, 0x08, 0x09\end{tabular} & N/A \\ \hline
+\end{tabular}
+}
+\label{select-apdu}
+\end{table}
+Two categories of response APDUs are expected, one represents successful processing of \emph{SELECT} command APDU and the other stands for failure.
+\begin{table}[h]
+\caption{SELECT response APDU}
+\label{select-response-apdu}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+Optional data & Status word & Description                                \\ \hline
+No data       & 0x9000      & Successful processing                      \\ \hline
+              & 0x6999      & Failed to select CommunicationStack applet \\ \hline               
+\end{tabular}
+}
+\end{table}
+
+\paragraph{Entity Authentication}
+When CommunicationStack is successfully select by JCRE, it then comes to entity authentication phase, which consist of authentication process between UICC and OTA server as well as authentication process between UICC and OPC UA application code.
 \bibliography{opc_ua}
 \bibliographystyle{splncs}
 
