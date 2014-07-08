@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  25 JUN 2014 11:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  8 JUL 2014 15:45
 entering extended mode
 **opc_ua.tex
 (C:\workspace\opc_ua\tex\opc_ua.tex
@@ -281,168 +281,159 @@ File: opc_ua_commstack.jpg Graphic file (type jpg)
 Package pdftex.def Info: opc_ua_commstack.jpg used on input line 138.
 (pdftex.def)             Requested size: 347.12354pt x 250.7291pt.
  [8 <C:/workspace/opc_ua/tex/opc_ua_commstack.jpg>]
-<opc_ua_messchunk.jpg, id=40, 514.92375pt x 367.3725pt>
-File: opc_ua_messchunk.jpg Graphic file (type jpg)
 
-<use opc_ua_messchunk.jpg>
-Package pdftex.def Info: opc_ua_messchunk.jpg used on input line 152.
-(pdftex.def)             Requested size: 260.34265pt x 185.74306pt.
- <tcp_1.jpg, id=41, 558.58687pt x 275.52937pt>
-File: tcp_1.jpg Graphic file (type jpg)
+LaTeX Warning: Reference `fig:opc_ua_messchunk' on page 9 undefined on input li
+ne 146.
 
-<use tcp_1.jpg>
-Package pdftex.def Info: tcp_1.jpg used on input line 159.
-(pdftex.def)             Requested size: 347.12354pt x 171.22583pt.
- <tcp_2.jpg, id=42, 529.98pt x 213.79875pt>
-File: tcp_2.jpg Graphic file (type jpg)
- <use tcp_2.jpg>
-Package pdftex.def Info: tcp_2.jpg used on input line 168.
-(pdftex.def)             Requested size: 347.12354pt x 140.0343pt.
-
-[9 <C:/workspace/opc_ua/tex/opc_ua_messchunk.jpg>]
-<tcp_3.jpg, id=46, 599.99156pt x 404.26031pt>
-File: tcp_3.jpg Graphic file (type jpg)
- <use tcp_3.jpg>
-Package pdftex.def Info: tcp_3.jpg used on input line 176.
-(pdftex.def)             Requested size: 347.12354pt x 233.8913pt.
- [10 <C:/workspace/opc_ua/tex/tcp_1.jpg> <C:/workspace/opc_ua/tex/tcp_2.jpg>] [
-11 <C:/workspace/opc_ua/tex/tcp_3.jpg>]
-Overfull \hbox (13.4337pt too wide) in paragraph at lines 210--222
+[9]
+Overfull \hbox (13.43373pt too wide) in paragraph at lines 173--185
  [][] 
  []
 
-<scc.jpg, id=53, 436.63126pt x 304.13625pt>
+<scc.jpg, id=43, 436.63126pt x 304.13625pt>
 File: scc.jpg Graphic file (type jpg)
  <use scc.jpg>
-Package pdftex.def Info: scc.jpg used on input line 228.
+Package pdftex.def Info: scc.jpg used on input line 191.
 (pdftex.def)             Requested size: 277.69987pt x 193.43065pt.
- [12]
-<file.pdf, id=57, 542.025pt x 379.4175pt>
+
+<file.pdf, id=44, 542.025pt x 379.4175pt>
 File: file.pdf Graphic file (type pdf)
  <use file.pdf>
-Package pdftex.def Info: file.pdf used on input line 240.
+Package pdftex.def Info: file.pdf used on input line 203.
 (pdftex.def)             Requested size: 277.69987pt x 194.39772pt.
- [13 <C:/workspace/opc_ua/tex/scc.jpg>] <file-structure.pdf, id=62, 582.67688pt
- x 415.5525pt>
+ [10] [11 <C:/workspace/opc_ua/tex/scc.jpg> <C:/workspace/opc_ua/tex/file.pdf>]
+
+<file-structure.pdf, id=75, 582.67688pt x 415.5525pt>
 File: file-structure.pdf Graphic file (type pdf)
-
-<use file-structure.pdf>
-Package pdftex.def Info: file-structure.pdf used on input line 253.
+ <use file-structure.pdf>
+Package pdftex.def Info: file-structure.pdf used on input line 216.
 (pdftex.def)             Requested size: 347.12354pt x 247.56433pt.
- [14 <C:/workspace/opc_ua/tex/file.pdf>]
-Underfull \vbox (badness 1881) has occurred while \output is active []
 
- [15 <C:/workspace/opc_ua/tex/file-structure.pdf>]
-Overfull \hbox (24.0705pt too wide) in paragraph at lines 301--302
+[12 <C:/workspace/opc_ua/tex/file-structure.pdf>]
+<master-slave-relationship.pdf, id=93, 424.58624pt x 307.1475pt>
+File: master-slave-relationship.pdf Graphic file (type pdf)
+
+<use master-slave-relationship.pdf>
+Package pdftex.def Info: master-slave-relationship.pdf used on input line 228.
+(pdftex.def)             Requested size: 347.12354pt x 251.12207pt.
+ [13 <C:/workspace/opc_ua/tex/master-slave-relationship.pdf>]
+Overfull \hbox (24.0705pt too wide) in paragraph at lines 271--272
 \OT1/cmr/m/n/10 keys. In telecom-mu-ni-ca-tion do-main in ac-cor-dance with ISO
 /IEC 7816-4[9], TLV(Type-
  []
 
-<jcvm.jpg, id=107, 330.48468pt x 205.5178pt>
+<jcvm.jpg, id=118, 330.48468pt x 205.5178pt>
 File: jcvm.jpg Graphic file (type jpg)
  <use jcvm.jpg>
-Package pdftex.def Info: jcvm.jpg used on input line 309.
+Package pdftex.def Info: jcvm.jpg used on input line 279.
 (pdftex.def)             Requested size: 347.12354pt x 215.8722pt.
- [16] [17 <C:/workspace/opc_ua/tex/jcvm.jpg>]
-<applet-execution-states.pdf, id=115, 532.99126pt x 94.85437pt>
+ [14] [15 <C:/workspace/opc_ua/tex/jcvm.jpg>]
+<applet-execution-states.pdf, id=125, 532.99126pt x 94.85437pt>
 File: applet-execution-states.pdf Graphic file (type pdf)
 
 <use applet-execution-states.pdf>
-Package pdftex.def Info: applet-execution-states.pdf used on input line 345.
+Package pdftex.def Info: applet-execution-states.pdf used on input line 315.
 (pdftex.def)             Requested size: 347.12354pt x 61.77762pt.
 
-<apdu-command-processing.pdf, id=116, 460.72125pt x 388.45125pt>
+<apdu-command-processing.pdf, id=126, 460.72125pt x 388.45125pt>
 File: apdu-command-processing.pdf Graphic file (type pdf)
 
 <use apdu-command-processing.pdf>
-Package pdftex.def Info: apdu-command-processing.pdf used on input line 355.
+Package pdftex.def Info: apdu-command-processing.pdf used on input line 325.
 (pdftex.def)             Requested size: 277.69987pt x 234.13945pt.
- [18 <C:/workspace/opc_ua/tex/applet-execution-states.pdf>]
-Overfull \hbox (42.68146pt too wide) in paragraph at lines 374--383
+ [16] [17 <C:/workspace/opc_ua/tex/applet-execution-states.pdf> <C:/workspace/o
+pc_ua/tex/apdu-command-processing.pdf
+
+pdfTeX warning: pdflatex.exe (file C:/workspace/opc_ua/tex/apdu-command-process
+ing.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
+>]
+Overfull \hbox (42.68146pt too wide) in paragraph at lines 344--353
  [][] 
  []
 
 
-Overfull \hbox (45.62366pt too wide) in paragraph at lines 388--410
+Overfull \hbox (45.62366pt too wide) in paragraph at lines 358--380
  [][] 
  []
 
-<gp_1.jpg, id=128, 490.83376pt x 475.02469pt>
+<gp_1.jpg, id=155, 490.83376pt x 475.02469pt>
 File: gp_1.jpg Graphic file (type jpg)
  <use gp_1.jpg>
-Package pdftex.def Info: gp_1.jpg used on input line 417.
+Package pdftex.def Info: gp_1.jpg used on input line 387.
 (pdftex.def)             Requested size: 242.98541pt x 235.15605pt.
- [19 <C:/workspace/opc_ua/tex/apdu-command-processing.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20 <C:/workspace/opc_ua/tex/gp_1.jpg>]
-<open-architecture.jpg, id=151, 377.91188pt x 289.08pt>
+ [18]
+<open-architecture.jpg, id=160, 377.91188pt x 289.08pt>
 File: open-architecture.jpg Graphic file (type jpg)
 
 <use open-architecture.jpg>
-Package pdftex.def Info: open-architecture.jpg used on input line 431.
+Package pdftex.def Info: open-architecture.jpg used on input line 401.
 (pdftex.def)             Requested size: 277.69987pt x 212.42493pt.
 
-<homeoverview.jpg, id=152, 1342.01375pt x 706.64pt>
+Underfull \vbox (badness 4013) has occurred while \output is active []
+
+ [19 <C:/workspace/opc_ua/tex/gp_1.jpg>] [20 <C:/workspace/opc_ua/tex/open-arch
+itecture.jpg>] <homeoverview.jpg, id=168, 1342.01375pt x 706.64pt>
 File: homeoverview.jpg Graphic file (type jpg)
  <use homeoverview.jpg>
-Package pdftex.def Info: homeoverview.jpg used on input line 450.
+Package pdftex.def Info: homeoverview.jpg used on input line 424.
 (pdftex.def)             Requested size: 416.54718pt x 219.3257pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 450--451
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 424--425
  [][] 
  []
 
-[21] [22 <C:/workspace/opc_ua/tex/open-architecture.jpg>]
-<csoverview.pdf, id=159, 487.8225pt x 347.79938pt>
+[21 <C:/workspace/opc_ua/tex/homeoverview.jpg>]
+<csoverview.pdf, id=172, 487.8225pt x 347.79938pt>
 File: csoverview.pdf Graphic file (type pdf)
  <use csoverview.pdf>
-Package pdftex.def Info: csoverview.pdf used on input line 464.
+Package pdftex.def Info: csoverview.pdf used on input line 438.
 (pdftex.def)             Requested size: 381.838pt x 272.23767pt.
 
-Overfull \hbox (34.71446pt too wide) in paragraph at lines 464--465
+Overfull \hbox (34.71446pt too wide) in paragraph at lines 438--439
  [][] 
  []
 
-[23 <C:/workspace/opc_ua/tex/homeoverview.jpg>]
-<clientStructure.pdf, id=163, 551.05875pt x 460.72125pt>
+[22] <clientStructure.pdf, id=176, 551.05875pt x 460.72125pt>
 File: clientStructure.pdf Graphic file (type pdf)
 
 <use clientStructure.pdf>
-Package pdftex.def Info: clientStructure.pdf used on input line 495.
+Package pdftex.def Info: clientStructure.pdf used on input line 469.
 (pdftex.def)             Requested size: 347.12354pt x 290.2278pt.
- [24 <C:/workspace/opc_ua/tex/csoverview.pdf>]
-<apsd.jpg, id=175, 563.85657pt x 532.23843pt>
+ <apsd.jpg, id=177, 563.85657pt x 532.23843pt>
 File: apsd.jpg Graphic file (type jpg)
- <use apsd.jpg>
-Package pdftex.def Info: apsd.jpg used on input line 503.
+
+<use apsd.jpg>
+Package pdftex.def Info: apsd.jpg used on input line 477.
 (pdftex.def)             Requested size: 416.54718pt x 393.19244pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 503--504
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 477--478
  [][] 
  []
 
-[25 <C:/workspace/opc_ua/tex/clientStructure.pdf>] [26 <C:/workspace/opc_ua/tex
-/apsd.jpg>] <serverStructure.pdf, id=189, 551.05875pt x 532.99126pt>
+[23 <C:/workspace/opc_ua/tex/csoverview.pdf>] [24 <C:/workspace/opc_ua/tex/clie
+ntStructure.pdf>] [25 <C:/workspace/opc_ua/tex/apsd.jpg>]
+<serverStructure.pdf, id=202, 551.05875pt x 532.99126pt>
 File: serverStructure.pdf Graphic file (type pdf)
 
 <use serverStructure.pdf>
-Package pdftex.def Info: serverStructure.pdf used on input line 515.
+Package pdftex.def Info: serverStructure.pdf used on input line 489.
 (pdftex.def)             Requested size: 312.40906pt x 302.17348pt.
- [27] [28 <C:/workspace/opc_ua/tex/serverStructure.pdf>]
+ [26 <C:/workspace/opc_ua/tex/serverStructure.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (3.23172pt too wide) in paragraph at lines 589--590
+Overfull \hbox (3.23172pt too wide) in paragraph at lines 563--564
  \OT1/cmr/m/it/10 En-tity Au-then-ti-ca-tion[] \OT1/cmr/m/n/10 When Com-mu-ni-c
 a-tion-Stack is suc-cess-fully se-lect by JCRE,
  []
 
-(C:\workspace\opc_ua\tex\opc_ua.bbl [29]
+(C:\workspace\opc_ua\tex\opc_ua.bbl [28]
 Underfull \hbox (badness 5924) in paragraph at lines 38--42
 []\OT1/cmr/m/n/9 Wikipedia con-trib-u-tors:  Con-strained Ap-pli-ca-tion Pro-to
 -col.  $\OT1/cmtt/m/n/9 http : / /$
@@ -455,30 +446,33 @@ Missing character: There is no § in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
-) [30] (C:\workspace\opc_ua\tex\opc_ua.aux) ) 
+) [29] (C:\workspace\opc_ua\tex\opc_ua.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1958 strings out of 493921
- 25558 string characters out of 3144871
- 89062 words of memory out of 3000000
- 5237 multiletter control sequences out of 15000+200000
+ 1941 strings out of 493921
+ 25409 string characters out of 3144871
+ 88033 words of memory out of 3000000
+ 5223 multiletter control sequences out of 15000+200000
  8315 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,15n,43p,1460b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmtt9.pfb>
-Output written on opc_ua.pdf (30 pages, 1981758 bytes).
+ 29i,15n,43p,1360b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on opc_ua.pdf (29 pages, 2022764 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
+ 258 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
