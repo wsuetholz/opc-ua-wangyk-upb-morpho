@@ -31,14 +31,14 @@ Object Linking and Embedding for Process Control Unified Architecture, known as 
 
 According to the \emph{Mobile Economy 2013} from \emph{Global System for Mobile Communications Association}, at the end of year 2013 there are over 3.2 billion mobile   subscribers in total, which means one half the population of the earth now enjoy the social and economic convenience brought by mobile technology. Moreover by year 2017 700 million new subscribers are expected to be added. And the number of mobile subscriber will reach 4 billion in 2018. Mobil technology opens nowadays a promising market. 
 
-Mobile products  play an irreplaceable role at the heart of our  daily life. With the help of mobile technology, the user's world in many domains such as, education, financial transactions, health and etc. are inter-connected. Mobile users are enjoying the advantages of mobility. Services, like 24/7 monitored home security, full control about the management of home humidity and temperature, exist not only in science fiction film but also could be realized by today's technology.
+Mobile products  play an irreplaceable role at the heart of our  daily life. With the help of mobile technology, the user's world in many domains such as, education, financial transactions, health and etc. are inter-connected. Mobile users are enjoying the advantages of mobility. Services, like 24/7 monitored home security, full control over the management of home humidity and temperature, exist not only in science fiction film but also could be realized by today's technology.
 
 At the same time, mobility in industry and business world is also a critical  assert, which can not only increase efficiency and productivity but also drive new revenue generation and competitive advantage. The most convicting example here is Machine to Machine communication, that is also referred as M2M technology. In M2M communication, machines which are usually embedded with smart cards exchange gathered date with each other to accomplish common task using wireless or wired networks. M2M technology is widely employed in different industry spheres such as factory automation, remote access control and sensor monitoring. It boosts the efficiency of corresponding processes, offers centralized service support and date management, minimizes system response time.
 
-But in order to enjoy the aforementioned features, two tough issues must be resolved. First, how to achieve a common interface for the devices that participate in the system.  And second how to guarantee system security under different communication environments with various date complexity.
+But in order to enjoy the aforementioned features, two tough issues must be resolved. First, how to achieve a common interface for the devices that build the system.  And second how to guarantee system security under different communication environments with various date complexity and customer's requirement.
 
 \subsection{Solution Idea}
-In this master thesis, I am going to address solutions for questions mentioned in  section \emph{Introduction and Motivation} and  design a smart home system for the purpose of demonstration. In this smart home system, home owner using smart phone is capable of experiencing 24/7 home security service, remotely managing inner home environment parameters and assigning access permissions. This system consists of smart phones with Universal Integrated Circuit Cards (UICC  smart card), digital door locks, control devices and environment sensors. Moreover each device is equipped with smart card, which acts not only as secure token, that saves  user credentials, but also is in charge of communication management with other device.
+In this master thesis, I am going to address solutions for questions mentioned in  section \emph{Introduction and Motivation} and  design a smart home system for the purpose of demonstration. In this smart home system, home owner using smart phone is capable of experiencing 24/7 home security service, remotely managing inner home environment parameters and assigning access permissions. This system consists of smart phones with Universal Integrated Circuit Cards (UICC  smart card), digital door locks, electronic devices (such as coffee maker) and environment sensors. Moreover each device is equipped with smart card, which acts not only as secure token, that saves  user credentials, but also is in charge of communication management with other devices.
 
 In particular, I will introduce the newly released industry automation standards object linking and embedding for processes control unified architecture(OPC UA standards) to build a common communication interface for devices that are mentioned above and design a OPC UA specification compliant communication stack on UICC smart card., whose duties are: creation and management communication between OPC client/server application, entity authentication and secure message exchange.
 
@@ -49,7 +49,7 @@ At first, in the second chapter I will present the fundamental technologies whic
 In this section, i am going to give a brief introduction about technologies and terminologies that are applied in this paper. 
 
 \subsection{OPC Unified Architecture Structure Overview }
-Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the most recent released industry standards from OPC Foundation, acts nowadays as the most promising candidate in industry M2M automation world, whose major duty is the build a secure communication interface for machines that participate in automation system. 
+Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the most recent released industry standards from OPC Foundation, acts nowadays as the most promising candidate in industry M2M automation world, whose major duty is to build a secure communication interface for machines that participate in automation system. 
 
 \subsubsection{OPC UA Specifications}
 
@@ -57,7 +57,7 @@ The whole OPC Unified Architecture specification can be divided into three main 
 \begin{table}[!htbp]
 \caption{OPC UA specifications}
 \centering
-\begin{tabular}{ c c }
+\begin{tabular}{lllll}
 \hline\hline
 OPC UA Part1 &Overview and Concepts Specification \\
 OPC UA Part2 &Security Model Specification \\
@@ -77,7 +77,7 @@ OPC UA Part12 &Discovery and Aggregates Specification \\
 \end{table}
 
 \subsubsection{OPC UA Client Server Structure}
- OPC UA standards apply the classic client server architecture, where server is in charge of managing functionalities and data information on a machine device, for instance temperature data gathered by  a remotely allocated sensor. Meanwhile client possesses the ability to query information from server, submit subscription and send command to server.
+OPC UA standards apply the classic client server architecture, where server is in charge of managing functionalities provided by a machine as well as data information gathered by that device, for instance temperature data measured by  a remotely allocated sensor and the make coffee function offered by coffee maker. Meanwhile client possesses the ability to query information from server, submit subscription and send command to server.
 
 \begin{figure}[!htbp]
 	\centering
@@ -132,7 +132,7 @@ Figure~\ref{fig:opc_ua_cs_comm} pictures the typical communication architecture 
 	\label{fig:opc_ua_cs_shs}
 \end{figure}
 \subsubsection{Security Handshake}
-Security handshake as below explains with some details how secure channel and session are established. Normally OPC UA client initiates the first \emph{OpenSecureChannel} request and waits the response from server. Messages exchanged during the process of construction secure channel between client and server are encrypted using asymmetric encryption and signature algorithms. But some security protocols that could be applied according to OPC UA standard, are not using an asymmetric message encryption algorithm to encrypt to request/response messages. Instead, they apply AsymmetricKeyWrapAlgorithm to encrypt symmetric keys and use symmetric encryption algorithm with encrypted keys to encrypt messages. After a successful construction of secure channel, OPC UA client sends \emph{CreateSession} request and waits for server response. Messages transported during this procedure are encrypted with symmetric encryption algorithms and signed with client/server signing key.
+Security handshake as below explains with some details how secure channel and session are established. Normally OPC UA client initiates the first \emph{OpenSecureChannel} request and waits the response from server. Messages exchanged during the process of construction secure channel between client and server are encrypted using asymmetric encryption and signature algorithms. But some security protocols that could be applied according to OPC UA standards, are not using an asymmetric message encryption algorithm to encrypt to request/response messages. Instead, they apply AsymmetricKeyWrapAlgorithm to encrypt symmetric keys and use symmetric encryption algorithm with encrypted keys to encrypt messages. After a successful construction of secure channel, OPC UA client sends \emph{CreateSession} request and waits for server response. Messages transported during this procedure are encrypted with symmetric encryption algorithms and signed with client/server signing key.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{opc_ua_commstack.jpg}
@@ -145,43 +145,6 @@ As described in figure~\ref{fig:opc_ua_commstack}, according to different respon
 
 UA Application part realizes client or server application. Serialization layer together with secure channel layer build the communication layer and their job is dividing long message into pieces referred as message chunk, encrypting each individual message chunk and forwarding encrypted message chunk to transport layer. When receiving message chunk from others, OPC UA message receiver firstly verifies whether this message piece meets the security standard negotiated between OPC UA client and server. If not, message receiver will close the secure channel. After a successful verification of all message chunks, the original OPC UA message will be reconstructed and sent to UA Application Code through API. Each secure message chunk applies the following structure described in figure~\ref{fig:opc_ua_messchunk}.
 
-Knowing the essential parts of OPC UA communication stack, in the following subsections the establishment, re-establishment and close of communication channel are explained.
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.75\textwidth]{opc_ua_messchunk.jpg}
-		\caption[ ]{Message Chunk Structure\cite{O2}}
-	\label{fig:opc_ua_messchunk}
-\end{figure}
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1\textwidth]{tcp_1.jpg}
-		\caption[ ]{Establish TCP/IP Connection\cite{O6}}
-	\label{fig:tcp_1}
-\end{figure}
-
-\paragraph{Establishment of communication channel}
-As the first step to create TCP/IP connection, this process is normally initialized by OPC UA client. OPC UA client initiates his socket and sends \emph{helloMessage}, that includes supported buffer size which specifies the message chunk size used for future communication, to the target OPC UA server. After receiving greeting message, OPC UA server answers the request for establishing TCP/IP connection with acknowledge message and reports suggested buffer size to his own secure channel layer. Moreover during the creation of communication channel, the greeting \emph{hallo} and answering \emph{acknowledgment} messages could only be sent once. If OPC UA client or server receives more than one above-mentioned message from a same sender, error will be reported and corresponding communication socket will be closed.
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1\textwidth]{tcp_2.jpg}
-		\caption[ ]{Close TCP/IP Connection\cite{O6}}
-	\label{fig:tcp_2}
-\end{figure}
-\paragraph{Close TCP/IP Connection}
-This process is done when OPC UA server receives \emph{CloseSecureChannel} request from OPC UA client. During this process, server releases all the resource taken by corresponding secure channel and sends none response.
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1\textwidth]{tcp_3.jpg}
-		\caption[ ]{Recover Secure Channel\cite{O6}}
-	\label{fig:tcp_3}
-\end{figure}
-
-\paragraph{Recover Secure Channel}
-
-
-Whenever error occurs during TCP/IP connection between OPC UA client and server, client will try to periodically re-establish it until the session is closed or the lifetime of security token goes to an end. Also it should be pointed out that the buffer size defined by corrupt secure channel should not be changed during this error recover process.
 
 \subsubsection{Historical Data}
 Last but not least security feature offered by OPC Unified Architecture is auditing, which supports traceability of any behaviours occur in OPC UA system. This record can be used for forensic research.
@@ -207,7 +170,7 @@ With sophisticated communication protocol using Application Protocol Data Units(
 \begin{table}[ht]
 \caption{ISO/IEC 7816\cite{handbuch}}
 \centering
-\begin{tabular}{ c c }
+\begin{tabular}{lllll}
  ISO7816 document & Description  \\[1ex]
 \hline\hline
  ISO 7816-1&Physical characteristics   \\
@@ -259,6 +222,13 @@ According to ISO/IEC 7816-4 specification, smart card offers two major file type
 As already shown, smart card not only is used as storage media but also acts as cryptographic token which offers enhanced security and privacy functionalities for other applications. The PKCS\#15 (Public key cryptography standards) specification\cite{pkcs}, which was proposed by RSA Inc. and is nowadays worldwide accepted, provide standards, that define how to store credential information such as cryptographic keys, certificates on smart card, and how to retrieve specified token with help from PKCS\#15 interpreter.
  
 \subsubsection{Data Exchange with Smart Card}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{master-slave-relationship}
+		\caption[ ]{Communication between Smart card and CAD\cite{handbuch}}
+	\label{fig:master-slave-relationship}
+\end{figure}
 The communication protocol between smart card and terminal is described as Master-Slave relationship\cite{handbuch}, that means terminal device knowns as Master processes unidirectional control over its slave, namely smart card. Once Master-Slave relationship is established, each communication will be initialized by Master and Slave only reacts based on Master's command. 
 
 When a smart card is inserted in a terminal, Master will send its Slave a RESET command which causes smart card to perform a Power-on-Reset behavior. After this Power-on-Reset, smart card informs Master using Answer-to-Rest (ATR) message about card state and communication parameters. In the next step, if necessary terminal will generate a Protocol Type Select (PTS) command, which is used to choose communication protocol and parameters suggested by smart card. After a successful negotiation, smart card and terminal are able to exchange date using Application Protocol Data Unit.
@@ -268,7 +238,7 @@ Application Protocol Data Unit, or APDU for short, is used  to perform data exch
 \begin{table}[!htbp]
 \caption{Command APDU Structure}
 \centering
-\begin{tabular}{ c c c}
+\begin{tabular}{lllll}
 \hline\hline
  CLA &class byte identifying application  & mandatory \\[0.5ex]
  INS &instruction byte representing the actual command  & mandatory \\
@@ -285,7 +255,7 @@ Le field &the length of data sent by card \\
 \begin{table}[ht]
 \caption{Command APDU Structure}
 \centering
-\begin{tabular}{ c c c}
+\begin{tabular}{lllll}
 \hline\hline
  data field & length decided by Le of preceding command  APDU  & mandatory \\[0.5ex]
  SW1 &state word 1 also called return code 1  & mandatory \\
@@ -434,7 +404,7 @@ In particular, GlobalPlatform has designed the secure mechanism: secure channel 
 \end{figure}
 
 \subsection{OpenMobileAPI}
-OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal and chip card, which can be used by on terminal installed mobile application to access recourse stored on smart card as well as call function provided by card applet. Moreover OpenMobileAPI offers security mechanisms such as access control, that can be applied for mutual authentication between application and secure element. Figure~\ref{fig:open-architecture} presents an architecture overview of OpenMobileAPI, which consist of three functional layers:
+OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal and chip card, which can be used by on terminal installed mobile application to access recourse stored on smart card as well as call function provided by smart card applet. Moreover OpenMobileAPI offers security mechanisms such as access control, that can be applied for mutual authentication between application and secure element. Figure~\ref{fig:open-architecture} presents an architecture overview of OpenMobileAPI, which consist of three functional layers:
  \begin{itemize}
   \item \emph{Transport Layer:} This layer is in charge of providing secure elements access control services using APDUs and acts as cornerstone for other two layers.
   \item \emph{Service Layer:} Abstract interfaces, that provide various functions such as secure storage, cryptographic services, are offered by this layer.
@@ -443,7 +413,11 @@ OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal
 
 \subsection{Android}
 
+TO WRITE
+
 \section{State of Art}
+TO WRITE
+
 \section{Implementation Scenario}
  \begin{figure}[!htbp]
 	\centering
@@ -453,8 +427,8 @@ OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal
 \end{figure}
 
 \subsection{Overview}
-Figure~\ref{fig:SmartHome} describes the basic structure and functionalities provided by implementation scenario-Smart Home.
-In each room , embedded with UICC smart card sensors which are in charge of monitoring environment variables, such as, home temperature, luminance and how much water the pet has, as well as embedded UICC smart card device controller whose responsibility is to control electric devices based on user's commands, such as opening windows, turning off the heating or starting to make coffee, are deployed. On each those sensor and control device an OPC UA server is installed, its major responsibility is controlling that corresponding device as well as data gathered by it.  Moreover each door in this scenario is equipped with a digital lock, that only allows people with enough authority to access. Also a OPC UA server exists on those locks and they are embedded with UICC smart card. Users in this scenario can be home owner or guests. Using embedded with UICC smart card cell phone and on this mobile terminal installed OPC UA client application, subscriber is capable of configuring sensor and control device , remote controlling aforementioned secure devices, viewing historical information recorded by corresponding facilities. With the help of such services a comfortable living condition is created in an automated way.  Moreover the root user, namely the owner of this house, is also able to assign the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care.
+Figure~\ref{fig:SmartHome} describes the basic structure and functionalities provided by implementation scenario Smart Home.
+In each room, embedded with UICC smart card sensors which are in charge of monitoring environment variables, such as, home temperature, luminance and how much water the pet has, as well as embedded UICC smart card electronic device, for instance coffee maker, are deployed. On each this sensor and device an OPC UA server is installed, whose major responsibility is controlling that corresponding device as well as data gathered by it.  Moreover each door in this scenario is equipped with a digital lock, that only allows people with enough authority to access. Also a OPC UA server exists on those locks and they are embedded with UICC smart card. Users in this scenario can be home owner or guests. Using embedded with UICC smart card cell phone and on this mobile terminal installed OPC UA client application, subscriber is capable of configuring sensors and querying data gathered by sensors, remote controlling aforementioned secure devices, viewing historical information recorded by corresponding facilities. With the help of such services a comfortable living condition is created in an automated way.  Moreover the root user, namely the owner of this house, is also able to assign the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care.
 
 
 In this implementation scenario, OPC UA clients, namely Universal Integrated Circuit Card (UICC)  based phone user communicates with OPC UA server, which is deployed on other secure hard devices, via an OTA server.   Smart card that is applied in this scenario acts as security token for both OPC UA client and server and it contains credential information like encryption keys. certificates and digital signature. The communication stack, that manages secure  communication between OPC UA client and server application, is also developed and integrated on smart card as a Java Card applet, which means without corresponding UICC card, OPC UA client and server are not able to appropriately finish their work.
@@ -486,7 +460,7 @@ Basic client functions as following are provided:
   \item providing user friendly interface
 \end{itemize}
 
-Communication stack is integrated  in UICC smart card, whose responsibility is realizing secure channel as well as session management, transporting data to receiver using TCP/IP connections. An internal API translates OPC UA application instructions in to Application Protocol Data Unity (APDU) messagse and forwards them to smart card OS, which is eventually in charge of user authentication and processing secure messaging between card application and chip card pair. 
+Communication stack is integrated in UICC smart card, whose responsibility is realizing secure channel as well as session management, transporting data to receiver using TCP/IP connections. An internal API translates OPC UA application instructions in to Application Protocol Data Unity (APDU) messagse and forwards them to smart card OS, which is eventually in charge of user authentication and processing secure messaging between card application and chip card pair. 
 
 Moreover thanks to self-containment structure, smart card itself does not dependent on other external resources, which could be extreme vulnerable to potential secure attack, and therefore provides a better hardware security and OS security.
 
