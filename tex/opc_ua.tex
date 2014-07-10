@@ -7,7 +7,7 @@
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{Implementation OPC UA on Secure Device}
+\rhead{Leveraging OPC UA with Smart Card for Secure Applications and Services}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage}
@@ -16,7 +16,8 @@
 \RequirePackage{filecontents}
 
 \begin{document}
-\title{Implementation Object Linking and Embedding for Processes Control Unified Architecture Specification on Secure Device} %titles have no end punctuation
+\title{Leveraging Object Linking and Embedding for Process Control Unified Architecture
+Standards with Smart Card Technology for Secure Applications and Services} %titles have no end punctuation
 \author{Yuankui Wang (Matr.-Nr.: 6670785)}
 \institute{University of Paderborn \email{wangyk@mail.upb.de}}
 
@@ -436,7 +437,7 @@ In this implementation scenario, OPC UA clients, namely Universal Integrated Cir
 
 	\centering
 	\includegraphics[width=1.1\textwidth]{csoverview}
-		\caption[ ]{OPC UA Client Server Structure}
+		\caption[ ]{OPC UA Client Server Structure Example}
 	\label{fig:softwareStructure}
 \end{figure}
 
@@ -466,31 +467,39 @@ Moreover thanks to self-containment structure, smart card itself does not depend
 
  \begin{figure}
 	\centering
-	\includegraphics[width=1.0\textwidth]{clientStructure}
+	\includegraphics[width=1.2\textwidth]{clientStructure}
 		\caption[ ]{Client Structure}
 	\label{fig:clientStructure}
 \end{figure}
 \subsubsection{Client Structure}
-As described in figure~\ref{fig:clientStructure}, the OPC UA client consists of client application code that realizes client application level functions, OPC UA client API that translates client application instructions into APDU and forwards APDU to UICC smart card. The Communication stack is developed and integrated with UICC card, which is in charge of creation and management TCP/IP connection, secure channel between client and server. This communication stack is based on card OS components provided by Global Platform. 
+As described in figure~\ref{fig:clientStructure}, the OPC UA client consists of client application code that realizes client application level functions, OPC UA client API that translates client application instructions into APDU and forwards APDU to UICC smart card as well as  manages secure communication between smart card and OPC UA client application code, which is realized as Android  App. The Communication stack is developed and integrated with UICC card and its main responsibilities are:
+\begin{itemize}
+  \item initiate HTTP session based on TLS(proactive)
+  \item trigger HTTP session based on trigger SMS send by OTA server(passive)
+  \item rebuild broken communication channel
+  \item message encryption as well as decryption
+  \item message transmit
+\end{itemize}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=1.2\textwidth]{apsd.jpg}
 		\caption[ ]{Communication Flow between an AP and corresponding APSD\cite{ramGP}}
 	\label{fig:apsd}
 \end{figure}
-Global Platform provides and defines communication flow between an application provider and smart card, allows information exchanged between a remote entity and a terminal, this process is also known as  Remote Application Management(RAM) based on HTTP protocol and PSK TLS security Over-the-Air. The on card component, which is responsible for connection creation with the remote entity and user/application authentication, is called Security Domain. And the aforementioned remote entity  is  referred as Remote Administration Server as well. With these concepts, smart card with Security Domain issued  by GloablPlatform can act as HTTP client and is capable of packing APDU formate information into HTTP POST message and transmitting HTTP message to OTA server. At the same time, the Remote Administration Server also is a HTTP server, which can send HTTP message including APDU format information to its client.\cite{ramGP}
+The communication flow compliant with the one provided by GlobalPlatform, which provides mechanisms that allow secure information exchanged between a remote entity and a terminal, this process is also known as Remote Application Management(RAM) over HTTP protocol and PSK TLS security. The on card component, which is responsible for connection creation with the remote entity and user/application authentication, is called Security Domain(SD). And the aforementioned remote entity  is  referred as Remote Administration Server as well. With these concepts, smart card with Security Domain issued  by GloablPlatform can act as HTTP client and is capable of packing APDU formate information into HTTP POST message and transmitting HTTP message to OTA server, which will then forward this HTTP message to target receiver.\cite{ramGP}
  
-Figure~\ref{fig:apsd} illustrates a typical communication flow between administration server and corresponding security domain (Application Security Domain) on smart card. As can be seen, the request for open communication is alway initialized by security domain, which is also the phone user. After a successful creation of secure handshake, the remote administration server and security domain is able to use HTTP message to exchange request and response strings, which include APDU instructions. GlobalPlatform has also provided  a lists of API used to initialize authentication process, to configure algorithm and keys for message  encryption and decryption, to perform message exchange  behavior and so on.
+Figure~\ref{fig:apsd} illustrates a typical communication flow between administration server and corresponding security domain (Application Security Domain) on smart card. As can be seen, the request for open communication is usually initialized by security domain, which is also the phone user. After a successful creation of secure handshake, the remote administration server and security domain is able to use HTTP connection to exchange request and response strings, which include APDU instructions. GlobalPlatform has also provided  a lists of API used to initialize authentication process, to configure algorithm and keys for message  encryption and decryption, to perform message exchange  behavior and so on.
 
 \subsubsection{Server Structure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{serverStructure}
+	\includegraphics[width=1.2\textwidth]{serverStructure}
 		\caption[ ]{Server Structure}
 	\label{fig:serverStructure}
 \end{figure}
-Server here refers sensors, control device as well digital locks that together build up the smart home system. Each server controls exactly one above-mentioned secure device and take subscription as well as publish corresponding notification to authenticated subscriber. The server structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic server like subscription and notification mentioned before, an internal API, that translate OPC UA instructions into APDU, and a on smart card integrated communication stack, that is responsible for user authentication, secure message exchange and so on.
+Server here refers sensors, electric device as well digital locks that together build up the smart home system. Each server controls exactly one above-mentioned secure device and take subscription as well as publish corresponding notification to authenticated subscriber. The server structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic server like subscription and notification mentioned before, an internal API and a on smart card integrated communication stack.
 
 \subsubsection{Implementation Tool Support}
 Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class API and software modules, that can be applied to design complete Java Card Applet as well as to debug Java source. When it comes to running test with Java Card Applet, apart from using regular cell phone with UICC smart card, on where to be tested applet is installed, Morpho Card Reader (MCR) or Java virtual card together with iCardReader, Universal Test Environment (UTE) can be applied. To be more specifically, iCardReader is a tool developed by Morpho and be used in order to send APDU script to Java virtual card or to real smart card connected with test PC using smart card reader such as MCR reader, and to monitor corresponding response APDU information. Universal Test Environment provided by Morpho uses Java languages developed test cases and test scenarios\footnote{Test scenario is a collection of relative test cases.} to simulate user cases and obverse related smart card reactions. In contrast with iCardreader, which can only send APDU command sequence to smart card, UTE integrates more software models that can be used to simulate such as security domain offered by other card application provider, and therefore can provide more sophisticate test environment.
