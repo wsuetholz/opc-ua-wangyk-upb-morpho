@@ -1,0 +1,6 @@
+Apache Version :
+    2.4.9   - Documentation
+PHP Version :
+    5.5.12   - Documentation
+Server Software:
+    Apache/2.4.9 (Win32) PHP/5.5.12
