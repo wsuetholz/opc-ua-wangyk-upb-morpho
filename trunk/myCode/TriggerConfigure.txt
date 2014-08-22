@@ -1,0 +1,45 @@
+TLS security Parameters
+
+14 38 39 33 39 30 31 30 30 30 30 30 31 32 39 35 30 36 39 30 33 02 40 01
+
+PSK-Identifier: 89390100000129506903
+Key Version/Key Identifier: 4001
+
+HTTP POST parameters 
+
+8A 11 38 30 2E 36 36 2E 31 30 2E 32 30 30 3A 38 30 38 30  Administartion Host parameter
+Tag Length "Host" header Value ->80.66.10.200:8080
+
+8B 03 30 30 37 Agent ID parameter
+Tag Length
+
+8C 0B 2F 43 45 48 2F 63 65 68 6F 63 70 Administration URI parameter
+Tag Length /CEH/cehocp
+
+Used Ciphersuite
+
+ Ciphersuite.TLS_PSK_WITH_NULL_SHA256
+ 
+
+byte[] pk1 = {0x00,0x00,0x10,0x00};
+
+	short length3 =
+	(short) pk3.length;
+	
+	
+	
+		    byte[] result = {0x00,0x01,0x02,0x03,0x04,0x05,0x06};
+33 0D 0A 01 6F 00 0D 0A 30 0D 0A 0D 0A
+
+33 0D 0A 01 12 34 0D 0A 30 0D 0A 0D 0A
+
+
+33 0D0A 01 9F0A 0D0A 30 0D0A 0D0A
+
+
+
+		short length3 = (short) pk3.length;
+	            			Util.arrayCopyNonAtomic(pk3, (short)0, apduBuffer, (short)0, (short) length3);
+	            			apdu.setOutgoingAndSend((short)0, length3);
+	            			
+	            		til.arrayCopyNonAtomic(pk1, (short)0, apduBuffer, (short)0, (short) length);
