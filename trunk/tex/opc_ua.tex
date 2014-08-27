@@ -417,7 +417,54 @@ OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal
 TO WRITE
 
 \section{State of Art}
-TO WRITE
+\subsection{Smart Home Research}
+\subsubsection{Overview}
+The smart home system we discussed about, that is also described as automated home, integrated home systems or intelligent building\cite{smart_home_concept}, has drawn more and more industry developers' and researchers' attention over the decades, research groups such as Siemens, IBM, Cisco, Microsoft\cite{smart_home_research} has already contributed in this domain. A great number of Smart Home application, network protocols as well as gateways\cite{smart_home_for_gateway} haven come into world and been applied to benefit their customers.
+
+With the development of Smart Home technology, nowadays' Smart Home is not only  in charge of monitoring and controlling lighting and heating inside the building, but also be capable of connecting almost every electronic devices. Functionalities provided by intelligent home are not just limited to turn device on and off, record and report senor date, but include self-adjusting the inner building environment, supporting various predefined pattern, such as energy saving pattern, especially the concept of Smart Home for elderly\cite{smart_home_for_old}, which perfectly combines modern remote control and monitoring technologies, with senior-friendly and patient-concerning housing, is welcomed by the market. 
+
+Two kinds of Smart Home will be introduced in the following as best practice example, they are Smart Home optimized for energy services and Smart Health Home.
+\subsubsection{Smart Home Optimized for Energy Services}
+This type of Smart Home put its main goal in the energy saving and monitoring domain, which helps householder to make wiser decisions in under the energy crisis background. 
+
+The key component in this Smart Home is decision-support tool\cite{smart_home_for_energy}, that applies a scheduling algorithm which offers house owner suggestion based on various parameters such as distributed energy resources(DER), with the prospect of energy and resource saving.
+
+\paragraph{Decision Support Tool}
+
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{scheduler.jpg}
+		\caption[ ]{DER Scheduler in Smart Home optimized for energy\cite{smart_home_for_energy}}
+	\label{fig:smart-home-scheduler}
+\end{figure}
+
+The decision support tool used in paper\cite{smart_home_for_energy} consists of two components, they are energy service model which describes the energy service request and distributed energy resource scheduling algorithm, as described in figure~\ref{fig:smart-home-scheduler} . To be more specifically, energy service model presents  the demand for one particular energy resource. For instance the demand aimed at hot water means, the hourly consumption of heated water or the energy that is hourly needed by water heater.  According to \cite{smart_home_for_energy}, the heat content of water is also defined as "energy equivalent" and therefore the energy service model is applied to increase "monetary benefit"  from every "energy equivalent" unit.
+
+Meanwhile the DER scheduler algorithm helps householder by reducing the unnecessary consumption of energy. This algorithm is in nature one mathematical optimization problem defined by\cite{smart_home_for_energy}.
+\begin{center}
+ $ \sum_{t=1}^{T}\sum_{i=1}^{S}[\lambda_{ES,i}(t)\cdot {U_{ES,i}}(t,x)]-Cost$
+\end{center}
+
+The purpose of DER scheduler, presented as \emph{x} is to maximize that above introduced fitness function, where \emph{S} represents all number of services offered by Smart Home, \emph{T} stands for the whole simulation time, $\lambda_{ES,i}$ and $ U_{ES,i}$ describe the "energy equivalent"  and energy demand of the \emph{i}th service respectively. \emph{Cost} means the total electricity consumption. Also in paper\cite{smart_home_for_energy} the choice of DER algorithm is well discussed.
+
+
+\subsubsection{Smart Health Home}
+Another suitable application domain for Smart Home is the Smart Health Home, which describes the intelligent housing that takes care of patients at home or elder resident.
+\paragraph{Overview}
+The charming features of this Smart Home system are the combination telemedical system with communication technologies\cite and customizing services such as, teleconsulting, telediagnosis, real time imaging as well as distance medical education\cite{smart_home_for_health}, which together improve the living condition of householder and at the same time build a caring system that takes care of residents' need. Nine best practice examples are provided and evaluated in paper
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{rcc.jpg}
+		\caption[ ]{Overview of Smart Health Home structure\cite{smart_home_for_health} (RCC: Remote Control Center)}
+	\label{fig:rcc}
+\end{figure}
+
+
+\subsection{OPC UA Security Concept}
+
+\subsection{Smart Card Security Design}
+
+\subsection{Secure Android Design}
 
 \section{Implementation Scenario}
  \begin{figure}[!htbp]
@@ -433,6 +480,8 @@ In each room, embedded with UICC smart card sensors which are in charge of monit
 
 
 In this implementation scenario, OPC UA clients, namely Universal Integrated Circuit Card (UICC)  based phone user communicates with OPC UA server, which is deployed on other secure hard devices, via an OTA server.   Smart card that is applied in this scenario acts as security token for both OPC UA client and server and it contains credential information like encryption keys. certificates and digital signature. The communication stack, that manages secure  communication between OPC UA client and server application, is also developed and integrated on smart card as a Java Card applet, which means without corresponding UICC card, OPC UA client and server are not able to appropriately finish their work.
+
+
  \begin{figure}[ht]
 
 	\centering

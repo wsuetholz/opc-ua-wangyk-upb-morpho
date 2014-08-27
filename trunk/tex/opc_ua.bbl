@@ -22,11 +22,6 @@
 \newblock Opc unified architecture specification part2 security model 1.01.
 \newblock (February 6.2009)
 
-\bibitem{O6}
-{OPC Foundation}:
-\newblock Opc unified architecture specification part6 mappings 1.01.
-\newblock (February 6.2009)
-
 \bibitem{Ref3}
 SID:
 \newblock Mqtt vs opc-ua: Das http der industrie 4.0?
@@ -74,6 +69,33 @@ SID:
 {simalliance}:
 \newblock Open mobile api specification.
 \newblock (February 2014)
+
+\bibitem{smart_home_concept}
+{Vincent Ricquebourg, David Menga, David Durand, Bruno Marhic, Laurent
+  Delhoche, Christophe Loge}:
+\newblock The smart home concept: our immediate future
+
+\bibitem{smart_home_research}
+{Li Jiang, Da-you Liu, Bo Yang}:
+\newblock Smart home research.
+\newblock (August 2004)
+
+\bibitem{smart_home_for_old}
+{Sibylle Meyer, Eva Schulze}:
+\newblock Smart home für ältere menschen.
+\newblock (February 2008)
+
+\bibitem{smart_home_for_energy}
+{Michael Angelo A. Pedrasa, Ted D. Spooner ,Iain F. MacGill}:
+\newblock Coordinated scheduling of residential distributed energy resource to
+  optimize smart home energy services.
+\newblock (September 2010)
+
+\bibitem{smart_home_for_health}
+{Vincent Rialle, Florence Duchene, Norbert Noury, Lionel Bajolle, Jacques
+  Demongeot}:
+\newblock Health \''smart\'' home: Information technology for patients at home.
+\newblock (Number 2002)
 
 \bibitem{ramGP}
 {GlobalPlatform Card}:
