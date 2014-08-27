@@ -70,6 +70,27 @@ SID:
 \newblock Open mobile api specification.
 \newblock (February 2014)
 
+\bibitem{learn_android}
+{Marko Gargenta}:
+\newblock Learning android.
+\newblock (March 2011)
+
+\bibitem{android_media}
+{Franke Feinbube from HPI University Postdam}:
+\newblock Android.
+\newblock (November 2011)
+
+\bibitem{android_forensics}
+{Andrew Hoog}:
+\newblock Android forensics: Investigation, analysis and mobile security for
+  google android.
+\newblock (July 2011)
+
+\bibitem{android_vm}
+{David Ehringer}:
+\newblock The dalvik virtual machine architecture.
+\newblock (March 2010)
+
 \bibitem{smart_home_concept}
 {Vincent Ricquebourg, David Menga, David Durand, Bruno Marhic, Laurent
   Delhoche, Christophe Loge}:
@@ -79,6 +100,11 @@ SID:
 {Li Jiang, Da-you Liu, Bo Yang}:
 \newblock Smart home research.
 \newblock (August 2004)
+
+\bibitem{smart_home_for_gateway}
+{Dimitar Valtchev, Ivailo Frankov}:
+\newblock Service gateway architecture for a smart home.
+\newblock (April 2002)
 
 \bibitem{smart_home_for_old}
 {Sibylle Meyer, Eva Schulze}:

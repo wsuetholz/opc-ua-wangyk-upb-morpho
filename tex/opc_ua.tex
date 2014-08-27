@@ -413,15 +413,83 @@ OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal
 \end{itemize}
 
 \subsection{Android}
+\subsubsection{Overview}
+Android is a open source platform based on Linux and modified by Google, which is designed for mobile devices. As a comprehensive platform, android manages to create a separation between hardware and software that runs on it.  At the same time being a open source platform means its entire stack is open and android developer is able to deploy his android on specific hardware as well as learn the system to the fundamental level.\cite{learn_android}
+Moreover, android system provides a list of software and hardware attracting features to his customers.
+ \begin{itemize}
+\item \emph{Security:} Linux, as the cornerstone of android, has been proved to be a secure system through many harsh tests over the years. Which in return guarantee the android system security. \cite{learn_android}
+\item \emph{Multi-Media:} A wide range of media formats are supported by Android. For instance: MPEG4, ACC, PNG, GIF and so on. \cite{android_media}
+\item \emph{Designed for Online:} One outstanding core feature of Android system is the ability to stay Online\cite{android_forensics}. Under various conditions such as Wi-Fi network, GSM/CDMA and so on, android device always provide its end users qualified network  connection.
+\item \emph{Variety of applications :}As one of the most popular platform,  Android, with the help of Android Market and great number of Android App developers, offers its customers the ability to extend  functionalities of  their android devices\cite{android_forensics}. The user is capable of downloading and installing applications from Android Market, which in return enhances the  user experience.
+\end{itemize}
+\subsubsection{Android Software Stack}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{android-stack.jpg}
+		\caption[ ]{Android Stack Overview \cite{learn_android}}
+	\label{fig:android-stack}
+\end{figure}
+Android stack is composed of four different layers as shown in figure~\ref{fig:android-stack}.
 
-TO WRITE
+\paragraph{Linux kernel:}This fundamental layer separates other three layers  from  device hardware and provide higher layer core  functions such as  power and hardware driver management.
+\paragraph{Libraries:}As second layer of android stack,  Libraries layer supports android runtime environment by using various C/C++ core libs which offer most of the Java-functionalities, and for android specific design virtual machine, namely Dalvik\cite{learn_android}. Two reasons for not using Java VM are mentioned\cite{learn_android}. First of all, since Java VM is general developed virtual machine, therefore some constrains from mobile systems and devices are not concerned, such as battery life and processing ability. Secondly, when android project  was been carried out,  Java VM belonged not to open source projects. For these reasons Dan Bornstein and his group developed the license free and mobile platform specific  virtual machine, Dalvik. 
+
+Apart form  android runtime, other libraries which provide services to application framework layers are also included in this Libraries layer, for instance:
+\begin{itemize}
+\item OpenGL, library that supports 2D and 3D graphics rendering.
+\item SSL, the widely applied secure socket layer library.
+\item  SQLite, which provides SQL database services.
+\item  WebKit, the fast  web-rending engine.
+\end{itemize}
+\paragraph{Application  framework} Application framework layer provides a large amount of application framework components, for instance activity manager which is in charge off managing application life cycles, content providers that controls data exchange between applications.
+\paragraph{Application}Being the top layer of entire android software stack, on this lay both native and third party reside, using component from  application framework layer and   offering various services to end users.
+
+\subsection{Android, Dalvik and Java}
+As described above, Dalvik VM compared with general Java virtual machine, takes the constrains that are specific about mobile device in to account, which means this  android virtual machine concerns the hardware shortcomings including less memory space, low processing power, no swap space as well as short battery lifetime. Minimum recommendations for android device\cite{android_vm} are list in table~\ref{android-min-req}.
+\begin{center} 
+\begin{table}[h]
+\caption{Minimum Android Recommendations\cite{android_vm}}
+\label{android-min-req}
+\begin{tabular}{|l|l|}
+\hline
+Feature          & Minimum Requirement                                                                                                   \\ \hline
+Chipset          & ARM-based                                                                                                             \\ \hline
+Memory           & 128 MB RAM; 256 Flash External                                                                                        \\ \hline
+Storage          & Mini or Micro SD                                                                                                      \\ \hline
+Primary Display  & QVGA TFT LCD or larger, 16-bit color or better                                                                        \\ \hline
+Navigation  keys & \begin{tabular}[c]{@{}l@{}}5-way navigation with 5 application keys, power,\\ camera and volume controls\end{tabular} \\ \hline
+Camera           & 2MP CMOS                                                                                                              \\ \hline
+USB              & Standard mini-B USB interface                                                                                         \\ \hline
+Bluetooth        & 1.2 or 2,0                                                                                                            \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{vm-compare.jpg}
+		\caption[]{Compiling process difference\cite{learn_android}}
+	\label{fig:vm-compare}
+\end{figure}
+When Dalvik virtual machine is applied, the compiling process is different from what is taken by Java VM. Figure~\ref{fig:vm-compare} clearly pictures the difference. In Android runtime environment, after the first compilation of Java source code, the newly generated Java byte code will be compiled by Dalvik Dex complier, as a result, Dalvik byte code is created, which is going to be executed by Dalvik VM.
+
+As pictured in figure~\ref{fig:class-vs-dex}, compared with \emph{.class} Java byte code, \emph{.dex} code adopts shared and type specific constant pools with the main purpose of conserving memory\cite{android_vm}. To be more specifically,  the constant pool in Java byte code, which is colored blue in above-mentioned figure, is heterogeneous, which means all constant pools listed in right side \emph{.dex} file are mixed here, as a consequence, duplication may occur.    
+
+Another obvious distinguish between Java VM and Delvik is that, the former one adopts stack-based architecture and  the later one uses register-based architecture, that in comparison with stack-based architecture needs on average 32.3\% less execution time\cite{android_vm}, which is obviously the better choice for the system that runs on mobile devices with limited battery life.
+
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{clas-vs-dex.jpg}
+		\caption[]{Comparison between Java byte code and Dalvik executable file\cite{android_vm}}
+	\label{fig:class-vs-dex}
+\end{figure}
 
 \section{State of Art}
 \subsection{Smart Home Research}
 \subsubsection{Overview}
 The smart home system we discussed about, that is also described as automated home, integrated home systems or intelligent building\cite{smart_home_concept}, has drawn more and more industry developers' and researchers' attention over the decades, research groups such as Siemens, IBM, Cisco, Microsoft\cite{smart_home_research} has already contributed in this domain. A great number of Smart Home application, network protocols as well as gateways\cite{smart_home_for_gateway} haven come into world and been applied to benefit their customers.
 
-With the development of Smart Home technology, nowadays' Smart Home is not only  in charge of monitoring and controlling lighting and heating inside the building, but also be capable of connecting almost every electronic devices. Functionalities provided by intelligent home are not just limited to turn device on and off, record and report senor date, but include self-adjusting the inner building environment, supporting various predefined pattern, such as energy saving pattern, especially the concept of Smart Home for elderly\cite{smart_home_for_old}, which perfectly combines modern remote control and monitoring technologies, with senior-friendly and patient-concerning housing, is welcomed by the market. 
+With the development of Smart Home technology, nowadays' Smart Home is not only  in charge of monitoring and controlling lighting and heating inside the building, but also capable of connecting almost every electronic devices as well as making scheduler decisions. Functionalities provided by intelligent home are not just limited to turn device on and off, record and report senor date, but include self-adjusting the inner building environment, supporting various predefined pattern, such as energy saving pattern, especially the concept of Smart Home for elderly\cite{smart_home_for_old}, which perfectly combines modern remote control and monitoring technologies, with senior-friendly and patient-concerning housing, is welcomed by the market. 
 
 Two kinds of Smart Home will be introduced in the following as best practice example, they are Smart Home optimized for energy services and Smart Health Home.
 \subsubsection{Smart Home Optimized for Energy Services}
@@ -451,7 +519,7 @@ The purpose of DER scheduler, presented as \emph{x} is to maximize that above in
 \subsubsection{Smart Health Home}
 Another suitable application domain for Smart Home is the Smart Health Home, which describes the intelligent housing that takes care of patients at home or elder resident.
 \paragraph{Overview}
-The charming features of this Smart Home system are the combination telemedical system with communication technologies\cite and customizing services such as, teleconsulting, telediagnosis, real time imaging as well as distance medical education\cite{smart_home_for_health}, which together improve the living condition of householder and at the same time build a caring system that takes care of residents' need. Nine best practice examples are provided and evaluated in paper
+The charming features of this Smart Home system are the combination telemedical system with communication technologies\cite and customizing services such as, teleconsulting, telediagnosis, real time imaging as well as distance medical education\cite{smart_home_for_health}, which together improve the living condition of householder and at the same time build a caring system that takes care of residents' need. Nine best practice examples are provided and evaluated in paper\cite{smart_home_for_old}, they provide a guideline for  the design of Smart  Home system and summarizes precious experience. 
  \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.0\textwidth]{rcc.jpg}
