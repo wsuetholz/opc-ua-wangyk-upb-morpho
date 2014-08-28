@@ -123,6 +123,12 @@ SID:
 \newblock Health \''smart\'' home: Information technology for patients at home.
 \newblock (Number 2002)
 
+\bibitem{smart_home_agent}
+{Diane J. Cook, Michael Youngblood, Edwin O. Heierman, Karthik Gopalratnam,
+  Sira Rao, Andrey Litvin, Farhan Khawaja}:
+\newblock Mavhome: An agent-based smart home.
+\newblock (2003)
+
 \bibitem{ramGP}
 {GlobalPlatform Card}:
 \newblock Remote application management over http card specification v2.2 –
