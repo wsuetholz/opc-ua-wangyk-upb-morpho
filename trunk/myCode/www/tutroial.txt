@@ -1,0 +1,7 @@
+http://www.androidhive.info/2012/05/how-to-connect-android-with-php-mysql/
+
+
+http post and get
+
+http://www.open-open.com/lib/view/open1328834211312.html
+http://blog.changyy.org/2012/07/android-httphttpsgetpostcookie.html
