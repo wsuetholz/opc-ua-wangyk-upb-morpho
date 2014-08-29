@@ -1,0 +1,1 @@
+echo "<td><p style="width:50%;">{$field->name}</p></td>"

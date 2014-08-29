@@ -1,0 +1,309 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+<div id="header">
+ 	<p style= "text-align:center"><img src="./img/logo.png" /></p>
+</div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="nav-bar right">
+         <ul class="button-group">
+           <li><a href="#" class="button">Overview</a></li>
+           <li><a href="#" class="button">Home Video</a></li>
+           <li><a href="#" class="button">Record</a></li>
+          </ul>
+        </div>
+        <h1>This <small>is my secure home</small></h1>
+        <hr/>
+      </div>
+    </div>
+
+      <div class="row">
+
+
+    <div class="large-6 columns" role="content">
+
+      <article>
+
+        <h3><a href="#">State Overview</a></h3>
+
+<div style="position: relative; background: url(ipad.png); width: 520px; height: 400px;">
+<div style="position: absolute; bottom: 12.5em; left: 3.5em; width: 400px; font-weight: bold; color: #fff;">
+<p>
+
+<div class="row">
+
+
+<?php
+error_reporting(E_ALL ^ E_DEPRECATED);
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pwd = '';
+
+$database = 'smart_home_db';
+$table = 'sensor';
+
+if (!mysql_connect($db_host, $db_user, $db_pwd))
+    die("Can't connect to database");
+
+if (!mysql_select_db($database))
+    die("Can't select database");
+
+// sending query
+$result = mysql_query("SELECT * FROM {$table}");
+if (!$result) {
+    die("Query to show fields from table failed");
+}
+
+$fields_num = mysql_num_fields($result);
+
+echo "<h4 align='center'> {$table}</h4>";
+echo "<table  background =\"./img/logo.png\" align='center' border='0'  cellpadding='5' cellspacing='0' > <tr>";
+// printing table headers
+for($i=0; $i<$fields_num; $i++)
+{
+    $field = mysql_fetch_field($result);
+    echo "<td>{$field->name}</td>";
+}
+echo "</tr>\n";
+// printing table rows
+while($row = mysql_fetch_row($result))
+{
+    echo "<tr>";
+
+    // $row is array... foreach( .. ) puts every element
+    // of $row to $cell variable
+    foreach($row as $cell)
+        echo "<td>$cell</td>";
+
+    echo "</tr>\n";
+}
+  echo "</table>";
+mysql_free_result($result);
+?>
+        </div>
+</p>
+
+
+
+
+<div style="position: absolute; bottom: -11.9em; left:-6em; width: 400px; font-weight: bold; color: #fff;">
+<p>
+
+<div class="row">
+
+
+<?php
+error_reporting(E_ALL ^ E_DEPRECATED);
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pwd = '';
+
+$database = 'smart_home_db';
+$table = 'main_lock';
+
+if (!mysql_connect($db_host, $db_user, $db_pwd))
+    die("Can't connect to database");
+
+if (!mysql_select_db($database))
+    die("Can't select database");
+
+// sending query
+$result = mysql_query("SELECT * FROM {$table}");
+if (!$result) {
+    die("Query to show fields from table failed");
+}
+
+$fields_num = mysql_num_fields($result);
+
+echo "<h4 align='center'> {$table}</h4>";
+echo "<table  background =\"./img/logo.png\" align='center' border='0'  cellpadding='5' cellspacing='0' > <tr>";
+// printing table headers
+for($i=0; $i<$fields_num; $i++)
+{
+    $field = mysql_fetch_field($result);
+    echo "<td>{$field->name}</td>";
+}
+echo "</tr>\n";
+// printing table rows
+while($row = mysql_fetch_row($result))
+{
+    echo "<tr>";
+
+    // $row is array... foreach( .. ) puts every element
+    // of $row to $cell variable
+    foreach($row as $cell)
+        echo "<td>$cell</td>";
+
+    echo "</tr>\n";
+}
+  echo "</table>";
+mysql_free_result($result);
+?>
+        </div>
+</p>
+
+
+
+
+
+
+
+
+<div style="position: absolute; bottom: 1.5em; left: 12em; width: 400px; font-weight: bold; color: #fff;">
+<p>
+
+<div class="row">
+
+
+<?php
+error_reporting(E_ALL ^ E_DEPRECATED);
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pwd = '';
+
+$database = 'smart_home_db';
+$table = 'cafe_maker';
+
+if (!mysql_connect($db_host, $db_user, $db_pwd))
+    die("Can't connect to database");
+
+if (!mysql_select_db($database))
+    die("Can't select database");
+
+// sending query
+$result = mysql_query("SELECT * FROM {$table}");
+if (!$result) {
+    die("Query to show fields from table failed");
+}
+
+$fields_num = mysql_num_fields($result);
+
+echo "<h4 align='center'> {$table}</h4>";
+echo "<table  background =\"./img/logo.png\" align='center' border='0'  cellpadding='5' cellspacing='0' > <tr>";
+// printing table headers
+for($i=0; $i<$fields_num; $i++)
+{
+    $field = mysql_fetch_field($result);
+    echo "<td>{$field->name}</td>";
+}
+echo "</tr>\n";
+// printing table rows
+while($row = mysql_fetch_row($result))
+{
+    echo "<tr>";
+
+    // $row is array... foreach( .. ) puts every element
+    // of $row to $cell variable
+    foreach($row as $cell)
+        echo "<td>$cell</td>";
+
+    echo "</tr>\n";
+}
+  echo "</table>";
+mysql_free_result($result);
+?>
+        </div>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+
+        </div>
+
+      </article>
+
+    </div>
+    <aside class="large-3 columns">
+
+      <h5>Categories</h5>
+      <ul class="side-nav">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Software Updata</a></li>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+
+      <div class="panel">
+        <h5>Featured</h5>
+        <p>Leveraging OPC UA standards with Smart Card technology in order to bring you a secure home remote control service and more comfortable living conditions  .</p>
+        <a href="#">Read More </a>
+      </div>
+
+    </aside>
+
+
+  </div>
+
+
+
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>© Copyright no one at all.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
