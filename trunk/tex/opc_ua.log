@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  28 AUG 2014 11:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  29 AUG 2014 10:32
 entering extended mode
 **opc_ua.tex
 (C:\workspace\opc_ua\tex\opc_ua.tex
@@ -228,18 +228,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 24.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (6.18265pt too wide) in paragraph at lines 44--45
-\OT1/cmr/m/n/10 dards ob-ject link-ing and em-bed-ding for pro-cesses con-trol 
-uni-fied ar-chi-tec-ture(OPC
- []
-
-[2]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 61.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 61.
- <cs.jpg, id=15, 538.26094pt x 170.13562pt>
+
+<cs.jpg, id=15, 538.26094pt x 170.13562pt>
 File: cs.jpg Graphic file (type jpg)
  <use cs.jpg>
 Package pdftex.def Info: cs.jpg used on input line 85.
@@ -316,18 +311,14 @@ File: master-slave-relationship.pdf Graphic file (type pdf)
 <use master-slave-relationship.pdf>
 Package pdftex.def Info: master-slave-relationship.pdf used on input line 229.
 (pdftex.def)             Requested size: 347.12354pt x 251.12207pt.
- [13 <C:/workspace/opc_ua/tex/master-slave-relationship.pdf>]
-Overfull \hbox (24.0705pt too wide) in paragraph at lines 272--273
-\OT1/cmr/m/n/10 keys. In telecom-mu-ni-ca-tion do-main in ac-cor-dance with ISO
-/IEC 7816-4[8], TLV(Type-
- []
-
-<jcvm.jpg, id=118, 330.48468pt x 205.5178pt>
+ [13 <C:/workspace/opc_ua/tex/master-slave-relationship.pdf>] <jcvm.jpg, id=118
+, 330.48468pt x 205.5178pt>
 File: jcvm.jpg Graphic file (type jpg)
  <use jcvm.jpg>
 Package pdftex.def Info: jcvm.jpg used on input line 280.
 (pdftex.def)             Requested size: 347.12354pt x 215.8722pt.
- [14] [15 <C:/workspace/opc_ua/tex/jcvm.jpg>]
+
+[14] [15 <C:/workspace/opc_ua/tex/jcvm.jpg>]
 <applet-execution-states.pdf, id=125, 532.99126pt x 94.85437pt>
 File: applet-execution-states.pdf Graphic file (type pdf)
 
@@ -448,8 +439,11 @@ Overfull \hbox (69.42365pt too wide) in paragraph at lines 607--608
  [][] 
  []
 
-[31 <C:/workspace/opc_ua/tex/csoverview.pdf>] [32 <C:/workspace/opc_ua/tex/clie
-ntStructure.pdf>] <apsd.jpg, id=249, 563.85657pt x 532.23843pt>
+
+Underfull \vbox (badness 3735) has occurred while \output is active []
+
+ [31 <C:/workspace/opc_ua/tex/csoverview.pdf>] [32 <C:/workspace/opc_ua/tex/cli
+entStructure.pdf>] <apsd.jpg, id=249, 563.85657pt x 532.23843pt>
 File: apsd.jpg Graphic file (type jpg)
  <use apsd.jpg>
 Package pdftex.def Info: apsd.jpg used on input line 623.
@@ -477,14 +471,18 @@ File: whole-structure.pdf Graphic file (type pdf)
 <use whole-structure.pdf>
 Package pdftex.def Info: whole-structure.pdf used on input line 650.
 (pdftex.def)             Requested size: 347.12354pt x 230.68013pt.
- [36 <C:/workspace/opc_ua/tex/whole-structure.pdf>]
-<class.pdf, id=284, 804.00375pt x 460.72125pt>
+ <class.pdf, id=269, 804.00375pt x 460.72125pt>
 File: class.pdf Graphic file (type pdf)
- <use class.pdf>
+
+<use class.pdf>
 Package pdftex.def Info: class.pdf used on input line 667.
 (pdftex.def)             Requested size: 347.12354pt x 198.9077pt.
- [37 <C:/workspace/opc_ua/tex/class.pdf>]
-<communication-flow.pdf, id=297, 614.295pt x 663.98062pt>
+ [36] [37 <C:/workspace/opc_ua/tex/whole-structure.pdf> <C:/workspace/opc_ua/te
+x/class.pdf
+
+pdfTeX warning: pdflatex.exe (file C:/workspace/opc_ua/tex/class.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>] <communication-flow.pdf, id=296, 614.295pt x 663.98062pt>
 File: communication-flow.pdf Graphic file (type pdf)
 
 <use communication-flow.pdf>
@@ -495,12 +493,17 @@ Overfull \hbox (69.42365pt too wide) in paragraph at lines 694--695
  [][] 
  []
 
-[38] [39 <C:/workspace/opc_ua/tex/communication-flow.pdf>]
-Overfull \hbox (6.75491pt too wide) in paragraph at lines 783--784
-[][] 
+[38] [39 <C:/workspace/opc_ua/tex/communication-flow.pdf>] [40]
+Overfull \hbox (80.61974pt too wide) in paragraph at lines 860--862
+[][]
  []
 
-[40] [41] [42] (C:\workspace\opc_ua\tex\opc_ua.bbl
+[41]
+Overfull \hbox (89.4767pt too wide) in paragraph at lines 930--932
+[][]
+ []
+
+(C:\workspace\opc_ua\tex\opc_ua.bbl [42]
 Underfull \hbox (badness 5924) in paragraph at lines 33--37
 []\OT1/cmr/m/n/9 Wikipedia con-trib-u-tors:  Con-strained Ap-pli-ca-tion Pro-to
 -col.  $\OT1/cmtt/m/n/9 http : / /$
@@ -510,11 +513,11 @@ Missing character: There is no Ã in font cmr9!
 Missing character: There is no © in font cmr9!
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no § in font cmr9!
+[43]
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ¼ in font cmr9!
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ¤ in font cmr9!
-[43]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
@@ -524,13 +527,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2014 strings out of 493921
- 26808 string characters out of 3144871
- 92297 words of memory out of 3000000
- 5287 multiletter control sequences out of 15000+200000
+ 2016 strings out of 493921
+ 26857 string characters out of 3144871
+ 97317 words of memory out of 3000000
+ 5289 multiletter control sequences out of 15000+200000
  8315 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,13n,43p,1360b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,13n,43p,1415b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
@@ -546,9 +549,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX
 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on opc_ua.pdf (44 pages, 2977961 bytes).
+Output written on opc_ua.pdf (44 pages, 2979993 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
+ 380 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

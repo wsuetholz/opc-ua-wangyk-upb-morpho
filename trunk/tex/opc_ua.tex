@@ -15,7 +15,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \RequirePackage{filecontents}
 
-\begin{document}
+\begin{document}\sloppy
 \title{Leveraging Object Linking and Embedding for Process Control Unified Architecture
 Standards with Smart Card Technology for Secure Applications and Services} %titles have no end punctuation
 \author{Yuankui Wang (Matr.-Nr.: 6670785)}
@@ -564,7 +564,7 @@ Prediction algorithm is the core component of MavHome project. Several Strategie
 
 \subsection{Overview}
 Figure~\ref{fig:SmartHome} describes the basic structure and functionalities provided by implementation scenario Smart Home.
-In each room, embedded with UICC smart card sensors which are in charge of monitoring environment variables, such as, home temperature, luminance and how much water the pet has, as well as embedded UICC smart card electronic device, for instance coffee maker, are deployed. On each this sensor and device an OPC UA server is installed, whose major responsibility is controlling that corresponding device as well as data gathered by it.  Moreover each door in this scenario is equipped with a digital lock, that only allows people with enough authority to access. Also a OPC UA server exists on those locks and they are embedded with UICC smart card. Users in this scenario can be home owner or guests. Using embedded with UICC smart card cell phone and on this mobile terminal installed OPC UA client application, subscriber is capable of configuring sensors and querying data gathered by sensors, remote controlling aforementioned secure devices, viewing historical information recorded by corresponding facilities. With the help of such services a comfortable living condition is created in an automated way.  Moreover the root user, namely the owner of this house, is also able to assign the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care.
+In the above-mentioned housing scenario, embedded with UICC smart card sensors which are in charge of monitoring and reporting environment variables, such as, home temperature, luminance and how much water the pet has, as well as embedded UICC smart card electronic device, for instance coffee maker, are deployed. On each this sensor and device an OPC UA server is installed, whose major responsibilities are controlling that corresponding device as well as processing data gathered by it.  Moreover each door in this scenario is equipped with a digital lock, that only allows user with enough authority to access. This electronic lock is also integrated an smart card and installed the OPC UA server application. Users in this scenario can be householder or guests of home owner. Using cell phone with UICC smart card and on this mobile terminal installed OPC UA client application, subscriber is capable of configuring sensors and querying data gathered by sensors, remote controlling aforementioned secure devices, viewing historical information recorded by corresponding facilities. With the help of such services a comfortable living condition is created in an automated way.  Moreover the root user, namely the owner of this house, is also able to assign the permission of accessing particular room to other guests. In case of when he/she is taking a vocation and pet cannot get necessary care.
 
 
 In this implementation scenario, OPC UA clients, namely Universal Integrated Circuit Card (UICC)  based phone user communicates with OPC UA server, which is deployed on other secure hard devices, via an OTA server.   Smart card that is applied in this scenario acts as security token for both OPC UA client and server and it contains credential information like encryption keys. certificates and digital signature. The communication stack, that manages secure  communication between OPC UA client and server application, is also developed and integrated on smart card as a Java Card applet, which means without corresponding UICC card, OPC UA client and server are not able to appropriately finish their work.
@@ -655,11 +655,11 @@ As described in previous sections, my demonstration system consists of two main 
 \subsection{UICC Applet}
 
 \subsubsection{Classes}
+My UICC applet is developed on Morpho \emph{SC5-01OS07} LTE SAT product.
 Communication stack includes following classes:
  \begin{itemize}
-  \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. This applet is also  designed as one UICC system applet.
+  \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. In order to process remote APDU, this applet is also design as UICC system applet, that extends interface \emph{com.orga.javacard.componentinterfaces.JCISIMApplication}
   \item  \emph{AdminTrigger}, which implements Globalplatform  and toolkitframework interfaces and offers functions for proactive and passive communication session creation with OTA server, cipher suit negotiation and mutual authentication.
- \item  \emph{ProcessData}, which is in charge of processing incoming APDUs and transmitting output APDUs. This class also provides methods that are necessary for cryptographic operations.
 \end{itemize}
 
 \begin{figure}[!htbp]
@@ -743,21 +743,19 @@ Whenever the communication channel is about to be closed, either because of sess
 \end{itemize}
 
 \subsubsection {Commands: Interface between Applet and CAD}
-Before concrete implementation of Javacard Applet code, the interface, which in essence is a set of commond APDUs and corresponding response APDUs, between applet and CAD must be well defined.  The CommunicationStack support two categories commond APDU:
+Before concrete implementation of Javacard applet code, the interface, which in essence is a set of commond APDUs and corresponding response APDUs, between applet and CAD must be well defined.  The CommunicationStack support two categories commond APDU:
  \begin{itemize}
   \item The \emph{SELECT} Command APDU, which is used by JCRE to select CommunicationStack applet.
   \item Other command APDUs, which are introduced in order to provide functionalists such as: trigger communication session, process input APDU and etc. To be more specifically:
 \begin{itemize}
-  \item Verify PIN APDU sets
-  \item Reset PIN APDU sets
-  \item Trigger Communication Session APDU sets
-  \item Close Communication Session APDU sets
-  \item Exchange Data APDU sets
+  \item PIN operation related APDU set
+  \item Communication session management APDU set
+  \item Date process APDU set
 \end{itemize}
 \end{itemize}
 
 \paragraph{SELECT APDU}
-The header of this command APDU is fixed and \emph{Lc} indicates the length of CommunicationStack AID. In\emph{Data filed} real AID is saved.
+The header of this command APDU is fixed and \emph{Lc} indicates the length of CommunicationStack AID. In \emph{Data filed} real AID is saved.
 \begin{table}[!htbp]
 \caption{SELECT command APDU}
 \scalebox{1.3}{%
@@ -773,7 +771,7 @@ Two categories of response APDUs are expected, one represents successful process
 \begin{table}[!htbp]
 \caption{SELECT response APDU}
 \label{select-response-apdu}
-\scalebox{1.2}{%
+\scalebox{1.1}{%
 \begin{tabular}{|l|l|l|}
 \hline
 Optional data & Status word & Description                                \\ \hline
@@ -783,21 +781,22 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 }
 \end{table}
 
-\paragraph{Verify PIN APDU}
-This APDU command and response set is used to let CommunicationStack applet verify identity of terminal user .
+\paragraph{Verify PIN operation}
+This APDU command and response set is used to let CommunicationStack applet verify identity of terminal user. Moreover the PIN size is set from four to eight and the verify PIN operation try limit is set to three times.
 
 \begin{table}[!htbp]
-\caption{Verify PIN command APDU}
-\scalebox{1.4}{%
+\caption{Verify PIN command }
+\scalebox{1.2}{%
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
-0xA0 & 0x10 & 0x00 & 0x00 & N/A & N/A & N/A \\ \hline
+CLA  & INS  & P1   & P2   & Lc   & Data field    & Le  \\ \hline
+0xA0 & 0x11 & 0x00 & 0x00 & length of Data field & PIN & N/A \\ \hline
 \end{tabular}
 }
 \label{verify-command-apdu}
 \end{table}
-Two categories of response APDUs are expected, success response APDU and fail response APDU.
+
+Three categories of response APDUs are expected.
 
 \begin{table}[!htbp]
 \caption{Verify PIN response APDU}
@@ -807,21 +806,56 @@ Two categories of response APDUs are expected, success response APDU and fail re
 \hline
 Optional data & Status word & Description                                \\ \hline
 No data       & 0x9000      & Successful processing                      \\ \hline
-              & 0x6300      & Verification failed \\ \hline               
+              & 0x63C0      & Verification failed \\ \hline      
+              & 0x6983      & After 3 times wrong input, pin is block \\ \hline              
 \end{tabular}
 }
 \end{table}
 
-\paragraph{Proactive Communication Session Creation}
-This APDU command and response set is used to let  CommunicationStack applet initiate the request to establish communication channel and create communication  session above  it.
+\paragraph{Reset PIN operation}
+This APDU command and response set is introduced to offer end user change PIN service.
 
 \begin{table}[!htbp]
-\caption{Trigger Session command APDU}
-\scalebox{1.3}{%
+\caption{Reset PIN command }
+\scalebox{1.2}{%
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
-0xA0 & 0x40 & 0x00 & 0x00 & 0x00 & N/A& N/A \\ \hline
+CLA  & INS  & P1   & P2   & Lc   & Data field    & Le  \\ \hline
+0xA0 & 0x12 & 0x00 & 0x00 & length of Data field &New PIN & N/A \\ \hline
+\end{tabular}
+}
+\label{reset-pin-command-apdu}
+\end{table}
+
+Three categories of response APDUs are expected.
+\begin{table}[!htbp]
+\caption{Reset PIN response APDU}
+\label{reset-pin-response-apdu}
+\scalebox{1.2}{%
+\begin{tabular}{|l|l|l|}
+\hline
+Optional data & Status word & Description                                \\ \hline
+No data       & 0x9000      & Successful processing                      \\ \hline
+              & 0x6301      & Verification is required first\\ \hline      
+              & 0x6984      & Length of input PIN is wrong \\ \hline              
+\end{tabular}
+}
+\end{table}
+
+
+\paragraph{Communication Session Creation}
+This APDU command and response set is used to let  CommunicationStack applet initiate the request to establish communication channel and create communication  session above  it. Following commands are supported.
+
+\begin{table}[!htbp]
+\caption{Communication session creation command APDUs}
+\scalebox{0.95}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+CLA  & INS  & P1   & P2   & Lc   & Data field  & Le  & Description \\ \hline
+0xA0 & 0x01 & 0x00 & 0x00 & data filed length & Session parameter& N/A  & create session parameters\\ \hline
+0xA0 & 0x02 & 0x00 & 0x00 & data filed length & Session parameter& N/A  & set session parameters\\ \hline
+0xA0 & 0x03 & 0x00 & 0x00 &  N/A & N/A& N/A  & create communication session\\ \hline
+0xA0 & 0x04 & 0x00 & 0x00 &  N/A & N/A& length of session state & get session state\\ \hline
 \end{tabular}
 }
 \label{trigger-session-apdu}
@@ -872,22 +906,26 @@ Following return codes are expected in response APDU:
 \hline
  Status word & Description                                \\ \hline
  0x9000      & Successful processing                      \\ \hline
- 0x6031      & Failed to close session \\ \hline             
+ 0x6032      & Failed to close session \\ \hline             
 \end{tabular}
 }
 \end{table}
 
 \paragraph{Process Communication Data }
-This APDU command and response set is used to perform secure data exchange.
+This APDU command and response set is used to provide functionalities to realize OPC UA client server 
 
 
 \begin{table}[!htbp]
-\caption{Process data command APDU}
-\scalebox{1.3}{%
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\caption{Process data command APDUs}
+\scalebox{0.98}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
-CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
-0xA0 & 0x50 & 0x00 & 0x00 & 0x00 & N/A& N/A \\ \hline
+CLA  & INS  & P1   & P2   & Lc   & Data field  & Le & Description \\ \hline
+0xA0 & 0x20 & 0x00 & 0x00 & data filed length & desired target's public key & PK length &require public key\\ \hline
+0xA0 & 0x21 & 0x00 & 0x00 & data filed length & command data & N/A &get subscription from command\\ \hline
+0xA0 & 0x22 & 0x00 & 0x00 & data filed length & subscription value & N/A &set subscription\\ \hline
+0xA0 & 0x23 & 0x00 & 0x00 & data filed length & command data & N/A & get record data from command\\ \hline
+0xA0 & 0x24 & 0x00 & 0x00 & data filed length & sensor id & 0x04 &read sensor value \\ \hline
 \end{tabular}
 }
 \label{process-data-cmd-apdu}
@@ -903,7 +941,10 @@ Following return codes are expected in response APDU:
 \hline
  Status word & Description                                \\ \hline
  0x9000      & Successful processing                      \\ \hline
- 0x6031      & Failed to close session \\ \hline             
+ 0x6A80      & error in data filed \\ \hline        
+ 0x6A81      & required device not found \\ \hline        
+ 0x6A82      & required service not found \\ \hline   
+ 0x6A83      & required record not found \\ \hline                
 \end{tabular}
 }
 \end{table}
