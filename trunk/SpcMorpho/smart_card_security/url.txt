@@ -1,1 +1,4 @@
 http://www.researchgate.net/publication/260134305_Security_Measurement_in_Secure_Smart_Card
+
+
+http://www.break-ic.com/topics/attack-microcontroller.asp
