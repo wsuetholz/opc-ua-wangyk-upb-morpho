@@ -129,6 +129,27 @@ SID:
 \newblock Mavhome: An agent-based smart home.
 \newblock (2003)
 
+\bibitem{opc_ics}
+{Stefan-Helmut Leitner, Wolfgang Mahnke, Ragnar Schierholz}:
+\newblock Secure communication in industrial automation by applying opc ua
+
+\bibitem{opc_grid}
+{Sebastian Lehnhoff, Wolfgang Mahnke, Sebastian Rohjans, Mathias Uslar}:
+\newblock Iec 61850 based opc ua communication - the future of smart grid
+  automation.
+\newblock (August 2011)
+
+\bibitem{opc_lemgo}
+{Jahanzaib Imtiaz, Jürgen Jasperneite}:
+\newblock Scalability of opc-ua down to the chip level enables \"internet of
+  things\".
+\newblock (July 2013)
+
+\bibitem{opc_secure_1}
+{Andreas Frejborg, Martti Ojala, Otso Palonen, Jouni Aro}:
+\newblock Opc ua connects your systems.
+\newblock (2013)
+
 \bibitem{ramGP}
 {GlobalPlatform Card}:
 \newblock Remote application management over http card specification v2.2 –
