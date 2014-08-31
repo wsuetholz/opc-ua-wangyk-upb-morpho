@@ -513,7 +513,7 @@ Meanwhile the DER scheduler algorithm helps householder by reducing the unnecess
  $ \sum_{t=1}^{T}\sum_{i=1}^{S}[\lambda_{ES,i}(t)\cdot {U_{ES,i}}(t,x)]-Cost$
 \end{center}
 
-The purpose of DER scheduler, presented as \emph{x} is to maximize that above introduced fitness function, where \emph{S} represents all number of services offered by Smart Home, \emph{T} stands for the whole simulation time, $\lambda_{ES,i}$ and $ U_{ES,i}$ describe the "energy equivalent"  and energy demand of the \emph{i}th service respectively. \emph{Cost} means the total electricity consumption. Also in paper\cite{smart_home_for_energy} the choice of DER algorithm is well discussed.
+The purpose of DER scheduler, presented as \emph{x} is to maximize that above introduced fitness function, where \emph{S} represents all number of services offered by Smart Home, \emph{T} stands for the whole simulation time, $\lambda_{ES,i}$ and $ U_{ES,i}$ describe the desired monetary benefit for "energy equivalent" and energy demand of the \emph{i}th service respectively. \emph{Cost} means the total electricity consumption. Also in paper\cite{smart_home_for_energy} the choice of DER algorithm is well discussed.
 
 
 \subsubsection{Smart Health Home}
@@ -547,8 +547,22 @@ As shown in figure~\ref{fig:smart-home-agent}, agents which are employed by MavH
 \paragraph{Prediction algorithm}
 Prediction algorithm is the core component of MavHome project. Several Strategies are presented on the first IEEE international conference on pervasive computes and communication, they are SHIP algorithm that is based on sequence matching, compression-based prediction algorithm ALZ and Task-based Markov model\cite{smart_home_agent}.
 
-\subsection{OPC UA Security Concept}
+\subsection{OPC UA Application and Security Modeling }
+\subsubsection{OPC UA applications}
+OPC UA ,as explained in former paragraphs,  is understood as a platform independent, well designed, secure concerned, IEC standard compliant, promising industry standards set, which provides a service oriented architecture, that is being widely applied in industry application such as critical control system and industrial automation.
+\paragraph{OPC UA and ICS}
+With develop of industrial automation, Industrial control system (ICS) has became a hot topic, but most manufactures put the much more effort in designing automation and manufacturing process and neglect  the communication security. As a consequence, Cyber security of ICS now is drawing more and more attentions from industry. OPC UA offers manufactures who are applying ICS system not only object oriented modeling rules, which can be extremely helpful for developers that design domain specific model and manufacturing process, but also provides them a reliable and robust security model\cite{opc_ics}, that has various secure arrangements in each communication protocol stack layer.
 
+
+\paragraph{OPC UA and  Smart Grid}
+Smart Grid is now concerned as the future of electricity energy industry and therefor how to achieve an intelligent electricity distribution as well as behavior coordination between customs and suppliers is a hot topic\cite{opc_grid}. Electricity industry is search out for a standardized communication technology to solve aforementioned issue.
+OPC UA standards that include \emph{alarm and even} model, \emph{data access} model as well as  \emph{historical data access} model, is without doubt become one the of best candidates. With the help of all these models,  the secure real-time communication and stockholders' coordination are guaranteed.
+
+\paragraph{Nano OPC UA }
+After from those enterprise level systems, OPC UA is also suitable for lower level field devices, such as field sensor and other resource limited facilities. Recently a German company Lemgo even designed a nano embedded OPC UA server\cite{opc_lemgo}, which provides the core OPC UA server service set. adopts TCP binary communication protocol  and  is implemented on a chip device.
+
+\subsubsection{OPC UA secure design}
+At the design beginning, the OPC foundation has taken the construction of secure and robust communication protocol as the Center and therefore developed a enhanced consistent security model which has clear and definite objectives in each layer of OPC UA transport and communication stack. In present day, OPC UA  offers secure messaging mechanisms by applying WS Security with Simple Object Access Protocol (SOAP)  and alternatively SSL based Hypertext transfer Protocol Secure (HTTPS) messaging\cite{opc_secure_1}. Besides secure messaging protocols,  authentication mechanisms based on username-password or X.509 certificates are introduced, in order to process mutual authentication among OPC UA applications from different logic levels and hardware devices.
 
 \subsection{Smart Card Security Design}
 
@@ -912,20 +926,17 @@ Following return codes are expected in response APDU:
 \end{table}
 
 \paragraph{Process Communication Data }
-This APDU command and response set is used to provide functionalities to realize OPC UA client server 
+This APDU command and response set is used to provide functionalities to perform command processing between cellphone and  other smart home device. 
 
 
 \begin{table}[!htbp]
 \caption{Process data command APDUs}
 \scalebox{0.98}{%
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-CLA  & INS  & P1   & P2   & Lc   & Data field  & Le & Description \\ \hline
-0xA0 & 0x20 & 0x00 & 0x00 & data filed length & desired target's public key & PK length &require public key\\ \hline
-0xA0 & 0x21 & 0x00 & 0x00 & data filed length & command data & N/A &get subscription from command\\ \hline
-0xA0 & 0x22 & 0x00 & 0x00 & data filed length & subscription value & N/A &set subscription\\ \hline
-0xA0 & 0x23 & 0x00 & 0x00 & data filed length & command data & N/A & get record data from command\\ \hline
-0xA0 & 0x24 & 0x00 & 0x00 & data filed length & sensor id & 0x04 &read sensor value \\ \hline
+CLA  & INS  & P1   & P2   & Lc   & Data field  & Le \\ \hline
+0xA0 & 0x20 & 0x00 & 0x00 & data filed length & desired target's public key & PK length \\ \hline
+0xA0 & 0x21 & 0x00 & 0x00 & data filed length & command data & response length \\ \hline
 \end{tabular}
 }
 \label{process-data-cmd-apdu}
