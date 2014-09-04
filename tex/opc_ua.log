@@ -1,24 +1,27 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.16)  31 AUG 2014 15:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  3 SEP 2014 11:49
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **opc_ua.tex
-(F:\opc_ua\tex\opc_ua.tex
+(./opc_ua.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(F:\opc_ua\tex\llncs.cls
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(./llncs.cls
 Document Class: llncs 2010/07/12 v2.17 
  LaTeX document class for Lecture Notes in Computer Science
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,7 +36,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count87
 \mult@box=\box26
@@ -81,9 +84,9 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \colbreak@box=\box51
 \multicol@sort@counter=\count95
 )
-(F:\opc_ua\tex\aliascnt.sty
+(./aliascnt.sty
 Package: aliascnt 2009/09/08 v1.3 Alias counter (HO)
- (F:\opc_ua\tex\remreset.sty))
+ (./remreset.sty))
 \c@chapter=\count96
 LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
 LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
@@ -135,31 +138,31 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
 \c@remark=\count115
 \headlineindent=\dimen123
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks18
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("f:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count116
@@ -167,7 +170,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen124
 \Gin@req@width=\dimen125
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count117
 \float@exts=\toks19
@@ -175,11 +178,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks20
 \@floatcapt=\box55
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip45
 \f@ncyO@elh=\skip46
 \f@ncyO@erh=\skip47
@@ -190,11 +193,13 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \f@ncyO@olf=\skip52
 \f@ncyO@orf=\skip53
 )
-("f:\Program Files (x86)\MiKTeX 2.9\tex\latex\filecontents\filecontents.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
 eX document
 )
-(F:\opc_ua\tex\opc_ua.aux)
+(./opc_ua.aux)
+\openout1 = `opc_ua.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -208,7 +213,7 @@ LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 
-("f:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count118
 \scratchdimen=\dimen126
@@ -221,277 +226,325 @@ LaTeX Font Info:    ... okay on input line 18.
 \MPnumerator=\count122
 \makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 24.
- [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 61.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 61.
+[1
 
-<cs.jpg, id=15, 538.26094pt x 170.13562pt>
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 66.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 66.
+ [3] <cs.jpg, id=19, 538.26094pt x 170.13562pt>
 File: cs.jpg Graphic file (type jpg)
  <use cs.jpg>
-Package pdftex.def Info: cs.jpg used on input line 85.
+Package pdftex.def Info: cs.jpg used on input line 90.
 (pdftex.def)             Requested size: 347.12354pt x 109.71974pt.
- [3]
-<server.jpg, id=19, 536.0025pt x 424.58624pt>
+ [4 <./cs.jpg>]
+<server.jpg, id=23, 536.0025pt x 424.58624pt>
 File: server.jpg Graphic file (type jpg)
  <use server.jpg>
-Package pdftex.def Info: server.jpg used on input line 99.
+Package pdftex.def Info: server.jpg used on input line 104.
 (pdftex.def)             Requested size: 277.69987pt x 219.9698pt.
- [4 <F:/opc_ua/tex/cs.jpg>] <client.jpg, id=23, 508.90125pt x 231.86626pt>
+
+<client.jpg, id=24, 508.90125pt x 231.86626pt>
 File: client.jpg Graphic file (type jpg)
  <use client.jpg>
-Package pdftex.def Info: client.jpg used on input line 108.
+Package pdftex.def Info: client.jpg used on input line 113.
 (pdftex.def)             Requested size: 347.12354pt x 158.16228pt.
-
-<opc_ua_cs_comm.jpg, id=24, 485.56406pt x 263.48438pt>
+ [5 <./server.jpg>] <opc_ua_cs_comm.jpg, id=28, 485.56406pt x 263.48438pt>
 File: opc_ua_cs_comm.jpg Graphic file (type jpg)
 
 <use opc_ua_cs_comm.jpg>
-Package pdftex.def Info: opc_ua_cs_comm.jpg used on input line 119.
+Package pdftex.def Info: opc_ua_cs_comm.jpg used on input line 124.
 (pdftex.def)             Requested size: 277.69987pt x 150.68617pt.
- [5 <F:/opc_ua/tex/server.jpg>] [6 <F:/opc_ua/tex/client.jpg> <F:/opc_ua/tex/op
-c_ua_cs_comm.jpg>]
-<opc_ua_shs.jpg, id=31, 551.81157pt x 389.95688pt>
+ [6 <./client.jpg> <./opc_ua_cs_comm.jpg>]
+<opc_ua_shs.jpg, id=32, 551.81157pt x 389.95688pt>
 File: opc_ua_shs.jpg Graphic file (type jpg)
  <use opc_ua_shs.jpg>
-Package pdftex.def Info: opc_ua_shs.jpg used on input line 131.
+Package pdftex.def Info: opc_ua_shs.jpg used on input line 136.
 (pdftex.def)             Requested size: 347.12354pt x 245.31711pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <F:/opc_ua/tex/opc_ua_shs.jpg>]
-<opc_ua_commstack.jpg, id=36, 536.75531pt x 387.69844pt>
+<opc_ua_commstack.jpg, id=33, 536.75531pt x 387.69844pt>
 File: opc_ua_commstack.jpg Graphic file (type jpg)
 
 <use opc_ua_commstack.jpg>
-Package pdftex.def Info: opc_ua_commstack.jpg used on input line 139.
+Package pdftex.def Info: opc_ua_commstack.jpg used on input line 144.
 (pdftex.def)             Requested size: 347.12354pt x 250.7291pt.
- [8 <F:/opc_ua/tex/opc_ua_commstack.jpg>]
+ [7 <./opc_ua_shs.jpg>] [8 <./opc_ua_commstack.jpg>]
 
 LaTeX Warning: Reference `fig:opc_ua_messchunk' on page 9 undefined on input li
-ne 147.
+ne 152.
 
 [9]
-Overfull \hbox (13.43373pt too wide) in paragraph at lines 174--186
+Overfull \hbox (13.43373pt too wide) in paragraph at lines 172--184
  [][] 
  []
 
-<scc.jpg, id=43, 436.63126pt x 304.13625pt>
+<scc.jpg, id=44, 436.63126pt x 304.13625pt>
 File: scc.jpg Graphic file (type jpg)
  <use scc.jpg>
-Package pdftex.def Info: scc.jpg used on input line 192.
+Package pdftex.def Info: scc.jpg used on input line 190.
 (pdftex.def)             Requested size: 277.69987pt x 193.43065pt.
-
-<file.pdf, id=44, 542.025pt x 379.4175pt>
+ [10 <./scc.jpg>]
+<file.pdf, id=48, 542.025pt x 379.4175pt>
 File: file.pdf Graphic file (type pdf)
  <use file.pdf>
-Package pdftex.def Info: file.pdf used on input line 204.
+Package pdftex.def Info: file.pdf used on input line 205.
 (pdftex.def)             Requested size: 277.69987pt x 194.39772pt.
- [10] [11 <F:/opc_ua/tex/scc.jpg> <F:/opc_ua/tex/file.pdf>]
-<file-structure.pdf, id=75, 582.67688pt x 415.5525pt>
+ [11 <./file.pdf>]
+<file-structure.pdf, id=76, 582.67688pt x 415.5525pt>
 File: file-structure.pdf Graphic file (type pdf)
  <use file-structure.pdf>
-Package pdftex.def Info: file-structure.pdf used on input line 217.
+Package pdftex.def Info: file-structure.pdf used on input line 218.
 (pdftex.def)             Requested size: 347.12354pt x 247.56433pt.
 
-[12 <F:/opc_ua/tex/file-structure.pdf>]
-<master-slave-relationship.pdf, id=93, 424.58624pt x 307.1475pt>
+<master-slave-relationship.pdf, id=77, 424.58624pt x 307.1475pt>
 File: master-slave-relationship.pdf Graphic file (type pdf)
 
 <use master-slave-relationship.pdf>
-Package pdftex.def Info: master-slave-relationship.pdf used on input line 229.
+Package pdftex.def Info: master-slave-relationship.pdf used on input line 230.
 (pdftex.def)             Requested size: 347.12354pt x 251.12207pt.
- [13 <F:/opc_ua/tex/master-slave-relationship.pdf>] <jcvm.jpg, id=118, 330.4846
-8pt x 205.5178pt>
+ [12 <./file-structure.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./master-slave-relationship.pdf>] <jcvm.jpg, id=119, 330.48468pt x 205.51
+78pt>
 File: jcvm.jpg Graphic file (type jpg)
- <use jcvm.jpg>
-Package pdftex.def Info: jcvm.jpg used on input line 280.
+
+<use jcvm.jpg>
+Package pdftex.def Info: jcvm.jpg used on input line 281.
 (pdftex.def)             Requested size: 347.12354pt x 215.8722pt.
- [14]
-[15 <F:/opc_ua/tex/jcvm.jpg>]
-<applet-execution-states.pdf, id=125, 532.99126pt x 94.85437pt>
+ [14] [15 <./jcvm.jpg>]
+<applet-execution-states.pdf, id=127, 532.99126pt x 94.85437pt>
 File: applet-execution-states.pdf Graphic file (type pdf)
 
 <use applet-execution-states.pdf>
-Package pdftex.def Info: applet-execution-states.pdf used on input line 316.
+Package pdftex.def Info: applet-execution-states.pdf used on input line 317.
 (pdftex.def)             Requested size: 347.12354pt x 61.77762pt.
 
-<apdu-command-processing.pdf, id=126, 460.72125pt x 388.45125pt>
+<apdu-command-processing.pdf, id=128, 460.72125pt x 388.45125pt>
 File: apdu-command-processing.pdf Graphic file (type pdf)
 
 <use apdu-command-processing.pdf>
-Package pdftex.def Info: apdu-command-processing.pdf used on input line 326.
+Package pdftex.def Info: apdu-command-processing.pdf used on input line 327.
 (pdftex.def)             Requested size: 277.69987pt x 234.13945pt.
- [16] [17 <F:/opc_ua/tex/applet-execution-states.pdf> <F:/opc_ua/tex/apdu-comma
-nd-processing.pdf
-
-pdfTeX warning: pdflatex.exe (file F:/opc_ua/tex/apdu-command-processing.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-Overfull \hbox (42.68146pt too wide) in paragraph at lines 345--354
+ [16 <./applet-execution-states.pdf>]
+Overfull \hbox (42.68146pt too wide) in paragraph at lines 346--355
  [][] 
  []
 
 
-Overfull \hbox (45.62366pt too wide) in paragraph at lines 359--381
+Overfull \hbox (45.62366pt too wide) in paragraph at lines 360--382
  [][] 
  []
 
-<gp_1.jpg, id=155, 490.83376pt x 475.02469pt>
+<gp_1.jpg, id=140, 490.83376pt x 475.02469pt>
 File: gp_1.jpg Graphic file (type jpg)
  <use gp_1.jpg>
-Package pdftex.def Info: gp_1.jpg used on input line 388.
+Package pdftex.def Info: gp_1.jpg used on input line 389.
 (pdftex.def)             Requested size: 242.98541pt x 235.15605pt.
- [18]
-<open-architecture.jpg, id=160, 377.91188pt x 289.08pt>
+ [17 <./apdu-command-processing.pdf>] [18]
+<open-architecture.jpg, id=162, 377.91188pt x 289.08pt>
 File: open-architecture.jpg Graphic file (type jpg)
 
 <use open-architecture.jpg>
-Package pdftex.def Info: open-architecture.jpg used on input line 402.
+Package pdftex.def Info: open-architecture.jpg used on input line 403.
 (pdftex.def)             Requested size: 277.69987pt x 212.42493pt.
-
-Underfull \vbox (badness 4013) has occurred while \output is active []
-
- [19 <F:/opc_ua/tex/gp_1.jpg>] [20 <F:/opc_ua/tex/open-architecture.jpg>]
-<android-stack.jpg, id=168, 365.86688pt x 366.61969pt>
+ [19 <./gp_1.jpg>] [20 <./open-architecture.jpg>]
+<android-stack.jpg, id=170, 365.86688pt x 366.61969pt>
 File: android-stack.jpg Graphic file (type jpg)
  <use android-stack.jpg>
-Package pdftex.def Info: android-stack.jpg used on input line 428.
+Package pdftex.def Info: android-stack.jpg used on input line 429.
 (pdftex.def)             Requested size: 347.12354pt x 347.85597pt.
 
-[21] [22 <F:/opc_ua/tex/android-stack.jpg>]
-<vm-compare.jpg, id=175, 266.49562pt x 271.76532pt>
+Underfull \vbox (badness 1681) has occurred while \output is active []
+
+ [21 <./android-stack.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<vm-compare.jpg, id=174, 266.49562pt x 271.76532pt>
 File: vm-compare.jpg Graphic file (type jpg)
  <use vm-compare.jpg>
-Package pdftex.def Info: vm-compare.jpg used on input line 470.
+Package pdftex.def Info: vm-compare.jpg used on input line 471.
 (pdftex.def)             Requested size: 242.98541pt x 247.79614pt.
 
-[23] <clas-vs-dex.jpg, id=179, 453.19313pt x 434.37282pt>
+[22]
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+ [23 <./vm-compare.jpg>] <clas-vs-dex.jpg, id=181, 453.19313pt x 434.37282pt>
 File: clas-vs-dex.jpg Graphic file (type jpg)
 
 <use clas-vs-dex.jpg>
-Package pdftex.def Info: clas-vs-dex.jpg used on input line 482.
+Package pdftex.def Info: clas-vs-dex.jpg used on input line 483.
 (pdftex.def)             Requested size: 347.12354pt x 332.70505pt.
- [24 <F:/opc_ua/tex/vm-compare.jpg>] [25 <F:/opc_ua/tex/clas-vs-dex.jpg>] <sche
-duler.jpg, id=187, 313.9228pt x 164.86594pt>
+ [24 <./clas-vs-dex.jpg>]
+<scheduler.jpg, id=185, 313.9228pt x 164.86594pt>
 File: scheduler.jpg Graphic file (type jpg)
-
-<use scheduler.jpg>
-Package pdftex.def Info: scheduler.jpg used on input line 504.
+ <use scheduler.jpg>
+Package pdftex.def Info: scheduler.jpg used on input line 506.
 (pdftex.def)             Requested size: 347.12354pt x 182.309pt.
- [26 <F:/opc_ua/tex/scheduler.jpg>]
+ [25]
 
-LaTeX Warning: Citation `a' on page 27 undefined on input line 522.
+LaTeX Warning: Citation `a' on page 26 undefined on input line 524.
 
-<rcc.jpg, id=191, 452.4403pt x 115.93312pt>
+<rcc.jpg, id=195, 452.4403pt x 115.93312pt>
 File: rcc.jpg Graphic file (type jpg)
  <use rcc.jpg>
-Package pdftex.def Info: rcc.jpg used on input line 525.
+Package pdftex.def Info: rcc.jpg used on input line 527.
 (pdftex.def)             Requested size: 347.12354pt x 88.94681pt.
- [27 <F:/opc_ua/tex/rcc.jpg>] <smart-home-agent.jpg, id=200, 291.33844pt x 248.
-42813pt>
+ [26 <./scheduler.jpg> <./rcc.jpg>] <smart-home-agent.jpg, id=199, 291.33844pt 
+x 248.42813pt>
 File: smart-home-agent.jpg Graphic file (type jpg)
 
 <use smart-home-agent.jpg>
-Package pdftex.def Info: smart-home-agent.jpg used on input line 535.
+Package pdftex.def Info: smart-home-agent.jpg used on input line 537.
 (pdftex.def)             Requested size: 277.69987pt x 236.81659pt.
- [28 <F:/opc_ua/tex/smart-home-agent.jpg>] [29]
-<homeoverview.jpg, id=207, 1342.01375pt x 706.64pt>
+ [27 <./smart-home-agent.jpg>] [28] [29]
+<homeoverview.jpg, id=210, 1342.01375pt x 706.64pt>
 File: homeoverview.jpg Graphic file (type jpg)
  <use homeoverview.jpg>
-Package pdftex.def Info: homeoverview.jpg used on input line 574.
+Package pdftex.def Info: homeoverview.jpg used on input line 600.
 (pdftex.def)             Requested size: 416.54718pt x 219.3257pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 574--575
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 600--601
  [][] 
  []
 
-[30 <F:/opc_ua/tex/homeoverview.jpg>]
-<csoverview.pdf, id=211, 487.8225pt x 406.51875pt>
+[30] <csoverview.pdf, id=214, 487.8225pt x 406.51875pt>
 File: csoverview.pdf Graphic file (type pdf)
  <use csoverview.pdf>
-Package pdftex.def Info: csoverview.pdf used on input line 590.
+Package pdftex.def Info: csoverview.pdf used on input line 616.
 (pdftex.def)             Requested size: 381.838pt x 318.19987pt.
 
-Overfull \hbox (34.71446pt too wide) in paragraph at lines 590--591
+Overfull \hbox (34.71446pt too wide) in paragraph at lines 616--617
  [][] 
  []
 
-[31] <clientStructure.pdf, id=216, 551.05875pt x 460.72125pt>
+[31 <./homeoverview.jpg>] [32 <./csoverview.pdf>]
+<clientStructure.pdf, id=245, 551.05875pt x 460.72125pt>
 File: clientStructure.pdf Graphic file (type pdf)
 
 <use clientStructure.pdf>
-Package pdftex.def Info: clientStructure.pdf used on input line 621.
+Package pdftex.def Info: clientStructure.pdf used on input line 647.
 (pdftex.def)             Requested size: 416.54718pt x 348.27477pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 621--622
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 647--648
  [][] 
  []
 
-[32 <F:/opc_ua/tex/csoverview.pdf>] [33 <F:/opc_ua/tex/clientStructure.pdf>]
-<apsd.jpg, id=252, 563.85657pt x 532.23843pt>
+[33 <./clientStructure.pdf>] <apsd.jpg, id=255, 563.85657pt x 532.23843pt>
 File: apsd.jpg Graphic file (type jpg)
- <use apsd.jpg>
-Package pdftex.def Info: apsd.jpg used on input line 637.
+
+<use apsd.jpg>
+Package pdftex.def Info: apsd.jpg used on input line 663.
 (pdftex.def)             Requested size: 416.54718pt x 393.19244pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 637--638
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 663--664
  [][] 
  []
 
-<serverStructure.pdf, id=253, 551.05875pt x 532.99126pt>
+<serverStructure.pdf, id=256, 551.05875pt x 532.99126pt>
 File: serverStructure.pdf Graphic file (type pdf)
 
 <use serverStructure.pdf>
-Package pdftex.def Info: serverStructure.pdf used on input line 649.
+Package pdftex.def Info: serverStructure.pdf used on input line 675.
 (pdftex.def)             Requested size: 416.54718pt x 402.90611pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 649--650
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 675--676
  [][] 
  []
 
-[34] [35 <F:/opc_ua/tex/apsd.jpg>] [36 <F:/opc_ua/tex/serverStructure.pdf>]
-<whole-structure.pdf, id=271, 713.66624pt x 474.27188pt>
+[34] [35 <./apsd.jpg>] [36 <./serverStructure.pdf>]
+<whole-structure.pdf, id=274, 713.66624pt x 474.27188pt>
 File: whole-structure.pdf Graphic file (type pdf)
 
 <use whole-structure.pdf>
-Package pdftex.def Info: whole-structure.pdf used on input line 664.
+Package pdftex.def Info: whole-structure.pdf used on input line 690.
 (pdftex.def)             Requested size: 347.12354pt x 230.68013pt.
- [37 <F:/opc_ua/tex/whole-structure.pdf>]
-<class.pdf, id=288, 804.00375pt x 460.72125pt>
+ <class.pdf, id=275, 804.00375pt x 460.72125pt>
 File: class.pdf Graphic file (type pdf)
- <use class.pdf>
-Package pdftex.def Info: class.pdf used on input line 681.
+
+<use class.pdf>
+Package pdftex.def Info: class.pdf used on input line 707.
 (pdftex.def)             Requested size: 347.12354pt x 198.9077pt.
- [38 <F:/opc_ua/tex/class.pdf>] <communication-flow.pdf, id=298, 614.295pt x 66
-3.98062pt>
+ [37] [38 <./whole-structure.pdf> <./class.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./class.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>] <communication-flow.pdf, id=300, 614.295pt x 663.98062pt>
 File: communication-flow.pdf Graphic file (type pdf)
 
 <use communication-flow.pdf>
-Package pdftex.def Info: communication-flow.pdf used on input line 708.
+Package pdftex.def Info: communication-flow.pdf used on input line 734.
 (pdftex.def)             Requested size: 416.54718pt x 450.24454pt.
 
-Overfull \hbox (69.42365pt too wide) in paragraph at lines 708--709
+Overfull \hbox (69.42365pt too wide) in paragraph at lines 734--735
  [][] 
  []
 
-[39] [40 <F:/opc_ua/tex/communication-flow.pdf>] [41]
-Overfull \hbox (80.61974pt too wide) in paragraph at lines 874--876
+[39] [40 <./communication-flow.pdf>] [41]
+Overfull \hbox (80.61974pt too wide) in paragraph at lines 900--902
 [][]
  []
 
-[42] (F:\opc_ua\tex\opc_ua.bbl [43]
+[42] (./opc_ua.bbl [43]
 Underfull \hbox (badness 5924) in paragraph at lines 33--37
 []\OT1/cmr/m/n/9 Wikipedia con-trib-u-tors:  Con-strained Ap-pli-ca-tion Pro-to
--col.  $\OT1/cmtt/m/n/9 http : / /$
+-col.  $\OT1/cmtt/m/n/9 http : / /
  []
 
 Missing character: There is no Ã in font cmr9!
@@ -508,37 +561,38 @@ Missing character: There is no ¼ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
-) [45] (F:\opc_ua\tex\opc_ua.aux)
+) [45] (./opc_ua.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2022 strings out of 493921
- 26768 string characters out of 3144882
- 93333 words of memory out of 3000000
- 5295 multiletter control sequences out of 15000+200000
+ 2381 strings out of 493488
+ 33301 string characters out of 3141326
+ 103900 words of memory out of 3000000
+ 5636 multiletter control sequences out of 15000+200000
  8315 words of font info for 30 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 29i,13n,43p,1415b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
-<f:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<f:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><f:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><f:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><f:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><f:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><f:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><f:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><f:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><f:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><f:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb><f:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on opc_ua.pdf (45 pages, 2983407 bytes).
+ 957 hyphenation exceptions out of 8191
+ 37i,13n,43p,1414b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on opc_ua.pdf (45 pages, 2945487 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 249 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
