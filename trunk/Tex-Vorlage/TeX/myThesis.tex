@@ -1,0 +1,84 @@
+% -*- TeX -*- -*- ENG -*- -*- UNIX -*-
+
+\input{myDocumentClass} % Dokumentklasse bestimmen
+
+\input{Constants} % Konstanten laden, z.B.: Begriffe wie Bachelor-Arbeit, Bachelor of Science, etc.
+
+\usepackage[american]{babel}
+%\usepackage[ansinew]{inputenc} %Für deutsche Kodierung von Buchstaben ä,ö,ü,ß unter Windows (für Unix: 'latin1' statt 'ansinew') ansonsten muss man Folgendes schreiben:
+% \"a für ä, \"o für ö, \"u für ü, \ss für ß.
+%\usepackage{german} % unter anderem für bessere Silbentrennung
+
+\input{myData} % Parameter wie Autor, Titel, Datum, Gutachter, etc.
+
+\usepackage{ifthen} % Paket für if-then-else-Konstrukte
+
+\usepackage{verbatim}  % z.B. für comment-Umgebung
+%\usepackage{natbib}    % für BibTeX mit dinat style (DIN 1505, Teil 2 und 3)
+%\usepackage{bibgerm}   % für BibTeX mit deutschem style z.B. geralpha
+%\usepackage{makeidx}   % für Index-/Stichwortverzeichnis
+%\makeindex             % lässt LaTeX die Indexeinträge sammeln
+%\usepackage{epsfig}   % zum Einfügen von EPS-Grafiken
+\usepackage{array}     % weitere Hilfsmittel für Tabellen
+%\usepackage{float}    % für weitere Gleitumgebungen außer table und figure
+
+\usepackage{setspace}  % für 1-fachen, 1,5-fachen oder 2-fachen Zeilenabstand
+
+%\floatstyle{plain}
+%\floatname{sourcecode}{Code-Fragment}
+%\newfloat{sourcecode}{htbp}{loc}[chapter] % neue Gleitumgebung für Quellcode
+
+
+\input{MathDefinitions} % einige mathematische Hilfskonstrukte und Vereinfachungen
+
+\input{PageLayout} % Layout der Seiten, z.B. Kopf- und Fußzeilendefinition
+
+
+% ueberpruefen, ob wir pdflatex ausfuehren (geht nur bei Koma-Klassen)
+\ifpdfoutput
+{
+% PDF wird genutzt
+	
+	\usepackage[pdftex]{graphicx,color}
+	% eigene Farben für Links:
+  %\definecolor{myLinkColor}{rgb}{0,0,.5}
+  %\definecolor{myCiteColor}{rgb}{0,.5,0}
+  %\definecolor{myFileColor}{rgb}{.5,0,0}
+  %\definecolor{myURLColor}{rgb}{0,0,1}
+  % Setzen aller Link-Farben auf Schwarz
+  \definecolor{myLinkColor}{rgb}{0,0,0}
+  \definecolor{myCiteColor}{rgb}{0,0,0}
+  \definecolor{myFileColor}{rgb}{0,0,0}
+  \definecolor{myURLColor}{rgb}{0,0,0}
+  \usepackage[pdftex,%
+  						pdftitle={\meinTitel},%
+  						pdfauthor={\meinName},%
+  						pdfkeywords={\meinePDFStichwoerter},% Stichwörter
+  						plainpages=false,%
+  						pdfpagelabels,% Seitenzahl als z.B. 'ii (4 of 40)' anstatt '4 of 40' darstellen
+  						colorlinks=true,%
+  						linkcolor=myLinkColor,%
+  						citecolor=myCiteColor,%
+  						filecolor=myFileColor,%
+  						urlcolor=myURLColor,%
+  						bookmarks,% Lesezeichen erstellen
+  						bookmarksnumbered, % Lesezeichen nummeriert wie im Inhaltsverzeichnis
+  						breaklinks, % Zeilenumbrüche bei Links erlauben
+  						%pdfpagelayout={TwoColumnRight}% zweiseitiges fortlaufendes Layout
+  						]{hyperref}
+  \pdfcompresslevel=9 %Kompressionslevel fuer Text und Grafiken
+  \DeclareGraphicsExtensions{.pdf, .png, .jpg, .tif, .mps} % Dateiendungen für Grafikdateien, geordnet nach Priorität für automatische Auswahl der richtigen Datei, falls Endung nicht angegeben
+}
+{
+% Kein PDF
+  
+  \usepackage{graphicx}
+  \usepackage{color}
+  \usepackage[hypertex, bookmarks,% Lesezeichen erstellen
+  						bookmarksnumbered, % Lesezeichen nummeriert wie im Inhaltsverzeichnis
+  						breaklinks, % Zeilenumbrüche bei Links erlauben
+  						]{hyperref}
+  \DeclareGraphicsExtensions{.eps,.ps} % Dateiendungen für Grafikdateien
+}
+
+\input{DocumentStructure} % der eigentliche Inhalt und die Struktur der Arbeit

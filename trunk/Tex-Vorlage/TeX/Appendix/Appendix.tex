@@ -1,0 +1,86 @@
+\chapter{My Appendix}\label{secAppendixA}
+
+The Appendix can be used to provide additional information, e.g. tables, figures, etc.
+
+
+\section{Some Exemplary Uses of \LaTeX}
+
+In the following a few exemplary uses of \LaTeX~commands are introduced.
+
+\subsection{Figures}\label{secFigures}
+
+You can reference figures in your text, e.g. Figure~\ref{figUniKralle} on Page~\pageref{figUniKralle}.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[scale=0.5]{Images/TitlePage/uni-logo}
+	\caption{A single scaled image}
+	\label{figUniKralle}
+\end{figure}
+
+You can even combine more than one image in a single float environment and reference each of them independently, e.g. Figures \ref{figCaseA} and \ref{figCaseB}.
+
+\begin{figure}[h]
+	\centering
+  \begin{minipage}[t]{.47\textwidth}
+    \centering
+    \includegraphics[width=4.3cm]{Images/TitlePage/uni-logo} 
+    \caption{Case A}
+    \label{figCaseA}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{.47\textwidth}
+    \centering
+    \includegraphics[width=6cm]{Images/TitlePage/uni-logo}
+    \caption{Case B}
+    \label{figCaseB}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\textwidth]{Images/TitlePage/uni-logo}
+	\caption[Caption for the list of figures]{A single figure scaled to fill the page's space given for the text area.}
+	\label{figUniKralleLarge}
+\end{figure}
+
+
+\subsection{Tables}
+
+You can reference tables analogously to figures (see Section~\ref{secFigures}), e.g. Table~\ref{tabValues} on Page~\pageref{tabValues}.
+
+\begin{table}[tb]
+  \caption{A Table with some values}
+  \label{tabValues}
+  \centering
+  \vspace{1ex}
+		\begin{tabular}{l|l|l|l|l}
+			Label & Amount of & \multicolumn{3}{c}{Values}\\
+			& something & Case 1 & Case 2 & Case 3\\
+			\hline
+			\hline
+			X & 100\% & 39.59\% & 86.47\% & 87.82\%\\
+			\hline
+			Y & 100\% & 38.03\% & 84.91\% & 86.26\%\\
+			\hline
+			Z & 71.88\% & 34.78\% & 97.83\% & 97.83\%\\
+			\hline
+		\end{tabular}
+\end{table}
+
+
+\subsection{References and Quotation}
+
+You can cite books and other scientific documents, e.g. books about \LaTeX~ \cite{Latex4, Latex3, Latex1, Latex2} (the last three are in German).
+Quotations have to be indented adequately, e.g.:
+
+\begin{quotation}
+	"\LaTeX~is great!"
+\end{quotation}
+
+\noindent\textbf{Attention!} When using citations in \LaTeX~consider that you have to compile your \LaTeX~file up to 4 times until all references are correctly set in your generated document.
+
+
+\subsection{Tools and Environments}
+
+In case of using Windows, the \LaTeX -environment MiKTeX \cite{MikTex} is a good choice. In this case the editor TeXnicCenter \cite{TexnicCenter} can be used to edit your text.

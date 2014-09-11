@@ -1,0 +1,87 @@
+% Please change only this file to adapt your document's structure.
+
+%--- list of figures ----------------------------------------------------------------------
+
+\ifthenelse{
+	\equal{\ausarbeitungsTyp}{\ausarbeitungsTypMaster}
+	\OR
+	\equal{\ausarbeitungsTyp}{\ausarbeitungsTypDiplom}
+	\OR
+	\equal{\ausarbeitungsTyp}{\ausarbeitungsTypBachelor}
+	}
+{
+	%then: add a list of figures
+	
+	%\clearemptydoublepage
+	\listoffigures
+}
+{
+	%else: do nothing
+}
+
+
+%--- list of tables ------------------------------------------------------------------------
+
+\ifthenelse{
+	\equal{\ausarbeitungsTyp}{\ausarbeitungsTypMaster}
+	\OR
+	\equal{\ausarbeitungsTyp}{\ausarbeitungsTypDiplom}
+	\OR
+	\equal{\ausarbeitungsTyp}{\ausarbeitungsTypBachelor}
+	}
+{
+	%then: add a list of tables
+	
+	%\clearemptydoublepage
+	\listoftables
+}
+{
+	%else: do nothing
+}
+
+%\setcounter{secnumdepth}{4} % create section numbers up to level 4, e.g.: 3.2.5.4, usually not necessary
+
+
+%######################## Chapter 1 ######################################################
+\cleardoublepage
+\pagenumbering{arabic} % use arabic page numbers again
+
+\input{Introduction/Introduction}
+\clearemptydoublepage
+%######################## Chapter 2 ######################################################
+%\clearemptydoublepage
+\input{Fundamentals/Fundamentals}
+\clearemptydoublepage
+\input{StateofArt/StateofArt}
+\clearemptydoublepage
+\input{Scenario/Scenario}
+\clearemptydoublepage
+\input{Desgin/Desgin}
+\clearemptydoublepage
+\input{Impl/Impl}
+\clearemptydoublepage
+\input{Analysis/Analysis}
+\clearemptydoublepage
+%######################## Chapter 3 ######################################################
+%\clearemptydoublepage
+%\input{...}
+
+%######################## Chapter ? ######################################################
+%\clearemptydoublepage
+\input{Summary/Summary}
+
+%######################## Remainder ######################################################
+
+%--- bibliography -----------------------------------------------------------------------
+%\clearemptydoublepage
+%\bibliographystyle{myalphadin}
+\bibliographystyle{alphadin}
+%\bibliographystyle{alpha}
+%\bibliographystyle{geralpha}
+%\bibliographystyle{dinat}
+%\bibliographystyle{splncs}
+\bibliography{myThesis}
+
+%--- index ------------------------------------------------------------------------
+%\clearemptydoublepage
+%\printindex
