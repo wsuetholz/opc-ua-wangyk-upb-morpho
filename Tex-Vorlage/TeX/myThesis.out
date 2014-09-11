@@ -1,0 +1,64 @@
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{1.2 Solution Idea}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{1.3 Thesis Structure}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{2 Fundamentals}{}% 5
+\BOOKMARK [1][-]{section.2.1}{2.1 OPC Unified Architecture Structure Overview}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 OPC UA Specifications}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 OPC UA Client Server Structure}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 OPC UA Terminologies}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 Standard OPC UA Server}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.5}{2.1.5 Standard OPC UA Client}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.6}{2.1.6 Secure Channel and Session}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.7}{2.1.7 Security Handshake}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.8}{2.1.8 OPC UA Communication stack}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.9}{2.1.9 Other Competitor}{section.2.1}% 15
+\BOOKMARK [1][-]{section.2.2}{2.2 Smart card}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Overview}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Universal integrated Circuit Card}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Smart Card Software Components}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 Smart card File Management}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Data Exchange with Smart Card}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.6}{2.2.6 Secure Messaging}{section.2.2}% 22
+\BOOKMARK [1][-]{section.2.3}{2.3 Java Card}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Language Specification}{section.2.3}% 24
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Transaction Integrity}{section.2.3}% 25
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Persistent Object and Transient Object}{section.2.3}% 26
+\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Java Card Applet}{section.2.3}% 27
+\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Javacard Cryptography}{section.2.3}% 28
+\BOOKMARK [1][-]{section.2.4}{2.4 GlobalPlatform and Remote Application Management}{chapter.2}% 29
+\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 OPEN - GlobalPlatform Environment}{section.2.4}% 30
+\BOOKMARK [1][-]{section.2.5}{2.5 OpenMobileAPI}{chapter.2}% 31
+\BOOKMARK [1][-]{section.2.6}{2.6 Android}{chapter.2}% 32
+\BOOKMARK [2][-]{subsection.2.6.1}{2.6.1 Overview}{section.2.6}% 33
+\BOOKMARK [2][-]{subsection.2.6.2}{2.6.2 Android Software Stack}{section.2.6}% 34
+\BOOKMARK [1][-]{section.2.7}{2.7 Android, Dalvik and Java}{chapter.2}% 35
+\BOOKMARK [0][-]{chapter.3}{3 State of Art}{}% 36
+\BOOKMARK [1][-]{section.3.1}{3.1 Smart Home Research}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Overview}{section.3.1}% 38
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Smart Home Optimized for Energy Services}{section.3.1}% 39
+\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Smart Health Home}{section.3.1}% 40
+\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Agent-based Smart Home}{section.3.1}% 41
+\BOOKMARK [2][-]{subsection.3.1.5}{3.1.5 Conclusion}{section.3.1}% 42
+\BOOKMARK [1][-]{section.3.2}{3.2 OPC UA Application and Security policy}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 OPC UA applications}{section.3.2}% 44
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 OPC UA secure policies}{section.3.2}% 45
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 OPC UA design consideration}{section.3.2}% 46
+\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 Conclusion}{section.3.2}% 47
+\BOOKMARK [1][-]{section.3.3}{3.3 Smart Card Security}{chapter.3}% 48
+\BOOKMARK [1][-]{section.3.4}{3.4 Secure Android Design}{chapter.3}% 49
+\BOOKMARK [0][-]{chapter.4}{4 Implementation Scenario}{}% 50
+\BOOKMARK [1][-]{section.4.1}{4.1 Overview}{chapter.4}% 51
+\BOOKMARK [1][-]{section.4.2}{4.2 Software Structure}{chapter.4}% 52
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Client Structure}{section.4.2}% 53
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Server Structure}{section.4.2}% 54
+\BOOKMARK [2][-]{subsection.4.2.3}{4.2.3 Implementation Tool Support}{section.4.2}% 55
+\BOOKMARK [0][-]{chapter.5}{5 System Design}{}% 56
+\BOOKMARK [1][-]{section.5.1}{5.1 UICC Applet}{chapter.5}% 57
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Classes}{section.5.1}% 58
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Communication Flow}{section.5.1}% 59
+\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Commands: Interface between Applet and CAD}{section.5.1}% 60
+\BOOKMARK [0][-]{chapter.6}{6 Summary and Future Work}{}% 61
+\BOOKMARK [1][-]{section.6.1}{6.1 Summary}{chapter.6}% 62
+\BOOKMARK [1][-]{section.6.2}{6.2 Future Work}{chapter.6}% 63
+\BOOKMARK [0][-]{chapter*.30}{Bibliography}{}% 64
