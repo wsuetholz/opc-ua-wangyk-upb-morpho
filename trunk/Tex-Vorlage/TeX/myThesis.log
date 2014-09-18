@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  11 SEP 2014 13:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  18 SEP 2014 11:18
 entering extended mode
 **myThesis.tex
 (C:\workspace\opc_ua\Tex-Vorlage\TeX\myThesis.tex
@@ -1350,7 +1350,7 @@ Class scrbook Warning: Usage of deprecated font command `\sl'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sl' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sl'
-(scrbook)              by `\normalfont \slshape ' on input line 380.
+(scrbook)              by `\normalfont \slshape ' on input line 379.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1364,7 +1364,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 380.
+(scrbook)              by `\normalfont \bfseries ' on input line 379.
 
 [25 <C:/workspace/opc_ua/Tex-Vorlage/TeX/open-architecture.jpg>]
 <android-stack.jpg, id=816, 365.86688pt x 366.61969pt>
@@ -1372,11 +1372,6 @@ File: android-stack.jpg Graphic file (type jpg)
  <use android-stack.jpg>
 Package pdftex.def Info: android-stack.jpg used on input line 385.
 (pdftex.def)             Requested size: 416.12161pt x 416.99977pt.
-
-Overfull \hbox (1.48656pt too wide) in paragraph at lines 392--393
-\OT1/cmr/m/n/12 ment by us-ing var-i-ous C/C++ core libs which of-fer most of t
-he Java-functionalities,
- []
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -1594,19 +1589,14 @@ LaTeX Warning: Citation `a' on page 33 undefined on input line 37.
 <rcc.jpg, id=894, 452.4403pt x 115.93312pt>
 File: rcc.jpg Graphic file (type jpg)
  <use rcc.jpg>
-Package pdftex.def Info: rcc.jpg used on input line 40.
+Package pdftex.def Info: rcc.jpg used on input line 42.
 (pdftex.def)             Requested size: 416.12161pt x 106.62614pt.
-
-Overfull \hbox (46.2972pt too wide) in paragraph at lines 37--44
-\OT1/cmr/m/n/12 tele-con-sult-ing, tele-di-ag-no-sis, real time imag-ing as wel
-l as dis-tance med-i-cal education[[]],
- []
 
 <smart-home-agent.jpg, id=898, 291.33844pt x 248.42813pt>
 File: smart-home-agent.jpg Graphic file (type jpg)
 
 <use smart-home-agent.jpg>
-Package pdftex.def Info: smart-home-agent.jpg used on input line 50.
+Package pdftex.def Info: smart-home-agent.jpg used on input line 52.
 (pdftex.def)             Requested size: 332.89856pt x 283.88954pt.
 
 
@@ -1621,7 +1611,7 @@ Class scrbook Warning: Usage of deprecated font command `\sl'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sl' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sl'
-(scrbook)              by `\normalfont \slshape ' on input line 60.
+(scrbook)              by `\normalfont \slshape ' on input line 62.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1635,7 +1625,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 60.
+(scrbook)              by `\normalfont \bfseries ' on input line 62.
 
 [33 <C:/workspace/opc_ua/Tex-Vorlage/TeX/rcc.jpg>]
 
@@ -1650,7 +1640,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 67.
+(scrbook)              by `\normalfont \scshape ' on input line 69.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1664,7 +1654,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 67.
+(scrbook)              by `\normalfont \bfseries ' on input line 69.
 
 [34 <C:/workspace/opc_ua/Tex-Vorlage/TeX/smart-home-agent.jpg>]
 
@@ -1679,7 +1669,7 @@ Class scrbook Warning: Usage of deprecated font command `\sl'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sl' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sl'
-(scrbook)              by `\normalfont \slshape ' on input line 82.
+(scrbook)              by `\normalfont \slshape ' on input line 84.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1693,10 +1683,10 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 82.
+(scrbook)              by `\normalfont \bfseries ' on input line 84.
 
 [35]
-Overfull \hbox (16.84215pt too wide) in paragraph at lines 95--96
+Overfull \hbox (16.84215pt too wide) in paragraph at lines 97--98
 []\OT1/cmr/m/n/12 Also OPC UA spec-i-fi-ca-tions pro-vide guide lines for a se-
 cure sys-tem design[[]]. 
  []
@@ -1713,7 +1703,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 98.
+(scrbook)              by `\normalfont \scshape ' on input line 100.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1727,7 +1717,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 98.
+(scrbook)              by `\normalfont \bfseries ' on input line 100.
 
 [36])
 
@@ -2401,7 +2391,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
 Here is how much of TeX's memory you used:
  8510 strings out of 493921
  129967 string characters out of 3144871
- 259351 words of memory out of 3000000
+ 259337 words of memory out of 3000000
  11340 multiletter control sequences out of 15000+200000
  14754 words of font info for 56 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
@@ -2422,7 +2412,7 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on myThesis.pdf (71 pages, 3507350 bytes).
+Output written on myThesis.pdf (71 pages, 3507550 bytes).
 PDF statistics:
  1239 PDF objects out of 1440 (max. 8388607)
  243 named destinations out of 1000 (max. 500000)
