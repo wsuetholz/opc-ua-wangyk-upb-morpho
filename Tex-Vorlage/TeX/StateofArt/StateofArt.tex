@@ -98,7 +98,7 @@ Also OPC UA specifications provide guide lines for a secure system design\cite{O
 \begin{itemize}
 \item \emph{appropriate timeout} Timeout mechanism is widely employed in systems that adopt client server architecture. With reasonable configured timeout property, both client and server can avoid unnecessary resource consumption by long time waiting response from the other, which could be caused by unexpected physical device failure or intentionally server denial of service attack initiated by third party and etc. 
 \item \emph{rate control} Rate control is considered as one of the most practical approach to prevent denial of service attack. Under rate control mechanism, each client has limited chance over a period to build communication channel, reconstruct this channel, require information from server or send data to sever. Alternatively server can also ban or block the client for a period of time, who is recently trying to flood messages. 
-\item \emph{random number generation} The generation of random number is required by most encryption, authentication and authorization algorithms. Therefore a secure system must support robust random number generation.
+\item \emph{random number generation} The generation of random number is required by most encryption, authentication and authorization algorithms. Therefore a secure system must support robust random number generation.s
 \item \emph{strict message processing}, which means the exchanged message between two communication partners must be compliant with predefined message format. Any ill-formed messages must be ignored, which in turn helps to avoid stack overflow attack and enhances system security
 \item \emph{historical data management}, this strategy ensures the system traceability and records any behaviors taking place in system. And the recorded data can be used for forensic research, when security related issues happens.
 \end{itemize}
@@ -106,5 +106,23 @@ Also OPC UA specifications provide guide lines for a secure system design\cite{O
 Above pictured OPC UA standards' features and characteristics prove the feasibility of applying OPC UA as communication protocol for Smart Home proposed in this thesis.
 
 \section{Smart Card Security}
-Smart Card
+Integrated circuit cards, ICCs for short, was firstly designed and patented in Germany\cite{smart_card_history}. Since then this credit size-, embedded with circuit chip- card is being applied in more and more various industry domains, such as secure information storage media, on-line access token, identification method, small amount payment mechanism and etc. With the development of smart card technologies, nowadays apart from traditional \emph{contact smart card}, \emph{contactless smart card}\cite{smart_card_contactless} has come into market. This \emph{contactless smart card} is able to communication with card access device without direct physical connection. To be more precisely, it applies radio frequency to contact with CADs. Now matter what categories of smart card, the temper resistant nature always contributes to make them to be one of the most popular secure token medias.
+\subsection{Smart Card in Access Control}
+In present days, \emph{security} no longer just meant the secure of our homeland borders, or the individual personal safety. In this information age, the word \emph{security} also refers to the confidentiality and integrity of users' personal data, the robustness of information system and so on. It is immediately concerned with our daily life. Especially when electronic devices, which can carry sensitive and precious information and could be vulnerable to malicious attackers, are playing irreplaceable roles in our society. 
+
+Smart card, as explained in section \emph{fundamental technologies}, is believed as one of the best secure mechanism for access control and user identification. There three ways to identity a person\cite{handbuch}:
+\begin{itemize}
+\item \emph{1 knowledge about a secret}, the secret is normally a password that negotiated early between two identification peers.
+\item \emph{2 possession of an object}, this object could be anything that is predefined. One example could be the open door keys.s
+\item \emph{3 biometrics identification}. First two points have their own limitations, because third part could steal the object, that is used for identification, or copy user's password. Moreover it also can happen, that password too long or too complex to remember or identification object is hard to carry with. Compared with them, biometrics identification depends on however the human body characteristics, such as fingerprint, signature and retina recognition.
+\end{itemize}
+Based on the above described facts, smart card is the best candidate for user identification and access control. Because when anyone wants to perform identification using smart card, he must possess the card (possession of an object satisfied), input PIN to unlock and to access card (knowledge about a secret). At the same time, complex passwords for the purpose of peer authentication and authorization can be stored on the smart card, which helps card holder to release the burden of remembering them. Also on same cards there exits a signature signed by card holder or a card holder photo, that could be use to perform biometrics identification. 
+
+\subsubsection{Personal Identification Number}
+Whenever an user intends to use one smart card, he must input a \emph{personal Identification Number}, which is also referred as \emph{Card Holder Verification}. PIN consists usually of decimal number from 0 to 9. 
+\subsubsection{}
+\subsection{Smart Card Secure Messaging}
+\subsection{Near Field Communication}
+\subsection{Conclusion}
+
 \section{Secure Android Design}
