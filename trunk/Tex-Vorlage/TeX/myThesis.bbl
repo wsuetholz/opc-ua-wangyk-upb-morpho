@@ -61,6 +61,11 @@
 \newblock \emph{The role of the UICC in Long Term Evolution all IP networks}.
 \newblock January 2009
 
+\bibitem[{Joh}02]{smart_card_history}
+\textsc{{John Abbot}}:
+\newblock \emph{Smart Card: How Secure Are They?}
+\newblock March, 2002
+
 \bibitem[{Li }04]{smart_home_research}
 \textsc{{Li Jiang, Da-you Liu, Bo Yang}}:
 \newblock \emph{SMART HOME RESEARCH}.
@@ -76,6 +81,10 @@
 \newblock \emph{Coordinated Scheduling of Residential Distributed Energy
   Resource to Optimize Smart Home Energy Services}.
 \newblock September 2010
+
+\bibitem[{Nim}]{smart_card_contactless}
+\textsc{{Nimmi Kalinati}}:
+\newblock \emph{A Study of Smart Card and its Security Features}
 
 \bibitem[{OPC}09a]{O2}
 \textsc{{OPC Foundation}}:
