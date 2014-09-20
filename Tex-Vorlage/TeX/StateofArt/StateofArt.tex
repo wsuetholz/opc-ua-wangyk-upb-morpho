@@ -118,11 +118,124 @@ Smart card, as explained in section \emph{fundamental technologies}, is believed
 \end{itemize}
 Based on the above described facts, smart card is the best candidate for user identification and access control. Because when anyone wants to perform identification using smart card, he must possess the card (possession of an object satisfied), input PIN to unlock and to access card (knowledge about a secret). At the same time, complex passwords for the purpose of peer authentication and authorization can be stored on the smart card, which helps card holder to release the burden of remembering them. Also on same cards there exits a signature signed by card holder or a card holder photo, that could be use to perform biometrics identification. 
 
+Nowadays with the help of standards such as \emph{GPC\_2.2\_B\_RAM\_over\_HTTP}, which is introduced in section \emph{fundamental technologies}, smart card is also capable of performing on-line identification based on either certificate or TLS protocol.
+
 \subsubsection{Personal Identification Number}
-Whenever an user intends to use one smart card, he must input a \emph{personal Identification Number}, which is also referred as \emph{Card Holder Verification}. PIN consists usually of decimal number from 0 to 9. 
-\subsubsection{}
-\subsection{Smart Card Secure Messaging}
-\subsection{Near Field Communication}
+Whenever an user intends to use one smart card, he must input a \emph{personal Identification Number}, which is also referred as \emph{Card Holder Verification}. PIN consists usually of four decimal number from 0 to 9 and tolerates at most 3 times wrong PIN input before a successful verification. PIN is usually stored in elementary files\cite{smart_card_access} on smart card in order to be kept from unauthorized modification. After 3 times wrong PIN input, a smart card will be locked until the \emph{unlock PIN} operation is successfully carried out. Moreover if \emph{unlock PIN} operation also fails three times in a roll, the PIN will never be unblocked\cite{smart_card_access}.
+
+\subsection{Key Management}
+
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{smart-card-key.jpg}
+		\caption{keys presented in Smart Card Description Language from \emph{Morpho}}
+	\label{fig:smart-card-key}
+\end{figure}
+
+The above introduce PIN is not the only key that are stored on smart card. In order to perform message encryption as well as decryption, peer authentication and etc. smart card must keep various keys in storage. As shown in figure~\ref{fig:smart-card-key}, in one \emph{Morpho} smart card product, a list of keys and key sets are used, for example, Card Manager PIN and Administrative keys (\emph{ADM1, ADM2, ADM5}).
+
+Moreover key data in smart not only simply record the actual key value but also must provide information such as key version number, the usage of key and so on. Table~\ref{table:smart-card-key} describes a typical key data on smart card. Likely the usage of a key also need more than just give  actual key value as shown in figure~\ref{fig:smart-card-key-use}
+
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth]{smart-card-key-use.jpg}
+		\caption{the PSK key used to configure administration session}
+	\label{fig:smart-card-key-use}
+\end{figure}
+
+\begin{table}[!htbp]
+\caption{key data stored in smart card\cite{handbook}}
+\begin{tabular}{lllll}
+\hline\hline
+Data object & Remarks\\[0.5ex]
+Key number & unique key reference number\\
+Version number & version number used for key derivation\\
+Intended usage & for which purpose this key is introduced\\
+Blocked & used to block a key\\
+Retry counter & wrong key input counter\\
+Maximum retry count & key will be blocked if retry counter reaches this value\\
+Key size & the size of key\\
+Key & Key value\\
+\hline
+\end{tabular}
+\label{table:smart-card-key}
+\end{table}
+
+Since different keys play distinguished roles in various system tasks and smart card must handle a huge number of keys, \emph{key management} shows its importance. The core responsibilities of key management is listed as following\cite{handbook}:
+\begin{itemize}
+\item \emph{key generation} Key generation is the initial step of key life cycles and uses usually physical random numbers as initial data, in order to generate secure and unique keys. 
+\item \emph{key update} This process keeps one key from being used for a long period, which could lead to compromise of system security.
+\item \emph{key revocation} When one key turns out to be compromise, key management system must destruct that key.
+\item \emph{key storage} Apparently a competent key management system must know how to safely store its secret.
+\end{itemize}
+\subsubsection{Key Generation}
+\paragraph{Derived Key}
+Since smart card can be easily exposed and analyzed by anyone who holds or steals the card, in order to minimize the risk of key compromising, none master keys are present in smart card. As a consequence, keys used in smart card are derived from unique card number, which is given during the card production process, with the help of triple DES and AES cryptographic algorithms\cite{handbook}.
+\paragraph{Dynamic Key}
+Dynamic key is normally applied to secure communication between peers and therefore it is also known as session key or temporary key. The generation of dynamic keys begins with generation of a random number that is proposed by one communication partner or unique data which is able to specify one particular session. The rest process may be different and let's take \emph{ANSI X 9.17} standard as an example\cite{handbook}. 
+\begin{center}
+$Key_{i+1} = e(Key_{gen},e(Key_{gen},(T_{i} XOR Key_{i})))$
+\end{center}
+This process described above is one-way process and can not be reserved. To be more specifically, $T_{i}$ and  $Key_{gen}$ are time-,session-independent initialization input parameter and Key generation key respectively. The newly generated  key $key_{i}$ can not only be used for encryption but also to generate other new keys.
+\subsection{Threaten and countermeasures}
+In this section, potential smart card vulnerabilities, threatens aimed at chip card as well as countermeasures will be discussed. But before we begin the analysis of smart card threatens, the trust environment of smart card based system should be explained. Following five parties are listed\cite{smart_card_attack1}.
+\begin{itemize}
+\item \emph{Cardholder} In other word, the owner of smart card, who as customer daily users smart card for different purpose  in various systems. For instance, using SIM card in cell phone to make phone call or using smart card digital wallet to perform smart amount payment like paying the park fee.
+\item \emph{Terminal} The card access device that communicates with smart card through smart card I/O.
+\item \emph{Card Manufacturer} As the name indicates, card manufacturer is the one who manufactures  the card.
+\item \emph{Card Issuer} Card Issuer is the party that designs the card OS and initializes the smart card. For example, if we are taking about a cell phone smart card, then card issuer will be the phone company. When it comes to employees' ID cards which as applied as access control tool for a particular company, in this situation card issuer is the employer.
+\item \emph{Software manufacturer} This party is the one who designs applications that run on smart card.
+\end{itemize}
+\subsubsection{Smart card Threatens and vulnerabilities}
+Since threat modeling for smart card could be extreme complex and also the classification of smart card is various. In this paragraph four representative threaten categories are presented. They are\cite{smart_card_attack2}:
+\begin{itemize}
+\item Logical attacks. Whenever we develop a software, there could exit a bug/bugs. And logical attacks just refer to the attacks that make use of bugs in software implementation\cite{smart_card_attack2}. Two examples are given as follow:
+\begin{itemize}
+\item \emph{Hidden Commands} Attack may attempt to abuse some command from \emph{initialization phase} of smart card life cycle, to modify or retrieve sensitive data from smart card in poorly designed smart card system. The abused command should have been inactive but in reality not in above mentioned vulnerable system\cite{smart_card_attack2}.
+\item \emph{Malicious Applets}
+\end{itemize}
+\item Physical attacks. This type of attack aim to reversed engineer the data and functions that contained on smart card. Normally expensive and modern lab equipments are required\cite{smart_card_attack2}. Also physical attack is known as \emph{invasive attack}\cite{smart_card_attack3}.
+\begin{itemize} 
+\item \emph{Micro-probe station} Using Micro-probes, attackers try to construct electrical connection with smart card chip, in order to observer communication between process and memory. Withe the observed information, attacker is capable of capture sensitive data such as key information and etc\cite{smart_card_attack3}.
+\item \emph{Focused Ion Beam}. Also it is possible to transmit intentionally generated signals to smart card processor using focused ion beam. As a consequence, it is possible for attacker to reveal data from smart card\cite{smart_card_attack3}
+\item \emph{Chemical Solvents, Etching and Staining Materials}. Using aforementioned chemical materials, attack can observe etching speed difference for some ROM memories  and with a step further analyze \emph{0} and \emph{1} in those memories\cite{smart_card_attack2}.
+\end{itemize}
+\item Non-invasive attacks. This kind of attack using smart card environments such as difference in power consumption, processor voltage, clock frequency and etc. to analyze smart card behaviors. For example,
+\begin{itemize}
+\item Power consumption attacks. The smart card operation execution relays on power provided by terminal.  When attack is able to observe smart card power consumption, when the card is performing cryptographic algorithms, he may retrieve related keys applying \emph{Differential Power attack} or \emph{Single Power attack}\cite{smart_card_attack3}.
+\item Timing attack on RSA. The duration of RSA algorithm runtime depends also on the input key. There there is an opportunity for attacker using observed time gap in key computation to get secret key information\cite{smart_card_history}
+\end{itemize}
+\item Other Attacks\cite{smart_card_attack5}.
+\begin{itemize}
+\item Denial of service. This kind of attack aims at interrupting normal smart card operation and consuming smart card system recourses to impact the smart card service availability.
+\item Eavesdropping. Through eavesdropping exchanged information is catapulted and analyzed.
+\item Cover transaction. Fake session or session hijacking tries to forge a communication session between smart card and the other connection peer, in order to gain information related with peer authentication, authorization and message exchanged between two partners.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Countermeasures}
+\paragraph{Logical Attacks Countermeasure}
+In oder to prevent this category of attacks, the number of bugs in smart card application should be minimized. software and card manufacturers can apply \emph{structure design} by dividing application into small units which are easy to be tested and understood. Alternatively various company related in smart card industry should work together to propose standardized interface and protocols to regulate the application development process\cite{smart_card_attack2}.
+\paragraph{Physical Attacks Countermeasure}
+Smart card manufacturers have already realized the potential  invasive attacks and are enhancing the physical security of smart card by offering:
+\begin{itemize}
+\item Reducing Chip Size. Now the size of smart card internal components can reach 150nm, which makes attack significantly hard to perform physical attack\cite{smart_card_attack3}.
+\item Metalization layers, which prevent smart card from atmospheric effects\cite{smart_card_attack3}.
+\item Multi-layered chips. Smart card manufactures are now able to build chip card consist of multi layers. vulnerable Components, for instance ROM memory, are built in lowest layer and protected from physical analysis\cite{smart_card_attack3}. 
+\item Sensors.  Smart card is protected by sensors covered with resin and those sensors will disable smart card whenever they detect physical attacks\cite{smart_card_attack}.
+\end{itemize}
+\paragraph{Non-invasive Attacks Countermeasure}
+Countermeasures against above described non-invasive attack are:
+\begin{itemize}
+\item Against Timing Attacks by computing \emph{superfluous calculations}, in this way attack are not  able  to get correct timing gap anymore\cite{smart_card_attack3} .
+\item Against Power Consumption Attacks by applying digital noise. Alternatively chips manufacturers can reduce the electromagnetic emissions to make power consumption analysis  harder\cite{smart_card_attack3}.
+\end{itemize}
+\paragraph{Other Attacks Countermeasure}
+Other attacks are normal computer security issues and can be avoided by for instance apply message encryption mechanism, building communication session based on secure channel, introducing message transmitting rate control policies and defining appropriate time out counts.
+\subsection{Smart Card Secure Applications}
+As given above, smart card is now considered as a secure data storage media and a superior tool for information system security.  People also describes smart card as the \emph{magic bullet}, that can solve computer security issues, such as access control management,  peer identification and so on. Understandably, therefore more and more smart cards are applied in secure application and products.
 \subsection{Conclusion}
 
 \section{Secure Android Design}
+
+\section{Embedded System Secure Design}

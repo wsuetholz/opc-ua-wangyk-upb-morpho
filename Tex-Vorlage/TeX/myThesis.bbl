@@ -7,6 +7,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[{Ahm}11]{smart_card_attack}
+\textsc{{Ahmadou A. SERE, Julien Iguchi-Cartigny, Jean-Louis Lanet}}:
+\newblock \emph{Evaluation of Countermeasures Against Fault Attacks on Smart
+  Cards}.
+\newblock April,2011
+
 \bibitem[{And}11]{android_forensics}
 \textsc{{Andrew Hoog}}:
 \newblock \emph{Android Forensics: Investigation, Analysis and Mobile Security
@@ -17,6 +23,16 @@
 \textsc{{Andreas Frejborg, Martti Ojala, Otso Palonen, Jouni Aro}}:
 \newblock \emph{OPC UA Connects your Systems}.
 \newblock 2013
+
+\bibitem[{Bru}99]{smart_card_attack1}
+\textsc{{Bruce Schneier, Adam Shostack}}:
+\newblock \emph{Breaking Up Is Hard To Do: Modeling Security Threats for Smart
+  Cards}.
+\newblock October,1999
+
+\bibitem[{CHA}]{smart_card_access}
+\textsc{{CHAN, Siu-cheung Charles}}:
+\newblock \emph{An Overview of Smart Card Security}
 
 \bibitem[{Dav}10]{android_vm}
 \textsc{{David Ehringer}}:
@@ -49,6 +65,11 @@
 \newblock \emph{Remote Application Management over HTTP Card Specification v2.2
   – Amendment B}.
 \newblock March 2012
+
+\bibitem[{Hoo}11]{smart_card_attack2}
+\textsc{{Hoon ko and Ronnie D. Caytiles}}:
+\newblock \emph{A Review of Smartcard Security Issues}.
+\newblock June,2011
 
 \bibitem[{Jah}13]{opc_lemgo}
 \textsc{{Jahanzaib Imtiaz, Jürgen Jasperneite}}:
@@ -109,6 +130,16 @@
   Concepts 1.02}.
 \newblock July 10.2012
 
+\bibitem[{Phi}06]{smart_card_attack3}
+\textsc{{Philip Keerseblick, Wim Vahnoucke}}:
+\newblock \emph{Smart card (In-)Security}.
+\newblock May,2006
+
+\bibitem[{Rak}14]{smart_card_attack5}
+\textsc{{Rakesh Kumar Jangid, Uma Choudhary, Swapnesh Taterh}}:
+\newblock \emph{Security Measurement in Secure Smart Cards}.
+\newblock May,2014
+
 \bibitem[{RSA}99]{pkcs}
 \textsc{{RSA Laboratories}}:
 \newblock \emph{PKCS \#15 v1.1: Cryptographic Token Information Syntax
@@ -127,13 +158,12 @@
 \newblock \emph{Smart Home für ältere Menschen}.
 \newblock February 2008
 
-\bibitem[SID]{Ref3}
+\bibitem[SID13]{Ref3}
 \textsc{SID}:
-\newblock \emph{MQTT vs OPC-UA: Das HTTP der Industrie 4.0?}
+\newblock \emph{MQTT vs OPC-UA : Das HTTP der Industrie 4.0?}
 \newblock
-  \url{http://dennisseidel.de/the-http-for-industrie-4-0-mqtt-vs-opc-ua-german},
-  . --
-\newblock [update;2013]
+  \url{http://dennisseidel.de/the-http-for-industrie-4-0-mqtt-vs-opc-ua-german}.
+\newblock \,Version:\,2013
 
 \bibitem[{sim}14]{open}
 \textsc{{simalliance}}:
@@ -173,6 +203,11 @@
 \textsc{{Wolfgang Rankl und Wolfgang Effing}}:
 \newblock \emph{Handbuch der Chipkarten - 5. deutsche Auflage}.
 \newblock 2008
+
+\bibitem[{Wol}10]{handbook}
+\textsc{{Wolfgang Rankl and Wolfgang Effing}}:
+\newblock \emph{Smart Card Handbook Fourth Edition}.
+\newblock 2010
 
 \bibitem[{Zhi}00]{chen}
 \textsc{{Zhiqun Chen}}:
