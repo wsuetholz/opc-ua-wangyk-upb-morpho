@@ -1,10 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: myThesis.aux
 The style file: alphadin.bst
 Database file #1: myThesis.bib
+Warning--entry type for "Ref3" isn't style-file defined
+--line 41 of file myThesis.bib
 Warning--I didn't find a database entry for "a"
+Warning--empty publisher in smart_card_access
 Warning--empty publisher in smart_card_contactless
-Warning--empty year in Ref3
 Warning--empty publisher in opc_ics
 Warning--empty publisher in smart_home_concept
 Warning--empty year in Ref5
-(There were 6 warnings)
+(There were 7 warnings)

@@ -86,7 +86,7 @@ Figure~\ref{fig:opc_ua_cs_comm} pictures the typical communication architecture 
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1\textwidth]{opc_ua_shs.jpg}
+	\includegraphics[width=0.7\textwidth]{opc_ua_shs.jpg}
 		\caption{OPC UA Client Server Security Handshake\cite{O2}}
 	\label{fig:opc_ua_cs_shs}
 \end{figure}
@@ -95,7 +95,7 @@ Figure~\ref{fig:opc_ua_cs_comm} pictures the typical communication architecture 
 Security handshake as below explains with some details how secure channel and session are established. Normally OPC UA client initiates the first \emph{OpenSecureChannel} request and waits the response from server. Messages exchanged during the process of construction secure channel between client and server are encrypted using asymmetric encryption and signature algorithms. But some security protocols that could be applied according to OPC UA standards, are not using an asymmetric message encryption algorithm to encrypt to request/response messages. Instead, they apply AsymmetricKeyWrapAlgorithm to encrypt symmetric keys and use symmetric encryption algorithm with encrypted keys to encrypt messages. After a successful construction of secure channel, OPC UA client sends \emph{CreateSession} request and waits for server response. Messages transported during this procedure are encrypted with symmetric encryption algorithms and signed with client/server signing key.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1\textwidth]{opc_ua_commstack.jpg}
+	\includegraphics[width=0.7\textwidth]{opc_ua_commstack.jpg}
 		\caption{OPC UA Client Server Communication Stack\cite{O2}}
 	\label{fig:opc_ua_commstack}
 \end{figure}
@@ -170,7 +170,7 @@ According to ISO/IEC 7816-4 specification, smart card offers two major file type
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{file-structure}
+	\includegraphics[width=0.7\textwidth]{file-structure}
 		\caption{File Tree on Smart Card\cite{handbuch}}
 	\label{fig:file-structure}
 \end{figure}
@@ -182,7 +182,7 @@ As already shown, smart card not only is used as storage media but also acts as 
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{master-slave-relationship}
+	\includegraphics[width=0.7\textwidth]{master-slave-relationship}
 		\caption{Communication between Smart card and CAD\cite{handbuch}}
 	\label{fig:master-slave-relationship}
 \end{figure}
@@ -203,7 +203,7 @@ Application Protocol Data Unit, or APDU for short, is used  to perform data exch
  P2 &parameter 2 used to provide more command information& mandatory \\
  Lc field &the length of data received by card & mandatory \\
  data field &data sent to card& optional \\
-Le field &the length of data sent by card \\
+Le field &the length of data sent by card& optional \\
 \hline
 \end{tabular}
 \label{table:capdu}
@@ -226,6 +226,19 @@ Le field &the length of data sent by card \\
 Since all communication between smart card and terminal is based on digital electrical pulse performed on card I/O line, attacker can easily record all communication information and and recover it. Therefore secure messaging mechanism is proposed and used to protect against aforementioned message eavesdropping, to ensure authenticity and confidentiality of exchanged information.
 
 In secure message mechanism, both message sender and receiver must agree on to be applied message cryptographic algorithms and corresponding pre-shared keys. In telecommunication domain in accordance with ISO/IEC 7816-4\cite{handbuch}, TLV(Type-lengthl-valuse)-formed data, which encapsulates relative user information, is used to perform secure messaging as data carrier.
+
+\subsection{Life Cycle}
+The typical Life cycle of a smart card is described as following\cite{smart_card_contactless}:
+\begin{itemize}
+\item \emph{Fabrication Phase} As the start of smart card life cycle, this process is taken by the card manufactures. One unique \emph{fabrication key}, \emph{KF} for short, is applied in order to keep smart card from unauthorized modification. 
+\item \emph{Pre-personalization Phase} After fabrication phase,  smart card chip is gonging to be integrated on plastic frame by card suppliers. Moreover \emph{fabrication key}, which is derived from \emph{manufacturer key} in phase one, is replaced by a \emph{personalization key}, which is also known as \emph{KP},  for the purpose of secure smart card delivery to card issuer. In order to protect smart card from fraudulent changes, \emph{KP} is locked by a \emph{personalization lock}.
+\item \emph{Personalization Phase} In this phase,  card issuer will write complete data files on the card including card PIN, card holder identity and so on. When card issuer finish this phase, he will add an \emph{utilization lock} and the life cycle of smart card will come to next phase.
+\item \emph{Utilization Phase} Card holder will be able to use his smart card in this phase. But the information access still must follow the rules defined by to be visited applications.
+\item \emph{Invalidation Phase} Card operation system will block the smart card in this phase. To be more specifically, operation such as writing and update will be disabled. There are two reasons that why a smart card lands this phase. Reason one is because both \emph{smart card PIN} and \emph{smart card unblock PIN} reach its limited  try counts, which indicates someone is trying to force brute guessing PIN.  The other reason is, a particular application adds a \emph{invalidation lock} on \emph{master file} of smart card.
+\end{itemize}
+
+\subsubsection {Conclusion}
+From the above described smart card life cycle, it is not hard to find out that from the every begin of smart card manufacturing and deliver process, card manufacturers and issuers have taken it into account, that a secure card production, utilization and delivery must be guaranteed.
 
 \section{Java Card}
 Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, it also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, like limited memory resource and computer ability.
@@ -296,19 +309,18 @@ In order to ensure sure messaging between smart card and terminal following thre
 \end{itemize}
 Packages \emph{javacard.security} and \emph{javacardx.crypto} support aforementioned security mechanism with following class and interfaces\cite{chen}:
 
-\begin{table}[ht]
-\caption{package: \emph{javacardx.crypto}}
-\centering
+\begin{table}[!htbp]
+\caption{package:\emph{javacardx.crypto}}
 \begin{tabular}{lllll}
-\hline
- Class or Interface & Function Description\\
 \hline\hline
-Cipher & Abstract class offers cryptographic cipher used for encryption and decryption\\
+Class or Interface & Function Description\\[0.5ex]
+Cipher & \parbox[t]{10cm}{Abstract class offers cryptographic cipher used for encryption and decryption}\\
 KeyEncryption & Class provides implementation of keys\\
 \hline
 \end{tabular}
 \label{table:javacardx-crypto}
 \end{table}
+
 
 \begin{table}[ht]
 \caption{package: \emph{javacard.security}}
@@ -319,7 +331,7 @@ KeyEncryption & Class provides implementation of keys\\
 \hline\hline
  Key &Interface for all keys   \\
  SecrectKey &Interface for symmetric algorithms' keys\\
-DESKey & Interface for keys used for DES or two-key triple DES or three-key triple DES\\
+DESKey & \parbox[t]{10cm}{Interface for keys used for DES or two-key triple DES or three-key triple DES}\\
 PrivateKey &Interface for private keys\\
 PublicKey & Interface for public keys\\
 RSAPrivateKey& Interface for keys used by RSA algorithm to sign data\\
@@ -382,7 +394,7 @@ Moreover, android system provides a list of software and hardware attracting fea
 \subsection{Android Software Stack}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{android-stack.jpg}
+	\includegraphics[width=0.85\textwidth]{android-stack.jpg}
 		\caption{Android Stack Overview \cite{learn_android}}
 	\label{fig:android-stack}
 \end{figure}
@@ -401,7 +413,7 @@ Apart form  android runtime, other libraries which provide services to applicati
 \subsubsection{Application  framework} Application framework layer provides a large amount of application framework components, for instance activity manager which is in charge off managing application life cycles, content providers that controls data exchange between applications.
 \subsubsection{Application}As the top layer of entire android software stack, application layer with the help of both native and third party reside component from application framework layer, provides various services to end users.
 
-\section{Android, Dalvik and Java}
+\subsection{Android, Dalvik and Java}
 As described above, Dalvik VM compared with general Java virtual machine, takes the constrains that are specific about mobile device into account, which means this android virtual machine concerns the hardware shortcomings including less memory space, low processing power, no swap space as well as short battery lifetime. Minimum recommendations for android device\cite{android_vm} are list in table~\ref{android-min-req}.
 \begin{center} 
 \begin{table}[h]
@@ -424,7 +436,7 @@ Bluetooth        & 1.2 or 2,0                                                   
 
  \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{vm-compare.jpg}
+	\includegraphics[width=0.55\textwidth]{vm-compare.jpg}
 		\caption{Compiling process difference\cite{learn_android}}
 	\label{fig:vm-compare}
 \end{figure}
@@ -436,7 +448,7 @@ Another obvious distinguish between Java VM and Delvik is that, the former one a
 
  \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{clas-vs-dex.jpg}
+	\includegraphics[width=0.85\textwidth]{clas-vs-dex.jpg}
 		\caption{Comparison between Java byte code and Dalvik executable file\cite{android_vm}}
 	\label{fig:class-vs-dex}
 \end{figure}
