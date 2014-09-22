@@ -350,7 +350,7 @@ CrptoException& Exception class\\
 \end{table}
 
 
-\section{GlobalPlatform and Remote Application Management}
+\section{GlobalPlatform and Remote Application Management}\label{secGP}
 
 \begin{figure}[!htbp]
 	\centering
@@ -452,3 +452,15 @@ Another obvious distinguish between Java VM and Delvik is that, the former one a
 		\caption{Comparison between Java byte code and Dalvik executable file\cite{android_vm}}
 	\label{fig:class-vs-dex}
 \end{figure}
+
+\subsection{Android Application Overview} \label{secAppComponents}
+One Android application consist of four components, they are activities, services, content providers and broadcast receivers\cite{android_secure_design}. Let's look into them a little deeper.
+\begin{itemize}
+\item  \emph{Activities} The main responsibility of android activity is provide end user an visual interface, with whose help the user can interact with the application.  
+\item  \emph{Services} Services are the important components that actually provide specific functionalities to the user through the  GUI interface.
+\item  \emph{Content Providers} Content Provider provides standardized and unified interfaces in order to perform shared data exchange among various applications.
+\item  \emph{Broadcast Receivers} The last component is broadcast receiver, who is in charge of  asynchronously communication with android system broadcast and other applications. For example, when the battery life runs almost out, broadcast receiver will then be informed by the android OS.
+\end{itemize}
+
+\subsection{Intent}
+For the purpose of inter- and intra- application communications, Android applies \emph{intent}, which is in nature a self-contained object, that includes the target application reference and alternatively the to be shared data.  Intent can be also understood as a well-formed message format that builds the Android message passing system\cite{android_secure_inter}.

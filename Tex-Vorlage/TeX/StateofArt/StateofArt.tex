@@ -107,7 +107,7 @@ Above pictured OPC UA standards' features and characteristics prove the feasibil
 
 \section{Smart Card Security}
 Integrated circuit cards, ICCs for short, was firstly designed and patented in Germany\cite{smart_card_history}. Since then this credit size-, embedded with circuit chip- card is being applied in more and more various industry domains, such as secure information storage media, on-line access token, identification method, small amount payment mechanism and etc. With the development of smart card technologies, nowadays apart from traditional \emph{contact smart card}, \emph{contactless smart card}\cite{smart_card_contactless} has come into market. This \emph{contactless smart card} is able to communication with card access device without direct physical connection. To be more precisely, it applies radio frequency to contact with CADs. Now matter what categories of smart card, the temper resistant nature always contributes to make them to be one of the most popular secure token medias.
-\subsection{Smart Card in Access Control}
+\subsection{Smart Card in Access Control}\label{secSCAC}
 In present days, \emph{security} no longer just meant the secure of our homeland borders, or the individual personal safety. In this information age, the word \emph{security} also refers to the confidentiality and integrity of users' personal data, the robustness of information system and so on. It is immediately concerned with our daily life. Especially when electronic devices, which can carry sensitive and precious information and could be vulnerable to malicious attackers, are playing irreplaceable roles in our society. 
 
 Smart card, as explained in section \emph{fundamental technologies}, is believed as one of the best secure mechanism for access control and user identification. There three ways to identity a person\cite{handbuch}:
@@ -233,9 +233,76 @@ Countermeasures against above described non-invasive attack are:
 \paragraph{Other Attacks Countermeasure}
 Other attacks are normal computer security issues and can be avoided by for instance apply message encryption mechanism, building communication session based on secure channel, introducing message transmitting rate control policies and defining appropriate time out counts.
 \subsection{Smart Card Secure Applications}
-As given above, smart card is now considered as a secure data storage media and a superior tool for information system security.  People also describes smart card as the \emph{magic bullet}, that can solve computer security issues, such as access control management,  peer identification and so on. Understandably, therefore more and more smart cards are applied in secure application and products.
+As given above, smart card is considered as a secure data storage media and a superior tool for information system security. People also describes smart card as the \emph{magic bullet}, that can solve computer security issues, such as access control management, peer identification and so on. Understandably, therefore more and more smart cards are applied in secure applications and products. For instance:
+\begin{itemize}
+\item In Payment System. Recently the concept electronic purses and electronic payment systems become more and more popular. Not only because this newly proposed mean of payment can play a supporting role for traditional payment methods such as credit card, but also because with the integration of smart card electronic purses are able to offer flexible, reliable and secure  small amount payment services\cite{handbook}.
+\item For Peer Identification. Based on the knowledge from section~\ref{secSCAC}, Smart card holder is  capable of performing two factor authentication\cite{smart_card_history}, which requires that at least two of three listed conditions are satisfied. Therefore smart card are suitable for the domain of personal identification and back to December 1999 Finland began to use electronic personal ID cards to replace traditional passports\cite{handbook}. 
+\end{itemize}
 \subsection{Conclusion}
+In conclusion, smart card  is now widely used as secure token in various computer secure domains and adds an additional protection layers on the system that adapts smart card. Moreover with the help of industrial standardized protocols which are introduced in section~\ref{secGP}, card holder can enjoy a secure remote management service and trust the electronic devices which are integrated with smart cards to let those facilities administer his properties.  
 
 \section{Secure Android Design}
+With the development of smart phone market, more and more subscribers are using this new generation of cell phones with their smart cards. Accordingly an increasing number of attacks aimed at smart phone platforms such as the most popular Android is reported. Figure~\ref{fig:android-malware} shows a dramatic increasing amount of Malwares that are targeted at Android from 2010 to 2011\cite{android_malware}. Especially when taken into account that present day's smart phones are also in charge of sensitive users' credentials such as recent visited location and contacts list.  And based on a study of Android applications, recherches have found that over 20\% applications could have access to user personal data\cite{android_secure_design}.Consequently there exits a pressing requirement for Android application developer to design an android software with large security consideration. 
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{android-malware.jpg}
+		\caption{Malware growth in period from August 2010 to October 2011 based on database from paper\cite{android_malware}}
+	\label{fig:android-malware}
+\end{figure}
+\subsection{Android Security Mechanism}
+Even though a huge number of third party applications exist on Android market and they could be potential Malwares, but Android platform is not vulnerable and it provides secure as well as robust security mechanisms to protect its customers. Following listed three methods are the most outstanding and efficient approaches.
+\begin{itemize}
+\item \emph{Application Isolation} Each Android application has its own Linux process and each of this process possesses an isolated virtual machine. In this way,  application data is protected from the others\cite{android_secure_language}. 
+\item \emph{Access Permissions} Permissions are given during the applications' installation time. As illustrated in figure~\ref{fig:android-permission}, Android permission system restricts application's access right to private data of end user as well as of other applications, to smart phone hardwares and to Android OS. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{android-permission.jpg}
+		\caption{Detailed Android permission model\cite{android_secure_design}}
+	\label{fig:android-permission}
+\end{figure}
+\item \emph{Authorized Signatures} Applications are signed with certificates and the according private keys are protected by application developer. Every time when one application claims his identity, his signatures will be checked, in order to stop potential masquerade attacks\cite{android_secure_language}.
+\end{itemize}
 
+\subsection{Security Design}
+With the acknowledgment form previous subsection, we can conclude that Android system is designed with consideration of security, especially in the domain of access control and permission management. But still ill-developed application is vulnerable. For instance, when an application carelessly sends an intent, which has none explicit target. This implicit intent can be intercepted by a Malware. As a result, this malicious application may manage to access to sensitive data and perform attacks such as \emph{activity hijacking} and \emph{service hijacking}\cite{android_secure_inter}.
+
+Therefore it it necessary for application developers to apply protection techniques  in oder to to protect their application from attacker and revers engineering. 
+\subsubsection{Application Components Secure}
+In order to restrict the number of applications, which have access rights to our Android application components described in subsection~\ref{secAppComponents}. We should explicitly claim the access control policies in \emph{AndroidManifest.xml} from our project. In the extreme case that none applications are expected to invoke the secured component, following rule should be add in \emph{AndroidManifest.xml}\cite{android_secure_cook}.
+\begin{verbatim}
+<[component name] android:exported='false'>
+</[component name]>
+\end{verbatim} 
+\subsubsection{Custom Permissions for Access Control}
+As pictured in figure~\ref{fig:android-permission2}, Android OS provides a list of default permissions, which service a generic access control management, including such as  phone  holder data reading and writing, Internet access right and etc. But when it comes to the case of sharing data between different applications, a more sophisticated and robust custom permission is desired. To be more specifically, following xml snippets should be added for protected components in project's \emph{AndroidManifest.xml}\cite{android_secure_cook}.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{android-permission2.jpg}
+		\caption{Permission required by application \emph{k9mail}\cite{android_secure_design}}
+	\label{fig:android-permission2}
+\end{figure}
+\begin{verbatim}
+<permission android:name='android.permission.CUSTOM_PERMISSION'
+	android:protectionLevel ='dangerous'
+	android:description = 'Custom Permission  Snippet'
+	android:label = '@string/custom_permission_label''>
+\end{verbatim} 
+Moreover four categories of protection level are supported\cite{android_secure_cook}:
+\begin{itemize}
+\item \emph{normal} This the lowest level of permission and usually be applied for nondangerous permissions. 
+\item \emph{dangerous}  In this kind of permission exists the risks that authorized application would be able to access user credential information and sensitive data.
+\item \emph{signature} Signature permission means that applications  which as signed with the same certificate can access each other.
+\item \emph{signatureOrSystem} In addition to \emph{signature} level, this level of permission will be also automatically granted to the application that is part of system image.
+\end{itemize}
+\subsubsection{Securing Content Provider}
+Last secure approach that I want to present is the content provider path  secure mechanism. Since content provider handles mostly the exchanged data between applications, therefor it always becomes the first victim of a system attack. Application developer must ensure the security of content provider especially the content  provider path, which is in nature an uniform recourse identifiers that is related  to sensitive information such as datasets\cite{android_secure_cook}. Content provide path may look like \emph{content://com.provider.android/account/balance}.
+
+It is highly recommended that application developer explicitly defines the permission rules at path level, to be more specifically\cite{android_secure_cook}, 
+\begin{verbatim}
+<provider ...>
+<grant-uri-permission android:path = 'path_name'>
+</provider>
+\end{verbatim} 
+\subsection{Conclusion}
+In conclusion Android is  a secure-designed platform with sophistical access control mechanisms and other security polices. But still Android  application developers should apply security techniques to protect their project from malicious ill-formed applications.
 \section{Embedded System Secure Design}

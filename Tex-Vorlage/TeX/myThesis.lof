@@ -20,20 +20,23 @@
 \contentsline {figure}{\numberline {\relax 2.17}{\ignorespaces Compiling process difference\cite {learn_android}}}{27}{figure.2.17}
 \contentsline {figure}{\numberline {\relax 2.18}{\ignorespaces Comparison between Java byte code and Dalvik executable file\cite {android_vm}}}{28}{figure.2.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces DER Scheduler in Smart Home optimized for energy\cite {smart_home_for_energy}}}{30}{figure.3.1}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Overview of Smart Health Home structure\cite {smart_home_for_health} (RCC: Remote Control Center)}}{31}{figure.3.2}
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces MavHome agent architecture\cite {smart_home_agent}}}{32}{figure.3.3}
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces keys presented in Smart Card Description Language from \emph {Morpho}}}{37}{figure.3.4}
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces the PSK key used to configure administration session}}{37}{figure.3.5}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces DER Scheduler in Smart Home optimized for energy\cite {smart_home_for_energy}}}{32}{figure.3.1}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Overview of Smart Health Home structure\cite {smart_home_for_health} (RCC: Remote Control Center)}}{33}{figure.3.2}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces MavHome agent architecture\cite {smart_home_agent}}}{34}{figure.3.3}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces keys presented in Smart Card Description Language from \emph {Morpho}}}{39}{figure.3.4}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces the PSK key used to configure administration session}}{39}{figure.3.5}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Malware growth in period from August 2010 to October 2011 based on database from paper\cite {android_malware}}}{45}{figure.3.6}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Detailed Android permission model\cite {android_secure_design}}}{46}{figure.3.7}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Permission required by application \emph {k9mail}\cite {android_secure_design}}}{47}{figure.3.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home}}{43}{figure.4.1}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example}}{45}{figure.4.2}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure}}{46}{figure.4.3}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}}}{48}{figure.4.4}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure}}{49}{figure.4.5}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home}}{49}{figure.4.1}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example}}{50}{figure.4.2}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure}}{52}{figure.4.3}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}}}{54}{figure.4.4}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure}}{55}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange}}{51}{figure.5.1}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Class Diagram}}{52}{figure.5.2}
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram}}{54}{figure.5.3}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange}}{57}{figure.5.1}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Class Diagram}}{58}{figure.5.2}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram}}{60}{figure.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
