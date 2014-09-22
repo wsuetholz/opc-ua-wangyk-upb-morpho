@@ -108,7 +108,9 @@
 \contentsline {subsubsection}{\nonumberline Communication Session Creation}{63}{section*.41}
 \contentsline {subsubsection}{\nonumberline Close Communication Session}{63}{section*.42}
 \contentsline {subsubsection}{\nonumberline Process Communication Data}{64}{section*.43}
-\contentsline {chapter}{\numberline {6}Summary and Future Work}{65}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary}{65}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{65}{section.6.2}
-\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.44}
+\contentsline {chapter}{\numberline {6}Implementation}{65}{chapter.6}
+\contentsline {chapter}{\numberline {7}System Security Analysis}{67}{chapter.7}
+\contentsline {chapter}{\numberline {8}Summary and Future Work}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{69}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Work}{69}{section.8.2}
+\contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.44}
