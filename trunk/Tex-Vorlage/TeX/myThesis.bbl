@@ -24,6 +24,11 @@
 \newblock \emph{OPC UA Connects your Systems}.
 \newblock 2013
 
+\bibitem[{Avi}09]{android_secure_language}
+\textsc{{Avik Chaudhuri}}:
+\newblock \emph{Language-Based Security on Android}.
+\newblock 2009
+
 \bibitem[{Bru}99]{smart_card_attack1}
 \textsc{{Bruce Schneier, Adam Shostack}}:
 \newblock \emph{Breaking Up Is Hard To Do: Modeling Security Threats for Smart
@@ -50,6 +55,11 @@
 \newblock \emph{Service Gateway Architecture for a Smart Home}.
 \newblock April 2002
 
+\bibitem[{Eri}11]{android_secure_inter}
+\textsc{{Erika Chin, Adrienne Porte Felt, Kata Greenwood, David Wagner}}:
+\newblock \emph{Analyzing Inter-Application Communication in Android}.
+\newblock June,2011
+
 \bibitem[{Fra}11]{android_media}
 \textsc{{Franke Feinbube from HPI University Postdam}}:
 \newblock \emph{Android}.
@@ -65,6 +75,11 @@
 \newblock \emph{Remote Application Management over HTTP Card Specification v2.2
   – Amendment B}.
 \newblock March 2012
+
+\bibitem[{Han}12]{android_secure_design}
+\textsc{{Hannah Gommerstadt, Devon Long}}:
+\newblock \emph{Android Application Security}.
+\newblock 2012
 
 \bibitem[{Hoo}11]{smart_card_attack2}
 \textsc{{Hoon ko and Ronnie D. Caytiles}}:
@@ -86,6 +101,11 @@
 \textsc{{John Abbot}}:
 \newblock \emph{Smart Card: How Secure Are They?}
 \newblock March, 2002
+
+\bibitem[{Kei}13]{android_secure_cook}
+\textsc{{Keith Makan, Scott Alexander-Bown}}:
+\newblock \emph{Android Security Cookbook}.
+\newblock December,2013
 
 \bibitem[{Li }04]{smart_home_research}
 \textsc{{Li Jiang, Da-you Liu, Bo Yang}}:
@@ -208,6 +228,11 @@
 \textsc{{Wolfgang Rankl and Wolfgang Effing}}:
 \newblock \emph{Smart Card Handbook Fourth Edition}.
 \newblock 2010
+
+\bibitem[{Yaj}11]{android_malware}
+\textsc{{Yajin Zhou, Xuxian Jiang}}:
+\newblock \emph{Dissecting Android Malware: Characterization and Evolution}.
+\newblock September, 2011
 
 \bibitem[{Zhi}00]{chen}
 \textsc{{Zhiqun Chen}}:

@@ -9,20 +9,20 @@
 \contentsline {table}{\numberline {\relax 2.6}{\ignorespaces package: \emph {javacard.security}}}{22}{table.2.6}
 \contentsline {table}{\numberline {\relax 2.7}{\ignorespaces Minimum Android Recommendations\cite {android_vm}}}{27}{table.2.7}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces key data stored in smart card\cite {handbook}}}{38}{table.3.1}
+\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces key data stored in smart card\cite {handbook}}}{40}{table.3.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces SELECT command APDU}}{56}{table.5.1}
-\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces SELECT response APDU}}{56}{table.5.2}
-\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Verify PIN command }}{56}{table.5.3}
-\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Verify PIN response APDU}}{56}{table.5.4}
-\contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Reset PIN command }}{56}{table.5.5}
-\contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Reset PIN response APDU}}{57}{table.5.6}
-\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Communication session creation command APDUs}}{57}{table.5.7}
-\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Trigger Session Return Code}}{57}{table.5.8}
-\contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Close Session command APDU}}{58}{table.5.9}
-\contentsline {table}{\numberline {\relax 5.10}{\ignorespaces Close Session Return Code}}{58}{table.5.10}
-\contentsline {table}{\numberline {\relax 5.11}{\ignorespaces Process data command APDUs}}{58}{table.5.11}
-\contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process data Return Code}}{58}{table.5.12}
+\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces SELECT command APDU}}{62}{table.5.1}
+\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces SELECT response APDU}}{62}{table.5.2}
+\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Verify PIN command }}{62}{table.5.3}
+\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Verify PIN response APDU}}{62}{table.5.4}
+\contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Reset PIN command }}{62}{table.5.5}
+\contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Reset PIN response APDU}}{63}{table.5.6}
+\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Communication session creation command APDUs}}{63}{table.5.7}
+\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Trigger Session Return Code}}{63}{table.5.8}
+\contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Close Session command APDU}}{64}{table.5.9}
+\contentsline {table}{\numberline {\relax 5.10}{\ignorespaces Close Session Return Code}}{64}{table.5.10}
+\contentsline {table}{\numberline {\relax 5.11}{\ignorespaces Process data command APDUs}}{64}{table.5.11}
+\contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process data Return Code}}{64}{table.5.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
