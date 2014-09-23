@@ -383,13 +383,13 @@ OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal
 
 \section{Android}
 \subsection{Overview}
-Android is an open source platform based on Linux and modified by Google, which is designed for mobile devices. As a comprehensive platform, android manages to create a separation between hardware and software that runs on it.  At the same time being an open source platform means its entire stack is open and android developer are able to deploy their androids on specific hardwares as well as to learn the system to the fundamental level.\cite{learn_android}
-Moreover, android system provides a list of software and hardware attracting features to his customers.
- \begin{itemize}
+Android is an open source platform based on Linux and modified by Google, which is designed for mobile devices. As a comprehensive platform, android manages to create a separation between hardware and software that runs on it.  At the same time being an open source project means its entire stack is open and android developers are able to deploy their androids system on any specific hardwares as well as to learn the system to the fundamental level.\cite{learn_android}
+Moreover, android system provides a list of attracting software and hardware features to his customers, such as:
+\begin{itemize}
 \item \emph{Security:} Linux, as the cornerstone of android, has been proved to be a secure system through many harsh tests over the years. Which in return guarantees the android system security. \cite{learn_android}
-\item \emph{Multi-Media:} A wide range of media formats are supported by Android. For instance: MPEG4, ACC, PNG, GIF and so on. \cite{android_media} Which in return provides android users a more comfortable user experiences and better entertainment functionalities.
+\item \emph{Multi-Media:} A wide range of media formats are supported by Android. For instance: MPEG4, ACC, PNG, GIF and so on\cite{android_media}. As a result Android customers are able to enjoy a more comfortable user experiences and better entertainment functionalities.
 \item \emph{Designed for Online:} One outstanding core feature of Android system is the ability to stay Online\cite{android_forensics}. Under various conditions such as Wi-Fi network, GSM/CDMA and so on, android device always provide its end users qualified network connection.
-\item \emph{Variety of applications :}As one of the most popular platform,  Android, with the help of Android Market and great number of talent Android application developers, offers its customers the ability to extend  functionalities of their android devices\cite{android_forensics}. Android user is capable of downloading and installing various innovative applications from Android Market and enhancing the user experience.
+\item \emph{Variety of applications :}As one of the most popular platform,  Android, with the help of Android Market and a great number of talent Android application developers, offers its customers the possibility to extend  functionalities of their android devices\cite{android_forensics}. Android user is capable of downloading and installing various innovative applications from Android Market and enhancing the user experience.
 \end{itemize}
 \subsection{Android Software Stack}
 \begin{figure}[!htbp]
@@ -400,10 +400,10 @@ Moreover, android system provides a list of software and hardware attracting fea
 \end{figure}
 Android stack is composed of four different layers as shown in figure~\ref{fig:android-stack}.
 
-\subsubsection{Linux kernel:}This fundamental layer separates other three layers  from  device hardware and provides higher layer core  functions such as  power and hardware driver management.
-\subsubsection{Libraries:}As second layer of android stack,  Libraries layer supports android runtime environment by applying various C/C++ core libs, that offer most of the Java-functionalities.  Also in this layer, the for android specific designed virtual machine, namely Dalvik\cite{learn_android} is deployed. There exits two reasons for not using standard Java VM\cite{learn_android}. First of all, since Java VM is general developed virtual machine, therefore some constrains from mobile systems and devices are not concerned, such as limited battery life and processing ability. Secondly, when android project  was being carried out,  Java VM didn't  belong  to the open source projects. For these reasons Dan Bornstein and his group developed the license free and mobile platform specific virtual machine, Dalvik. 
+\subsubsection{Linux kernel:}This fundamental layer separates other three layers  from  device hardware and provides core functions such as  power and hardware driver management.
+\subsubsection{Libraries:}As second layer of android stack,  Libraries layer supports android runtime environment by applying various C/C++ core libs, that offer most of the Java-functionalities.  Also in this layer, the for android specific designed virtual machine, namely Dalvik\cite{learn_android} is deployed. There exits two reasons for not using standard Java VM\cite{learn_android}. First of all, since Java VM is general developed virtual machine, therefore some constrains from mobile systems and devices are not concerned, such as limited battery life and processing ability. Secondly, when Android project  was being carried out,  Java VM didn't  belong  to the open source projects. For these reasons Dan Bornstein and his group developed the license free and mobile platform specific virtual machine, Dalvik. 
 
-Apart form  android runtime, other libraries which provide services to application framework layers are also included in this Libraries layer, for instance:
+Moreover other libraries which provide services to application framework layers are also included in this Libraries layer, for instance:
 \begin{itemize}
 \item OpenGL, library that supports 2D and 3D graphics rendering.
 \item SSL, the widely applied secure socket layer library.
