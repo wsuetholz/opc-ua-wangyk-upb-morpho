@@ -43,7 +43,7 @@
 \contentsline {subsubsection}{\nonumberline Libraries:}{26}{section*.13}
 \contentsline {subsubsection}{\nonumberline Application framework}{26}{section*.14}
 \contentsline {subsubsection}{\nonumberline Application}{26}{section*.15}
-\contentsline {subsection}{\numberline {2.6.3}Android, Dalvik and Java}{26}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.3}Android, Dalvik and Java}{27}{subsection.2.6.3}
 \contentsline {subsection}{\numberline {2.6.4}Android Application Overview}{29}{subsection.2.6.4}
 \contentsline {subsection}{\numberline {2.6.5}Intent}{29}{subsection.2.6.5}
 \contentsline {chapter}{\numberline {3}State of Art}{31}{chapter.3}

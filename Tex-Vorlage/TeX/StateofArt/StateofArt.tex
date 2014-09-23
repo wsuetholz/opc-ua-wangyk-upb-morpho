@@ -1,9 +1,9 @@
 \chapter{State of Art}
 \section{Smart Home Research}
 \subsection{Overview}
-The smart home system we discussed about, that is also described as automated home, integrated home systems or intelligent building\cite{smart_home_concept}, has drawn more and more industry developers' and researchers' attention over the decades, research groups such as Siemens, IBM, Cisco, Microsoft\cite{smart_home_research} has already contributed in this domain. A great number of Smart Home application, network protocols as well as gateways\cite{smart_home_for_gateway} have come into world and been applied to benefit their customers.
+The smart home system we discussed about, that is also described as automated home, integrated home systems or intelligent building\cite{smart_home_concept}, has drawn more and more industry developers' and researchers' attention over the decades. Research groups such as Siemens, IBM, Cisco, Microsoft\cite{smart_home_research} has already contributed in this domain. A great number of Smart Home application, network protocols as well as gateways\cite{smart_home_for_gateway} have come into world and been applied to benefit their customers.
 
-With the development of Smart Home technology, nowadays' Smart Home is not only in charge of monitoring and controlling lighting and heating inside the building, but also capable of connecting almost every electronic devices, inhabitant action prediction as well as making scheduler decisions. Functionalities provided by intelligent home are not just limited to turn device on and off, record and report senor data, but include self-adjusting the inner building environment, supporting various predefined patterns, such as energy saving pattern, especially the concept of Smart Home for elderly\cite{smart_home_for_old}, which perfectly combines modern remote control and monitoring technologies, with senior-friendly and patient-concerning housing, is welcomed by the market. 
+With the development of Smart Home technology, nowadays' Smart Home is not only in charge of monitoring and controlling lighting and heating inside the building, but also capable of connecting almost every electronic devices, prediction of inhabitant behaviors as well as making scheduler decisions. Functionalities provided by intelligent home are not just limited to turn device on and off, record and report senor data, but include self-adjusting the inner building environment and supporting various predefined patterns, such as energy saving pattern. Especially the concept of Smart Home for elderly\cite{smart_home_for_old}, which perfectly combines modern remote control and monitoring technologies, with senior-friendly and patient-concerning housing techniques, is welcomed by the market. 
 
 Three categories of Smart Home will be introduced in the following as best practice examples, they are Smart Home optimized for energy services , Smart Health Home and Agent-based Smart Home.
  
@@ -21,22 +21,20 @@ The key component in this Smart Home is decision-support tool\cite{smart_home_fo
 	\label{fig:smart-home-scheduler}
 \end{figure}
 
-The decision support tool used in paper\cite{smart_home_for_energy} consists of two components, they are energy service model which describes the energy service request and distributed energy resource scheduling algorithm, as described in figure~\ref{fig:smart-home-scheduler}. To be more specifically, energy service model presents the demand for one particular energy resource. For instance the demand aimed at hot water means, the hourly consumption of heated water or the energy that is hourly needed by water heater.  According to \cite{smart_home_for_energy}, the heat content of water is also defined as "energy equivalent" and therefore the energy service model is applied to increase "monetary benefit"  from every "energy equivalent" unit.
+The decision support tool used in paper\cite{smart_home_for_energy} consists of two components, they are energy service model which describes the energy service request and distributed energy resource scheduling algorithm, as described in figure~\ref{fig:smart-home-scheduler}. To be more specifically, energy service model presents the demand for one particular energy resource. For instance the demand aimed at hot water means, the hourly consumption of heated water or the energy that is hourly needed by water heater.  According to \cite{smart_home_for_energy}, the heat content of water is also defined as "energy equivalent" and therefore the main goal of decision support tool is to increase "monetary benefit"  from every "energy equivalent" unit.
 
-Meanwhile the DER scheduler algorithm helps householder by reducing the unnecessary consumption of energy. This algorithm is in nature one mathematical optimization problem defined by\cite{smart_home_for_energy}.
+The DER scheduler algorithm, that helps householder to reduce the unnecessary consumption of energy, is in nature one mathematical optimization problem defined by\cite{smart_home_for_energy}.
 \begin{center}
  $ \sum_{t=1}^{T}\sum_{i=1}^{S}[\lambda_{ES,i}(t)\cdot {U_{ES,i}}(t,x)]-Cost$
 \end{center}
 
-The purpose of DER scheduler, presented as \emph{x} is to maximize that above introduced fitness function, where \emph{S} represents all number of services offered by Smart Home, \emph{T} stands for the whole simulation time, $\lambda_{ES,i}$ and $ U_{ES,i}$ describe the desired monetary benefit for "energy equivalent" and energy demand of the \emph{i}th service respectively. \emph{Cost} means the total electricity consumption. Also in paper\cite{smart_home_for_energy} the choice of DER algorithm is well discussed.
+The purpose of DER scheduler, presented as \emph{x} is, to maximize that above introduced fitness function, where \emph{S} represents all number of services offered by Smart Home, \emph{T} stands for the whole simulation time, $\lambda_{ES,i}$ and $ U_{ES,i}$ describe the desired monetary benefit for "energy equivalent" and energy demand of the \emph{i}th service respectively. \emph{Cost} means the total electricity consumption. Also in paper\cite{smart_home_for_energy} the choice of DER algorithm is well discussed.
 
 
 \subsection{Smart Health Home}
 Another suitable application domain for Smart Home is the Smart Health Home, which describes the intelligent housing that takes care of patients at home or elder residents.
 
-The charming features of this Smart Home system are the combination of telemedical system with communication technologies\cite and customizing services such as, teleconsulting, telediagnosis, real time imaging as well as distance medical education\cite{smart_home_for_health}, which together improve the living condition of householder and at the same time build a caring system that takes care of residents' need. Nine best practice examples are provided and evaluated in paper\cite{smart_home_for_old}, they provide a guideline for  the design of Smart  Home system and summarizes precio
-
-us experience. 
+The charming features of this Smart Home system are the combination of telemedical system with communication technologies and customizing services such as, teleconsulting, telediagnosis, real time imaging as well as distance medical education\cite{smart_home_for_health}, which together improve the living condition of householder and at the same time build a concerning system that takes care of residents' need. Nine best practice examples are provided and evaluated in paper\cite{smart_home_for_old}, they provide a guideline for  the design of Smart Health Home system and summarizes precious experience. 
  \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.0\textwidth]{rcc.jpg}
@@ -65,7 +63,7 @@ As shown in figure~\ref{fig:smart-home-agent}, agents which are employed by MavH
 Prediction algorithm is the core component of MavHome project. Several Strategies are presented on the first IEEE international conference on pervasive computes and communication, they are SHIP algorithm that is based on sequence matching, compression-based prediction algorithm ALZ and Task-based Markov model\cite{smart_home_agent}.
 
 \subsection{Conclusion}
-Also described above, Smart Home is the representative application which is based on industrial automation, remote control, management and coordination system. Despite the decision making algorithms and application level components from above mentioned smart buildings are different from the other, but they all are integrated upon or connected with housing devices. The management and cooperation with those devices must take place under a secure system environment. None of householders are willing to be monitored by a strange third party using his own camera or to expose their daily life related information to public. Therefore one common request for the design of such intelligent building is to ensure the system security.
+Also described above, Smart Home is the representative application which is based on industrial automation, remote control, management and coordination system. Despite the decision making algorithms and application level components from above mentioned smart buildings are different from the other, but they all are integrated upon or connected with housing devices. The management and cooperation with those devices must take place under a secure system environment. None of householders are willing to be monitored by a strange third party using his own camera or to expose their daily life related information to public. Therefore one common request for the design of such intelligent buildings is to ensure the system security.
 
 Based on the fact, that home devices applied by Smart Home are manufactured by various vendors,  Smart Home designers also must take it into account, that how to realize the system interoperability. Considered those two requirements, the idea of this thesis applying OPC UA standards with smart card technology came into world. 
 
@@ -79,26 +77,26 @@ With develop of industrial automation, Industrial control system (ICS) has becam
 
 
 \subsubsection{OPC UA and  Smart Grid}
-Smart Grid is now concerned as the future of electricity energy industry and therefor how to achieve an intelligent electricity distribution as well as behavior coordination between customs and suppliers is a hot topic\cite{opc_grid}. Electricity industry is searching out for a standardized communication technology to solve aforementioned issue.
-OPC UA standards set that includes \emph{alarm and even} model, \emph{data access} model as well as  \emph{historical data access} model, is without doubt one the of best candidates. With the help of all these models, the secure real-time communication and stockholders' coordination are guaranteed.
+Smart Grid is now concerned as the future of electricity energy industry and therefor how to achieve an intelligent electricity distribution as well as behavior coordination between customs and suppliers is a hot topic\cite{opc_grid}. Electricity industry is searching out for a standardized communication technology to solve aforementioned issues.
+OPC UA standards set that includes \emph{alarm and even} model, \emph{data access} model as well as  \emph{historical data access} model, is without doubt one the of best candidates. With the help of all these models, the secure real-time peer communication and coordination among stockholders are guaranteed.
 
 \subsubsection{Nano OPC UA }
 Apart from those enterprise level systems, OPC UA is also suitable for lower level field devices, such as field sensor and other resource limited facilities. Recently a German company Lemgo even designed a nano embedded OPC UA server\cite{opc_lemgo}, which provides the core OPC UA server service set. adopts TCP binary communication protocol and is implemented on a chip device.
 
 \subsection{OPC UA secure policies}
-At the design beginning, the OPC foundation has taken the construction of secure and robust communication protocol as the center and therefore developed a enhanced consistent security model which has clear and definite objectives in each layer of OPC UA transport and communication stack. In present day, OPC UA  offers secure messaging mechanisms by applying WS Security with Simple Object Access Protocol (SOAP)  and alternatively SSL based Hypertext transfer Protocol Secure (HTTPS) messaging\cite{opc_secure_1}. Besides secure messaging protocols,  authentication mechanisms based on username-password or X.509 certificates are introduced, in order to process mutual authentication among OPC UA applications from different logic levels and hardware devices.
+At the beginning of design phase, the OPC foundation has taken the construction of secure and robust communication protocol as the center and therefore developed a enhanced consistent security model which has clear and definite objectives in each layer of OPC UA transport and communication stack. In present day, OPC UA  offers secure messaging mechanisms by applying WS Security with Simple Object Access Protocol (SOAP)  and alternatively SSL based Hypertext transfer Protocol Secure (HTTPS) messaging\cite{opc_secure_1}. Besides secure messaging protocols,  authentication mechanisms based on username-password or X.509 certificates are introduced, in order to process mutual authentication among OPC UA applications from different logic levels and hardware devices.
 
 OPC foundation uses the term \emph{secure policies}\cite{O2} to describe the 
-user authentication, user authorization and application authentication mechanisms proposed by one OPC UA server profile. In this server profile, both secure related requirements and other server functionalities are described. One server is capable of maintaining several profiles in order to provides services to different clients, who might have various demands for security. Meanwhile one client can also accept a list of profiles, each of them is assigned by one server with particular security objectives. 
+user authentication, user authorization and application authentication mechanisms proposed by one OPC UA server profile. In this server profile, both secure related requirements and other server functionalities are described. One server is capable of maintaining several profiles in order to provides distinguishing services to different clients, who might have various demands for security. Meanwhile one client can also accept a list of profiles, each of them is assigned by one server with particular security objectives. 
 
 \subsection{OPC UA design consideration}
-Along with core services set including data read and write services, notification service etc., OPC UA server also provides \emph{discover service}\cite{O4}, which provides OPC UA clients mechanism to require server secure policy, and \emph{secure channel service} set\cite{O4}, that is used to create and management secure channel with acknowledgment such as key deviation algorithm and encryption algorithm achieved from secure policy. 
+Along with core services set including data read and write services, notification service and etc., OPC UA server also provides \emph{discover service}\cite{O4}, which provides OPC UA clients mechanism to require server secure policy, and \emph{secure channel service} set\cite{O4}, that is used to create and manage secure channel with acknowledgment such as key deviation algorithm and encryption algorithm offered by secure policy. 
 
 Also OPC UA specifications provide guide lines for a secure system design\cite{O4}.
 \begin{itemize}
-\item \emph{appropriate timeout} Timeout mechanism is widely employed in systems that adopt client server architecture. With reasonable configured timeout property, both client and server can avoid unnecessary resource consumption by long time waiting response from the other, which could be caused by unexpected physical device failure or intentionally server denial of service attack initiated by third party and etc. 
+\item \emph{appropriate timeout} Timeout mechanism is widely employed in systems that adopt client server architecture. With reasonable configured timeout property, both client and server can avoid unnecessary resource consumption caused by long time waiting of response from the other, which could be caused by unexpected physical device failure or intentionally server denial of service attack initiated by third party and etc. 
 \item \emph{rate control} Rate control is considered as one of the most practical approach to prevent denial of service attack. Under rate control mechanism, each client has limited chance over a period to build communication channel, reconstruct this channel, require information from server or send data to sever. Alternatively server can also ban or block the client for a period of time, who is recently trying to flood messages. 
-\item \emph{random number generation} The generation of random number is required by most encryption, authentication and authorization algorithms. Therefore a secure system must support robust random number generation.s
+\item \emph{random number generation} The generation of random number is required by most encryption, authentication and authorization algorithms. Therefore a secure system must support robust random number generation functions.
 \item \emph{strict message processing}, which means the exchanged message between two communication partners must be compliant with predefined message format. Any ill-formed messages must be ignored, which in turn helps to avoid stack overflow attack and enhances system security
 \item \emph{historical data management}, this strategy ensures the system traceability and records any behaviors taking place in system. And the recorded data can be used for forensic research, when security related issues happens.
 \end{itemize}
@@ -108,20 +106,22 @@ Above pictured OPC UA standards' features and characteristics prove the feasibil
 \section{Smart Card Security}
 Integrated circuit cards, ICCs for short, was firstly designed and patented in Germany\cite{smart_card_history}. Since then this credit size-, embedded with circuit chip- card is being applied in more and more various industry domains, such as secure information storage media, on-line access token, identification method, small amount payment mechanism and etc. With the development of smart card technologies, nowadays apart from traditional \emph{contact smart card}, \emph{contactless smart card}\cite{smart_card_contactless} has come into market. This \emph{contactless smart card} is able to communication with card access device without direct physical connection. To be more precisely, it applies radio frequency to contact with CADs. Now matter what categories of smart card, the temper resistant nature always contributes to make them to be one of the most popular secure token medias.
 \subsection{Smart Card in Access Control}\label{secSCAC}
-In present days, \emph{security} no longer just meant the secure of our homeland borders, or the individual personal safety. In this information age, the word \emph{security} also refers to the confidentiality and integrity of users' personal data, the robustness of information system and so on. It is immediately concerned with our daily life. Especially when electronic devices, which can carry sensitive and precious information and could be vulnerable to malicious attackers, are playing irreplaceable roles in our society. 
+In present days, \emph{security} no longer just meant the secure of our homeland borders or the individual personal safety. In this information age, the word \emph{security} also refers to the confidentiality and integrity of users' personal data, the robustness of information system and so on. It is immediately concerned with our daily life. Especially when electronic devices, which can carry sensitive and precious information and could be vulnerable to malicious attackers, are playing irreplaceable roles in our society. 
 
-Smart card, as explained in section \emph{fundamental technologies}, is believed as one of the best secure mechanism for access control and user identification. There three ways to identity a person\cite{handbuch}:
+Smart card, as explained in section \emph{fundamental technologies}, is believed as one of the best secure mechanism for access control and user identification. 
+
+Traditionally there are three ways to identity a person\cite{handbuch}:
 \begin{itemize}
 \item \emph{1 knowledge about a secret}, the secret is normally a password that negotiated early between two identification peers.
-\item \emph{2 possession of an object}, this object could be anything that is predefined. One example could be the open door keys.s
-\item \emph{3 biometrics identification}. First two points have their own limitations, because third part could steal the object, that is used for identification, or copy user's password. Moreover it also can happen, that password too long or too complex to remember or identification object is hard to carry with. Compared with them, biometrics identification depends on however the human body characteristics, such as fingerprint, signature and retina recognition.
+\item \emph{2 possession of an object}, this object could be anything that is predefined. One example could be a key that can open a particular door.
+\item \emph{3 biometrics identification}. First two points have their own limitations, because third part could steal the object, that is used for identification, or copy user's password. Moreover it also can happen, that a password is too complex to remember or identification object is hard to carry with. Compared with them, biometrics identification depends on however the human body characteristics, such as fingerprint, signature and retina recognition.
 \end{itemize}
-Based on the above described facts, smart card is the best candidate for user identification and access control. Because when anyone wants to perform identification using smart card, he must possess the card (possession of an object satisfied), input PIN to unlock and to access card (knowledge about a secret). At the same time, complex passwords for the purpose of peer authentication and authorization can be stored on the smart card, which helps card holder to release the burden of remembering them. Also on same cards there exits a signature signed by card holder or a card holder photo, that could be use to perform biometrics identification. 
+Based on the above described facts, smart card is the best candidate for user identification and access control. Because when anyone wants to perform identification using smart card, he must possess the card (possession of an object satisfied), input PIN to unlock the card (knowledge about a secret). At the same time, complex passwords for the purpose of peer authentication and authorization can be stored on the smart card, which helps card holder to release the burden of remembering them. Also on the a chip card there usually exit a signature signed by the card holder or a card holder photo, that could be use to perform biometrics identification. 
 
 Nowadays with the help of standards such as \emph{GPC\_2.2\_B\_RAM\_over\_HTTP}, which is introduced in section \emph{fundamental technologies}, smart card is also capable of performing on-line identification based on either certificate or TLS protocol.
 
 \subsubsection{Personal Identification Number}
-Whenever an user intends to use one smart card, he must input a \emph{personal Identification Number}, which is also referred as \emph{Card Holder Verification}. PIN consists usually of four decimal number from 0 to 9 and tolerates at most 3 times wrong PIN input before a successful verification. PIN is usually stored in elementary files\cite{smart_card_access} on smart card in order to be kept from unauthorized modification. After 3 times wrong PIN input, a smart card will be locked until the \emph{unlock PIN} operation is successfully carried out. Moreover if \emph{unlock PIN} operation also fails three times in a roll, the PIN will never be unblocked\cite{smart_card_access}.
+Whenever an user intends to use one smart card, he must input a \emph{personal Identification Number}, which is also referred as \emph{Card Holder Verification}. PIN consists usually of four decimal number from 0 to 9 and tolerates at most 3 times wrong PIN input before a successful verification. PIN is stored in elementary files\cite{smart_card_access} on smart card in order to be kept from unauthorized modification. After 3 times wrong PIN input, a smart card will be locked until the \emph{unlock PIN} operation is successfully carried out. Moreover if \emph{unlock PIN} operation also fails three times in a roll, the PIN will never be unblocked\cite{smart_card_access}.
 
 \subsection{Key Management}
 
@@ -134,7 +134,7 @@ Whenever an user intends to use one smart card, he must input a \emph{personal I
 
 The above introduce PIN is not the only key that are stored on smart card. In order to perform message encryption as well as decryption, peer authentication and etc. smart card must keep various keys in storage. As shown in figure~\ref{fig:smart-card-key}, in one \emph{Morpho} smart card product, a list of keys and key sets are used, for example, Card Manager PIN and Administrative keys (\emph{ADM1, ADM2, ADM5}).
 
-Moreover key data in smart not only simply record the actual key value but also must provide information such as key version number, the usage of key and so on. Table~\ref{table:smart-card-key} describes a typical key data on smart card. Likely the usage of a key also need more than just give  actual key value as shown in figure~\ref{fig:smart-card-key-use}
+Moreover key data in smart card not only simply record the actual key value but also must provide information such as key version number, the usage of key and so on. Table~\ref{table:smart-card-key} describes a typical key data stored on smart card. Likely the usage of a key also needs more information than just input the actual key value as shown in figure~\ref{fig:smart-card-key-use}
 
  \begin{figure}[!htbp]
 	\centering
@@ -164,7 +164,7 @@ Key & Key value\\
 Since different keys play distinguished roles in various system tasks and smart card must handle a huge number of keys, \emph{key management} shows its importance. The core responsibilities of key management is listed as following\cite{handbook}:
 \begin{itemize}
 \item \emph{key generation} Key generation is the initial step of key life cycles and uses usually physical random numbers as initial data, in order to generate secure and unique keys. 
-\item \emph{key update} This process keeps one key from being used for a long period, which could lead to compromise of system security.
+\item \emph{key update} This process keeps one key from being used for a long period. Because long time service of one key could lead to the compromise of system security.
 \item \emph{key revocation} When one key turns out to be compromise, key management system must destruct that key.
 \item \emph{key storage} Apparently a competent key management system must know how to safely store its secret.
 \end{itemize}
@@ -180,10 +180,10 @@ This process described above is one-way process and can not be reserved. To be m
 \subsection{Threaten and countermeasures}
 In this section, potential smart card vulnerabilities, threatens aimed at chip card as well as countermeasures will be discussed. But before we begin the analysis of smart card threatens, the trust environment of smart card based system should be explained. Following five parties are listed\cite{smart_card_attack1}.
 \begin{itemize}
-\item \emph{Cardholder} In other word, the owner of smart card, who as customer daily users smart card for different purpose  in various systems. For instance, using SIM card in cell phone to make phone call or using smart card digital wallet to perform smart amount payment like paying the park fee.
+\item \emph{Cardholder} In other word, the owner of smart card, who as customer daily uses smart card for different purpose  in various systems. For instance, using SIM card in cell phone to make phone call or using smart card digital wallet to perform smart amount payment like paying the park fee.
 \item \emph{Terminal} The card access device that communicates with smart card through smart card I/O.
 \item \emph{Card Manufacturer} As the name indicates, card manufacturer is the one who manufactures  the card.
-\item \emph{Card Issuer} Card Issuer is the party that designs the card OS and initializes the smart card. For example, if we are taking about a cell phone smart card, then card issuer will be the phone company. When it comes to employees' ID cards which as applied as access control tool for a particular company, in this situation card issuer is the employer.
+\item \emph{Card Issuer} Card Issuer is the party that designs the card OS and initializes the smart card. For example, if we are taking about a cell phone smart card, then card issuer will be the phone company. When it comes to employees' ID cards which are applied as access control tool for a company. Then in this situation card issuer is the employer.
 \item \emph{Software manufacturer} This party is the one who designs applications that run on smart card.
 \end{itemize}
 \subsubsection{Smart card Threatens and vulnerabilities}
@@ -191,19 +191,19 @@ Since threat modeling for smart card could be extreme complex and also the class
 \begin{itemize}
 \item Logical attacks. Whenever we develop a software, there could exit a bug/bugs. And logical attacks just refer to the attacks that make use of bugs in software implementation\cite{smart_card_attack2}. Two examples are given as follow:
 \begin{itemize}
-\item \emph{Hidden Commands} Attack may attempt to abuse some command from \emph{initialization phase} of smart card life cycle, to modify or retrieve sensitive data from smart card in poorly designed smart card system. The abused command should have been inactive but in reality not in above mentioned vulnerable system\cite{smart_card_attack2}.
-\item \emph{Malicious Applets}
+\item \emph{Hidden Commands} Attack may attempt to abuse some command from \emph{initialization phase} of smart card life cycle, to modify or retrieve sensitive data from smart card in poorly designed smart card system. The abused command should have been inactive but not in above mentioned vulnerable system\cite{smart_card_attack2}.
+\item \emph{Malicious Applets} Ill-designed smart card software, that attempts to break smart card system and steal information.
 \end{itemize}
-\item Physical attacks. This type of attack aim to reversed engineer the data and functions that contained on smart card. Normally expensive and modern lab equipments are required\cite{smart_card_attack2}. Also physical attack is known as \emph{invasive attack}\cite{smart_card_attack3}.
+\item Physical attacks. This type of attack aim to reversed engineer the data and functions that are contained on smart card. Normally expensive and modern lab equipments are required\cite{smart_card_attack2}. Also physical attack is known as \emph{invasive attack}\cite{smart_card_attack3}. For instance:
 \begin{itemize} 
-\item \emph{Micro-probe station} Using Micro-probes, attackers try to construct electrical connection with smart card chip, in order to observer communication between process and memory. Withe the observed information, attacker is capable of capture sensitive data such as key information and etc\cite{smart_card_attack3}.
+\item \emph{Micro-probe station} Using Micro-probes, attackers try to construct electrical connection with smart card chip, in order to observer communication between process and memory. With the observed information, attacker is capable of capture sensitive data such as key information and etc\cite{smart_card_attack3}.
 \item \emph{Focused Ion Beam}. Also it is possible to transmit intentionally generated signals to smart card processor using focused ion beam. As a consequence, it is possible for attacker to reveal data from smart card\cite{smart_card_attack3}
-\item \emph{Chemical Solvents, Etching and Staining Materials}. Using aforementioned chemical materials, attack can observe etching speed difference for some ROM memories  and with a step further analyze \emph{0} and \emph{1} in those memories\cite{smart_card_attack2}.
+\item \emph{Chemical Solvents, Etching and Staining Materials}. Using aforementioned chemical materials, attacker can observe etching speed difference for some ROM memories  and with a step further analyze \emph{0} and \emph{1} in those memories\cite{smart_card_attack2}.
 \end{itemize}
-\item Non-invasive attacks. This kind of attack using smart card environments such as difference in power consumption, processor voltage, clock frequency and etc. to analyze smart card behaviors. For example,
+\item Non-invasive attacks. This kind of attack makes use of smart card runtime environments such as difference in power consumption, processor voltage, clock frequency and etc. to analyze smart card behaviors. For example,
 \begin{itemize}
-\item Power consumption attacks. The smart card operation execution relays on power provided by terminal.  When attack is able to observe smart card power consumption, when the card is performing cryptographic algorithms, he may retrieve related keys applying \emph{Differential Power attack} or \emph{Single Power attack}\cite{smart_card_attack3}.
-\item Timing attack on RSA. The duration of RSA algorithm runtime depends also on the input key. There there is an opportunity for attacker using observed time gap in key computation to get secret key information\cite{smart_card_history}
+\item Power consumption attacks. The smart card operation execution relays on power provided by terminal.  When attacker is able to observe smart card power consumption, which is used by card performing cryptographic algorithms, he may retrieve related keys by applying \emph{Differential Power attack} or \emph{Single Power attack}\cite{smart_card_attack3}.
+\item Timing attack on RSA. The computing duration of RSA algorithm runtime depends also on the input key. Therefore there is an opportunity for attacker using observed time gap in key computation to get secret key information\cite{smart_card_history}
 \end{itemize}
 \item Other Attacks\cite{smart_card_attack5}.
 \begin{itemize}
@@ -215,11 +215,11 @@ Since threat modeling for smart card could be extreme complex and also the class
 
 \subsubsection{Countermeasures}
 \paragraph{Logical Attacks Countermeasure}
-In oder to prevent this category of attacks, the number of bugs in smart card application should be minimized. software and card manufacturers can apply \emph{structure design} by dividing application into small units which are easy to be tested and understood. Alternatively various company related in smart card industry should work together to propose standardized interface and protocols to regulate the application development process\cite{smart_card_attack2}.
+In oder to prevent this category of attacks, the number of bugs in smart card application should be minimized. Software and card manufacturers can apply \emph{structure design} by dividing application into small units which are easy to be tested and understood. Alternatively various company related in smart card industry should work together to propose standardized interface and protocols to regulate the application development process\cite{smart_card_attack2}.
 \paragraph{Physical Attacks Countermeasure}
 Smart card manufacturers have already realized the potential  invasive attacks and are enhancing the physical security of smart card by offering:
 \begin{itemize}
-\item Reducing Chip Size. Now the size of smart card internal components can reach 150nm, which makes attack significantly hard to perform physical attack\cite{smart_card_attack3}.
+\item Reducing Chip Size. Now the size of smart card internal components can reach 150nm, which makes it significantly hard for attacker to perform physical attack\cite{smart_card_attack3}.
 \item Metalization layers, which prevent smart card from atmospheric effects\cite{smart_card_attack3}.
 \item Multi-layered chips. Smart card manufactures are now able to build chip card consist of multi layers. vulnerable Components, for instance ROM memory, are built in lowest layer and protected from physical analysis\cite{smart_card_attack3}. 
 \item Sensors.  Smart card is protected by sensors covered with resin and those sensors will disable smart card whenever they detect physical attacks\cite{smart_card_attack}.
@@ -231,7 +231,7 @@ Countermeasures against above described non-invasive attack are:
 \item Against Power Consumption Attacks by applying digital noise. Alternatively chips manufacturers can reduce the electromagnetic emissions to make power consumption analysis  harder\cite{smart_card_attack3}.
 \end{itemize}
 \paragraph{Other Attacks Countermeasure}
-Other attacks are normal computer security issues and can be avoided by for instance apply message encryption mechanism, building communication session based on secure channel, introducing message transmitting rate control policies and defining appropriate time out counts.
+Other attacks are normal computer security issues and can be avoided by for instance applying message encryption mechanism, building communication session based on secure channel, introducing message transmitting rate control policies and defining appropriate timeout counts.
 \subsection{Smart Card Secure Applications}
 As given above, smart card is considered as a secure data storage media and a superior tool for information system security. People also describes smart card as the \emph{magic bullet}, that can solve computer security issues, such as access control management, peer identification and so on. Understandably, therefore more and more smart cards are applied in secure applications and products. For instance:
 \begin{itemize}
@@ -264,7 +264,7 @@ Even though a huge number of third party applications exist on Android market an
 \end{itemize}
 
 \subsection{Security Design}
-With the acknowledgment form previous subsection, we can conclude that Android system is designed with consideration of security, especially in the domain of access control and permission management. But still ill-developed application is vulnerable. For instance, when an application carelessly sends an intent, which has none explicit target. This implicit intent can be intercepted by a Malware. As a result, this malicious application may manage to access to sensitive data and perform attacks such as \emph{activity hijacking} and \emph{service hijacking}\cite{android_secure_inter}.
+With the acknowledgment form previous subsection, we can conclude that Android system is designed with consideration of security, especially in the domain of access control and permission management. But still ill-developed application is vulnerable. For instance, when an application carelessly sends an intent, which has none explicit target, this implicit intent can be intercepted by a Malware. As a result, this malicious application may manage to access to sensitive data and perform attacks such as \emph{activity hijacking} and \emph{service hijacking}\cite{android_secure_inter}.
 
 Therefore it it necessary for application developers to apply protection techniques  in oder to to protect their application from attacker and revers engineering. 
 \subsubsection{Application Components Secure}
