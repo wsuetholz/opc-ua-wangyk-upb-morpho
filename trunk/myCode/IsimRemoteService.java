@@ -115,19 +115,29 @@ public class IsimRemoteService extends UsimRemoteService implements JCISIMApplic
 
     
 		 
+		 
     public void process(ISimBiosSystemApplicationApdu anApdu) throws ISOException
+    
     {
 	    byte claMasked = (byte)(anApdu.getCla() & (byte)0xF0);
-        byte ins = anApdu.getIns();
-        try{
-        	switch(ins)
-        	{
-        	case 
-        	
-        	}
-        	
-        }
-        
+	    byte ins = anApdu.getIns();
+	   
+
+	    byte[] cmd = (byte[]) anApdu.getCommandData();	    
+	    short cmdOffset = anApdu.getCommandDataOffset();
+	    
+	    byte[] result = {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07, 0x08,0x09};
+	    short length = (short) result.length;
+	    
+	    byte[] resBuff = anApdu.getResponseBuffer(); 
+	    short resOffset = anApdu.getResponseBufferOffset();
+	    
+	    Util.arrayCopyNonAtomic(result, (short)0, resBuff, (short)resOffset, (short)length);	    
+	  	
+	  	anApdu.setStatusword(SW_RM_SUCCESS);
+	    anApdu.appendResponse(resBuff,(short)resOffset, (short)length, true);
+    	
+ 		
     }
     
 
