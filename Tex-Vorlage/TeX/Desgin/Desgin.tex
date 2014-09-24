@@ -1,5 +1,4 @@
 \chapter{System Design}
-As described in previous sections, my demonstration system consists of two main parts, namely the on card integrated  communication stack and android application. Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange  process that occurs in the demonstration system.
 
 \begin{figure}[!htbp]
 	\centering
@@ -8,10 +7,20 @@ As described in previous sections, my demonstration system consists of two main 
 	\label{fig:whole-structure}
 \end{figure}
 
+As described in previous sections, my demonstration system consists of three main parts, namely the on card integrated communication stack, Android application and Smart Home web service. Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange process that occurs in the demonstration system. In my case I integrate \emph{Public Key Infrastructure} with OTA server, in order to perform secure peer identification and messaging.
+\section{Overview}
+The whole message exchange process consists of following phases:
+\begin{itemize}
+\item \emph{Open Channel Phase} Whenever a OPC UA client/server attempts to contact with other housing devices or Remote Server tries to communicate with a home device, a communication session between Remote Server and home device must be created.
+\item \emph{TSL Handshake with Remote Server} After a successful creation of communication channel, a mutual peer identification through TLS handshake between Remote server and aforementioned client/server will be performed.
+\item \emph{Require target's public key} When Remote Server identify the connected communication partner, it will grant client/server the expected target's public key. 
+\item \emph{secure messaging} Message sender will in this phase encrypt message with target's public key and send this encrypted message through Remote Server to message receiver. 
+\end{itemize}
+
 \section{UICC Applet}
 
-\subsection{Classes}
-My UICC applet is developed on Morpho \emph{SC5-01OS07} LTE SAT product.
+\subsection{Classes}\sloppy
+My UICC applet is integrated in Morpho \emph{SC5-01OS07} LTE SAT product.
 Communication stack includes following classes:
  \begin{itemize}
   \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. In order to process remote APDU, this applet is also design as UICC system applet, that extends interface \emph{com.orga.javacard.componentinterfaces.JCISIMApplication}
@@ -25,7 +34,7 @@ Communication stack includes following classes:
 	\label{fig:class}
 \end{figure}
 
-\subsection {Communication Flow}
+\subsection {Work Flow}
 
 The components involved in this scenario are:
  \begin{itemize}
@@ -41,14 +50,14 @@ The communication between CommunicationStack and Remote Administration Server in
   \item Close Communication Session
 \end{itemize}
 \subsubsection{Communication Session Creation and Message Exchange}
-This process could be either initiated by Remote Administration Server by sending target applet a trigger SMS or be sponsored by applet itself. In both cases, applet sends the first \emph{OpenChannel Request} message. During the PSK TLS Handshake phase, APSD and remote server will agree on to be used cipher suit and authenticate each other. After a successful PSK TLS Handshake, CommunicationStack and remote OTA server will be able to exchange HTTP message,that encapsulates APDU strings as body, with HTTP header that is in compliance with GlobalPlatform standards.
+This process could be either initiated by Remote Administration Server by sending target applet a trigger SMS or be sponsored by applet itself. In both cases, applet sends the first \emph{OpenChannel Request} message. During the PSK TLS Handshake phase, APSD and remote server will agree on to be used cipher suit and authenticate each other. After a successful PSK TLS Handshake, CommunicationStack and remote OTA server will be able to exchange HTTP message, which encapsulates APDU strings as body. And HTTP header is in compliance with GlobalPlatform standards.
 
 
 \begin{figure}[!htbp]
 
 	\centering
-	\includegraphics[width=1.2\textwidth]{communication-flow}
-		\caption{Class Diagram}
+	\includegraphics[width=1\textwidth]{communication-flow}
+		\caption{Handshake and message exchange between SD and Remote Server}
 	\label{fig:communication-flow}
 \end{figure}
 
@@ -65,7 +74,7 @@ X-Admin-Protocol: globalplatform-remote-admin/1.0 CRLF
 CRLF
 [body]
 \end{verbatim}
-In the field \emph{security-domain-AID} could be filled the AID of targeted applet.
+The field \emph{security-domain-AID} will be filled with the AID of targeted applet.
 
 
 The HTTP response message sent from applet to remote server uses following schema\cite{gp}:
@@ -92,7 +101,7 @@ The filed \emph{X-Admin-Script-Status} could contain following values:
 \end{itemize}
 
 \subsubsection{Close Communication Session}
-Whenever the communication channel is about to be closed, either because of session security issue, or due to successful finish of communication, remote server will send target applet HTTP message:
+Whenever the communication channel is about to be closed, either because of session security issue, or due to successful finish of communication, remote server will send target applet HTTP message using following parameters:
  \begin{itemize}
   \item No \emph{X-Admin-Next-URI} field is present in this HTTP message and message body is empty, which will be recognized as final message from remote server and then the session will be closed.
   \item No \emph{X-Admin-Next-URI} filed is present but in this HTTP message body is not empty. The receiver will process the data in body and close the communication session appropriately. But no response message will be generated.
@@ -114,7 +123,7 @@ Before concrete implementation of Javacard applet code, the interface, which in 
 The header of this command APDU is fixed and \emph{Lc} indicates the length of CommunicationStack AID. In \emph{Data filed} real AID is saved.
 \begin{table}[!htbp]
 \caption{SELECT command APDU}
-\scalebox{1.3}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
 CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
@@ -127,7 +136,7 @@ Two categories of response APDUs are expected, one represents successful process
 \begin{table}[!htbp]
 \caption{SELECT response APDU}
 \label{select-response-apdu}
-\scalebox{1.1}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
 \hline
 Optional data & Status word & Description                                \\ \hline
@@ -138,11 +147,11 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 \end{table}
 
 \subsubsection{Verify PIN operation}
-This APDU command and response set is used to let CommunicationStack applet verify identity of terminal user. Moreover the PIN size is set from four to eight and the verify PIN operation try limit is set to three times.
+This APDU command and response set is used to let CommunicationStack applet verify identity of terminal user. Moreover the PIN size is set from four to eight and the verify PIN operation only allows three times wrong PIN input before a successful identification.
 
 \begin{table}[!htbp]
 \caption{Verify PIN command }
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
 CLA  & INS  & P1   & P2   & Lc   & Data field    & Le  \\ \hline
@@ -152,18 +161,18 @@ CLA  & INS  & P1   & P2   & Lc   & Data field    & Le  \\ \hline
 \label{verify-command-apdu}
 \end{table}
 
-Three categories of response APDUs are expected.
+As described in tabl~\ref{verify-response-apdu}, three categories of response APDUs are expected.
 
 \begin{table}[!htbp]
 \caption{Verify PIN response APDU}
 \label{verify-response-apdu}
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
 \hline
 Optional data & Status word & Description                                \\ \hline
 No data       & 0x9000      & Successful processing                      \\ \hline
               & 0x63C0      & Verification failed \\ \hline      
-              & 0x6983      & After 3 times wrong input, pin is block \\ \hline              
+              & 0x6983      & After 3 times wrong input, PIN is block \\ \hline              
 \end{tabular}
 }
 \end{table}
@@ -173,7 +182,7 @@ This APDU command and response set is introduced to offer end user change PIN se
 
 \begin{table}[!htbp]
 \caption{Reset PIN command }
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
 CLA  & INS  & P1   & P2   & Lc   & Data field    & Le  \\ \hline
@@ -187,7 +196,7 @@ Three categories of response APDUs are expected.
 \begin{table}[!htbp]
 \caption{Reset PIN response APDU}
 \label{reset-pin-response-apdu}
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
 \hline
 Optional data & Status word & Description                                \\ \hline
@@ -200,11 +209,9 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 
 
 \subsubsection{Communication Session Creation}
-This APDU command and response set is used to let  CommunicationStack applet initiate the request to establish communication channel and create communication  session above  it. Following commands are supported.
-
 \begin{table}[!htbp]
 \caption{Communication session creation command APDUs}
-\scalebox{0.95}{%
+\scalebox{0.75}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
 CLA  & INS  & P1   & P2   & Lc   & Data field  & Le  & Description \\ \hline
@@ -216,13 +223,16 @@ CLA  & INS  & P1   & P2   & Lc   & Data field  & Le  & Description \\ \hline
 }
 \label{trigger-session-apdu}
 \end{table}
+This APDU command and response set is used to let  CommunicationStack applet initiate the request to establish communication channel and create communication  session above  it. Following commands are supported.
+
+
 
 Following return codes are expected in response APDU:
 
 .\begin{table}[!htbp]
 \caption{Trigger Session Return Code}
 \label{trigger-session-response-apdu}
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
 \hline
  Status word & Description                                \\ \hline
@@ -242,7 +252,7 @@ This APDU command and response set is used to correctly close  communication cha
 
 \begin{table}[!htbp]
 \caption{Close Session command APDU}
-\scalebox{1.3}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
 CLA  & INS  & P1   & P2   & Lc   & Data field                                                                                          & Le  \\ \hline
@@ -257,7 +267,7 @@ Following return codes are expected in response APDU:
 .\begin{table}[!htbp]
 \caption{Close Session Return Code}
 \label{close-session-response-apdu}
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
 \hline
  Status word & Description                                \\ \hline
@@ -268,12 +278,9 @@ Following return codes are expected in response APDU:
 \end{table}
 
 \subsubsection{Process Communication Data }
-This APDU command and response set is used to provide functionalities to perform command processing between cellphone and  other smart home device. 
-
-
 \begin{table}[!htbp]
 \caption{Process data command APDUs}
-\scalebox{0.98}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
 CLA  & INS  & P1   & P2   & Lc   & Data field  & Le \\ \hline
@@ -283,13 +290,12 @@ CLA  & INS  & P1   & P2   & Lc   & Data field  & Le \\ \hline
 }
 \label{process-data-cmd-apdu}
 \end{table}
-
-Following return codes are expected in response APDU:
+This APDU command and response set is used to provide functionalities to perform command processing between cellphone and  other smart home device. 
 
 .\begin{table}[!htbp]
 \caption{Process data Return Code}
 \label{process-data-res-apdu}
-\scalebox{1.2}{%
+\scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
 \hline
  Status word & Description                                \\ \hline
@@ -301,3 +307,9 @@ Following return codes are expected in response APDU:
 \end{tabular}
 }
 \end{table}
+Following return codes as shown in table~\ref{process-data-res-apdu} are expected in response APDU.
+
+Moreover \emph{command data} in data filed of command APDU adopts following TLV format. 
+
+\section{Android Application}
+\section{Smart Home Web Server}
