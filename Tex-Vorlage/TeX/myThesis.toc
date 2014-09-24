@@ -115,8 +115,8 @@
 \contentsline {subsubsection}{\nonumberline Communication Session Creation}{63}{section*.46}
 \contentsline {subsubsection}{\nonumberline Close Communication Session}{64}{section*.47}
 \contentsline {subsubsection}{\nonumberline Process Communication Data}{64}{section*.48}
-\contentsline {section}{\numberline {5.3}Android Application}{64}{section.5.3}
-\contentsline {section}{\numberline {5.4}Smart Home Web Server}{64}{section.5.4}
+\contentsline {section}{\numberline {5.3}Android Application}{65}{section.5.3}
+\contentsline {section}{\numberline {5.4}Smart Home Web Server}{65}{section.5.4}
 \contentsline {chapter}{\numberline {6}Implementation}{67}{chapter.6}
 \contentsline {chapter}{\numberline {7}System Security Analysis}{69}{chapter.7}
 \contentsline {chapter}{\numberline {8}Summary and Future Work}{71}{chapter.8}

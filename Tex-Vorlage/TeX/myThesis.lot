@@ -23,7 +23,8 @@
 \contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Close Session command APDU}}{64}{table.5.9}
 \contentsline {table}{\numberline {\relax 5.10}{\ignorespaces Close Session Return Code}}{64}{table.5.10}
 \contentsline {table}{\numberline {\relax 5.11}{\ignorespaces Process data command APDUs}}{64}{table.5.11}
-\contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process data Return Code}}{65}{table.5.12}
+\contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process data Return Code}}{64}{table.5.12}
+\contentsline {table}{\numberline {\relax 5.13}{\ignorespaces Command data Type-Length-Value structure}}{65}{table.5.13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
