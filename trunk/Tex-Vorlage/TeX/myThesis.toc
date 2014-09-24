@@ -90,27 +90,36 @@
 \contentsline {section}{\numberline {3.5}Embedded System Secure Design}{48}{section.3.5}
 \contentsline {chapter}{\numberline {4}Implementation Scenario}{49}{chapter.4}
 \contentsline {section}{\numberline {4.1}Overview}{49}{section.4.1}
-\contentsline {section}{\numberline {4.2}Software Structure}{51}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Client Structure}{51}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Server Structure}{53}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Implementation Tool Support}{56}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.2}Software Structure}{50}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Communication Flow}{50}{subsection.4.2.1}
+\contentsline {subsubsection}{\nonumberline Conclusion}{52}{section*.35}
+\contentsline {subsection}{\numberline {4.2.2}Client Structure}{52}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Server Structure}{55}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Implementation Tool Support}{56}{subsection.4.2.4}
+\contentsline {subsubsection}{\nonumberline Java Card Application Design and Debug Tool}{56}{section*.36}
+\contentsline {subsubsection}{\nonumberline Java Card Applet Testing Environment}{56}{section*.37}
+\contentsline {subsubsection}{\nonumberline Android Application Design Tool}{56}{section*.38}
+\contentsline {subsubsection}{\nonumberline Smart Home Simulation Environment}{56}{section*.39}
 \contentsline {chapter}{\numberline {5}System Design}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}UICC Applet}{57}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Classes}{57}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Communication Flow}{58}{subsection.5.1.2}
-\contentsline {subsubsection}{\nonumberline Communication Session Creation and Message Exchange}{59}{section*.35}
-\contentsline {subsubsection}{\nonumberline HTTP Header Format}{59}{section*.36}
-\contentsline {subsubsection}{\nonumberline Close Communication Session}{61}{section*.37}
-\contentsline {subsection}{\numberline {5.1.3}Commands: Interface between Applet and CAD}{61}{subsection.5.1.3}
-\contentsline {subsubsection}{\nonumberline SELECT APDU}{61}{section*.38}
-\contentsline {subsubsection}{\nonumberline Verify PIN operation}{62}{section*.39}
-\contentsline {subsubsection}{\nonumberline Reset PIN operation}{62}{section*.40}
-\contentsline {subsubsection}{\nonumberline Communication Session Creation}{63}{section*.41}
-\contentsline {subsubsection}{\nonumberline Close Communication Session}{63}{section*.42}
-\contentsline {subsubsection}{\nonumberline Process Communication Data}{64}{section*.43}
-\contentsline {chapter}{\numberline {6}Implementation}{65}{chapter.6}
-\contentsline {chapter}{\numberline {7}System Security Analysis}{67}{chapter.7}
-\contentsline {chapter}{\numberline {8}Summary and Future Work}{69}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{69}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future Work}{69}{section.8.2}
-\contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.44}
+\contentsline {section}{\numberline {5.1}Overview}{57}{section.5.1}
+\contentsline {section}{\numberline {5.2}UICC Applet}{58}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Classes}{58}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Work Flow}{58}{subsection.5.2.2}
+\contentsline {subsubsection}{\nonumberline Communication Session Creation and Message Exchange}{59}{section*.40}
+\contentsline {subsubsection}{\nonumberline HTTP Header Format}{59}{section*.41}
+\contentsline {subsubsection}{\nonumberline Close Communication Session}{61}{section*.42}
+\contentsline {subsection}{\numberline {5.2.3}Commands: Interface between Applet and CAD}{62}{subsection.5.2.3}
+\contentsline {subsubsection}{\nonumberline SELECT APDU}{62}{section*.43}
+\contentsline {subsubsection}{\nonumberline Verify PIN operation}{62}{section*.44}
+\contentsline {subsubsection}{\nonumberline Reset PIN operation}{63}{section*.45}
+\contentsline {subsubsection}{\nonumberline Communication Session Creation}{63}{section*.46}
+\contentsline {subsubsection}{\nonumberline Close Communication Session}{64}{section*.47}
+\contentsline {subsubsection}{\nonumberline Process Communication Data}{64}{section*.48}
+\contentsline {section}{\numberline {5.3}Android Application}{64}{section.5.3}
+\contentsline {section}{\numberline {5.4}Smart Home Web Server}{64}{section.5.4}
+\contentsline {chapter}{\numberline {6}Implementation}{67}{chapter.6}
+\contentsline {chapter}{\numberline {7}System Security Analysis}{69}{chapter.7}
+\contentsline {chapter}{\numberline {8}Summary and Future Work}{71}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{71}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Work}{71}{section.8.2}
+\contentsline {chapter}{\nonumberline Bibliography}{73}{chapter*.49}
