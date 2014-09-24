@@ -50,7 +50,6 @@ Agent-based Smart Home aims to build an intelligent home that based on machine l
 	\includegraphics[width=0.8\textwidth]{smart-home-agent.jpg}
 		\caption{MavHome agent architecture\cite{smart_home_agent}}
 	\label{fig:smart-home-agent}
-
 \end{figure}
 As shown in figure~\ref{fig:smart-home-agent}, agents which are employed by MavHome consist of four different layers. From bottom to top:
 \begin{itemize}
@@ -200,9 +199,15 @@ Since threat modeling for smart card could be extreme complex and also the class
 \item \emph{Focused Ion Beam}. Also it is possible to transmit intentionally generated signals to smart card processor using focused ion beam. As a consequence, it is possible for attacker to reveal data from smart card\cite{smart_card_attack3}
 \item \emph{Chemical Solvents, Etching and Staining Materials}. Using aforementioned chemical materials, attacker can observe etching speed difference for some ROM memories  and with a step further analyze \emph{0} and \emph{1} in those memories\cite{smart_card_attack2}.
 \end{itemize}
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pda-attack.jpg}
+		\caption{Differential Power Attack on a DES implementation\cite{embedded_secure}}
+	\label{fig:pad-attack}
+\end{figure}
 \item Non-invasive attacks. This kind of attack makes use of smart card runtime environments such as difference in power consumption, processor voltage, clock frequency and etc. to analyze smart card behaviors. For example,
 \begin{itemize}
-\item Power consumption attacks. The smart card operation execution relays on power provided by terminal.  When attacker is able to observe smart card power consumption, which is used by card performing cryptographic algorithms, he may retrieve related keys by applying \emph{Differential Power attack} or \emph{Single Power attack}\cite{smart_card_attack3}.
+\item Power consumption attacks. The smart card operation execution relays on power provided by terminal.  When attacker is able to observe smart card power consumption, which is used by card performing cryptographic algorithms, he may retrieve related keys by applying \emph{Differential Power attack} or \emph{Single Power attack}\cite{smart_card_attack3}. Figure~\ref{fig:pad-attack} pictures a differential power attack analysis on a DES implementation.
 \item Timing attack on RSA. The computing duration of RSA algorithm runtime depends also on the input key. Therefore there is an opportunity for attacker using observed time gap in key computation to get secret key information\cite{smart_card_history}
 \end{itemize}
 \item Other Attacks\cite{smart_card_attack5}.
@@ -306,3 +311,24 @@ It is highly recommended that application developer explicitly defines the permi
 \subsection{Conclusion}
 In conclusion Android is  a secure-designed platform with sophistical access control mechanisms and other security polices. But still Android  application developers should apply security techniques to protect their project from malicious ill-formed applications.
 \section{Embedded System Secure Design}
+\subsection{Overview}
+In this last section,  a generic guide for the embedded system secure design is introduced. As already in previous sections described, low level components that build the embedded system compared with traditional  computer software have additional security requirement. For instance, low end devices are normally dependent on battery as electricity supplement and have limited computing capacities. Those two constrains must be taken into account during the design phase of a secure embedded system.
+\subsection{Embedded System Secure Requirements}
+The \emph{Trinity of Trouble}\cite{embedded_secure} three factors, namely \emph{complexity},\emph{extensibility} and \emph{connectivity} contribute together to make the embedded system more vulnerable and make the  system secure requirements complexer.
+In the following a brief discussion about embedded system secure requirements and corresponding solutions are presented\cite{embedded_secure}.
+\begin{itemize}
+\item \emph{User Authenticatio} Before the embedded system performs any functionalities, the identity of system user must be confirmed. Alternatively the user also has the need to verity the embedded system identity. The expected mutual authentication can be realized by applying secure protocol such as \emph{TLS 1.2} or using digital certificates and signatures.
+\item \emph{Content Security} The security of exchanged message also plays an import roll in a secure embedded system. Message integrity and confidentiality must be ensured. Popular solutions are to use cryptographic algorithms such as symmetric chip, asymmetric chip and hash algorithms to protect message from illegitimately modification and eavesdropping.
+\item \emph{Secure Network Connection} Most devices nowadays have the access to the Internet. As a consequence, secure  network connection belongs also to the security domain in embedded system. In order  to provide a secure network environment, system developer should apply secure communication protocols such as SSL or create secure VPN connection\cite{embedded_secure}.
+\item \emph{Secure Storage} System date must be protect from unauthorized modification and stealing by malicious entities. Therefore tamper resistance hardware should be applied.
+\item \emph{Availability}At last the service availability must be guaranteed by apply anti-Dos attack mechanisms, which are already introduced in this thesis.
+\end{itemize}
+\subsection{Software Security during Software Design Life Cycle}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{sdlc.jpg}
+		\caption{Software Security Consideration in Software  Design Life  Cycle\cite{embedded_secure}}
+	\label{fig:sdlc}
+\end{figure}
+With the acknowledgment of system requirements as well as corresponding solutions, embedded system designer should concern potential security imperfection in each design period and perform corresponding secure analysis as well as run secure-related tests, as shown in figure~\ref{fig:sdlc}.
+\subsection{Secure Architectures}

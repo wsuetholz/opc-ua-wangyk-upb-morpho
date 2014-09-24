@@ -150,6 +150,12 @@
   Concepts 1.02}.
 \newblock July 10.2012
 
+\bibitem[{Pau}04]{embedded_secure}
+\textsc{{Paul Kocher, Ruby Lee, Gary McGraw, Anand Raghunathan and Srivaths
+  Ravi}}:
+\newblock \emph{Security as a New Dimension in Embedded System Design}.
+\newblock 2004
+
 \bibitem[{Phi}06]{smart_card_attack3}
 \textsc{{Philip Keerseblick, Wim Vahnoucke}}:
 \newblock \emph{Smart card (In-)Security}.
