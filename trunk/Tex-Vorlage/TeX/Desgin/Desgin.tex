@@ -292,7 +292,7 @@ CLA  & INS  & P1   & P2   & Lc   & Data field  & Le \\ \hline
 \end{table}
 This APDU command and response set is used to provide functionalities to perform command processing between cellphone and  other smart home device. 
 
-.\begin{table}[!htbp]
+\begin{table}[!htbp]
 \caption{Process data Return Code}
 \label{process-data-res-apdu}
 \scalebox{0.8}{%
@@ -309,7 +309,54 @@ This APDU command and response set is used to provide functionalities to perform
 \end{table}
 Following return codes as shown in table~\ref{process-data-res-apdu} are expected in response APDU.
 
-Moreover \emph{command data} in data filed of command APDU adopts following TLV format. 
+Moreover \emph{command data} in data filed of command APDU adopts following TLV format as shown in table~\ref{tlv}. 
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Tag & Length & \multicolumn{7}{l|}{Name} & Presence \\ \hline
+'90' & 0-n & \multicolumn{7}{l|}{command parameters} & \multirow{2}{*}{optional} \\ \cline{1-9}
+\multirow{26}{*}{} & \multirow{26}{*}{} & Tag & Length & \multicolumn{5}{l|}{Name} &  \\ \cline{3-10} 
+ &  & '91' & 0-n & \multicolumn{5}{l|}{command from cell phone to home device} & \multirow{2}{*}{optional} \\ \cline{3-9}
+ &  & \multirow{18}{*}{} & \multirow{18}{*}{} & Tag & Length & \multicolumn{3}{l|}{Name} &  \\ \cline{5-10} 
+ &  &  &  & '92' & 1-n & \multicolumn{3}{l|}{Read sensor value} & optional \\ \cline{5-10} 
+ &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
+ &  &  &  & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{5-10} 
+ &  &  &  & '93' & 1-n & \multicolumn{3}{l|}{Set subscription} & optional \\ \cline{5-10} 
+ &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
+ &  &  &  & \multicolumn{2}{l|}{} & '9C' & 1-n & sensor uid &  \\ \cline{5-9}
+ &  &  &  &  &  & '9A' & 1-256 & subscription value &  \\ \cline{5-10} 
+ &  &  &  & '94' & 1-n & \multicolumn{3}{l|}{Get historical record} & optional \\ \cline{5-10} 
+ &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
+ &  &  &  & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{5-10} 
+ &  &  &  & '95' & 1 & \multicolumn{3}{l|}{Open main door} & optional \\ \cline{5-10} 
+ &  &  &  & '96' & 1 & \multicolumn{3}{l|}{Coffee Maker add water} & optional \\ \cline{5-10} 
+ &  &  &  & '97' & 1 & \multicolumn{3}{l|}{Coffee Maker add coffee} & optional \\ \cline{5-10} 
+ &  &  &  & '98' & 1 & \multicolumn{3}{l|}{Coffee Maker make coffee} & optional \\ \cline{5-10} 
+ &  &  &  & '99' & 1-n & \multicolumn{3}{l|}{Grant main door access to} & optional \\ \cline{5-10} 
+ &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
+ &  &  &  & \multicolumn{2}{l|}{} & '9B' & 1-n & user uid &  \\ \cline{3-10} 
+ &  & '9D' & 0-n & \multicolumn{5}{l|}{Command from home device to cell phone} & optional \\ \cline{3-10} 
+ &  & \multicolumn{2}{l|}{\multirow{5}{*}{}} & Tag & Length & \multicolumn{3}{l|}{Name} & optional \\ \cline{5-10} 
+ &  & \multicolumn{2}{l|}{} & '9E' & 0-n & \multicolumn{3}{l|}{Notification sent by home device} & optional \\ \cline{5-10} 
+ &  & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{3}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
+ &  & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{7-9}
+ &  & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9A' & 1-256 & value &  \\ \hline
+\end{tabular}
+}
+\caption{Command data Type-Length-Value structure}
+\label{tlv}
+\end{table}
+
+
+
+
+
+
+
+
+
 
 \section{Android Application}
 \section{Smart Home Web Server}

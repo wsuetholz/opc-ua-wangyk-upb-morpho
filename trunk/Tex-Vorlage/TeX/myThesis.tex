@@ -5,33 +5,33 @@
 \input{Constants} % Konstanten laden, z.B.: Begriffe wie Bachelor-Arbeit, Bachelor of Science, etc.
 
 \usepackage[american]{babel}
-%\usepackage[ansinew]{inputenc} %Für deutsche Kodierung von Buchstaben ä,ö,ü,ß unter Windows (für Unix: 'latin1' statt 'ansinew') ansonsten muss man Folgendes schreiben:
-% \"a für ä, \"o für ö, \"u für ü, \ss für ß.
-%\usepackage{german} % unter anderem für bessere Silbentrennung
+%\usepackage[ansinew]{inputenc} %Fï¿½r deutsche Kodierung von Buchstaben ï¿½,ï¿½,ï¿½,ï¿½ unter Windows (fï¿½r Unix: 'latin1' statt 'ansinew') ansonsten muss man Folgendes schreiben:
+% \"a fï¿½r ï¿½, \"o fï¿½r ï¿½, \"u fï¿½r ï¿½, \ss fï¿½r ï¿½.
+%\usepackage{german} % unter anderem fï¿½r bessere Silbentrennung
 
 \input{myData} % Parameter wie Autor, Titel, Datum, Gutachter, etc.
 
-\usepackage{ifthen} % Paket für if-then-else-Konstrukte
+\usepackage{ifthen} % Paket fï¿½r if-then-else-Konstrukte
 
-\usepackage{verbatim}  % z.B. für comment-Umgebung
-%\usepackage{natbib}    % für BibTeX mit dinat style (DIN 1505, Teil 2 und 3)
-%\usepackage{bibgerm}   % für BibTeX mit deutschem style z.B. geralpha
-%\usepackage{makeidx}   % für Index-/Stichwortverzeichnis
-%\makeindex             % lässt LaTeX die Indexeinträge sammeln
-%\usepackage{epsfig}   % zum Einfügen von EPS-Grafiken
-\usepackage{array}     % weitere Hilfsmittel für Tabellen
-%\usepackage{float}    % für weitere Gleitumgebungen außer table und figure
+\usepackage{verbatim}  % z.B. fï¿½r comment-Umgebung
+%\usepackage{natbib}    % fï¿½r BibTeX mit dinat style (DIN 1505, Teil 2 und 3)
+%\usepackage{bibgerm}   % fï¿½r BibTeX mit deutschem style z.B. geralpha
+%\usepackage{makeidx}   % fï¿½r Index-/Stichwortverzeichnis
+%\makeindex             % lï¿½sst LaTeX die Indexeintrï¿½ge sammeln
+%\usepackage{epsfig}   % zum Einfï¿½gen von EPS-Grafiken
+\usepackage{array}     % weitere Hilfsmittel fï¿½r Tabellen
+%\usepackage{float}    % fï¿½r weitere Gleitumgebungen auï¿½er table und figure
 
-\usepackage{setspace}  % für 1-fachen, 1,5-fachen oder 2-fachen Zeilenabstand
+\usepackage{setspace}  % fï¿½r 1-fachen, 1,5-fachen oder 2-fachen Zeilenabstand
 
 %\floatstyle{plain}
 %\floatname{sourcecode}{Code-Fragment}
-%\newfloat{sourcecode}{htbp}{loc}[chapter] % neue Gleitumgebung für Quellcode
+%\newfloat{sourcecode}{htbp}{loc}[chapter] % neue Gleitumgebung fï¿½r Quellcode
 
 
 \input{MathDefinitions} % einige mathematische Hilfskonstrukte und Vereinfachungen
 
-\input{PageLayout} % Layout der Seiten, z.B. Kopf- und Fußzeilendefinition
+\input{PageLayout} % Layout der Seiten, z.B. Kopf- und Fuï¿½zeilendefinition
 
 
 % ueberpruefen, ob wir pdflatex ausfuehren (geht nur bei Koma-Klassen)
@@ -40,7 +40,7 @@
 % PDF wird genutzt
 	
 	\usepackage[pdftex]{graphicx,color}
-	% eigene Farben für Links:
+	% eigene Farben fï¿½r Links:
   %\definecolor{myLinkColor}{rgb}{0,0,.5}
   %\definecolor{myCiteColor}{rgb}{0,.5,0}
   %\definecolor{myFileColor}{rgb}{.5,0,0}
@@ -53,7 +53,7 @@
   \usepackage[pdftex,%
   						pdftitle={\meinTitel},%
   						pdfauthor={\meinName},%
-  						pdfkeywords={\meinePDFStichwoerter},% Stichwörter
+  						pdfkeywords={\meinePDFStichwoerter},% Stichwï¿½rter
   						plainpages=false,%
   						pdfpagelabels,% Seitenzahl als z.B. 'ii (4 of 40)' anstatt '4 of 40' darstellen
   						colorlinks=true,%
@@ -63,11 +63,11 @@
   						urlcolor=myURLColor,%
   						bookmarks,% Lesezeichen erstellen
   						bookmarksnumbered, % Lesezeichen nummeriert wie im Inhaltsverzeichnis
-  						breaklinks, % Zeilenumbrüche bei Links erlauben
+  						breaklinks, % Zeilenumbrï¿½che bei Links erlauben
   						%pdfpagelayout={TwoColumnRight}% zweiseitiges fortlaufendes Layout
   						]{hyperref}
   \pdfcompresslevel=9 %Kompressionslevel fuer Text und Grafiken
-  \DeclareGraphicsExtensions{.pdf, .png, .jpg, .tif, .mps} % Dateiendungen für Grafikdateien, geordnet nach Priorität für automatische Auswahl der richtigen Datei, falls Endung nicht angegeben
+  \DeclareGraphicsExtensions{.pdf, .png, .jpg, .tif, .mps} % Dateiendungen fï¿½r Grafikdateien, geordnet nach Prioritï¿½t fï¿½r automatische Auswahl der richtigen Datei, falls Endung nicht angegeben
 }
 {
 % Kein PDF
@@ -76,9 +76,9 @@
   \usepackage{color}
   \usepackage[hypertex, bookmarks,% Lesezeichen erstellen
   						bookmarksnumbered, % Lesezeichen nummeriert wie im Inhaltsverzeichnis
-  						breaklinks, % Zeilenumbrüche bei Links erlauben
+  						breaklinks, % Zeilenumbrï¿½che bei Links erlauben
   						]{hyperref}
-  \DeclareGraphicsExtensions{.eps,.ps} % Dateiendungen für Grafikdateien
+  \DeclareGraphicsExtensions{.eps,.ps} % Dateiendungen fï¿½r Grafikdateien
 }
 
 \input{DocumentStructure} % der eigentliche Inhalt und die Struktur der Arbeit
