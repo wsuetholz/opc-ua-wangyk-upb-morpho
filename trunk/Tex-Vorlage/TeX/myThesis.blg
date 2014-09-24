@@ -3,7 +3,7 @@ The style file: alphadin.bst
 Database file #1: myThesis.bib
 Warning--entry type for "Ref3" isn't style-file defined
 --line 41 of file myThesis.bib
-Warning--I didn't find a database entry for "a"
+Warning--I didn't find a database entry for "embedd_secure"
 Warning--empty publisher in smart_card_access
 Warning--empty publisher in smart_card_contactless
 Warning--empty publisher in opc_ics
