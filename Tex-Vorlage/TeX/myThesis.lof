@@ -25,21 +25,21 @@
 \contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces MavHome agent architecture\cite {smart_home_agent}}}{34}{figure.3.3}
 \contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces keys presented in Smart Card Description Language from \emph {Morpho}}}{39}{figure.3.4}
 \contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces the PSK key used to configure administration session}}{39}{figure.3.5}
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Differential Power Attack on a DES implementation\cite {embedded_secure}}}{42}{figure.3.6}
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Malware growth in period from August 2010 to October 2011 based on database from paper\cite {android_malware}}}{45}{figure.3.7}
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Detailed Android permission model\cite {android_secure_design}}}{46}{figure.3.8}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Differential Power Attack on a DES implementation\cite {embedded_secure}}}{43}{figure.3.6}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Malware growth in period from August 2010 to October 2011 based on database from paper\cite {android_malware}}}{46}{figure.3.7}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Detailed Android permission model\cite {android_secure_design}}}{47}{figure.3.8}
 \contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Permission required by application \emph {k9mail}\cite {android_secure_design}}}{48}{figure.3.9}
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Software Security Consideration in Software Design Life Cycle\cite {embedded_secure}}}{50}{figure.3.10}
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Software Security Consideration in Software Design Life Cycle\cite {embedded_secure}}}{51}{figure.3.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home}}{51}{figure.4.1}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example}}{53}{figure.4.2}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure}}{55}{figure.4.3}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}}}{56}{figure.4.4}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure}}{57}{figure.4.5}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home}}{53}{figure.4.1}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example}}{55}{figure.4.2}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure}}{57}{figure.4.3}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}}}{58}{figure.4.4}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure}}{59}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange}}{59}{figure.5.1}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Class Diagram}}{61}{figure.5.2}
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Handshake and message exchange between SD and Remote Server}}{62}{figure.5.3}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange}}{61}{figure.5.1}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Handshake and message exchange between SD and Remote Server}}{63}{figure.5.2}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram}}{70}{figure.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
