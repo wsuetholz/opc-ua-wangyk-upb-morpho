@@ -18,22 +18,6 @@ The whole message exchange process consists of following phases:
 \end{itemize}
 
 \section{UICC Applet}
-
-\subsection{Classes}\sloppy
-My UICC applet is integrated in Morpho \emph{SC5-01OS07} LTE SAT product.
-Communication stack includes following classes:
- \begin{itemize}
-  \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. In order to process remote APDU, this applet is also design as UICC system applet, that extends interface \emph{com.orga.javacard.componentinterfaces.JCISIMApplication}
-  \item  \emph{AdminTrigger}, which implements Globalplatform  and toolkitframework interfaces and offers functions for proactive and passive communication session creation with OTA server, cipher suit negotiation and mutual authentication.
-\end{itemize}
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1.0\textwidth]{class}
-		\caption{Class Diagram}
-	\label{fig:class}
-\end{figure}
-
 \subsection {Work Flow}
 
 The components involved in this scenario are:
@@ -107,7 +91,7 @@ Whenever the communication channel is about to be closed, either because of sess
   \item No \emph{X-Admin-Next-URI} filed is present but in this HTTP message body is not empty. The receiver will process the data in body and close the communication session appropriately. But no response message will be generated.
 \end{itemize}
 
-\subsection {Commands: Interface between Applet and CAD}
+\subsection {Commands: Interface between Applet and CAD} \label{secAPDU}
 Before concrete implementation of Javacard applet code, the interface, which in essence is a set of commond APDUs and corresponding response APDUs, between applet and CAD must be well defined.  The CommunicationStack support two categories commond APDU:
  \begin{itemize}
   \item The \emph{SELECT} Command APDU, which is used by JCRE to select CommunicationStack applet.
@@ -208,7 +192,7 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 \end{table}
 
 
-\subsubsection{Communication Session Creation}
+\subsubsection{Communication Session Creation}\label{secSessionOpen}
 \begin{table}[!htbp]
 \caption{Communication session creation command APDUs}
 \scalebox{0.75}{%
@@ -246,7 +230,7 @@ Following return codes are expected in response APDU:
 \end{table}
 
 
-\subsubsection{Close Communication Session }
+\subsubsection{Close Communication Session}\label{secSessionClose}
 This APDU command and response set is used to correctly close  communication channel.
 
 
@@ -277,7 +261,7 @@ Following return codes are expected in response APDU:
 }
 \end{table}
 
-\subsubsection{Process Communication Data }
+\subsubsection{Process Communication Data }\sloppy
 \begin{table}[!htbp]
 \caption{Process data command APDUs}
 \scalebox{0.8}{%
@@ -310,53 +294,177 @@ This APDU command and response set is used to provide functionalities to perform
 Following return codes as shown in table~\ref{process-data-res-apdu} are expected in response APDU.
 
 Moreover \emph{command data} in data filed of command APDU adopts following TLV format as shown in table~\ref{tlv}. 
-\begin{table}[h]
-\centering
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[!htbp]
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
 \hline
 Tag & Length & \multicolumn{7}{l|}{Name} & Presence \\ \hline
 '90' & 0-n & \multicolumn{7}{l|}{command parameters} & \multirow{2}{*}{optional} \\ \cline{1-9}
-\multirow{26}{*}{} & \multirow{26}{*}{} & Tag & Length & \multicolumn{5}{l|}{Name} &  \\ \cline{3-10} 
- &  & '91' & 0-n & \multicolumn{5}{l|}{command from cell phone to home device} & \multirow{2}{*}{optional} \\ \cline{3-9}
- &  & \multirow{18}{*}{} & \multirow{18}{*}{} & Tag & Length & \multicolumn{3}{l|}{Name} &  \\ \cline{5-10} 
- &  &  &  & '92' & 1-n & \multicolumn{3}{l|}{Read sensor value} & optional \\ \cline{5-10} 
- &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
- &  &  &  & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{5-10} 
- &  &  &  & '93' & 1-n & \multicolumn{3}{l|}{Set subscription} & optional \\ \cline{5-10} 
- &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
- &  &  &  & \multicolumn{2}{l|}{} & '9C' & 1-n & sensor uid &  \\ \cline{5-9}
- &  &  &  &  &  & '9A' & 1-256 & subscription value &  \\ \cline{5-10} 
- &  &  &  & '94' & 1-n & \multicolumn{3}{l|}{Get historical record} & optional \\ \cline{5-10} 
- &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
- &  &  &  & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{5-10} 
- &  &  &  & '95' & 1 & \multicolumn{3}{l|}{Open main door} & optional \\ \cline{5-10} 
- &  &  &  & '96' & 1 & \multicolumn{3}{l|}{Coffee Maker add water} & optional \\ \cline{5-10} 
- &  &  &  & '97' & 1 & \multicolumn{3}{l|}{Coffee Maker add coffee} & optional \\ \cline{5-10} 
- &  &  &  & '98' & 1 & \multicolumn{3}{l|}{Coffee Maker make coffee} & optional \\ \cline{5-10} 
- &  &  &  & '99' & 1-n & \multicolumn{3}{l|}{Grant main door access to} & optional \\ \cline{5-10} 
- &  &  &  & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
- &  &  &  & \multicolumn{2}{l|}{} & '9B' & 1-n & user uid &  \\ \cline{3-10} 
- &  & '9D' & 0-n & \multicolumn{5}{l|}{Command from home device to cell phone} & optional \\ \cline{3-10} 
- &  & \multicolumn{2}{l|}{\multirow{5}{*}{}} & Tag & Length & \multicolumn{3}{l|}{Name} & optional \\ \cline{5-10} 
- &  & \multicolumn{2}{l|}{} & '9E' & 0-n & \multicolumn{3}{l|}{Notification sent by home device} & optional \\ \cline{5-10} 
- &  & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{3}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
- &  & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{7-9}
- &  & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9A' & 1-256 & value &  \\ \hline
+\multicolumn{2}{|l|}{\multirow{30}{*}{}} & Tag & Length & \multicolumn{5}{l|}{Name} &  \\ \cline{3-10} 
+\multicolumn{2}{|l|}{} & '91' & 0-n & \multicolumn{5}{l|}{command from cell phone to home device} & \multirow{2}{*}{optional} \\ \cline{3-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{\multirow{18}{*}{}} & Tag & Length & \multicolumn{3}{l|}{Name} &  \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '92' & 1-n & \multicolumn{3}{l|}{Read sensor value} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '93' & 1-n & \multicolumn{3}{l|}{Set subscription} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & sensor uid &  \\ \cline{5-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} &  &  & '9A' & 1-256 & subscription value &  \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '94' & 1-n & \multicolumn{3}{l|}{Get historical record} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '95' & 1 & \multicolumn{3}{l|}{Open main door} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '96' & 1 & \multicolumn{3}{l|}{Coffee Maker add water} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '97' & 1 & \multicolumn{3}{l|}{Coffee Maker add coffee} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '98' & 1 & \multicolumn{3}{l|}{Coffee Maker make coffee} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '99' & 1-n & \multicolumn{3}{l|}{Grant main door access to} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{2}{*}{}} & Tag & Length & Name & \multirow{2}{*}{} \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9B' & 1-n & user uid &  \\ \cline{3-10} 
+\multicolumn{2}{|l|}{} & '9D' & 0-n & \multicolumn{5}{l|}{Command from home device to cell phone} & \multirow{2}{*}{optional} \\ \cline{3-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{\multirow{9}{*}{}} & Tag & Length & \multicolumn{3}{l|}{Name} &  \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '9E' & 0-n & \multicolumn{3}{l|}{Notification sent by home device} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{3}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9A' & 1-256 & value &  \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & '9F' & 0-n & \multicolumn{3}{l|}{Historical data} & optional \\ \cline{5-10} 
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{\multirow{3}{*}{}} & Tag & Length & Name & \multirow{3}{*}{} \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & '9C' & 1-n & device uid &  \\ \cline{7-9}
+\multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & ''A0' & 1-256 & historical data &  \\ \hline
 \end{tabular}
 }
 \caption{Command data Type-Length-Value structure}
 \label{tlv}
 \end{table}
+Based on above described TLV structure, following APDU \emph{A0210000129010910892069C040102030402}\label{remote-apdu-example} can be translated as command sent by smart phone to sensor with \emph{uid 01020304} for the purpose of querying current sensor value. And the expected response data length is set as two bits.
 
+\subsection{Classes}\sloppy
+My UICC applet is integrated in Morpho \emph{SC5-01OS07} LTE SAT product.
+\emph{Communicationstack} contains following classes:
+ \begin{itemize}
+  \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. In order to process remote APDU, this applet is also design as UICC system applet, that extends interface \emph{com.orga.javacard.componentinterfaces.JCISIMApplication}
+  \item  \emph{sessionTrigger}, which implements Globalplatform  and toolkitframework interfaces and offers functions for proactive and passive communication session creation with OTA server, cipher suit negotiation and mutual authentication. \emph{sessionTrigger} is developed based on \emph{adminTrigger} class provided by Morpho.
+\end{itemize}
 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{class}
+		\caption{Class Diagram}
+	\label{fig:class}
+\end{figure}
 
+\subsubsection{Class CommunicationStack} \sloppy
+As the main class of my Applet, \emph{communicationStack} extends \emph{UsimRemoteService} class provided by Morpho in order to be recognized as a system Applet, which is capable of performing remote file management behavior. Moreover this main class has implemented interface \emph{JCISIMApplication}, which defines how to handle remote APDU.
 
+Ecept the instructions and status bytes, which are related to \emph{communication session creation} and \emph{close communication session},  the reset mentioned in~\ref{secAPDU} are defined in this class.
+For instance
+{\small
+\begin{verbatim}
+//### CLS - CLass###
+private static final byte CLA = (byte) 0xA0;
+//###INS-Instructions ###
+private static final byte INS_VERIFYPIN=(byte) 0x11;
+private static final byte INS_RESETPIN=(byte) 0x12;
+... ....
+private static final byte INS_CREATE_SESSION_PARAM=(byte) 0x01; 
+private static final byte INS_SET_SESSION_PARAM=(byte) 0x02;
+...
+// ### SW1SW2 - Exceptions ###
+private static final short SW_NULLPOINTER_EXCEPTION=(short) 0x6600;
+private static final short SW_ARRAYINDEXOUTOFBOUNDS_EXCEPTION = (short) 0x66AB;
+private static final short SW_SECURITY_EXCEPTION= (short) 0x665E;
+....
+private static final short SW_PIN_LENGTH_WRONG= (short) 0x6984;
+private static final short SW_RM_SUCCESS= (short) 0x1234;
+\end{verbatim}
+}
+As can be seen, a special return code \emph{SW\_RM\_SUCCESS} is introduced, which is used in order to confirm a successful receive of remote APDU during the system test phase. 
 
+PIN configuration is described as below, 
+{\small
+\begin{verbatim}
+    private static final byte PIN_TRY_LIMIT = (byte) 0x03;
+    private static final byte PIN_MAX_SIZE = (byte) 0x08;
+    private static final byte PIN_SIZE = (byte) 0x04;
+\end{verbatim}
+}
+System allows maximum three time wrong PIN input and PIN size is set from four bits to eight.
 
+\paragraph{Install Method}
+\emph{install} method is used to register Applet in JCRE and create a CommunicationStack implementation.
+\paragraph{process Method}
+In this function, the received remote APDU as shown by~\ref{remote-apdu-example} will be analyzed and upon the encapsulated instruction filed, corresponding handler will be invoked. Following snippet defines how to get \emph{class} filed, \emph{instruction} filed  and \emph{command data} from a remote APDU.
+{\small
+\begin{verbatim}
+byte claMasked = (byte)(anApdu.getCla() & (byte)0xF0);
+byte ins = anApdu.getIns();
+byte[] cmd = (byte[]) anApdu.getCommandData();	    
+short cmdOffset = anApdu.getCommandDataOffset();
+byte[] apdu = anApdu.getApdu(); //return APDU object if available
+\end{verbatim}
+}
 
+Based on the acknowledgment of \emph{claMasked} , \emph{ins} data and \emph{apdu} object, using below described switch statement, appropriate handler is invoked.
+{\small
+\begin{verbatim}
+switch{ins}
+	{
+		case INS_VERIFYPIN:
+			doVerifyPIN(apdu);
+		case ....
+	}
+\end{verbatim}
+}
+In case when \emph{ins} equals \emph{INS\_VERIFYPIN}, following \emph{doVerifyPIN} is invoked.
+{\small
+\begin{verbatim}
+	private void doVerifyPIN(APDU apdu) {
+		byte[] buffer = apdu.getBuffer();
+		apdu.setIncomingAndReceive();			
+		if(pin.getTriesRemaining() == (byte)0) {
+			ISOException.throwIt(SW_PIN_BLOCKED);
+		}
+		if((byte)buffer[ISO7816.OFFSET_LC] != PIN_SIZE) {
+			ISOException.throwIt(SW_PIN_LENGTH_WRONG);
+		}		
+		if (!pin.check(buffer, ISO7816.OFFSET_CDATA, PIN_SIZE)) {
+			ISOException.throwIt(SW_PIN_VERIFICATION_FAILED);
+		}
+	}
+\end{verbatim}
+}
+If except from statue words, other information is expected to be transmitted back to command APDU sender,  the return data can be appended at the end of existing response data using following schema.
+{\small
+\begin{verbatim}
+byte[] result = {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07, 0x08,0x09};
+short length = (short) result.length;
+byte[] resBuff = anApdu.getResponseBuffer(); 
+short resOffset = anApdu.getResponseBufferOffset();
+Util.arrayCopyNonAtomic(result, (short)0, resBuff, (short)resOffset, (short)length);	    
+anApdu.setStatusword(SW_RM_SUCCESS);
+anApdu.appendResponse(resBuff,(short)resOffset, (short)length, true);
+\end{verbatim}
+}
 
+Byte array \emph{result} is a dummy demonstration appended data and \emph{resBuff} is the outgoing buffer. Also dummy return code \emph{SW\_RM\_SUCCESS} is set for the response APDU.
+\subsubsection{Class SessionTrigger}
+\emph{sessionTrigger} class extends \emph{HTTPReportListener} interface in order to receive notification upon completion of an session. Meanwhile \emph{triggerSession} method as shown below provides mechanism to create a communication session configured by input parameter \emph{byte[] data}.
 
+{\footnotesize 
+\begin{verbatim}
+ public void triggerSession(byte[] data, short dataOffset, short dataLength ) {
+final short FAMILY_HTTP_ADMINISTRATION = (short) (GPSystem.FAMILY_HTTP_ADMINISTRATION << 8)
+// get GlobalService object
+GlobalService globalService = GPSystem.getService(null, FAMILY_HTTP_ADMINISTRATION);
+// getServiceInterface
+HTTPAdministration httpAdmin = (HTTPAdministration)globalService.getServiceInterface
+(GPSystem.getRegistryEntry(null),FAMILY_HTTP_ADMINISTRATION, null, (short)0, (short)0);
+// trigger HTTP Administration to start Session
+httpAdmin.requestHTTPAdministrationSession(data, dataOffset, dataLength);}
+\end{verbatim}
+}
 
 \section{Android Application}
 \section{Smart Home Web Server}
