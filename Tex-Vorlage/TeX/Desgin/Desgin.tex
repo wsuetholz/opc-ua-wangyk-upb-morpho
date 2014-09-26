@@ -338,13 +338,12 @@ Tag & Length & \multicolumn{7}{l|}{Name} & Presence \\ \hline
 \caption{Command data Type-Length-Value structure}
 \label{tlv}
 \end{table}
-Based on above described TLV structure, following APDU \emph{A0210000129010910892069C040102030402}\label{remote-apdu-example} can be translated as command sent by smart phone to sensor with \emph{uid 01020304} for the purpose of querying current sensor value. And the expected response data length is set as two bits.
+Based on above described TLV structure, following APDU \emph{A0210000129010910892069C040102030402}\label{remote-apdu-example} can be translated as command sent by smart phone to sensor with \emph{uid 01020304} for the purpose of querying current sensor value. And the expected response data length is set as two bits. Any ill-formed command data will be ignored.
 
 \subsection{Classes}\sloppy
-My UICC applet is integrated in Morpho \emph{SC5-01OS07} LTE SAT product.
-\emph{Communicationstack} contains following classes:
+My UICC applet is integrated in Morpho \emph{SC5-01OS07} LTE SAT product and contains following classes:
  \begin{itemize}
-  \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. In order to process remote APDU, this applet is also design as UICC system applet, that extends interface \emph{com.orga.javacard.componentinterfaces.JCISIMApplication}
+  \item  \emph{CommunicationStack}, which is the main class of my applet, that implements \emph{install}, \emph{select}, \emph{deselect} as well as \emph{process} methods provided by \emph{javacard.framework.Applet}. In order to process remote APDU, this applet is also designed as UICC system applet, that extends interface \emph{com.orga.javacard.componentinterfaces.JCISIMApplication}
   \item  \emph{sessionTrigger}, which implements Globalplatform  and toolkitframework interfaces and offers functions for proactive and passive communication session creation with OTA server, cipher suit negotiation and mutual authentication. \emph{sessionTrigger} is developed based on \emph{adminTrigger} class provided by Morpho.
 \end{itemize}
 
@@ -358,86 +357,88 @@ My UICC applet is integrated in Morpho \emph{SC5-01OS07} LTE SAT product.
 \subsubsection{Class CommunicationStack} \sloppy
 As the main class of my Applet, \emph{communicationStack} extends \emph{UsimRemoteService} class provided by Morpho in order to be recognized as a system Applet, which is capable of performing remote file management behavior. Moreover this main class has implemented interface \emph{JCISIMApplication}, which defines how to handle remote APDU.
 
-Ecept the instructions and status bytes, which are related to \emph{communication session creation} and \emph{close communication session},  the reset mentioned in~\ref{secAPDU} are defined in this class.
+Except from the instructions and status bytes, which are related to \emph{communication session creation} and \emph{close communication session},  the reset ones mentioned in~\ref{secAPDU} are defined in this class.
 For instance
-{\small
-\begin{verbatim}
+\begin{Verbatim}[fontsize=\relsize{-1}]
 //### CLS - CLass###
 private static final byte CLA = (byte) 0xA0;
 //###INS-Instructions ###
 private static final byte INS_VERIFYPIN=(byte) 0x11;
 private static final byte INS_RESETPIN=(byte) 0x12;
 ... ....
-private static final byte INS_CREATE_SESSION_PARAM=(byte) 0x01; 
-private static final byte INS_SET_SESSION_PARAM=(byte) 0x02;
-...
 // ### SW1SW2 - Exceptions ###
-private static final short SW_NULLPOINTER_EXCEPTION=(short) 0x6600;
-private static final short SW_ARRAYINDEXOUTOFBOUNDS_EXCEPTION = (short) 0x66AB;
-private static final short SW_SECURITY_EXCEPTION= (short) 0x665E;
+private static final short SW_INVALID_PARAMETERS_DATAFIELD    = (short) 0x6A80;
+private static final short SW_DEVICE_NOT_FOUND = (short) 0x6A81;
+private static final short SW_FUNCTION_NOT_FOUND = (short) 0x6A82;
+private static final short SW_RECORD_NOT_FOUND = (short) 0x6A83
 ....
 private static final short SW_PIN_LENGTH_WRONG= (short) 0x6984;
 private static final short SW_RM_SUCCESS= (short) 0x1234;
-\end{verbatim}
-}
+\end{Verbatim}
+
 As can be seen, a special return code \emph{SW\_RM\_SUCCESS} is introduced, which is used in order to confirm a successful receive of remote APDU during the system test phase. 
 
 PIN configuration is described as below, 
-{\small
-\begin{verbatim}
+
+\begin{Verbatim}[fontsize=\relsize{-1}]
     private static final byte PIN_TRY_LIMIT = (byte) 0x03;
     private static final byte PIN_MAX_SIZE = (byte) 0x08;
     private static final byte PIN_SIZE = (byte) 0x04;
-\end{verbatim}
-}
-System allows maximum three time wrong PIN input and PIN size is set from four bits to eight.
+\end{Verbatim}
 
+System allows maximum three time wrong PIN input and PIN size is set from four bits to eight.
+Following two core methods provided by \emph{communicationStack} is described.
 \paragraph{Install Method}
 \emph{install} method is used to register Applet in JCRE and create a CommunicationStack implementation.
+\begin{Verbatim}[fontsize=\relsize{-1.5}, frame=lines,framesep=4mm, label=\fbox{\small\emph{doVerifyPIN Handler}}]
+public static void install( byte[] bArray, short bOffset, byte bLength ) throws ISOException
+\end{Verbatim}
+
 \paragraph{process Method}
-In this function, the received remote APDU as shown by~\ref{remote-apdu-example} will be analyzed and upon the encapsulated instruction filed, corresponding handler will be invoked. Following snippet defines how to get \emph{class} filed, \emph{instruction} filed  and \emph{command data} from a remote APDU.
-{\small
-\begin{verbatim}
+In this method, the received remote APDU will be analyzed and upon on the encapsulated instruction filed, corresponding handler will be invoked using \emph{command data} included in command APDU. Following snippet defines how to get \emph{class} filed, \emph{instruction} filed , \emph{command data} and alternatively an normal \emph{APDU} object from a remote APDU.
+
+
+\begin{Verbatim}[frame=lines,framesep=4mm, label=\fbox{\small\emph{Remote APDU Operation}}]
 byte claMasked = (byte)(anApdu.getCla() & (byte)0xF0);
 byte ins = anApdu.getIns();
 byte[] cmd = (byte[]) anApdu.getCommandData();	    
 short cmdOffset = anApdu.getCommandDataOffset();
 byte[] apdu = anApdu.getApdu(); //return APDU object if available
-\end{verbatim}
-}
+\end{Verbatim}
 
 Based on the acknowledgment of \emph{claMasked} , \emph{ins} data and \emph{apdu} object, using below described switch statement, appropriate handler is invoked.
-{\small
-\begin{verbatim}
-switch{ins}
+
+\begin{Verbatim}[frame=lines,framesep=4mm, label=\fbox{\small\emph{Switch Statement}}]
+switch(ins)
 	{
-		case INS_VERIFYPIN:
-			doVerifyPIN(apdu);
-		case ....
+	case INS_VERIFYPIN:
+		doVerifyPIN(apdu);
+	case ....
 	}
-\end{verbatim}
-}
+\end{Verbatim}
 In case when \emph{ins} equals \emph{INS\_VERIFYPIN}, following \emph{doVerifyPIN} is invoked.
-{\small
-\begin{verbatim}
-	private void doVerifyPIN(APDU apdu) {
-		byte[] buffer = apdu.getBuffer();
-		apdu.setIncomingAndReceive();			
-		if(pin.getTriesRemaining() == (byte)0) {
-			ISOException.throwIt(SW_PIN_BLOCKED);
-		}
-		if((byte)buffer[ISO7816.OFFSET_LC] != PIN_SIZE) {
-			ISOException.throwIt(SW_PIN_LENGTH_WRONG);
-		}		
-		if (!pin.check(buffer, ISO7816.OFFSET_CDATA, PIN_SIZE)) {
-			ISOException.throwIt(SW_PIN_VERIFICATION_FAILED);
-		}
+
+\begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{doVerifyPIN Handler}}]
+private void doVerifyPIN(APDU apdu) {
+	byte[] buffer = apdu.getBuffer();
+	apdu.setIncomingAndReceive();			
+	if(pin.getTriesRemaining() == (byte)0) {
+		ISOException.throwIt(SW_PIN_BLOCKED);	
+	....
 	}
-\end{verbatim}
-}
-If except from statue words, other information is expected to be transmitted back to command APDU sender,  the return data can be appended at the end of existing response data using following schema.
-{\small
-\begin{verbatim}
+\end{Verbatim}
+In total handlers are designed:
+\begin{itemize}
+\item \emph{doVerifyPIN} As already introduced, this handler performs the verify PIN operation. If wrong PIN input reaches 3 times before a successful verification, \emph{doVerfiyPIN} will block the PIN.
+\item \emph{doResetPIN} This handler in charge of reset PIN operation.
+\item \emph{doUnlockPIN} \emph{doUnlockPIN} operation will never be invoked by an Android application. Only remote APDU sent by authenticated server, for instance card issuer, can unlock blocked PIN.
+\item \emph{doGetPublicKey} This operation queries target public key from \emph{Public Key infrastructure} which is integrated in OTA server in my scenario.
+\item \emph{doNotification} After receiving command data, \emph{communicationStack} applet will invoke this handler in order to inform corresponding Android application to fetch that command data. 
+\item \emph{doAppendMsg} This handler configures the outgoing response remote APDU.
+\end{itemize}
+Except from statue words, if other information is expected to be transmitted back to command APDU sender,  the return data can be appended at the end of existing response data using following schema.
+
+\begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Editing Response Data}}]
 byte[] result = {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07, 0x08,0x09};
 short length = (short) result.length;
 byte[] resBuff = anApdu.getResponseBuffer(); 
@@ -445,16 +446,25 @@ short resOffset = anApdu.getResponseBufferOffset();
 Util.arrayCopyNonAtomic(result, (short)0, resBuff, (short)resOffset, (short)length);	    
 anApdu.setStatusword(SW_RM_SUCCESS);
 anApdu.appendResponse(resBuff,(short)resOffset, (short)length, true);
-\end{verbatim}
-}
+\end{Verbatim}
 
-Byte array \emph{result} is a dummy demonstration appended data and \emph{resBuff} is the outgoing buffer. Also dummy return code \emph{SW\_RM\_SUCCESS} is set for the response APDU.
+Byte array \emph{result} from above snippet is a dummy demonstration appended data and \emph{resBuff} is the outgoing buffer. Also dummy return code \emph{SW\_RM\_SUCCESS} is set for the response APDU.
+
 \subsubsection{Class SessionTrigger}
-\emph{sessionTrigger} class extends \emph{HTTPReportListener} interface in order to receive notification upon completion of an session. Meanwhile \emph{triggerSession} method as shown below provides mechanism to create a communication session configured by input parameter \emph{byte[] data}.
+\emph{sessionTrigger} class extends \emph{HTTPReportListener} interface in order to receive notification upon completion of an session. Meanwhile related instruction and exceptions are included in this class. For example,
+\begin{Verbatim}[fontsize=\relsize{-1}]
+private static final byte INS_CREATE_SESSION_PARAM            = (byte) 0x01;
+private static final byte INS_SET_SESSION_PARAM               = (byte) 0x02;
+private static final byte INS_CONFIGURE_SESSION               = (byte) 0x03;
+....
+private static final short SW_NULLPOINTER_EXCEPTION           = (short) 0x6600;
+private static final short SW_ARRAYINDEXOUTOFBOUNDS_EXCEPTION = (short) 0x66AB;
+\end{Verbatim}
+\emph{triggerSession} method as shown below provides mechanism to create a communication session configured by input parameter \emph{byte[] data}.
 
-{\footnotesize 
-\begin{verbatim}
- public void triggerSession(byte[] data, short dataOffset, short dataLength ) {
+\begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Trigger Session}}]
+public void triggerSession(byte[] data, short dataOffset, short dataLength )
+ {
 final short FAMILY_HTTP_ADMINISTRATION = (short) (GPSystem.FAMILY_HTTP_ADMINISTRATION << 8)
 // get GlobalService object
 GlobalService globalService = GPSystem.getService(null, FAMILY_HTTP_ADMINISTRATION);
@@ -462,9 +472,10 @@ GlobalService globalService = GPSystem.getService(null, FAMILY_HTTP_ADMINISTRATI
 HTTPAdministration httpAdmin = (HTTPAdministration)globalService.getServiceInterface
 (GPSystem.getRegistryEntry(null),FAMILY_HTTP_ADMINISTRATION, null, (short)0, (short)0);
 // trigger HTTP Administration to start Session
-httpAdmin.requestHTTPAdministrationSession(data, dataOffset, dataLength);}
-\end{verbatim}
+httpAdmin.requestHTTPAdministrationSession(data, dataOffset, dataLength);
 }
+\end{Verbatim}
 
 \section{Android Application}
+
 \section{Smart Home Web Server}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/widget32"
+	android:layout_width="249dp"
+	android:layout_height="112dp"
+	android:text="                   Card  Blocked \n                   Please Contact \n             your Service Provider"
+	android:layout_x="30dp"
+	android:layout_y="114dp" />
+</AbsoluteLayout>
