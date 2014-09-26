@@ -8,7 +8,10 @@
 \end{figure}
 
 As described in previous sections, my demonstration system consists of three main parts, namely the on card integrated communication stack, Android application and Smart Home web service. Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange process that occurs in the demonstration system. In my case I integrate \emph{Public Key Infrastructure} with OTA server, in order to perform secure peer identification and messaging.
-\section{Overview}
+
+
+\section{UICC Applet}
+\subsection{Overview}
 The whole message exchange process consists of following phases:
 \begin{itemize}
 \item \emph{Open Channel Phase} Whenever a OPC UA client/server attempts to contact with other housing devices or Remote Server tries to communicate with a home device, a communication session between Remote Server and home device must be created.
@@ -16,8 +19,6 @@ The whole message exchange process consists of following phases:
 \item \emph{Require target's public key} When Remote Server identify the connected communication partner, it will grant client/server the expected target's public key. 
 \item \emph{secure messaging} Message sender will in this phase encrypt message with target's public key and send this encrypted message through Remote Server to message receiver. 
 \end{itemize}
-
-\section{UICC Applet}
 \subsection {Work Flow}
 
 The components involved in this scenario are:
@@ -47,7 +48,7 @@ This process could be either initiated by Remote Administration Server by sendin
 
 \subsubsection{HTTP Header Format}
 The HTTP message sent from remote sever to targeted applet uses following schema\cite{gp}:
-\begin{verbatim}
+\begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Http Request Schema}}]
 HTTP/1.1 200 OK [or HTTP/1.1 204 No Content CRLF]
 X-Admin-Protocol: globalplatform-remote-admin/1.0 CRLF
 [X-Admin-Next-URI:  <next-URI> CRLF]
@@ -57,12 +58,12 @@ X-Admin-Protocol: globalplatform-remote-admin/1.0 CRLF
 [Content-Length: xxxx CRLF] or [Transfer-Encoding: chunked CRLF]
 CRLF
 [body]
-\end{verbatim}
+\end{Verbatim}
 The field \emph{security-domain-AID} will be filled with the AID of targeted applet.
 
 
 The HTTP response message sent from applet to remote server uses following schema\cite{gp}:
-\begin{verbatim}
+\begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Http Response Schema}}]
 POST<URI>HTTP/1.1 CRLF
 Host: <Administration Host> CRLF
 X-Admin-Protocol: globalplatform-remote-admin/1.0 CRLF
@@ -74,7 +75,7 @@ X-Admin-From: <Agent ID> CRLF
 [X-Admin-Resume: true]
 CRLF
 [body]
-\end{verbatim}
+\end{Verbatim}
 
 The filed \emph{X-Admin-Script-Status} could contain following values:
  \begin{itemize}
@@ -477,5 +478,9 @@ httpAdmin.requestHTTPAdministrationSession(data, dataOffset, dataLength);
 \end{Verbatim}
 
 \section{Android Application}
+\subsection{Activity Classes}
+\subsection{Utility Classes}
+\subsection{Layout}
+\subsection{AndroidManifest}
 
 \section{Smart Home Web Server}
