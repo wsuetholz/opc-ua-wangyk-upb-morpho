@@ -105,26 +105,30 @@
 \contentsline {subsubsection}{\nonumberline Android Application Design Tool}{58}{section*.38}
 \contentsline {subsubsection}{\nonumberline Smart Home Simulation Environment}{58}{section*.39}
 \contentsline {chapter}{\numberline {5}System Design}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview}{59}{section.5.1}
-\contentsline {section}{\numberline {5.2}UICC Applet}{60}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Work Flow}{60}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.1}UICC Applet}{59}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Overview}{59}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Work Flow}{60}{subsection.5.1.2}
 \contentsline {subsubsection}{\nonumberline Communication Session Creation and Message Exchange}{60}{section*.40}
 \contentsline {subsubsection}{\nonumberline HTTP Header Format}{62}{section*.41}
 \contentsline {subsubsection}{\nonumberline Close Communication Session}{63}{section*.42}
-\contentsline {subsection}{\numberline {5.2.2}Commands: Interface between Applet and CAD}{63}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.1.3}Commands: Interface between Applet and CAD}{63}{subsection.5.1.3}
 \contentsline {subsubsection}{\nonumberline SELECT APDU}{63}{section*.43}
 \contentsline {subsubsection}{\nonumberline Verify PIN operation}{64}{section*.44}
 \contentsline {subsubsection}{\nonumberline Reset PIN operation}{64}{section*.45}
 \contentsline {subsubsection}{\nonumberline Communication Session Creation}{65}{section*.46}
 \contentsline {subsubsection}{\nonumberline Close Communication Session}{65}{section*.47}
 \contentsline {subsubsection}{\nonumberline Process Communication Data}{66}{section*.48}
-\contentsline {subsection}{\numberline {5.2.3}Classes}{66}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.1.4}Classes}{66}{subsection.5.1.4}
 \contentsline {subsubsection}{\nonumberline Class CommunicationStack}{68}{section*.49}
 \contentsline {paragraph}{\nonumberline Install Method}{69}{section*.50}
 \contentsline {paragraph}{\nonumberline process Method}{69}{section*.51}
 \contentsline {subsubsection}{\nonumberline Class SessionTrigger}{71}{section*.52}
-\contentsline {section}{\numberline {5.3}Android Application}{71}{section.5.3}
-\contentsline {section}{\numberline {5.4}Smart Home Web Server}{71}{section.5.4}
+\contentsline {section}{\numberline {5.2}Android Application}{71}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Activity Classes}{71}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Utility Classes}{71}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Layout}{71}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}AndroidManifest}{71}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Smart Home Web Server}{71}{section.5.3}
 \contentsline {chapter}{\numberline {6}Implementation}{73}{chapter.6}
 \contentsline {chapter}{\numberline {7}System Security Analysis}{75}{chapter.7}
 \contentsline {chapter}{\numberline {8}Summary and Future Work}{77}{chapter.8}
