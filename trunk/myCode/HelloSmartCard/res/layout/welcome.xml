@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/widget32"
+	android:layout_width="222dp"
+	android:layout_height="60dp"
+	android:text="             ==Smart Home=="
+	android:layout_x="41dp"
+	android:layout_y="61dp" />
+<EditText android:layout_width="230dp" android:text="root" android:layout_height="wrap_content" android:textSize="18sp" android:id="@+id/widget35" android:layout_x="40dp" android:layout_y="90dp"></EditText>
+<EditText android:layout_width="230dp" android:hint="Password" android:layout_height="wrap_content" android:textSize="18sp" android:password="true" android:id="@+id/widget36" android:layout_x="40dp" android:layout_y="150dp">
+    <requestFocus></requestFocus>
+</EditText>
+<Button android:id="@+id/widget37" android:layout_width="104dp" android:layout_height="wrap_content" android:text="Login" android:layout_x="167dp" android:layout_y="213dp"></Button>
+<Button android:id="@+id/widget38" android:layout_width="104dp" android:layout_height="wrap_content" android:text="StartSE" android:layout_x="34dp" android:layout_y="213dp"></Button>
+<Button android:id="@+id/Button02" android:layout_width="104dp" android:layout_height="wrap_content" android:text="NewPin" android:layout_x="34dp" android:layout_y="265dp"></Button>
+<Button android:id="@+id/Button01" android:layout_width="104dp" android:layout_height="wrap_content" android:text="Unlock" android:layout_x="167dp" android:layout_y="265dp"></Button>
+<TextView android:layout_height="115dp" android:gravity="bottom" android:scrollbars="vertical" android:layout_width="262dp" android:id="@+id/textView1" android:text="   =========welcome=========\n" android:layout_x="36dp" android:layout_y="314dp"></TextView>
+</AbsoluteLayout>

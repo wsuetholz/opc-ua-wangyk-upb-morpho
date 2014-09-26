@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="C:/P4/RZ_SmartIDM/SmartIDM/HelloSmartCard/org.simalliance.openmobileapi.jar"/>
+	<classpathentry kind="lib" path="C:/P4/RZ_SmartIDM/SmartIDM/HelloSmartCard/bcprov-jdk15on-151.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
