@@ -40,7 +40,7 @@ Figure~\ref{fig:softwareStructure} pictures the communication flow between two s
 
 When the householder wants to make some coffee, he will send the \emph{makeCoffee} command to coffee maker with his cell phone. And the communication flow between two system components looks like following. Client application installed on cell phone firstly generates the \emph{makeCoffee} request and forwards it to the internal API, which translates the request into APDU and transmits this APDU command to communication stack applet. Communication stack will then creates connection with OTA server and after a successful identification OTA server will confirm the cardholder's identify and forward his request to targeted message receiver. Likewise the request message is going to be transmitted from bottom communication stack to top application step by step. At last the \emph{makeCoffee} command will be performed by coffee maker and a response message is sent back to phone user. 
 
-\subsubsection{Conclusion}
+\subsubsection{Conclusion}\label{secFunction}
 In conclusion, server on secure device provides following services:
  \begin{itemize}
   \item processing client subscription/publishing environment data
@@ -54,6 +54,7 @@ Basic client functions as following are provided:
   \item submitting subscription/receiving published data
   \item secure message exchange with server
   \item sending command/configuration data
+  \item querying system historical data
   \item providing user friendly interface
 \end{itemize}
 
@@ -107,6 +108,6 @@ When it comes to running test with Java Card Applet, tester has two options. Fir
 In either way, as next step \emph{Universal Test Environment (UTE)} will be applied. \emph{UTE} provided by Morpho uses Java languages developed test cases
  and test scenarios\footnote{Test scenario is a collection of relative test cases.} to simulate desired use cases and observe corresponding smart card reactions. With the observed test result, tester will be able to analyze Applet's performance and debug corresponding application code. For instance \emph{UTE} can integrate software models used to simulate security domain offered by \emph{Globalplatform} and perform the sophisticate user authentication simulation process.
 \subsubsection{Android Application Design Tool}
-Eclipse IDE for Java Developer of version 3.7.1 is applied ,together with Android SDK \emph{seek-for-android} and ADT plug-in, as Android Application development environment. 
+Eclipse IDE for Java Developer of version 3.7.1 is applied ,together with Android SDK \emph{seek-for-android} and ADT plug-in, as Android Application development environment. Android 2.3.5 is simulated and chosen as demonstration platform.
 \subsubsection{Smart Home Simulation Environment}
 In order to simulate data manged by home electronic device, \emph{MySQL} database is introduced. And together with \emph{PHP of version 5.5.12}, \emph{Apache of version 2.4.9}, the web server for Smart Home is created. Android Application from previous subsection will then communication with this web server for the purpose of scenario demonstration.
