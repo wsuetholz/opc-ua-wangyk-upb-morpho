@@ -274,10 +274,10 @@ With the acknowledgment form previous subsection, we can conclude that Android s
 Therefore it it necessary for application developers to apply protection techniques  in oder to to protect their application from attacker and revers engineering. 
 \subsubsection{Application Components Secure}
 In order to restrict the number of applications, which have access rights to our Android application components described in subsection~\ref{secAppComponents}. We should explicitly claim the access control policies in \emph{AndroidManifest.xml} from our project. In the extreme case that none applications are expected to invoke the secured component, following rule should be add in \emph{AndroidManifest.xml}\cite{android_secure_cook}.
-\begin{verbatim}
+\begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{Component Securing}}]
 <[component name] android:exported='false'>
 </[component name]>
-\end{verbatim} 
+\end{Verbatim} 
 \subsubsection{Custom Permissions for Access Control}
 As pictured in figure~\ref{fig:android-permission2}, Android OS provides a list of default permissions, which service a generic access control management, including such as  phone  holder data reading and writing, Internet access right and etc. But when it comes to the case of sharing data between different applications, a more sophisticated and robust custom permission is desired. To be more specifically, following xml snippets should be added for protected components in project's \emph{AndroidManifest.xml}\cite{android_secure_cook}.
 \begin{figure}[!htbp]
@@ -286,12 +286,12 @@ As pictured in figure~\ref{fig:android-permission2}, Android OS provides a list 
 		\caption{Permission required by application \emph{k9mail}\cite{android_secure_design}}
 	\label{fig:android-permission2}
 \end{figure}
-\begin{verbatim}
+\begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{'Custom Permission Snippet}}]
 <permission android:name='android.permission.CUSTOM_PERMISSION'
 	android:protectionLevel ='dangerous'
-	android:description = 'Custom Permission  Snippet'
+	android:description = 'Custom Permission Snippet'
 	android:label = '@string/custom_permission_label''>
-\end{verbatim} 
+\end{Verbatim} 
 Moreover four categories of protection level are supported\cite{android_secure_cook}:
 \begin{itemize}
 \item \emph{normal} This the lowest level of permission and usually be applied for nondangerous permissions. 
@@ -303,11 +303,11 @@ Moreover four categories of protection level are supported\cite{android_secure_c
 Last secure approach that I want to present is the content provider path  secure mechanism. Since content provider handles mostly the exchanged data between applications, therefor it always becomes the first victim of a system attack. Application developer must ensure the security of content provider especially the content  provider path, which is in nature an uniform recourse identifiers that is related  to sensitive information such as datasets\cite{android_secure_cook}. Content provide path may look like \emph{content://com.provider.android/account/balance}.
 
 It is highly recommended that application developer explicitly defines the permission rules at path level, to be more specifically\cite{android_secure_cook}, 
-\begin{verbatim}
+\begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{'Content Path Securing}}]
 <provider ...>
 <grant-uri-permission android:path = 'path_name'>
 </provider>
-\end{verbatim} 
+\end{Verbatim} 
 \subsection{Conclusion}
 In conclusion Android is  a secure-designed platform with sophistical access control mechanisms and other security polices. But still Android  application developers should apply security techniques to protect their project from malicious ill-formed applications.
 \section{Embedded System Secure Design}

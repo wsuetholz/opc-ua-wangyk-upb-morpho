@@ -86,7 +86,7 @@
 \contentsline {subsubsection}{\nonumberline Application Components Secure}{47}{section*.32}
 \contentsline {subsubsection}{\nonumberline Custom Permissions for Access Control}{47}{section*.33}
 \contentsline {subsubsection}{\nonumberline Securing Content Provider}{48}{section*.34}
-\contentsline {subsection}{\numberline {3.4.3}Conclusion}{48}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Conclusion}{49}{subsection.3.4.3}
 \contentsline {section}{\numberline {3.5}Embedded System Secure Design}{49}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Overview}{49}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Embedded System Secure Requirements}{49}{subsection.3.5.2}
@@ -124,14 +124,19 @@
 \contentsline {paragraph}{\nonumberline process Method}{69}{section*.51}
 \contentsline {subsubsection}{\nonumberline Class SessionTrigger}{71}{section*.52}
 \contentsline {section}{\numberline {5.2}Android Application}{71}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Activity Classes}{71}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Utility Classes}{71}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Layout}{71}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}AndroidManifest}{71}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Smart Home Web Server}{71}{section.5.3}
-\contentsline {chapter}{\numberline {6}Implementation}{73}{chapter.6}
-\contentsline {chapter}{\numberline {7}System Security Analysis}{75}{chapter.7}
-\contentsline {chapter}{\numberline {8}Summary and Future Work}{77}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{77}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future Work}{77}{section.8.2}
-\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.53}
+\contentsline {subsection}{\numberline {5.2.1}Utility Classes}{71}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Layout}{72}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Activity Classes}{72}{subsection.5.2.3}
+\contentsline {subsubsection}{\nonumberline Seek for Android}{73}{section*.53}
+\contentsline {subsubsection}{\nonumberline Layout Adoption}{73}{section*.54}
+\contentsline {subsubsection}{\nonumberline AsyncTask}{73}{section*.55}
+\contentsline {subsubsection}{\nonumberline Intent}{74}{section*.56}
+\contentsline {subsubsection}{\nonumberline Activities Overview}{74}{section*.57}
+\contentsline {subsubsection}{\nonumberline AndroidManifest}{75}{section*.58}
+\contentsline {section}{\numberline {5.3}Smart Home Web Server}{75}{section.5.3}
+\contentsline {chapter}{\numberline {6}Implementation}{77}{chapter.6}
+\contentsline {chapter}{\numberline {7}System Security Analysis}{79}{chapter.7}
+\contentsline {chapter}{\numberline {8}Summary and Future Work}{81}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{81}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Work}{81}{section.8.2}
+\contentsline {chapter}{\nonumberline Bibliography}{83}{chapter*.59}
