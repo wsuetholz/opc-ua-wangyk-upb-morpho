@@ -564,5 +564,37 @@ Following four activities together build my Android application.
 \item \emph{RecordActivity}. With the help of \emph{RecordActivity}, user is capable of receiving system historical data.
 \end{itemize}
 \subsubsection{AndroidManifest}
-
+\emph{AndroidManifest} encapsulates all necessary information related to my Android application which is needed by Android OS. Such as composing components, access permissions and necessary libraries\cite{android_manifest}. In order to provide a secure application, in my \emph{AndroidManifest}, only the starting \emph{ValidationActivity} can be launched by Android system and alway be the initial task. For all other activities none other components from other application has access right to them. Moreover, no \emph{intent-filters} are declared for them, which means they can only be started or visited by the explicit intent sent by \emph{ValidationActivity} as show below.
+\begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{AndroidManifest.xml}}]
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1"
+	android:versionName="1.0" package="org.simalliance.openmobileapi.test">
+ <application android:label="@string/app_name" android:debuggable="true">
+  <activity android:name=".ValidationActivity"
+ 		android:label="@string/app_name">
+	<intent-filter>
+		<action android:name="android.intent.action.MAIN" />
+		<category android:name="android.intent.category.LAUNCHER" />
+	</intent-filter>
+ </activity>
+      
+ <activity android:name=".MainActivity"
+	android:label="@string/app_name"
+	android:exported='false'>
+ </activity>
+....
+ </application>
+</manifest> 
+\end{Verbatim}
 \section{Smart Home Web Server}
+Smart Home web application are also designed for the purpose of testing my previous developed smart card applet and Android application as well as of simulating Smart Home devices, especially data information maintained by them. 
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.55\textwidth]{logo.png}
+		\caption{Logo image used in web applications}
+	\label{fig:logo}
+\end{figure}
+
+Apache 2.4.9 together with PhP of version 5.5.12 and a MySQL data base build my web applications.  Detailed design process has limited relation with the subject of this thesis, therefor will be neglected.

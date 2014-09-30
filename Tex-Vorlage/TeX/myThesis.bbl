@@ -76,6 +76,12 @@
   – Amendment B}.
 \newblock March 2012
 
+\bibitem[{Goo}]{android_manifest}
+\textsc{{Google}}:
+\newblock \emph{{API Guides}}.
+\newblock
+  \url{http://developer.android.com/guide/topics/manifest/manifest-intro.html},
+
 \bibitem[{Han}12]{android_secure_design}
 \textsc{{Hannah Gommerstadt, Devon Long}}:
 \newblock \emph{Android Application Security}.
