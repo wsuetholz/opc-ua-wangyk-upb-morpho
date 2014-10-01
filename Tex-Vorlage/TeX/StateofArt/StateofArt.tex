@@ -332,3 +332,17 @@ In the following a brief discussion about embedded system secure requirements an
 \end{figure}
 With the acknowledgment of system requirements as well as corresponding solutions, embedded system designer should concern potential security imperfection in each design period and perform corresponding secure analysis as well as run secure-related tests, as shown in figure~\ref{fig:sdlc}.
 \subsection{Secure Architectures}
+In oder to keep an embedded system from malicious parities' attack, especially when present day's system is normally exposed in a ubiquitous networking and pervasive computing environment\cite{embedded_secure}. System developer should design a robust and secure system architecture with the security consideration from architectural micro level to macro level. Figure~\ref{fig:design-space} pictures the choice of architectural design space.\footnote{ASIC:application-specific instruction set processor. EP: embedded general-purpose process. SPx: special purpose extensions. GPx:general purpose extensions. HWaccel: hardware accelerators. GOP: co-processor}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{design-space.jpg}
+		\caption{Architectural design space for a secure information processing\cite{embedded_secure}}
+	\label{fig:design-space}
+\end{figure}
+
+
+When the hardware architecture characteristics of an embedded system are confirmed. Following two secure aspect as shown last two rows in figure~\ref{fig:design-space} should be considered
+\begin{itemize}
+\item \emph{Security Processing Features} Various fundamental secure protocols and algorithms could be selected and some of them may offer the same security services. Therefore in this layer, the choice of cryptographic algorithms should be made with consideration from hardware and software aspect. For instance, the full implementation of SSL protocol for a simple low end PAD device might not be a wise decision.
+\item \emph{Attack Resistant Features}
+\end{itemize}
