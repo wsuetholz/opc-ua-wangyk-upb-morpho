@@ -1,1 +1,28 @@
-\chapter{Implementation}
+\chapter{Implementation Test}
+In this chapter, a brief demonstration testing cases are described. To be more specifically, two testing scenarios are designed. The are remote device management testing cases and Smart Home component communication scenarios respectively.
+
+\section{Remote Management Testing}
+The aim of this testing scenario is to prove the feasibility of applying Smart Card and remote application/file management protocols proposed by Globalplatform to design a secure dual authentication and messaging platform for higher leveled applications. My Javacard Applet, \emph{CommunicationStack} together with correspondingly designed \emph{UTE} test cases are employed.
+
+\subsection{\emph{UTE} Test Case}
+Two \emph{UTE} test cases are programmed. They are:
+\begin{itemize}
+\item \emph{Trigger Communication Channel with SMS}. In this test case, I simulate the open communication channel process between smart card and remote administrator server. This process is also the cornerstone for a successful remote management.
+\item \emph{Secure Messaging Exchanging} After a successful identification between communication peers and creation of communication channel, in this test scenario, smart card and remote server are going to perform secure messaging. 
+\end{itemize}
+
+\subsubsection{Trigger Communication Channel with SMS}
+This test case acts as an OTA server and encapsulates connection construction information in a \emph{TriggerPushSMS} object and sent this SMS to target smart card using simulated GPRS connection. The encapsulated parameters are:
+\begin{itemize}
+\item \emph{Connection Parameters}, which includes network access name, bearer description and etc. related to simulated OTA server.
+\item \emph{Security Parameters} In security parameters, proposed TLS 1.2 connection information is provided
+\item \emph{Smart Card Keysets}, that consists of key identifiers as well as indicator used for the select of cipher keys, signature keys.
+\item \emph{Http Connection Parameters}, which 
+\end{itemize}
+
+
+
+\subsubsection{Secure Messaging Exchanging}
+
+
+\section{Android Application Testing}
