@@ -41,7 +41,7 @@ The charming features of this Smart Home system are the combination of telemedic
 		\caption{Overview of Smart Health Home structure\cite{smart_home_for_health} (RCC: Remote Control Center)}
 	\label{fig:rcc}
 \end{figure}
-\subsection{Agent-based Smart Home}
+\subsection{Agent-based Smart Home} \label{secAgent}
 Agent-based Smart Home aims to build an intelligent home that based on machine learning, artificial intelligence technology and mobile computing predicts householders' behaviors, makes appropriate decisions. The achieved prediction can help residents to experience more comfortable and convenience living condition. MavHome ( Managing An Intelligent Versatile Home)\cite{smart_home_agent} builds the best example. 
 
 \subsubsection{MavHome architecture}
@@ -341,8 +341,8 @@ In oder to keep an embedded system from malicious parities' attack, especially w
 \end{figure}
 
 
-When the hardware architecture characteristics of an embedded system are confirmed. Following two secure aspect as shown last two rows in figure~\ref{fig:design-space} should be considered
+When the hardware architecture characteristics of an embedded system are confirmed. Following two secure aspect as shown in last two rows in figure~\ref{fig:design-space} should be considered
 \begin{itemize}
-\item \emph{Security Processing Features} Various fundamental secure protocols and algorithms could be selected and some of them may offer the same security services. Therefore in this layer, the choice of cryptographic algorithms should be made with consideration from hardware and software aspect. For instance, the full implementation of SSL protocol for a simple low end PAD device might not be a wise decision.
-\item \emph{Attack Resistant Features}
+\item \emph{Security Processing Features} Various fundamental secure protocols and algorithms could be selected by system designer. But some of them may offer the same security services. Therefore in this layer, the choice of cryptographic algorithms should be made with consideration from hardware and software specific aspect. For instance, the full implementation of SSL protocol for a simple low end PAD device might not be a wise decision\cite{embedded_secure}.
+\item \emph{Attack Resistant Features} When general security mechanisms used to ensure confidentiality, integrity and authentication are provided by embedded system, attempts to prevent such as denial of service attack also should be made.
 \end{itemize}
