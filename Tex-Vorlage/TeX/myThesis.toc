@@ -134,9 +134,14 @@
 \contentsline {subsubsection}{\nonumberline Activities Overview}{76}{section*.57}
 \contentsline {subsubsection}{\nonumberline AndroidManifest}{77}{section*.58}
 \contentsline {section}{\numberline {5.3}Smart Home Web Server}{77}{section.5.3}
-\contentsline {chapter}{\numberline {6}Implementation}{79}{chapter.6}
+\contentsline {chapter}{\numberline {6}Implementation Test}{79}{chapter.6}
+\contentsline {section}{\numberline {6.1}Remote Management Testing}{79}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\emph {UTE} Test Case}{79}{subsection.6.1.1}
+\contentsline {subsubsection}{\nonumberline Trigger Communication Channel with SMS}{79}{section*.59}
+\contentsline {subsubsection}{\nonumberline Secure Messaging Exchanging}{79}{section*.60}
+\contentsline {section}{\numberline {6.2}Android Application Testing}{79}{section.6.2}
 \contentsline {chapter}{\numberline {7}System Security Analysis}{81}{chapter.7}
 \contentsline {chapter}{\numberline {8}Summary and Future Work}{83}{chapter.8}
 \contentsline {section}{\numberline {8.1}Summary}{83}{section.8.1}
 \contentsline {section}{\numberline {8.2}Future Work}{83}{section.8.2}
-\contentsline {chapter}{\nonumberline Bibliography}{85}{chapter*.59}
+\contentsline {chapter}{\nonumberline Bibliography}{85}{chapter*.61}
