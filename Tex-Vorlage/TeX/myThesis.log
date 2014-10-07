@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  2 OCT 2014 13:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  7 OCT 2014 11:55
 entering extended mode
 **myThesis.tex
 (C:\workspace\opc_ua\Tex-Vorlage\TeX\myThesis.tex
@@ -705,7 +705,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
 
-<cs.jpg, id=726, 538.26094pt x 170.13562pt>
+<cs.jpg, id=733, 538.26094pt x 170.13562pt>
 File: cs.jpg Graphic file (type jpg)
  <use cs.jpg>
 Package pdftex.def Info: cs.jpg used on input line 43.
@@ -743,13 +743,13 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 49.
 
 [6 <C:/workspace/opc_ua/Tex-Vorlage/TeX/cs.jpg>]
-<server.jpg, id=742, 536.0025pt x 424.58624pt>
+<server.jpg, id=749, 536.0025pt x 424.58624pt>
 File: server.jpg Graphic file (type jpg)
  <use server.jpg>
 Package pdftex.def Info: server.jpg used on input line 57.
 (pdftex.def)             Requested size: 332.89856pt x 263.70073pt.
 
-<client.jpg, id=746, 508.90125pt x 231.86626pt>
+<client.jpg, id=753, 508.90125pt x 231.86626pt>
 File: client.jpg Graphic file (type jpg)
  <use client.jpg>
 Package pdftex.def Info: client.jpg used on input line 66.
@@ -783,7 +783,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 69.
 
-[7] <opc_ua_cs_comm.jpg, id=756, 485.56406pt x 263.48438pt>
+[7] <opc_ua_cs_comm.jpg, id=763, 485.56406pt x 263.48438pt>
 File: opc_ua_cs_comm.jpg Graphic file (type jpg)
 
 <use opc_ua_cs_comm.jpg>
@@ -819,13 +819,13 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 80.
 
 [8 <C:/workspace/opc_ua/Tex-Vorlage/TeX/server.jpg> <C:/workspace/opc_ua/Tex-Vo
-rlage/TeX/client.jpg>] <opc_ua_shs.jpg, id=766, 551.81157pt x 389.95688pt>
+rlage/TeX/client.jpg>] <opc_ua_shs.jpg, id=773, 551.81157pt x 389.95688pt>
 File: opc_ua_shs.jpg Graphic file (type jpg)
 
 <use opc_ua_shs.jpg>
 Package pdftex.def Info: opc_ua_shs.jpg used on input line 89.
 (pdftex.def)             Requested size: 291.28384pt x 205.85501pt.
- <opc_ua_commstack.jpg, id=769, 536.75531pt x 387.69844pt>
+ <opc_ua_commstack.jpg, id=776, 536.75531pt x 387.69844pt>
 File: opc_ua_commstack.jpg Graphic file (type jpg)
 
 <use opc_ua_commstack.jpg>
@@ -935,7 +935,7 @@ Overfull \hbox (58.54318pt too wide) in paragraph at lines 126--138
  [][] 
  []
 
-<scc.jpg, id=795, 436.63126pt x 304.13625pt>
+<scc.jpg, id=802, 436.63126pt x 304.13625pt>
 File: scc.jpg Graphic file (type jpg)
  <use scc.jpg>
 Package pdftex.def Info: scc.jpg used on input line 144.
@@ -969,7 +969,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 151.
 
-[12] <file.pdf, id=806, 542.025pt x 379.4175pt>
+[12] <file.pdf, id=813, 542.025pt x 379.4175pt>
 File: file.pdf Graphic file (type pdf)
  <use file.pdf>
 Package pdftex.def Info: file.pdf used on input line 160.
@@ -1009,7 +1009,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 167.
 
 [13 <C:/workspace/opc_ua/Tex-Vorlage/TeX/scc.jpg>]
-<file-structure.pdf, id=817, 582.67688pt x 415.5525pt>
+<file-structure.pdf, id=824, 582.67688pt x 415.5525pt>
 File: file-structure.pdf Graphic file (type pdf)
 
 <use file-structure.pdf>
@@ -1045,7 +1045,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 181.
 
 [14 <C:/workspace/opc_ua/Tex-Vorlage/TeX/file.pdf>]
-<master-slave-relationship.pdf, id=852, 424.58624pt x 307.1475pt>
+<master-slave-relationship.pdf, id=859, 424.58624pt x 307.1475pt>
 File: master-slave-relationship.pdf Graphic file (type pdf)
 
 <use master-slave-relationship.pdf>
@@ -1148,7 +1148,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 245.
 
-[17] <jcvm.jpg, id=912, 330.48468pt x 205.5178pt>
+[17] <jcvm.jpg, id=919, 330.48468pt x 205.5178pt>
 File: jcvm.jpg Graphic file (type jpg)
  <use jcvm.jpg>
 Package pdftex.def Info: jcvm.jpg used on input line 249.
@@ -1211,14 +1211,14 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 281.
 
-[19] <applet-execution-states.pdf, id=928, 532.99126pt x 94.85437pt>
+[19] <applet-execution-states.pdf, id=935, 532.99126pt x 94.85437pt>
 File: applet-execution-states.pdf Graphic file (type pdf)
 
 <use applet-execution-states.pdf>
 Package pdftex.def Info: applet-execution-states.pdf used on input line 286.
 (pdftex.def)             Requested size: 416.12161pt x 74.05846pt.
 
-<apdu-command-processing.pdf, id=933, 460.72125pt x 388.45125pt>
+<apdu-command-processing.pdf, id=940, 460.72125pt x 388.45125pt>
 File: apdu-command-processing.pdf Graphic file (type pdf)
 
 <use apdu-command-processing.pdf>
@@ -1258,7 +1258,7 @@ Overfull \hbox (23.90744pt too wide) in paragraph at lines 328--350
  [][] 
  []
 
-<gp_1.jpg, id=949, 490.83376pt x 475.02469pt>
+<gp_1.jpg, id=956, 490.83376pt x 475.02469pt>
 File: gp_1.jpg Graphic file (type jpg)
  <use gp_1.jpg>
 Package pdftex.def Info: gp_1.jpg used on input line 357.
@@ -1325,7 +1325,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 364.
 
 [22 <C:/workspace/opc_ua/Tex-Vorlage/TeX/gp_1.jpg>]
-<open-architecture.jpg, id=978, 377.91188pt x 289.08pt>
+<open-architecture.jpg, id=985, 377.91188pt x 289.08pt>
 File: open-architecture.jpg Graphic file (type jpg)
 
 <use open-architecture.jpg>
@@ -1390,9 +1390,10 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 391.
 
 [24 <C:/workspace/opc_ua/Tex-Vorlage/TeX/open-architecture.jpg>]
-<android-stack.jpg, id=998, 365.86688pt x 366.61969pt>
+<android-stack.jpg, id=1005, 365.86688pt x 366.61969pt>
 File: android-stack.jpg Graphic file (type jpg)
- <use android-stack.jpg>
+
+<use android-stack.jpg>
 Package pdftex.def Info: android-stack.jpg used on input line 397.
 (pdftex.def)             Requested size: 353.7059pt x 354.45149pt.
 
@@ -1453,7 +1454,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 418.
 
-[26] <vm-compare.jpg, id=1022, 266.49562pt x 271.76532pt>
+[26] <vm-compare.jpg, id=1029, 266.49562pt x 271.76532pt>
 File: vm-compare.jpg Graphic file (type jpg)
  <use vm-compare.jpg>
 Package pdftex.def Info: vm-compare.jpg used on input line 439.
@@ -1488,7 +1489,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 444.
 
 [27 <C:/workspace/opc_ua/Tex-Vorlage/TeX/vm-compare.jpg>]
-<clas-vs-dex.jpg, id=1033, 453.19313pt x 434.37282pt>
+<clas-vs-dex.jpg, id=1040, 453.19313pt x 434.37282pt>
 File: clas-vs-dex.jpg Graphic file (type jpg)
  <use clas-vs-dex.jpg>
 Package pdftex.def Info: clas-vs-dex.jpg used on input line 451.
@@ -1560,7 +1561,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 ] (C:\workspace\opc_ua\Tex-Vorlage\TeX\StateofArt/StateofArt.tex
 Chapter 3.
-<scheduler.jpg, id=1057, 313.9228pt x 164.86594pt>
+<scheduler.jpg, id=1064, 313.9228pt x 164.86594pt>
 File: scheduler.jpg Graphic file (type jpg)
  <use scheduler.jpg>
 Package pdftex.def Info: scheduler.jpg used on input line 19.
@@ -1604,13 +1605,13 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 36.
 
 [32 <C:/workspace/opc_ua/Tex-Vorlage/TeX/scheduler.jpg>]
-<rcc.jpg, id=1084, 452.4403pt x 115.93312pt>
+<rcc.jpg, id=1091, 452.4403pt x 115.93312pt>
 File: rcc.jpg Graphic file (type jpg)
  <use rcc.jpg>
 Package pdftex.def Info: rcc.jpg used on input line 40.
 (pdftex.def)             Requested size: 416.12161pt x 106.62614pt.
 
-<smart-home-agent.jpg, id=1088, 291.33844pt x 248.42813pt>
+<smart-home-agent.jpg, id=1095, 291.33844pt x 248.42813pt>
 File: smart-home-agent.jpg Graphic file (type jpg)
 
 <use smart-home-agent.jpg>
@@ -1795,14 +1796,14 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 124.
 
-[38] <smart-card-key.jpg, id=1143, 212.29312pt x 194.97844pt>
+[38] <smart-card-key.jpg, id=1150, 212.29312pt x 194.97844pt>
 File: smart-card-key.jpg Graphic file (type jpg)
 
 <use smart-card-key.jpg>
 Package pdftex.def Info: smart-card-key.jpg used on input line 129.
 (pdftex.def)             Requested size: 187.25345pt x 171.98914pt.
 
-<smart-card-key-use.jpg, id=1147, 519.44063pt x 162.6075pt>
+<smart-card-key-use.jpg, id=1154, 519.44063pt x 162.6075pt>
 File: smart-card-key-use.jpg Graphic file (type jpg)
 
 <use smart-card-key-use.jpg>
@@ -1907,7 +1908,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 195.
 
-[41] <pda-attack.jpg, id=1181, 362.85562pt x 241.65282pt>
+[41] <pda-attack.jpg, id=1188, 362.85562pt x 241.65282pt>
 File: pda-attack.jpg Graphic file (type jpg)
  <use pda-attack.jpg>
 Package pdftex.def Info: pda-attack.jpg used on input line 204.
@@ -2015,7 +2016,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 248.
 
-[44] <android-malware.jpg, id=1223, 438.13687pt x 205.5178pt>
+[44] <android-malware.jpg, id=1230, 438.13687pt x 205.5178pt>
 File: android-malware.jpg Graphic file (type jpg)
 
 <use android-malware.jpg>
@@ -2054,7 +2055,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 259.
 
 [45 <C:/workspace/opc_ua/Tex-Vorlage/TeX/android-malware.jpg>]
-<android-permission.jpg, id=1232, 420.06938pt x 312.41719pt>
+<android-permission.jpg, id=1239, 420.06938pt x 312.41719pt>
 File: android-permission.jpg Graphic file (type jpg)
 
 <use android-permission.jpg>
@@ -2090,7 +2091,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 273.
 
 [46 <C:/workspace/opc_ua/Tex-Vorlage/TeX/android-permission.jpg>]
-<android-permission2.jpg, id=1246, 182.18062pt x 218.31563pt>
+<android-permission2.jpg, id=1253, 182.18062pt x 218.31563pt>
 File: android-permission2.jpg Graphic file (type jpg)
 
 <use android-permission2.jpg>
@@ -2183,13 +2184,13 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 324.
 
-[49] <sdlc.jpg, id=1274, 391.4625pt x 217.5628pt>
+[49] <sdlc.jpg, id=1281, 391.4625pt x 217.5628pt>
 File: sdlc.jpg Graphic file (type jpg)
  <use sdlc.jpg>
 Package pdftex.def Info: sdlc.jpg used on input line 329.
 (pdftex.def)             Requested size: 395.31425pt x 219.71677pt.
 
-<design-space.jpg, id=1281, 415.5525pt x 320.69812pt>
+<design-space.jpg, id=1288, 415.5525pt x 320.69812pt>
 File: design-space.jpg Graphic file (type jpg)
  <use design-space.jpg>
 Package pdftex.def Info: design-space.jpg used on input line 338.
@@ -2258,7 +2259,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 ]
 (C:\workspace\opc_ua\Tex-Vorlage\TeX\Scenario/Scenario.tex
 Chapter 4.
-<homeoverview.jpg, id=1301, 1342.01375pt x 706.64pt>
+<homeoverview.jpg, id=1308, 1342.01375pt x 706.64pt>
 File: homeoverview.jpg Graphic file (type jpg)
  <use homeoverview.jpg>
 Package pdftex.def Info: homeoverview.jpg used on input line 4.
@@ -2268,7 +2269,7 @@ Package pdftex.def Info: homeoverview.jpg used on input line 4.
 
 
  <C:/workspace/opc_ua/Tex-Vorlage/TeX/homeoverview.jpg>]
-<csoverview.pdf, id=1308, 487.8225pt x 406.51875pt>
+<csoverview.pdf, id=1315, 487.8225pt x 406.51875pt>
 File: csoverview.pdf Graphic file (type pdf)
  <use csoverview.pdf>
 Package pdftex.def Info: csoverview.pdf used on input line 20.
@@ -2342,7 +2343,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 43.
 
 [55 <C:/workspace/opc_ua/Tex-Vorlage/TeX/csoverview.pdf>]
-<clientStructure.pdf, id=1342, 551.05875pt x 460.72125pt>
+<clientStructure.pdf, id=1349, 551.05875pt x 460.72125pt>
 File: clientStructure.pdf Graphic file (type pdf)
 
 <use clientStructure.pdf>
@@ -2377,7 +2378,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 80.
 
-[56] <apsd.jpg, id=1349, 563.85657pt x 532.23843pt>
+[56] <apsd.jpg, id=1356, 563.85657pt x 532.23843pt>
 File: apsd.jpg Graphic file (type jpg)
  <use apsd.jpg>
 Package pdftex.def Info: apsd.jpg used on input line 84.
@@ -2445,7 +2446,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              by `\normalfont \bfseries ' on input line 91.
 
 [58 <C:/workspace/opc_ua/Tex-Vorlage/TeX/apsd.jpg>]
-<serverStructure.pdf, id=1368, 551.05875pt x 532.99126pt>
+<serverStructure.pdf, id=1375, 551.05875pt x 532.99126pt>
 File: serverStructure.pdf Graphic file (type pdf)
 
 <use serverStructure.pdf>
@@ -2511,7 +2512,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 [60] (C:\workspace\opc_ua\Tex-Vorlage\TeX\Desgin/Desgin.tex
 Chapter 5.
-<whole-structure.pdf, id=1393, 713.66624pt x 474.27188pt>
+<whole-structure.pdf, id=1400, 713.66624pt x 474.27188pt>
 File: whole-structure.pdf Graphic file (type pdf)
 
 <use whole-structure.pdf>
@@ -2523,7 +2524,7 @@ Package pdftex.def Info: whole-structure.pdf used on input line 5.
 
 
  <C:/workspace/opc_ua/Tex-Vorlage/TeX/whole-structure.pdf>] <communication-flow
-.pdf, id=1410, 614.295pt x 663.98062pt>
+.pdf, id=1417, 614.295pt x 663.98062pt>
 File: communication-flow.pdf Graphic file (type pdf)
 
 <use communication-flow.pdf>
@@ -2707,7 +2708,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 296.
 
-[67] <class.pdf, id=1461, 804.00375pt x 460.72125pt>
+[67] <class.pdf, id=1468, 804.00375pt x 460.72125pt>
 File: class.pdf Graphic file (type pdf)
  <use class.pdf>
 Package pdftex.def Info: class.pdf used on input line 352.
@@ -2886,7 +2887,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 485.
 
-[73] <get-style.jpg, id=1501, 238.64156pt x 143.03438pt>
+[73] <get-style.jpg, id=1508, 238.64156pt x 143.03438pt>
 File: get-style.jpg Graphic file (type jpg)
  <use get-style.jpg>
 Package pdftex.def Info: get-style.jpg used on input line 488.
@@ -2978,7 +2979,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 568.
 
-[76] <logo.png, id=1524, 469.755pt x 60.225pt>
+[76] <logo.png, id=1531, 469.755pt x 60.225pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
 Package pdftex.def Info: logo.png used on input line 595.
@@ -3020,35 +3021,88 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 Chapter 6.
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 7.
+(Font)              using `OT1/cmss/bx/n' instead on input line 8.
 
-) [79
-
-
-] [80
+[79
 
 
-] (C:\workspace\opc_ua\Tex-Vorlage\TeX\Analysis/Analysis.tex
+] <Images/impl/mk.jpg, id=1552, 648.17157pt x 146.04562pt>
+File: Images/impl/mk.jpg Graphic file (type jpg)
+
+<use Images/impl/mk.jpg>
+Package pdftex.def Info: Images/impl/mk.jpg used on input line 30.
+(pdftex.def)             Requested size: 457.73631pt x 103.1382pt.
+
+Overfull \hbox (41.6147pt too wide) in paragraph at lines 30--31
+ [][] 
+ []
+
+<Images/impl/verify-pass.jpg, id=1553, 502.87875pt x 280.79906pt>
+File: Images/impl/verify-pass.jpg Graphic file (type jpg)
+
+<use Images/impl/verify-pass.jpg>
+Package pdftex.def Info: Images/impl/verify-pass.jpg used on input line 37.
+(pdftex.def)             Requested size: 457.73631pt x 255.59181pt.
+
+Overfull \hbox (41.6147pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+)
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 62.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 62.
+
+[80 <C:/workspace/opc_ua/Tex-Vorlage/TeX/Images/impl/mk.jpg>] [81 <C:/workspace
+/opc_ua/Tex-Vorlage/TeX/Images/impl/verify-pass.jpg>] [82
+
+
+]
+(C:\workspace\opc_ua\Tex-Vorlage\TeX\Analysis/Analysis.tex
 Chapter 7.
-) [81
+) [83
 
 
-] [82
+] [84
 
 
 ] (C:\workspace\opc_ua\Tex-Vorlage\TeX\Summary/Summary.tex
 Chapter 8.
-) (C:\workspace\opc_ua\Tex-Vorlage\TeX\myThesis.bbl [83
+) (C:\workspace\opc_ua\Tex-Vorlage\TeX\myThesis.bbl [85
 
 
-] [84
+] [86
 
 
 ]
 Missing character: There is no â in font cmti12!
 Missing character: There is no € in font cmti12!
 Missing character: There is no “ in font cmti12!
- [85]
+ [87]
 Missing character: There is no Ã in font cmcsc10!
 Missing character: There is no ¼ in font cmcsc10!
 Missing character: There is no Ã in font cmcsc10!
@@ -3074,7 +3128,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 174.
 
-[86]
+[88]
 Missing character: There is no Ã in font cmti12!
 Missing character: There is no ¼ in font cmti12!
 Missing character: There is no Ã in font cmti12!
@@ -3116,7 +3170,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 254.
 
-[87]))
+[89]))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
 
 
@@ -3133,38 +3187,35 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 209.
 
-[88]
+[90]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
  (C:\workspace\opc_ua\Tex-Vorlage\TeX\myThesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
+Package rerunfilecheck Info: File `myThesis.out' has not changed.
+(rerunfilecheck)             Checksum: 7C4823D1931F4A786DC21AB67B30C3A2;7025.
 
-
-Package rerunfilecheck Warning: File `myThesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `myThesis.out':
-(rerunfilecheck)             Before: D2DDADC247CEA6A41A7D103C2BA92651;7025
-(rerunfilecheck)             After:  7C4823D1931F4A786DC21AB67B30C3A2;7025.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) ) 
 Here is how much of TeX's memory you used:
- 9197 strings out of 493921
- 140743 string characters out of 3144871
- 298272 words of memory out of 3000000
- 11882 multiletter control sequences out of 15000+200000
+ 9216 strings out of 493921
+ 141080 string characters out of 3144871
+ 298559 words of memory out of 3000000
+ 11894 multiletter control sequences out of 15000+200000
  15258 words of font info for 59 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
  44i,14n,55p,1528b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{chapter*.59} has been referenced but does not e
-xist, replaced by a fixed one
+pdfTeX warning (dest): name{figure.6.3} has been referenced but does not ex
+ist, replaced by a fixed one
 
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
@@ -3184,9 +3235,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on myThesis.pdf (102 pages, 4474251 bytes).
+Output written on myThesis.pdf (104 pages, 4538147 bytes).
 PDF statistics:
- 1722 PDF objects out of 1728 (max. 8388607)
- 363 named destinations out of 1000 (max. 500000)
- 937 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1744 PDF objects out of 2073 (max. 8388607)
+ 367 named destinations out of 1000 (max. 500000)
+ 947 words of extra memory for PDF output out of 10000 (max. 10000000)
 
