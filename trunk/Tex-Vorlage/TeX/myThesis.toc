@@ -138,10 +138,10 @@
 \contentsline {section}{\numberline {6.1}Remote Management Testing}{79}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}\emph {UTE} Test Case}{79}{subsection.6.1.1}
 \contentsline {subsubsection}{\nonumberline Trigger Communication Channel with SMS}{79}{section*.59}
-\contentsline {subsubsection}{\nonumberline Secure Messaging Exchanging}{79}{section*.60}
-\contentsline {section}{\numberline {6.2}Android Application Testing}{79}{section.6.2}
-\contentsline {chapter}{\numberline {7}System Security Analysis}{81}{chapter.7}
-\contentsline {chapter}{\numberline {8}Summary and Future Work}{83}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{83}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future Work}{83}{section.8.2}
-\contentsline {chapter}{\nonumberline Bibliography}{85}{chapter*.61}
+\contentsline {subsubsection}{\nonumberline Secure Messaging Exchanging}{80}{section*.60}
+\contentsline {section}{\numberline {6.2}Android Application Testing}{80}{section.6.2}
+\contentsline {chapter}{\numberline {7}System Security Analysis}{83}{chapter.7}
+\contentsline {chapter}{\numberline {8}Summary and Future Work}{85}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{85}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Work}{85}{section.8.2}
+\contentsline {chapter}{\nonumberline Bibliography}{87}{chapter*.61}
