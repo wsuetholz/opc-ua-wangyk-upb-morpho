@@ -72,8 +72,8 @@ Moreover thanks to self-containment structure, smart card itself does not depend
 \subsection{Client Structure}
 As described in figure~\ref{fig:clientStructure}, the OPC UA client consists of client application code that realizes client application level functions, internal API, communication stack applet, smart card and device hardware. The Communication stack's responsibilities are:
 \begin{itemize}
-  \item initiate HTTP session based on TLS(proactive)
-  \item trigger HTTP session based on trigger SMS send by OTA server(passive)
+  \item initiate Http session based on TLS(proactive)
+  \item trigger Http session based on trigger SMS send by OTA server(passive)
   \item rebuild broken communication channel
   \item message encryption as well as decryption
   \item message transmit
@@ -85,9 +85,9 @@ As described in figure~\ref{fig:clientStructure}, the OPC UA client consists of 
 		\caption{Communication Flow between an AP and corresponding APSD\cite{ramGP}}
 	\label{fig:apsd}
 \end{figure}
-The communication flow compliant with the one provided by GlobalPlatform, which provides mechanisms that allow secure information exchanged between a remote entity and a terminal, this process is also known as Remote Application Management(RAM) over HTTP protocol and PSK TLS security. The on card component, which is responsible for connection creation with the remote entity and user/application authentication, is called Security Domain(SD). And the aforementioned remote entity  is  referred as Remote Administration Server as well. With these concepts, smart card with Security Domain issued  by GloablPlatform can act as HTTP client and is capable of packing APDU formate information into HTTP POST message and transmitting HTTP message to OTA server, which will then forward this HTTP message to target receiver.\cite{ramGP}
+The communication flow compliant with the one provided by GlobalPlatform, which provides mechanisms that allow secure information exchanged between a remote entity and a terminal, this process is also known as Remote Application Management(RAM) over Http protocol and PSK TLS security. The on card component, which is responsible for connection creation with the remote entity and user/application authentication, is called Security Domain(SD). And the aforementioned remote entity  is  referred as Remote Administration Server as well. With these concepts, smart card with Security Domain issued  by GloablPlatform can act as Http client and is capable of packing APDU formate information into Http POST message and transmitting Http message to OTA server, which will then forward this Http message to target receiver.\cite{ramGP}
  
-Figure~\ref{fig:apsd} illustrates a typical communication flow between administration server and corresponding security domain (Application Security Domain) on smart card. As can be seen, the request for open communication is usually initialized by security domain, which is also the phone user. After a successful creation of secure handshake, the remote administration server and security domain are able to based on HTTP connection exchange request and response strings, which encapsulate APDU instructions. GlobalPlatform has also provided  a lists of API used to initialize authentication process, to configure algorithm and keys for message encryption and decryption, to perform secure messaging and etc.
+Figure~\ref{fig:apsd} illustrates a typical communication flow between administration server and corresponding security domain (Application Security Domain) on smart card. As can be seen, the request for open communication is usually initialized by security domain, which is also the phone user. After a successful creation of secure handshake, the remote administration server and security domain are able to based on Http connection exchange request and response strings, which encapsulate APDU instructions. GlobalPlatform has also provided  a lists of API used to initialize authentication process, to configure algorithm and keys for message encryption and decryption, to perform secure messaging and etc.
 
 \subsection{Server Structure}
 

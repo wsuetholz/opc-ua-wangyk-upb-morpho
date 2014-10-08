@@ -1,51 +1,60 @@
 \select@language {american}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces OPC UA Client Server Structure\cite {O1}}}{6}{figure.2.1}
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces OPC UA Server Structure\cite {O1}}}{8}{figure.2.2}
-\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces OPC UA Client Structure\cite {O1}}}{8}{figure.2.3}
-\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces OPC UA Client Server Communication\cite {O2}}}{9}{figure.2.4}
-\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces OPC UA Client Server Security Handshake\cite {O2}}}{10}{figure.2.5}
-\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces OPC UA Client Server Communication Stack\cite {O2}}}{11}{figure.2.6}
-\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces Smart Card Software Components\cite {jcadg}}}{13}{figure.2.7}
-\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces the internal structure of a file in smart card file management system\cite {handbuch}}}{14}{figure.2.8}
-\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces File Tree on Smart Card\cite {handbuch}}}{15}{figure.2.9}
-\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces Communication between Smart card and CAD\cite {handbuch}}}{15}{figure.2.10}
-\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces Java Card VM Components\cite {jcadg}}}{18}{figure.2.11}
-\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces Javacard Applet Execution States\cite {handbuch}}}{20}{figure.2.12}
-\contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces APDU command processing\cite {handbuch}}}{21}{figure.2.13}
-\contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces Card Operation System Architecture\cite {gp}}}{22}{figure.2.14}
-\contentsline {figure}{\numberline {\relax 2.15}{\ignorespaces OpenMobileAPI architecture overview\cite {open}}}{24}{figure.2.15}
-\contentsline {figure}{\numberline {\relax 2.16}{\ignorespaces Android Stack Overview \cite {learn_android}}}{25}{figure.2.16}
-\contentsline {figure}{\numberline {\relax 2.17}{\ignorespaces Compiling process difference\cite {learn_android}}}{27}{figure.2.17}
-\contentsline {figure}{\numberline {\relax 2.18}{\ignorespaces Comparison between Java byte code and Dalvik executable file\cite {android_vm}}}{28}{figure.2.18}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces OPC UA Client Server Structure\cite {O1}\relax }}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces OPC UA Server Structure\cite {O1}\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces OPC UA Client Structure\cite {O1}\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces OPC UA Client Server Communication\cite {O2}\relax }}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces OPC UA Client Server Security Handshake\cite {O2}\relax }}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces OPC UA Client Server Communication Stack\cite {O2}\relax }}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces Smart Card Software Components\cite {jcadg}\relax }}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces the internal structure of a file in smart card file management system\cite {handbuch}\relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces File Tree on Smart Card\cite {handbuch}\relax }}{15}{figure.caption.19}
+\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces Communication between Smart card and CAD\cite {handbuch}\relax }}{15}{figure.caption.21}
+\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces Java Card VM Components\cite {jcadg}\relax }}{18}{figure.caption.25}
+\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces Javacard Applet Execution States\cite {handbuch}\relax }}{20}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces APDU command processing\cite {handbuch}\relax }}{21}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces Card Operation System Architecture\cite {gp}\relax }}{23}{figure.caption.30}
+\contentsline {figure}{\numberline {\relax 2.15}{\ignorespaces OpenMobileAPI architecture overview\cite {open}\relax }}{24}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 2.16}{\ignorespaces Android Stack Overview \cite {learn_android}\relax }}{26}{figure.caption.33}
+\contentsline {figure}{\numberline {\relax 2.17}{\ignorespaces Compiling process difference\cite {learn_android}\relax }}{28}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 2.18}{\ignorespaces Comparison between Java byte code and Dalvik executable file\cite {android_vm}\relax }}{29}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces DER Scheduler in Smart Home optimized for energy\cite {smart_home_for_energy}}}{32}{figure.3.1}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Overview of Smart Health Home structure\cite {smart_home_for_health} (RCC: Remote Control Center)}}{33}{figure.3.2}
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces MavHome agent architecture\cite {smart_home_agent}}}{34}{figure.3.3}
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces keys presented in Smart Card Description Language from \emph {Morpho}}}{39}{figure.3.4}
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces the PSK key used to configure administration session}}{39}{figure.3.5}
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Differential Power Attack on a DES implementation\cite {embedded_secure}}}{42}{figure.3.6}
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Malware growth in period from August 2010 to October 2011 based on database from paper\cite {android_malware}}}{45}{figure.3.7}
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Detailed Android permission model\cite {android_secure_design}}}{46}{figure.3.8}
-\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Permission required by application \emph {k9mail}\cite {android_secure_design}}}{48}{figure.3.9}
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Software Security Consideration in Software Design Life Cycle\cite {embedded_secure}}}{50}{figure.3.10}
-\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Architectural design space for a secure information processing\cite {embedded_secure}}}{51}{figure.3.11}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces DER Scheduler in Smart Home optimized for energy\cite {smart_home_for_energy}\relax }}{32}{figure.caption.42}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Overview of Smart Health Home structure\cite {smart_home_for_health} (RCC: Remote Control Center)\relax }}{33}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces MavHome agent architecture\cite {smart_home_agent}\relax }}{34}{figure.caption.45}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces keys presented in Smart Card Description Language from \emph {Morpho}\relax }}{39}{figure.caption.51}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces the PSK key used to configure administration session\relax }}{39}{figure.caption.52}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Differential Power Attack on a DES implementation\cite {embedded_secure}\relax }}{42}{figure.caption.58}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Malware growth in period from August 2010 to October 2011 based on database from paper\cite {android_malware}\relax }}{45}{figure.caption.64}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Detailed Android permission model\cite {android_secure_design}\relax }}{46}{figure.caption.65}
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Permission required by application \emph {k9mail}\cite {android_secure_design}\relax }}{48}{figure.caption.68}
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Software Security Consideration in Software Design Life Cycle\cite {embedded_secure}\relax }}{50}{figure.caption.70}
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Architectural design space for a secure information processing\cite {embedded_secure}\relax }}{51}{figure.caption.71}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home}}{53}{figure.4.1}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example}}{55}{figure.4.2}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure}}{57}{figure.4.3}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}}}{58}{figure.4.4}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure}}{59}{figure.4.5}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home\relax }}{53}{figure.caption.72}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example\relax }}{54}{figure.caption.73}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure\relax }}{57}{figure.caption.75}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}\relax }}{58}{figure.caption.76}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure\relax }}{59}{figure.caption.77}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange}}{61}{figure.5.1}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Handshake and message exchange between SD and Remote Server}}{63}{figure.5.2}
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram}}{70}{figure.5.3}
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Customized text color}}{74}{figure.5.4}
-\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Logo image used in web applications}}{77}{figure.5.5}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange\relax }}{61}{figure.caption.82}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Handshake and message exchange between SD and Remote Server\relax }}{63}{figure.caption.84}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram\relax }}{70}{figure.caption.106}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Customized text color\relax }}{74}{figure.caption.111}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Logo image used in web applications\relax }}{77}{figure.caption.118}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Smart Home Web Overview\relax }}{78}{figure.caption.119}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Successful generation of master key between remote server and \emph {CommunicationStack} applet}}{80}{figure.6.1}
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Successful creation of secure channel}}{81}{figure.6.2}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Push Short Message including all parameters which are necessary for the creation of communication channel\relax }}{80}{figure.caption.121}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces TLS client hello sent by smart card applet\relax }}{81}{figure.caption.122}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Successful generation of master key between remote server and \emph {CommunicationStack} applet\relax }}{81}{figure.caption.123}
+\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces \emph {cmd} Buffer in \emph {CommunicationStack} applet.\relax }}{82}{figure.caption.125}
+\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Http Response Message received by remote server\relax }}{82}{figure.caption.126}
+\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Http Content Translation\relax }}{82}{figure.caption.127}
+\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Wrong PIN input\relax }}{83}{figure.caption.128}
+\contentsline {figure}{\numberline {\relax 6.8}{\ignorespaces PIN is blocked\relax }}{83}{figure.caption.128}
+\contentsline {figure}{\numberline {\relax 6.9}{\ignorespaces Using Android application remotely managing home devices\relax }}{84}{figure.caption.129}
+\contentsline {figure}{\numberline {\relax 6.10}{\ignorespaces Historical Record Overview\relax }}{84}{figure.caption.130}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

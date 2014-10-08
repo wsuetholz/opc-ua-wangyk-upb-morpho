@@ -85,8 +85,10 @@
 \BOOKMARK [1][-]{section.6.1}{6.1 Remote Management Testing}{chapter.6}% 85
 \BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 UTE Test Case}{section.6.1}% 86
 \BOOKMARK [1][-]{section.6.2}{6.2 Android Application Testing}{chapter.6}% 87
-\BOOKMARK [0][-]{chapter.7}{7 System Security Analysis}{}% 88
-\BOOKMARK [0][-]{chapter.8}{8 Summary and Future Work}{}% 89
-\BOOKMARK [1][-]{section.8.1}{8.1 Summary}{chapter.8}% 90
-\BOOKMARK [1][-]{section.8.2}{8.2 Future Work}{chapter.8}% 91
-\BOOKMARK [0][-]{chapter*.61}{Bibliography}{}% 92
+\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 PIN Verification}{section.6.2}% 88
+\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Communication with Web server}{section.6.2}% 89
+\BOOKMARK [0][-]{chapter.7}{7 System Security Analysis}{}% 90
+\BOOKMARK [0][-]{chapter.8}{8 Summary and Future Work}{}% 91
+\BOOKMARK [1][-]{section.8.1}{8.1 Summary}{chapter.8}% 92
+\BOOKMARK [1][-]{section.8.2}{8.2 Future Work}{chapter.8}% 93
+\BOOKMARK [0][-]{chapter*.131}{Bibliography}{}% 94
