@@ -35,7 +35,7 @@ The communication between CommunicationStack and Remote Administration Server in
   \item Close Communication Session
 \end{itemize}
 \subsubsection{Communication Session Creation and Message Exchange}
-This process could be either initiated by Remote Administration Server by sending target applet a trigger SMS or be sponsored by applet itself. In both cases, applet sends the first \emph{OpenChannel Request} message. During the PSK TLS Handshake phase, APSD and remote server will agree on to be used cipher suit and authenticate each other. After a successful PSK TLS Handshake, CommunicationStack and remote OTA server will be able to exchange HTTP message, which encapsulates APDU strings as body. And HTTP header is in compliance with GlobalPlatform standards.
+This process could be either initiated by Remote Administration Server by sending target applet a trigger SMS or be sponsored by applet itself. In both cases, applet sends the first \emph{OpenChannel Request} message. During the PSK TLS Handshake phase, APSD and remote server will agree on to be used cipher suit and authenticate each other. After a successful PSK TLS Handshake, CommunicationStack and remote OTA server will be able to exchange Http message, which encapsulates APDU strings as body. And Http header is in compliance with GlobalPlatform standards.
 
 
 \begin{figure}[!htbp]
@@ -45,8 +45,8 @@ This process could be either initiated by Remote Administration Server by sendin
 	\label{fig:communication-flow}
 \end{figure}
 
-\subsubsection{HTTP Header Format} \label{secHTTPHeader}
-The HTTP message sent from remote sever to targeted applet uses following schema\cite{gp}:
+\subsubsection{Http Header Format} \label{secHTTPHeader}
+The Http message sent from remote sever to targeted applet uses following schema\cite{gp}:
 \begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Http Request Schema}}]
 HTTP/1.1 200 OK [or HTTP/1.1 204 No Content CRLF]
 X-Admin-Protocol: globalplatform-remote-admin/1.0 CRLF
@@ -61,7 +61,7 @@ CRLF
 The field \emph{security-domain-AID} will be filled with the AID of targeted applet.
 
 
-The HTTP response message sent from applet to remote server uses following schema\cite{gp}:
+The Http response message sent from applet to remote server uses following schema\cite{gp}:
 \begin{Verbatim}[fontsize=\relsize{-1}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Http Response Schema}}]
 POST<URI>HTTP/1.1 CRLF
 Host: <Administration Host> CRLF
@@ -85,10 +85,10 @@ The filed \emph{X-Admin-Script-Status} could contain following values:
 \end{itemize}
 
 \subsubsection{Close Communication Session}
-Whenever the communication channel is about to be closed, either because of session security issue, or due to successful finish of communication, remote server will send target applet HTTP message using following parameters:
+Whenever the communication channel is about to be closed, either because of session security issue, or due to successful finish of communication, remote server will send target applet Http message using following parameters:
  \begin{itemize}
-  \item No \emph{X-Admin-Next-URI} field is present in this HTTP message and message body is empty, which will be recognized as final message from remote server and then the session will be closed.
-  \item No \emph{X-Admin-Next-URI} filed is present but in this HTTP message body is not empty. The receiver will process the data in body and close the communication session appropriately. But no response message will be generated.
+  \item No \emph{X-Admin-Next-URI} field is present in this Http message and message body is empty, which will be recognized as final message from remote server and then the session will be closed.
+  \item No \emph{X-Admin-Next-URI} filed is present but in this Http message body is not empty. The receiver will process the data in body and close the communication session appropriately. But no response message will be generated.
 \end{itemize}
 
 \subsection {Commands: Interface between Applet and CAD} \label{secAPDU}
@@ -394,7 +394,7 @@ Following two core methods provided by \emph{communicationStack} is described.
 public static void install( byte[] bArray, short bOffset, byte bLength ) throws ISOException
 \end{Verbatim}
 
-\paragraph{process Method}
+\paragraph{process Method} \label{secDummy}
 In this method, the received remote APDU will be analyzed and upon on the encapsulated instruction filed, corresponding handler will be invoked using \emph{command data} included in command APDU. Following snippet defines how to get \emph{class} filed, \emph{instruction} filed , \emph{command data} and alternatively an normal \emph{APDU} object from a remote APDU.
 
 
@@ -480,7 +480,7 @@ httpAdmin.requestHTTPAdministrationSession(data, dataOffset, dataLength);
 In order to encapsulate commonly re-used functions, following utility classes are employed.
 \begin{itemize}
 \item \emph{CmdTranslate} This class provide methods such as \emph{getCmd}, \emph{getCmdTlv} and \emph{byteArrayToHexString}, which are used to translate user commands in to byte arrays based on rules defines in table~\ref{tlv}. Newly generated byte arrays will be further recognized as APDU command and sent to smart card by \emph{activity class}.
-\item \emph{JSONParser} With supports provided by \emph{org.apache.http} and \emph{org.json} packages, \emph{JSONParse} class offers mechanisms to make HTTP POST and GET request. Moreover method \emph{makeHttpRequest} returns a Json object including query result as well as return code.
+\item \emph{JSONParser} With supports provided by \emph{org.apache.http} and \emph{org.json} packages, \emph{JSONParse} class offers mechanisms to make Http POST and GET request. Moreover method \emph{makeHttpRequest} returns a Json object including query result as well as return code.
 \item \emph{UiDesign} Based on package \emph{android.graphic} and \emph{android.text}, this class provides the approach to realize customized layout. For instance, in method \emph{getStyle(String text, int begin, int end, String Farbe)}, the text between \emph{begin} and \emph{end} position is granted with a given color,  \emph{Farbe}. A concrete usage case is demonstrated in figure~\ref{fig:get-style}
 
 \begin{figure}[!htbp]
@@ -530,7 +530,7 @@ setContentView(R.layout.main);
 \end{Verbatim}
 
 \subsubsection{AsyncTask}
-Since \emph{HttpResponse} could be delivered to \emph{activity} with latency, therefore corresponding \emph{HttpRequest} should run in background for the purpose of simplified UI thread operations. Following code snippet demonstrates class used to perform HTTP GET request and to receive HTTP response related to update sensor subscription value operation.
+Since \emph{HttpResponse} could be delivered to \emph{activity} with latency, therefore corresponding \emph{HttpRequest} should run in background for the purpose of simplified UI thread operations. Following code snippet demonstrates class used to perform Http GET request and to receive Http response related to update sensor subscription value operation.
 \begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{AsyncTask HttpRequest}}]
 class RecordUpdate extends AsyncTask<String, String, String> {
 protected void onPreExecute() {}	
@@ -587,14 +587,23 @@ Following four activities together build my Android application.
  </application>
 </manifest> 
 \end{Verbatim}
-\section{Smart Home Web Server}
-Smart Home web application are also designed for the purpose of testing my previous developed smart card applet and Android application as well as of simulating Smart Home devices, especially data information maintained by them. 
 
-\begin{figure}[!htbp]
+
+
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.55\textwidth]{logo.png}
 		\caption{Logo image used in web applications}
 	\label{fig:logo}
 \end{figure}
 
-Apache 2.4.9 together with PhP of version 5.5.12 and a MySQL data base build my web applications.  Detailed design process has limited relation with the subject of this thesis, therefor will be neglected.
+\section{Smart Home Web Server}
+Smart Home web application are also designed for the purpose of testing my previous developed smart card applet and Android application as well as of simulating Smart Home devices, especially data information maintained by them. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1\textwidth]{Images/design/overview.jpg}
+		\caption{Smart Home Web Overview}
+	\label{fig:smart-home-frontpage}
+\end{figure}
+Apache 2.4.9 together with PhP of version 5.5.12 and a MySQL data base build my web applications.  Detailed design process has limited relation with the subject of this thesis, therefor will not be presented.

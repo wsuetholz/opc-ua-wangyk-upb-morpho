@@ -19,73 +19,73 @@
 \contentsline {subsection}{\numberline {2.2.2}Universal integrated Circuit Card}{12}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Smart Card Software Components}{13}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Smart card File Management}{13}{subsection.2.2.4}
-\contentsline {subsubsection}{\nonumberline File Structure}{13}{section*.7}
-\contentsline {subsubsection}{\nonumberline File Types}{14}{section*.8}
-\contentsline {subsubsection}{\nonumberline PKCS{\#}15}{14}{section*.9}
+\contentsline {subsubsection}{\nonumberline File Structure}{13}{section*.17}
+\contentsline {subsubsection}{\nonumberline File Types}{14}{section*.18}
+\contentsline {subsubsection}{\nonumberline PKCS{\#}15}{14}{section*.20}
 \contentsline {subsection}{\numberline {2.2.5}Data Exchange with Smart Card}{15}{subsection.2.2.5}
 \contentsline {subsection}{\numberline {2.2.6}Secure Messaging}{16}{subsection.2.2.6}
 \contentsline {subsection}{\numberline {2.2.7}Life Cycle}{17}{subsection.2.2.7}
-\contentsline {subsubsection}{\nonumberline Conclusion}{17}{section*.10}
-\contentsline {section}{\numberline {2.3}Java Card}{18}{section.2.3}
+\contentsline {subsubsection}{\nonumberline Conclusion}{17}{section*.24}
+\contentsline {section}{\numberline {2.3}Java Card}{17}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Language Specification}{18}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Transaction Integrity}{19}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Persistent Object and Transient Object}{19}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Java Card Applet}{19}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Javacard Cryptography}{20}{subsection.2.3.5}
-\contentsline {section}{\numberline {2.4}GlobalPlatform and Remote Application Management}{21}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}OPEN - GlobalPlatform Environment}{23}{subsection.2.4.1}
-\contentsline {paragraph}{\nonumberline Secure Channel Protocol}{23}{section*.11}
+\contentsline {section}{\numberline {2.4}GlobalPlatform and Remote Application Management}{22}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}OPEN - GlobalPlatform Environment}{22}{subsection.2.4.1}
+\contentsline {paragraph}{\nonumberline Secure Channel Protocol}{23}{section*.31}
 \contentsline {section}{\numberline {2.5}OpenMobileAPI}{23}{section.2.5}
 \contentsline {section}{\numberline {2.6}Android}{24}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Overview}{24}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Android Software Stack}{25}{subsection.2.6.2}
-\contentsline {subsubsection}{\nonumberline Linux kernel:}{26}{section*.12}
-\contentsline {subsubsection}{\nonumberline Libraries:}{26}{section*.13}
-\contentsline {subsubsection}{\nonumberline Application framework}{26}{section*.14}
-\contentsline {subsubsection}{\nonumberline Application}{26}{section*.15}
+\contentsline {subsubsection}{\nonumberline Linux kernel:}{25}{section*.34}
+\contentsline {subsubsection}{\nonumberline Libraries:}{25}{section*.35}
+\contentsline {subsubsection}{\nonumberline Application framework}{27}{section*.36}
+\contentsline {subsubsection}{\nonumberline Application}{27}{section*.37}
 \contentsline {subsection}{\numberline {2.6.3}Android, Dalvik and Java}{27}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Android Application Overview}{29}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Intent}{29}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.4}Android Application Overview}{28}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Intent}{30}{subsection.2.6.5}
 \contentsline {chapter}{\numberline {3}State of Art}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}Smart Home Research}{31}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Overview}{31}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Smart Home Optimized for Energy Services}{31}{subsection.3.1.2}
-\contentsline {subsubsection}{\nonumberline Decision Support Tool}{32}{section*.16}
+\contentsline {subsubsection}{\nonumberline Decision Support Tool}{32}{section*.41}
 \contentsline {subsection}{\numberline {3.1.3}Smart Health Home}{33}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Agent-based Smart Home}{33}{subsection.3.1.4}
-\contentsline {subsubsection}{\nonumberline MavHome architecture}{33}{section*.17}
-\contentsline {subsubsection}{\nonumberline Prediction algorithm}{34}{section*.18}
+\contentsline {subsubsection}{\nonumberline MavHome architecture}{33}{section*.44}
+\contentsline {subsubsection}{\nonumberline Prediction algorithm}{34}{section*.46}
 \contentsline {subsection}{\numberline {3.1.5}Conclusion}{34}{subsection.3.1.5}
 \contentsline {section}{\numberline {3.2}OPC UA Application and Security policy}{35}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}OPC UA applications}{35}{subsection.3.2.1}
-\contentsline {subsubsection}{\nonumberline OPC UA and ICS}{35}{section*.19}
-\contentsline {subsubsection}{\nonumberline OPC UA and Smart Grid}{35}{section*.20}
-\contentsline {subsubsection}{\nonumberline Nano OPC UA}{36}{section*.21}
+\contentsline {subsubsection}{\nonumberline OPC UA and ICS}{35}{section*.47}
+\contentsline {subsubsection}{\nonumberline OPC UA and Smart Grid}{35}{section*.48}
+\contentsline {subsubsection}{\nonumberline Nano OPC UA}{36}{section*.49}
 \contentsline {subsection}{\numberline {3.2.2}OPC UA secure policies}{36}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}OPC UA design consideration}{36}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Conclusion}{37}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Smart Card Security}{37}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Smart Card in Access Control}{38}{subsection.3.3.1}
-\contentsline {subsubsection}{\nonumberline Personal Identification Number}{38}{section*.22}
+\contentsline {subsubsection}{\nonumberline Personal Identification Number}{38}{section*.50}
 \contentsline {subsection}{\numberline {3.3.2}Key Management}{39}{subsection.3.3.2}
-\contentsline {subsubsection}{\nonumberline Key Generation}{40}{section*.23}
-\contentsline {paragraph}{\nonumberline Derived Key}{40}{section*.24}
-\contentsline {paragraph}{\nonumberline Dynamic Key}{40}{section*.25}
+\contentsline {subsubsection}{\nonumberline Key Generation}{40}{section*.54}
+\contentsline {paragraph}{\nonumberline Derived Key}{40}{section*.55}
+\contentsline {paragraph}{\nonumberline Dynamic Key}{40}{section*.56}
 \contentsline {subsection}{\numberline {3.3.3}Threaten and countermeasures}{41}{subsection.3.3.3}
-\contentsline {subsubsection}{\nonumberline Smart card Threatens and vulnerabilities}{41}{section*.26}
-\contentsline {subsubsection}{\nonumberline Countermeasures}{43}{section*.27}
-\contentsline {paragraph}{\nonumberline Logical Attacks Countermeasure}{43}{section*.28}
-\contentsline {paragraph}{\nonumberline Physical Attacks Countermeasure}{43}{section*.29}
-\contentsline {paragraph}{\nonumberline Non-invasive Attacks Countermeasure}{44}{section*.30}
-\contentsline {paragraph}{\nonumberline Other Attacks Countermeasure}{44}{section*.31}
+\contentsline {subsubsection}{\nonumberline Smart card Threatens and vulnerabilities}{41}{section*.57}
+\contentsline {subsubsection}{\nonumberline Countermeasures}{43}{section*.59}
+\contentsline {paragraph}{\nonumberline Logical Attacks Countermeasure}{43}{section*.60}
+\contentsline {paragraph}{\nonumberline Physical Attacks Countermeasure}{43}{section*.61}
+\contentsline {paragraph}{\nonumberline Non-invasive Attacks Countermeasure}{44}{section*.62}
+\contentsline {paragraph}{\nonumberline Other Attacks Countermeasure}{44}{section*.63}
 \contentsline {subsection}{\numberline {3.3.4}Smart Card Secure Applications}{44}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Conclusion}{45}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Secure Android Design}{45}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Android Security Mechanism}{46}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Security Design}{47}{subsection.3.4.2}
-\contentsline {subsubsection}{\nonumberline Application Components Secure}{47}{section*.32}
-\contentsline {subsubsection}{\nonumberline Custom Permissions for Access Control}{47}{section*.33}
-\contentsline {subsubsection}{\nonumberline Securing Content Provider}{48}{section*.34}
+\contentsline {subsubsection}{\nonumberline Application Components Secure}{47}{section*.66}
+\contentsline {subsubsection}{\nonumberline Custom Permissions for Access Control}{47}{section*.67}
+\contentsline {subsubsection}{\nonumberline Securing Content Provider}{48}{section*.69}
 \contentsline {subsection}{\numberline {3.4.3}Conclusion}{49}{subsection.3.4.3}
 \contentsline {section}{\numberline {3.5}Embedded System Secure Design}{49}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Overview}{49}{subsection.3.5.1}
@@ -94,54 +94,56 @@
 \contentsline {subsection}{\numberline {3.5.4}Secure Architectures}{50}{subsection.3.5.4}
 \contentsline {chapter}{\numberline {4}Implementation Scenario}{53}{chapter.4}
 \contentsline {section}{\numberline {4.1}Overview}{53}{section.4.1}
-\contentsline {section}{\numberline {4.2}Software Structure}{54}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Communication Flow}{54}{subsection.4.2.1}
-\contentsline {subsubsection}{\nonumberline Conclusion}{56}{section*.35}
+\contentsline {section}{\numberline {4.2}Software Structure}{55}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Communication Flow}{55}{subsection.4.2.1}
+\contentsline {subsubsection}{\nonumberline Conclusion}{56}{section*.74}
 \contentsline {subsection}{\numberline {4.2.2}Client Structure}{56}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Server Structure}{59}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Implementation Tool Support}{60}{subsection.4.2.4}
-\contentsline {subsubsection}{\nonumberline Java Card Application Design and Debug Tool}{60}{section*.36}
-\contentsline {subsubsection}{\nonumberline Java Card Applet Testing Environment}{60}{section*.37}
-\contentsline {subsubsection}{\nonumberline Android Application Design Tool}{60}{section*.38}
-\contentsline {subsubsection}{\nonumberline Smart Home Simulation Environment}{60}{section*.39}
+\contentsline {subsubsection}{\nonumberline Java Card Application Design and Debug Tool}{60}{section*.78}
+\contentsline {subsubsection}{\nonumberline Java Card Applet Testing Environment}{60}{section*.79}
+\contentsline {subsubsection}{\nonumberline Android Application Design Tool}{60}{section*.80}
+\contentsline {subsubsection}{\nonumberline Smart Home Simulation Environment}{60}{section*.81}
 \contentsline {chapter}{\numberline {5}System Design}{61}{chapter.5}
 \contentsline {section}{\numberline {5.1}UICC Applet}{61}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Overview}{61}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Work Flow}{62}{subsection.5.1.2}
-\contentsline {subsubsection}{\nonumberline Communication Session Creation and Message Exchange}{62}{section*.40}
-\contentsline {subsubsection}{\nonumberline HTTP Header Format}{64}{section*.41}
-\contentsline {subsubsection}{\nonumberline Close Communication Session}{65}{section*.42}
+\contentsline {subsubsection}{\nonumberline Communication Session Creation and Message Exchange}{62}{section*.83}
+\contentsline {subsubsection}{\nonumberline Http Header Format}{64}{section*.85}
+\contentsline {subsubsection}{\nonumberline Close Communication Session}{65}{section*.86}
 \contentsline {subsection}{\numberline {5.1.3}Commands: Interface between Applet and CAD}{65}{subsection.5.1.3}
-\contentsline {subsubsection}{\nonumberline SELECT APDU}{65}{section*.43}
-\contentsline {subsubsection}{\nonumberline Verify PIN operation}{66}{section*.44}
-\contentsline {subsubsection}{\nonumberline Reset PIN operation}{66}{section*.45}
-\contentsline {subsubsection}{\nonumberline Communication Session Creation}{67}{section*.46}
-\contentsline {subsubsection}{\nonumberline Close Communication Session}{67}{section*.47}
-\contentsline {subsubsection}{\nonumberline Process Communication Data}{68}{section*.48}
+\contentsline {subsubsection}{\nonumberline SELECT APDU}{65}{section*.87}
+\contentsline {subsubsection}{\nonumberline Verify PIN operation}{66}{section*.90}
+\contentsline {subsubsection}{\nonumberline Reset PIN operation}{66}{section*.93}
+\contentsline {subsubsection}{\nonumberline Communication Session Creation}{67}{section*.96}
+\contentsline {subsubsection}{\nonumberline Close Communication Session}{67}{section*.99}
+\contentsline {subsubsection}{\nonumberline Process Communication Data}{68}{section*.102}
 \contentsline {subsection}{\numberline {5.1.4}Classes}{68}{subsection.5.1.4}
-\contentsline {subsubsection}{\nonumberline Class CommunicationStack}{70}{section*.49}
-\contentsline {paragraph}{\nonumberline Install Method}{71}{section*.50}
-\contentsline {paragraph}{\nonumberline process Method}{71}{section*.51}
-\contentsline {subsubsection}{\nonumberline Class SessionTrigger}{73}{section*.52}
+\contentsline {subsubsection}{\nonumberline Class CommunicationStack}{70}{section*.107}
+\contentsline {paragraph}{\nonumberline Install Method}{71}{section*.108}
+\contentsline {paragraph}{\nonumberline process Method}{71}{section*.109}
+\contentsline {subsubsection}{\nonumberline Class SessionTrigger}{73}{section*.110}
 \contentsline {section}{\numberline {5.2}Android Application}{73}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Utility Classes}{73}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Layout}{74}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Activity Classes}{74}{subsection.5.2.3}
-\contentsline {subsubsection}{\nonumberline Seek for Android}{75}{section*.53}
-\contentsline {subsubsection}{\nonumberline Layout Adoption}{75}{section*.54}
-\contentsline {subsubsection}{\nonumberline AsyncTask}{75}{section*.55}
-\contentsline {subsubsection}{\nonumberline Intent}{76}{section*.56}
-\contentsline {subsubsection}{\nonumberline Activities Overview}{76}{section*.57}
-\contentsline {subsubsection}{\nonumberline AndroidManifest}{77}{section*.58}
+\contentsline {subsubsection}{\nonumberline Seek for Android}{75}{section*.112}
+\contentsline {subsubsection}{\nonumberline Layout Adoption}{75}{section*.113}
+\contentsline {subsubsection}{\nonumberline AsyncTask}{75}{section*.114}
+\contentsline {subsubsection}{\nonumberline Intent}{76}{section*.115}
+\contentsline {subsubsection}{\nonumberline Activities Overview}{76}{section*.116}
+\contentsline {subsubsection}{\nonumberline AndroidManifest}{77}{section*.117}
 \contentsline {section}{\numberline {5.3}Smart Home Web Server}{77}{section.5.3}
 \contentsline {chapter}{\numberline {6}Implementation Test}{79}{chapter.6}
 \contentsline {section}{\numberline {6.1}Remote Management Testing}{79}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}\emph {UTE} Test Case}{79}{subsection.6.1.1}
-\contentsline {subsubsection}{\nonumberline Trigger Communication Channel with SMS}{79}{section*.59}
-\contentsline {subsubsection}{\nonumberline Secure Messaging Exchanging}{80}{section*.60}
-\contentsline {section}{\numberline {6.2}Android Application Testing}{80}{section.6.2}
-\contentsline {chapter}{\numberline {7}System Security Analysis}{83}{chapter.7}
-\contentsline {chapter}{\numberline {8}Summary and Future Work}{85}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{85}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future Work}{85}{section.8.2}
-\contentsline {chapter}{\nonumberline Bibliography}{87}{chapter*.61}
+\contentsline {subsubsection}{\nonumberline Trigger Communication Channel with SMS}{79}{section*.120}
+\contentsline {subsubsection}{\nonumberline Secure Messaging Exchanging}{82}{section*.124}
+\contentsline {section}{\numberline {6.2}Android Application Testing}{82}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}PIN Verification}{83}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Communication with Web server}{83}{subsection.6.2.2}
+\contentsline {chapter}{\numberline {7}System Security Analysis}{85}{chapter.7}
+\contentsline {chapter}{\numberline {8}Summary and Future Work}{87}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{87}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Work}{87}{section.8.2}
+\contentsline {chapter}{\nonumberline Bibliography}{89}{chapter*.131}
