@@ -3,18 +3,18 @@ In this chapter, a brief demonstration testing cases are presented. To be more s
 
 \section{Remote Management Testing}
 The aim of this testing scenario is to prove the feasibility of applying Smart Card and remote application/file management protocols proposed by Globalplatform to provide a secure dual authentication and messaging platform for other 
-higher leveled applications. My Javacard Applet, \emph{CommunicationStack} together with correspondingly designed \emph{UTE} test cases are employed together building the testing environment.
+higher leveled applications. My Javacard Applet, \emph{CommunicationStack} together with correspondingly designed \emph{UTE} test cases are employed and build the testing environment.
 
 \subsection{\emph{UTE} Test Case}
 
 Two \emph{UTE} test cases are programmed. They are:
 \begin{itemize}
-\item \emph{Trigger Communication Channel with SMS}. In this test case, I simulate the open communication channel process between smart card and remote administrator server. This process is also the cornerstone for a successful remote management.
+\item \emph{Trigger Communication Channel with SMS}. In this test case, I simulate the open communication channel process between smart card and remote administrator server. This process is also the cornerstone for a successful remote application management.
 \item \emph{Secure Messaging Exchanging} After a successful identification between communication peers and creation of communication channel, in this test scenario, smart card and remote server are going to perform secure messaging. 
 \end{itemize}
 
 \subsubsection{Trigger Communication Channel with SMS} \label{secAppletTest1}
-In this test suit, UTE testing case acts as an OTA server and encapsulates information for the construction of a secure Http channel in a \emph{TriggerPushSMS} object and sent this SMS to target smart card applet using simulated GPRS connection.  The whole SMS structure is pictured in figure~\ref{fig:pushSMS} and encapsulated parameters are categorized as following:
+In this test suit, UTE testing case acts as a remote administrator server and encapsulates information necessary for the construction of a secure Http channel in a \emph{TriggerPushSMS} object and sent this SMS to target smart card applet using simulated GPRS connection. The SMS structure is pictured in figure~\ref{fig:push-sms} and includes parameters which are categorized as following:
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Images/impl/push-sms.png}
@@ -24,10 +24,12 @@ In this test suit, UTE testing case acts as an OTA server and encapsulates infor
 \begin{itemize}
 \item \emph{Connection Parameters}, which includes network access name, bearer description and other parameters describing the simulated remote server.
 \item \emph{Security Parameters} In security parameters, proposed TLS 1.2 connection information, such as suggested cipher suit, is provided
-\item \emph{Smart Card Keysets}, that consists of key identifiers as well as indicator used for the select of cipher keys, signature keys.
+\item \emph{Smart Card Keysets}, that consists of key identifiers as well as indicator used for the select of cipher keys and signature keys.
 \item \emph{Http connection parameters}. Also parameters such as retry counter, timeout values are included in this short message.
 \end{itemize}
-After a successful receive and process of aforementioned push SMS, as shown in figure~\ref{fig:push-sms}, \emph{CommunicationStack} will preform TLS handshake with remote server. The TLS \emph{client hello} is demonstrated by figure~\ref{fig:client-hello}. And in this demonstration case \emph{TLS\_PSK\_WITH\_NULL\_SHA256} is chosen. At last, the master key, shown in figure~\ref{fig:mk} is generated between remote server and card applet.
+After a successful receiving and processing of aforementioned push SMS, \emph{CommunicationStack} will preform TLS handshake with the remote server. 
+
+The TLS \emph{client hello} is demonstrated by figure~\ref{fig:client-hello}. And in this demonstration case \emph{TLS\_PSK\_WITH\_NULL\_SHA256} is chosen. At last, the master key, shown in figure~\ref{fig:mk} is generated between remote server and card applet.
 
 \begin{figure}[!htb]
 	\centering
@@ -53,7 +55,7 @@ After a successful receive and process of aforementioned push SMS, as shown in f
 	\label{fig:remote1}
 \end{figure}
 
-Based on in previous paragraph ~\ref{secAppletTest1} created secure channel and Http Connection, in this test case, smart card applet and remote server performs message exchanging. As illustrated in figure ~\ref{fig:remote1}, my applet is able to receive Http Message from remote server and retrieve the encapsulated command data. Furthermore as shown in figure ~\ref{fig:remote2}, at the end of this testing scenario, remote server receives a Http message from \emph{CommunicationStack} and the content of this message is apparently secured, whose clear test is presented in figure~\ref{fig:remote2} and is dummy test data set in chapter~\ref{secDummy}.
+Based on in previous paragraph ~\ref{secAppletTest1} created secure channel and Http Connection, in this test case, smart card applet and remote server perform secure message exchange. As illustrated in figure~\ref{fig:remote1}, my applet is able to receive Http Message from remote server and retrieve the encapsulated command data. Furthermore as shown in figure~\ref{fig:remote2}, at the end of this testing scenario, remote server receives a Http message from \emph{CommunicationStack} and the content of this message is apparently secured, whose clear test is presented in figure~\ref{fig:remote2}.
 
 \begin{figure}[!htb]
 	\centering
@@ -89,7 +91,7 @@ In this section, how my Android application interact with Smart Home web server 
 
 As already introduced, in order to use functionalities provided by Smart Home, phone holder must authenticate himself by inputing PIN for Android application. But after three times wrong PIN input, as shown in figure~\ref{fig:sub1}, PIN will be locked. And only the service provider can unblock this PIN. 
 \subsection{Communication with Web server}
-After a successful identification, Android application user now can enjoy functions provided by Smart Home application, such as remote housing device management and querying historical data, as shown in figure
+After a successful identification, Android application user now can enjoy functions provided by Smart Home application, such as remote housing device management and querying historical data, as shown in following figures.
 
 \begin{figure}[!htb]
 	\centering
