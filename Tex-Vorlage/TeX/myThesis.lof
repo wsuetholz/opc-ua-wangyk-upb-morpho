@@ -33,28 +33,29 @@
 \contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Architectural design space for a secure information processing\cite {embedded_secure}\relax }}{51}{figure.caption.71}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home\relax }}{53}{figure.caption.72}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces OPC UA Client Server Structure Example\relax }}{54}{figure.caption.73}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Client Structure\relax }}{57}{figure.caption.75}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}\relax }}{58}{figure.caption.76}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Server Structure\relax }}{59}{figure.caption.77}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Smart Home System Component Structure\relax }}{54}{figure.caption.73}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces OPC UA Client Server Structure Example\relax }}{55}{figure.caption.74}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Client Structure\relax }}{58}{figure.caption.75}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Communication Flow between an AP and corresponding APSD\cite {ramGP}\relax }}{59}{figure.caption.76}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Server Structure\relax }}{60}{figure.caption.77}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange\relax }}{61}{figure.caption.82}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Handshake and message exchange between SD and Remote Server\relax }}{63}{figure.caption.84}
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram\relax }}{70}{figure.caption.106}
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Customized text color\relax }}{74}{figure.caption.111}
-\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Logo image used in web applications\relax }}{77}{figure.caption.118}
-\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Smart Home Web Overview\relax }}{78}{figure.caption.119}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Message Exchange\relax }}{63}{figure.caption.82}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Handshake and message exchange between SD and Remote Server\relax }}{65}{figure.caption.84}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Diagram\relax }}{72}{figure.caption.106}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Customized text color\relax }}{75}{figure.caption.111}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Logo image used in web applications\relax }}{78}{figure.caption.118}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Smart Home Web Overview\relax }}{79}{figure.caption.119}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Push Short Message including all parameters which are necessary for the creation of communication channel\relax }}{80}{figure.caption.121}
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces TLS client hello sent by smart card applet\relax }}{81}{figure.caption.122}
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Successful generation of master key between remote server and \emph {CommunicationStack} applet\relax }}{81}{figure.caption.123}
-\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces \emph {cmd} Buffer in \emph {CommunicationStack} applet.\relax }}{82}{figure.caption.125}
-\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Http Response Message received by remote server\relax }}{82}{figure.caption.126}
-\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Http Content Translation\relax }}{82}{figure.caption.127}
-\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Wrong PIN input\relax }}{83}{figure.caption.128}
-\contentsline {figure}{\numberline {\relax 6.8}{\ignorespaces PIN is blocked\relax }}{83}{figure.caption.128}
-\contentsline {figure}{\numberline {\relax 6.9}{\ignorespaces Using Android application remotely managing home devices\relax }}{84}{figure.caption.129}
-\contentsline {figure}{\numberline {\relax 6.10}{\ignorespaces Historical Record Overview\relax }}{84}{figure.caption.130}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Push Short Message including all parameters which are necessary for the creation of communication channel\relax }}{82}{figure.caption.121}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces TLS client hello sent by smart card applet\relax }}{83}{figure.caption.122}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Successful generation of master key between remote server and \emph {CommunicationStack} applet\relax }}{83}{figure.caption.123}
+\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces \emph {cmd} Buffer in \emph {CommunicationStack} applet.\relax }}{84}{figure.caption.125}
+\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Http Response Message received by remote server\relax }}{84}{figure.caption.126}
+\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Http Content Translation\relax }}{84}{figure.caption.127}
+\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Wrong PIN input\relax }}{85}{figure.caption.128}
+\contentsline {figure}{\numberline {\relax 6.8}{\ignorespaces PIN is blocked\relax }}{85}{figure.caption.128}
+\contentsline {figure}{\numberline {\relax 6.9}{\ignorespaces Using Android application remotely managing home devices\relax }}{86}{figure.caption.129}
+\contentsline {figure}{\numberline {\relax 6.10}{\ignorespaces Historical Record Overview\relax }}{86}{figure.caption.130}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
