@@ -27,7 +27,7 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Persistent Object and Transient Object}{section.2.3}% 27
 \BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Java Card Applet}{section.2.3}% 28
 \BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Javacard Cryptography}{section.2.3}% 29
-\BOOKMARK [1][-]{section.2.4}{2.4 GlobalPlatform and Remote Application Management}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.4}{2.4 GlobalPlatform and Remote Application/File Management}{chapter.2}% 30
 \BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 OPEN - GlobalPlatform Environment}{section.2.4}% 31
 \BOOKMARK [1][-]{section.2.5}{2.5 OpenMobileAPI}{chapter.2}% 32
 \BOOKMARK [1][-]{section.2.6}{2.6 Android}{chapter.2}% 33
@@ -89,8 +89,17 @@
 \BOOKMARK [1][-]{section.6.2}{6.2 Android Application Testing}{chapter.6}% 89
 \BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 PIN Verification}{section.6.2}% 90
 \BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Communication with Web server}{section.6.2}% 91
-\BOOKMARK [0][-]{chapter.7}{7 System Security Analysis}{}% 92
-\BOOKMARK [0][-]{chapter.8}{8 Summary and Future Work}{}% 93
-\BOOKMARK [1][-]{section.8.1}{8.1 Summary}{chapter.8}% 94
-\BOOKMARK [1][-]{section.8.2}{8.2 Future Work}{chapter.8}% 95
-\BOOKMARK [0][-]{chapter*.131}{Bibliography}{}% 96
+\BOOKMARK [1][-]{section.6.3}{6.3 Conclusion}{chapter.6}% 92
+\BOOKMARK [0][-]{chapter.7}{7 System Security Analysis}{}% 93
+\BOOKMARK [1][-]{section.7.1}{7.1 Attack Tree Overview}{chapter.7}% 94
+\BOOKMARK [1][-]{section.7.2}{7.2 Smart Card Security Compromise}{chapter.7}% 95
+\BOOKMARK [2][-]{subsection.7.2.1}{7.2.1 Sub Attack Tree and its Content}{section.7.2}% 96
+\BOOKMARK [2][-]{subsection.7.2.2}{7.2.2 Analysis and Countermeasures}{section.7.2}% 97
+\BOOKMARK [1][-]{section.7.3}{7.3 Application Level Security Compromise}{chapter.7}% 98
+\BOOKMARK [2][-]{subsection.7.3.1}{7.3.1 Sub Attack Tree and its Content}{section.7.3}% 99
+\BOOKMARK [2][-]{subsection.7.3.2}{7.3.2 Analysis and Countermeasures}{section.7.3}% 100
+\BOOKMARK [1][-]{section.7.4}{7.4 conclusion}{chapter.7}% 101
+\BOOKMARK [0][-]{chapter.8}{8 Summary and Future Work}{}% 102
+\BOOKMARK [1][-]{section.8.1}{8.1 Summary}{chapter.8}% 103
+\BOOKMARK [1][-]{section.8.2}{8.2 Future Work}{chapter.8}% 104
+\BOOKMARK [0][-]{chapter*.135}{Bibliography}{}% 105
