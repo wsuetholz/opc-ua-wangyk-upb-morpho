@@ -6,17 +6,18 @@
 		\caption{Message Exchange}
 	\label{fig:whole-structure}
 \end{figure}
+In this chapter, I will present the crucial information about how I designed and programmed my system. To be more specifically, I am going to describe the design of my UICC Applet, Android  Application as well as  Smart  Home Web Server.
 
-As described in previous sections, my demonstration system consists of three main parts, namely the on card integrated communication stack, Android application and Smart Home web service. Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange process that occurs in the demonstration system. In my case, OTA is also integrated with a \emph{public key infrastructure},  in order to perform secure peer identification and messaging.
+As described in previous chapters, my demonstration system consists of three main parts, namely the on card integrated communication stack, Android application and Smart Home web service. Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange process that occurs in the demonstration system. In my case, OTA is also integrated with a \emph{public key infrastructure},  in order to perform secure peer identification and messaging. Therefor this OTA is also referred as remote administrator sever.
 
 
 \section{UICC Applet}
 \subsection{Overview}
 The whole message exchange process consists of following phases:
 \begin{itemize}
-\item \emph{Open Channel Phase} Whenever a OPC UA client/server attempts to contact with the other, a communication session between Remote Server and housing device must be created firstly.
-\item \emph{TSL Handshake with Remote Server} After a successful creation of communication channel, a mutual peer identification through TLS handshake between Remote server and aforementioned client/server will be performed.
-\item \emph{Require target's public key} When Remote Server identify the connected communication partner, it will grant client/server the expected target's public key. 
+\item \emph{Open Channel Phase} Whenever a secure housing device attempts to contact with the other, a communication session between Remote Server and this device must be created firstly.
+\item \emph{TSL Handshake with Remote Server} After a successful creation of communication channel, a mutual peer identification through TLS handshake between Remote server and aforementioned homing device will be performed.
+\item \emph{Require target's public key} When Remote Server identify the connected communication partner, it will grant him the expected target's public key. 
 \item \emph{secure messaging} Message sender will in this phase encrypt the message with target's public key and send this encrypted message through Remote Server to message receiver. 
 \end{itemize}
 \subsection {Work Flow}
@@ -193,6 +194,9 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 
 
 \subsubsection{Communication Session Creation}\label{secSessionOpen}
+
+
+This APDU command and response set is used to let  CommunicationStack applet initiate the request to establish communication channel and create communication  session above  it. Commands listed in table ~\ref{trigger-session-apdu} are supported.
 \begin{table}[!htb]
 \caption{Communication session creation command APDUs}
 \scalebox{0.75}{%
@@ -207,8 +211,6 @@ CLA  & INS  & P1   & P2   & Lc   & Data field  & Le  & Description \\ \hline
 }
 \label{trigger-session-apdu}
 \end{table}
-This APDU command and response set is used to let  CommunicationStack applet initiate the request to establish communication channel and create communication  session above  it. Following commands are supported.
-
 
 
 Following return codes are expected in response APDU:
@@ -356,7 +358,7 @@ My UICC applet shown in figure~\ref{fig:class} is integrated in Morpho \emph{SC5
 \end{figure}
 
 \subsubsection{Class CommunicationStack} \sloppy
-As the main class of my Applet, \emph{communicationStack} extends \emph{UsimRemoteService} class provided by Morpho in order to be recognized as a system Applet, which is capable of performing remote file management behavior. Moreover this main class has implemented interface \emph{JCISIMApplication}, which defines mechanisms to handle remote APDUs.
+As the main class of my Applet, \emph{communicationStack} extends \emph{UsimRemoteService} class provided by Morpho in order to be recognized as a system Applet, which is capable of performing remote application/file management behavior. Moreover this main class has implemented interface \emph{JCISIMApplication}, which defines mechanisms to handle remote APDUs.
 
 Also PIN configuration is defined in this applet and described as below, 
 
@@ -445,12 +447,22 @@ httpAdmin.requestHTTPAdministrationSession(data, dataOffset, dataLength);
 \end{Verbatim}
 
 \section{Android Application}
+In order to simulate and realize application level  OPC UA functionalities, I have designed the following Android Application.
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1\textwidth]{android-class}
+		\caption{Android Application Class Diagram}
+	\label{fig:android-class}
+\end{figure}
+
 \subsection{Utility Classes}
-In order to encapsulate commonly re-used functions, following utility classes are employed.
+The Application class diagram is shown in figure ~\ref{fig:android-class}. And in order to encapsulate commonly re-used functions, following utility classes are employed.
 \begin{itemize}
 \item \emph{CmdTranslate}. This class provide methods such as \emph{getCmd}, \emph{getCmdTlv} and \emph{byteArrayToHexString}, which are used to translate user commands into byte arrays based on rules defined in table~\ref{tlv}.
 \item \emph{JSONParser}. With supports provided by \emph{org.apache.http} and \emph{org.json} packages, \emph{JSONParse} class offers mechanisms to generate Http POST and GET request. Moreover method \emph{makeHttpRequest} in this class returns a Json object including query result as well as return code.
-\item \emph{UiDesign}. Based on package \emph{android.graphic} and \emph{android.text}, this class provides the approach to realize customized ui layout. For instance, in method \emph{getStyle(String text, int begin, int end, String Farbe)}, the text between \emph{begin} and \emph{end} position is granted with a given color,  \emph{Farbe}. A concrete usage case is demonstrated in figure~\ref{fig:get-style}
+\item \emph{UiDesign}. Based on package \emph{android.graphic} and \emph{android.text}, this class provides the approach to realize customized UIi layout. For instance, in method \emph{getStyle(String text, int begin, int end, String Farbe)}, the text between \emph{begin} and \emph{end} position is granted with a given color,  \emph{Farbe}. A concrete usage case is demonstrated in figure~\ref{fig:get-style}
 
 \begin{figure}[!htbp]
 	\centering
@@ -468,7 +480,7 @@ Under \emph{root$\backslash$res$\backslash$layout} directory, the \emph{xml} fil
 \item \emph{list\_item.xml} and \emph{record.xml}. Those two xml files together picture how to present historical record in a list arranged by modified data.
 \item \emph{block.xml}. The PIN block screen is defined by \emph{block.xml}
 \end{itemize}
-The screen shots of my Android application will be presented in next section \emph{Implementation}.
+The screen shots of my Android application will be presented in next chapter \emph{Implementation Test}.
 
 
 \subsection{Activity Classes}
@@ -573,11 +585,13 @@ Following four activities together build my Android application.
 
 \section{Smart Home Web Server}
 Smart Home web application are also designed for the purpose of testing my smart card applet, Android application as well as simulating Smart Home devices, especially the data information maintained by them. 
-
+Apache 2.4.9 together with PhP of version 5.5.12 and MySQL database build my web applications.  
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\textwidth]{Images/design/overview.jpg}
 		\caption{Smart Home Web Overview}
 	\label{fig:smart-home-frontpage}
 \end{figure}
-Apache 2.4.9 together with PhP of version 5.5.12 and MySQL data base build my web applications.  Detailed design process has limited relation with the subject of this thesis, therefor will not be presented.
+
+Figure ~\ref{fig:smart-home-frontpage} illustrates the web page that shows all three housing devices states. Each housing device has its own table in MySQL database. Moreover, user can navigate to other pages by clicking the blue tabs on top right of this page. For instance, by clicking \emph{Record} button, user is able to bowser historical record of each home device. 
+Detailed design process has limited relation with the subject of this thesis, therefor will not be presented.
