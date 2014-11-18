@@ -29,11 +29,11 @@ Figure~\ref{fig:SmartHome} describes the basic structure and functionalities pro
 		\caption{Smart Home System Component Structure}
 	\label{fig:SmartHomeComponent}
 \end{figure}
-With inspiration offered by application described  in section~\ref{secAgent}, in order to provide a generic application platform for vendor specific devices, my demonstration Smart Home system consists of components, \footnote{All housing devices that build the system and  smart phone are generically referred as system components.} whose basic structure is illustrated in figure~\ref{fig:SmartHomeComponent}.  As can be seen, components are composed of three layers. From bottom to top, they are:
+With inspiration offered by application described  in section~\ref{secAgent}, in order to provide a generic application platform for vendor specific devices, my demonstration Smart Home system consists of components, \footnote{All housing devices that build the system and  smart phone are generically referred as system components.} whose basic structure is illustrated in figure~\ref{fig:SmartHomeComponent}.  As can be seen, components are composed of device specific application and the generic communication platform, which includes three layers. From bottom to top, they are:
 
 \begin{itemize}
-\item Physical layer. In this layer electronic devices and facilities are deployed. Alternatively lower level component could be also in this layer of higher level component.
-\item Communication layer. Smart card and corresponding remote file/application management protocols together form this layer. The main responsibility of communication layer is to create a secure communication environment for application layer.
+\item Physical layer. In this layer secure electronic devices and facilities are deployed. Alternatively lower level component could be also in this layer of higher level component.
+\item Communication layer. Smart card, the on card integrated Communication stack applet and corresponding remote file/application management protocols together form this layer. The main responsibility of communication layer is to create a secure communication environment for application layer.
 \item Application layer. OPC UA client application (installed on smart phone) and OPC UA server application (installed on other homing devices) are placed in this layer and provide a common interface for higher layer device specific application. 
 \end{itemize}
 
@@ -47,11 +47,11 @@ Moreover this component platform also emphasizes the importance of secure messag
 \end{figure}
 
 \section{Communication Flow}
-Figure~\ref{fig:softwareStructure} pictures the communication flow between two system components. OPC UA Client and Server application communicate with each other with the help of an OTA server. And the communication stack is in charge of creation and managing secure communications between OTA server and secure devices. Moreover OPC UA client application is able to communicate with OPC UA server application using Short Message Service(SMS) or TCP/IP based web service. One demonstration case is given as below:
+Figure~\ref{fig:softwareStructure} pictures the communication flow between two system components. OPC UA Client and Server application communicate with each other with the help of an OTA server. And the communication stack is in charge of creation and managing secure communications between OTA server and secure devices. Moreover OPC UA client application is able to communicate with OPC UA server application using Short Message Service(SMS) or TCP/IP based network connection. One demonstration case is given as below:
 
 When the householder wants to make some coffee, he will send the \emph{makeCoffee} command to coffee maker with his cell phone in following steps as pictured in figure~\ref{fig:softwareStructure}. 
 \begin{enumerate}
-\item OPC UA Client application installed on cell phone initially generates the \emph{makeCoffee} request and forwards it to the internal API, such as openmobile API.
+\item OPC UA Client application installed on cell phone initially generates the \emph{makeCoffee} request and forwards it to the internal API
 \item The internal API translates the request into remote APDU object, and the \emph{CommunicationStack} applet will firstly try to connect with remote OTA/administrator server and to require the target coffee maker information.
 \item The server will then in this step firstly check the identification of the message sender.
 \item After a successful identification, OTA server is able to confirm the cardholder's identify and to grant necessary information to him and help cardholder transmit his request to targeted message receiver.

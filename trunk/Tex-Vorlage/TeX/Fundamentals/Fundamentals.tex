@@ -118,13 +118,13 @@ As described in figure~\ref{fig:opc_ua_commstack}, based on different responsibi
 \begin{itemize}
 \item{Application Layer}. Client or server application code is realized in this layer.
 
-\item{Communication Layer}. Serialization layer together with secure channel layer build the communication layer and their jobs are, dividing long message into pieces referred as message chunk, encrypting each individual message chunk and forwarding encrypted message chunks to the transport layer. When receiving message chunks from other, the message receiver will firstly verify whether this message piece meets the security standard negotiated between him and the message sender. If not, message receiver will close the secure channel. After a successful verification of all message chunks, the original OPC UA message will be reconstructed and forwarded to the UA Application Code through a API. 
+\item{Communication Layer}. Serialization layer together with secure channel layer build the communication layer and their jobs are, dividing long message into pieces referred as message chunk, encrypting each individual message chunk and forwarding encrypted message chunks to the transport layer. When receiving message chunks from other, the message receiver will firstly verify whether this message piece meets the security standard negotiated between him and the message sender. If not, message receiver will close the secure channel. After a successful verification of all message chunks, the original OPC UA message will be reconstructed and forwarded to the UA Application Code through an API. 
 
 \item{Transport Layer}. The transport layer provides mechanism for message transmitting.
 \end{itemize}
 
 \subsection{Other Competitor}
-WebSphere Message Broker Message Queuing Telemetry Transport (MQTT)\cite{Ref3} is another machine to machine (M2M) communication protocol. Compared with OPC UA standard, MQTT also supports UDP protocol in the transport layer. In OPC UA, only unidirectional, client to server, communication is provided, but in MQTT server to client communication is also possible without server implements client code. Moreover the communication overhead of MQTT is in comparison with OPC UA is relative small. 
+WebSphere Message Broker Message Queuing Telemetry Transport (MQTT)\cite{Ref3} is another machine to machine (M2M) Internet of Things communication and connectivity protocol. Compared with OPC UA standard, MQTT also supports UDP protocol in the transport layer. In OPC UA, only unidirectional, client to server, communication is provided, but in MQTT server to client communication is also possible without server implements client code. Moreover the communication overhead of MQTT is in comparison with OPC UA is relative small. 
 
 
 Even though MQTT protocol supports communication environment with low bandwidth and high latency, OPC UA provides complexer object model and supports more features including historical data record, alarm, notification as well as complete security policies. This is the reason why OPC UA is more suitable for the application system that handles sensitive data with complex structure and needs immediate response.
@@ -262,24 +262,25 @@ The typical Life cycle of a smart card is described as following\cite{smart_card
 \item \emph{Invalidation Phase}. Card operation system will block the smart card in this phase. To be more specifically, operation such as writing and update will be disabled. There are two reasons that why a smart card lands this phase. Reason one is because both \emph{smart card PIN} and \emph{smart card unblock PIN} reach its limited  try counts, which indicates someone is trying to force brute guessing PIN.  The other reason is, a particular application adds a \emph{invalidation lock} on \emph{master file} of smart card.
 \end{itemize}
 
-\subsubsection {Conclusion}
-From the above described smart card life cycle, it is not hard to find out that from the every begin of smart card manufacturing and deliver process, card manufacturers and issuers have taken it into account, that a secure card production, utilization and delivery must be guaranteed.
+\subsection {Conclusion}
+From the above described smart card characteristics and life cycle, it is not hard to find out that from the every begin of smart card's design, manufacturing and deliver processes, card manufacturers and issuers have taken it into account, that a secure card design production, utilization and delivery must be guaranteed. Therefore nowadays smart cards are widely employed as secure token in various industrial fields.
 
 \section{Java Card}
-Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, it also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, like limited memory resource and computing ability.
-
-In contrast with Java VM, Java Card VM consists of two parts, the on-card part, which is in charge of bytecode execution, class as well as object management and secure data exchange. Secondly the off-card part, which is the real Java Converter.
- \begin{figure}[!htbp]
+ \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\textwidth]{jcvm.jpg}
 		\caption{Java Card VM Components\cite{jcadg}}
 	\label{fig:jcvm}
 \end{figure}
+Java Card technology not only adopts the distinguishing features from Java, such as productivity, security and portability\cite{jcadg}, but also makes Java technology available on smart card, where programmer must be faced with more harsh conditions, like limited memory resource and computing ability.
+
+In contrast with Java VM, Java Card VM consists of two parts, the on-card part, which is in charge of bytecode execution, class as well as object management and secure data exchange. Secondly the off-card part, which is the real Java Converter.
+
 As illustrated in figure~\ref{fig:jcvm}, a complied Java applet (.cap file) is generated by off-card Converter based on inputed Javacard class file and executed by on-card Java Card Runtime Environment (JCRE). 
 
 \subsection{Language Specification}
-Apart from above mentioned Java Card VM, compared with original Java language, Java card has many unique features.
-Since current smart card does not support multitasking, therefore threads are not backed up in Java Card. Also garbage collection  is performed by VM, as a result function \emph{finalize()} is not supported. Moreover, since on smart card, the memory space and processing ability are limited, programmer can only use three main primitive types, namely byte, short and boolean. Furthermore only one-dimensional array is offered. Nonetheless Java card language supports all features of inheritance and provides all Java language security features, for example, private access modifiers as well as bytecode verification\cite{jcadg}.
+Apart from above mentioned Java Card VM, compared with the original Java language, Java card has many unique features. For instance,
+since current smart card does not support multitasking, therefore threads are not backed up in Java Card. Also garbage collection  is performed by VM, as a result function \emph{finalize()} is not supported. Moreover, since on smart card, the memory space and processing ability are limited, programmer can only use three main primitive types, namely byte, short and boolean. Furthermore only one-dimensional array is offered. Nonetheless Java card language supports all features of inheritance and provides all Java language security features, for example, private access modifiers as well as bytecode verification\cite{jcadg}.
 
 \subsection{Transaction Integrity}
 One of the most import features of Java Card technology is that Java Card Runtime Environment ensures the integrity of transaction, which means even an unexpected loss of power occurs on smart card, the ongoing transactions' integrity is protected with the help of following schema\cite{handbuch}:
@@ -374,6 +375,8 @@ CrptoException& Exception class\\
 \label{table:javacard-security}
 \end{table}
 
+\subsection{Conclusion}
+In a short conclusion, Javacard is a for embedded secure elements such as smart card specifically designed programming language, which emphasis the concept of portability and security. Many Javacard applications are compliant with GlobalPlatform specifications, that are going to be introduced in following paragraphs.
 
 \section{GlobalPlatform and Remote Application/File Management}\label{secGP}
 
@@ -413,11 +416,11 @@ Moreover, android system provides a list of attracting software and hardware fea
 \begin{itemize}
 \item \emph{Security:} Linux, as the cornerstone of android, has been proved to be a secure system through many harsh tests over the years. Which in return guarantees the android system security. \cite{learn_android}
 \item \emph{Multi-Media:} A wide range of media formats are supported by Android. For instance: MPEG4, ACC, PNG, GIF and so on\cite{android_media}. As a result Android customers are able to enjoy a more comfortable user experiences and better entertainment functionalities.
-\item \emph{Designed for Online:} One outstanding core feature of Android system is the ability to stay Online\cite{android_forensics}. Under various conditions such as Wi-Fi network, GSM/CDMA and so on, android device always provide its end users qualified network connection.
+\item \emph{Designed for Online:} One outstanding core feature of Android system is the ability to stay Online\cite{android_forensics}. Under various conditions such as Wi-Fi network, GSM/CDMA and so on, android devices always provide its end users qualified network connection.
 \item \emph{Variety of applications :}As one of the most popular platform,  Android, with the help of Android Market and a great number of talent Android application developers, offers its customers the possibility to extend  functionalities of their android devices\cite{android_forensics}. Android user is capable of downloading and installing various innovative applications from Android Market and enhancing the user experience.
 \end{itemize}
 \subsection{Android Software Stack}
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.85\textwidth]{android-stack.jpg}
 		\caption{Android Stack Overview \cite{learn_android}}
@@ -490,3 +493,6 @@ One Android application consist of four components, they are activities, service
 
 \subsection{Intent} \label{secIntent}
 For the purpose of inter- and intra- application communications, Android applies \emph{intent}, which is in nature a self-contained object, that includes the target application reference and alternatively the to be shared data.  Intent can be also understood as a well-formed message format that builds the Android message passing system\cite{android_secure_inter}.
+
+\section{Conclusion}
+With the acknowledgment of all above-introduced technologies and standards, I now have gather theoretical   supports for my proposal. In the upcoming \emph{State of Art} chapter, I will analysis practical industrial cases and get enlightening ideas from them to design my scenario and system.

@@ -9,7 +9,7 @@ In this chapter, I will perform a secure analysis based on the demonstration sys
 		\caption{Attack tree overview}
 	\label{fig:attack-tree-overview}
 \end{figure}
-As shown in figure~\ref{fig:attack-tree-overview} the attack tree is categorized into two main types. The first type group describes attacks that the third malicious party could apply to the smart card employed in my scenario. And the first ones contain higher application level related threats, namely the security threats to OPC UA standards and applications. 
+As shown in figure~\ref{fig:attack-tree-overview} the attack tree is categorized into two main sub attack  trees. The first type group describes attacks that the third malicious party could apply to harm the smart card employed in my scenario. And the second ones contain higher application level related threats, namely the security threats to OPC UA standards and applications. 
 
 \section{Smart Card Security Compromise}
 In this section, I will firstly present the attack tree in the domain of smart card and based on this attack tree  perform the secure analysis . At last countermeasures designed and integrated in my system is going to be described.
@@ -55,7 +55,7 @@ Secure mechanisms and countermeasures against potential threads to the smart car
 \begin{itemize}
 \item \emph{against user credential compromise}. Any security system must have a human as the administrator or user, therefore the secure storage and usage of user credential shows its importance in the realm of computer security. As shown in the attack tree, following potential threads are presented,
 \begin{itemize}
-\item Social engineering, this attack refers to the process of psychological manipulation of user to for instance give out their password or to believe a fraud. In order to protect the end user, no one can get access to my system, without the UICC smart card and corresponding user password, which is used to unlock Android  application. In the worst case, which means, user gives his smart phone and password to the attacker, the system is also capable of recording any behaviors taking place during the period of fraud and providing forensic evidence.
+\item Social engineering, this attack refers to the process of psychological manipulation of user to for instance give out their password or to believe a fraud. In order to protect the end user, no one can get access to my system, without the UICC smart card and the corresponding user password, which is used to unlock Android  application. In the worst case, which means, user gives his smart phone and password to the attacker, the system is also capable of recording any behaviors taking place during the period of fraud and providing forensic evidence.
 \item Theft of Phone or smart card. Even when the attacker manages to steal the smart phone, but without the acknowledge of the PIN and users password, which are used to unlock the smart card and Android Application respectively, he can not get access to the system. Moreover both smart card and my Android Application has the mechanism to block itself after three times of wrong input, which means brute force attack is not an option for the attacker.
 \item Key phishing and cryptanalysis/Sniffing. As introduced in ~\ref{labelKeyManagement}, smart card is the secure  credential  storage media and the keys used by smart card consist of various of information, such as key number, key indicator and so on. Consequently, even if the attacker has a segment of credential message, which is captured as a result of key phishing or sniffing, he can never figure out what encryption keys are applied without knowing the smart card key management mechanism and structure.
 \end{itemize}
@@ -125,4 +125,4 @@ In total eight categories of threads, which aim at the OPC UA client and server 
 \end{itemize}
 
 \section{conclusion}
-In conclusion, my proposal  system is strong against  the known attacks by combination of the magic bullet - smart card and the newly released OPC UA specifications. 
+In conclusion, my proposal  system is strong against  the known attacks by adopting the combination of the magic bullet - smart card and the newly released OPC UA specifications. 
