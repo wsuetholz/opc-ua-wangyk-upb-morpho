@@ -21,85 +21,86 @@
 \BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Data Exchange with Smart Card}{section.2.2}% 21
 \BOOKMARK [2][-]{subsection.2.2.6}{2.2.6 Secure Messaging}{section.2.2}% 22
 \BOOKMARK [2][-]{subsection.2.2.7}{2.2.7 Life Cycle}{section.2.2}% 23
-\BOOKMARK [1][-]{section.2.3}{2.3 Java Card}{chapter.2}% 24
-\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Language Specification}{section.2.3}% 25
-\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Transaction Integrity}{section.2.3}% 26
-\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Persistent Object and Transient Object}{section.2.3}% 27
-\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Java Card Applet}{section.2.3}% 28
-\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Javacard Cryptography}{section.2.3}% 29
-\BOOKMARK [1][-]{section.2.4}{2.4 GlobalPlatform and Remote Application/File Management}{chapter.2}% 30
-\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 OPEN - GlobalPlatform Environment}{section.2.4}% 31
-\BOOKMARK [1][-]{section.2.5}{2.5 OpenMobileAPI}{chapter.2}% 32
-\BOOKMARK [1][-]{section.2.6}{2.6 Android}{chapter.2}% 33
-\BOOKMARK [2][-]{subsection.2.6.1}{2.6.1 Overview}{section.2.6}% 34
-\BOOKMARK [2][-]{subsection.2.6.2}{2.6.2 Android Software Stack}{section.2.6}% 35
-\BOOKMARK [2][-]{subsection.2.6.3}{2.6.3 Android, Dalvik and Java}{section.2.6}% 36
-\BOOKMARK [2][-]{subsection.2.6.4}{2.6.4 Android Application Overview}{section.2.6}% 37
-\BOOKMARK [2][-]{subsection.2.6.5}{2.6.5 Intent}{section.2.6}% 38
-\BOOKMARK [0][-]{chapter.3}{3 State of Art}{}% 39
-\BOOKMARK [1][-]{section.3.1}{3.1 Smart Home Research}{chapter.3}% 40
-\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Overview}{section.3.1}% 41
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Smart Home Optimized for Energy Services}{section.3.1}% 42
-\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Smart Health Home}{section.3.1}% 43
-\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Agent-based Smart Home}{section.3.1}% 44
-\BOOKMARK [2][-]{subsection.3.1.5}{3.1.5 Conclusion}{section.3.1}% 45
-\BOOKMARK [1][-]{section.3.2}{3.2 OPC UA Application and Security policy}{chapter.3}% 46
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 OPC UA applications}{section.3.2}% 47
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 OPC UA secure policies}{section.3.2}% 48
-\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 OPC UA design consideration}{section.3.2}% 49
-\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 Conclusion}{section.3.2}% 50
-\BOOKMARK [1][-]{section.3.3}{3.3 Smart Card Security}{chapter.3}% 51
-\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Smart Card in Access Control}{section.3.3}% 52
-\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Key Management}{section.3.3}% 53
-\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Threaten and countermeasures}{section.3.3}% 54
-\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Smart Card Secure Applications}{section.3.3}% 55
-\BOOKMARK [2][-]{subsection.3.3.5}{3.3.5 Conclusion}{section.3.3}% 56
-\BOOKMARK [1][-]{section.3.4}{3.4 Secure Android Design}{chapter.3}% 57
-\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Android Security Mechanism}{section.3.4}% 58
-\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Security Design}{section.3.4}% 59
-\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Conclusion}{section.3.4}% 60
-\BOOKMARK [1][-]{section.3.5}{3.5 Embedded System Secure Design}{chapter.3}% 61
-\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Overview}{section.3.5}% 62
-\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Embedded System Secure Requirements}{section.3.5}% 63
-\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 Software Security during Software Design Life Cycle}{section.3.5}% 64
-\BOOKMARK [2][-]{subsection.3.5.4}{3.5.4 Secure Architectures}{section.3.5}% 65
-\BOOKMARK [0][-]{chapter.4}{4 Implementation Scenario}{}% 66
-\BOOKMARK [1][-]{section.4.1}{4.1 Overview}{chapter.4}% 67
-\BOOKMARK [1][-]{section.4.2}{4.2 Component Structure}{chapter.4}% 68
-\BOOKMARK [1][-]{section.4.3}{4.3 Communication Flow}{chapter.4}% 69
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 CommunicationStack Applet}{section.4.3}% 70
-\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 OPC UA appliation Functionalities}{section.4.3}% 71
-\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Cell Phone Side Software Structure}{section.4.3}% 72
-\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Housing Device Software Structure}{section.4.3}% 73
-\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Implementation Tool Support}{section.4.3}% 74
-\BOOKMARK [0][-]{chapter.5}{5 System Design}{}% 75
-\BOOKMARK [1][-]{section.5.1}{5.1 UICC Applet}{chapter.5}% 76
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Overview}{section.5.1}% 77
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Work Flow}{section.5.1}% 78
-\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Commands: Interface between Applet and CAD}{section.5.1}% 79
-\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 Classes}{section.5.1}% 80
-\BOOKMARK [1][-]{section.5.2}{5.2 Android Application}{chapter.5}% 81
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Utility Classes}{section.5.2}% 82
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Layout}{section.5.2}% 83
-\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Activity Classes}{section.5.2}% 84
-\BOOKMARK [1][-]{section.5.3}{5.3 Smart Home Web Server}{chapter.5}% 85
-\BOOKMARK [0][-]{chapter.6}{6 Implementation Test}{}% 86
-\BOOKMARK [1][-]{section.6.1}{6.1 Remote Management Testing}{chapter.6}% 87
-\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 UTE Test Case}{section.6.1}% 88
-\BOOKMARK [1][-]{section.6.2}{6.2 Android Application Testing}{chapter.6}% 89
-\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 PIN Verification}{section.6.2}% 90
-\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Communication with Web server}{section.6.2}% 91
-\BOOKMARK [1][-]{section.6.3}{6.3 Conclusion}{chapter.6}% 92
-\BOOKMARK [0][-]{chapter.7}{7 System Security Analysis}{}% 93
-\BOOKMARK [1][-]{section.7.1}{7.1 Attack Tree Overview}{chapter.7}% 94
-\BOOKMARK [1][-]{section.7.2}{7.2 Smart Card Security Compromise}{chapter.7}% 95
-\BOOKMARK [2][-]{subsection.7.2.1}{7.2.1 Sub Attack Tree and its Content}{section.7.2}% 96
-\BOOKMARK [2][-]{subsection.7.2.2}{7.2.2 Analysis and Countermeasures}{section.7.2}% 97
-\BOOKMARK [1][-]{section.7.3}{7.3 Application Level Security Compromise}{chapter.7}% 98
-\BOOKMARK [2][-]{subsection.7.3.1}{7.3.1 Sub Attack Tree and its Content}{section.7.3}% 99
-\BOOKMARK [2][-]{subsection.7.3.2}{7.3.2 Analysis and Countermeasures}{section.7.3}% 100
-\BOOKMARK [1][-]{section.7.4}{7.4 conclusion}{chapter.7}% 101
-\BOOKMARK [0][-]{chapter.8}{8 Summary and Future Work}{}% 102
-\BOOKMARK [1][-]{section.8.1}{8.1 Summary}{chapter.8}% 103
-\BOOKMARK [1][-]{section.8.2}{8.2 Future Work}{chapter.8}% 104
-\BOOKMARK [0][-]{chapter*.135}{Bibliography}{}% 105
+\BOOKMARK [2][-]{subsection.2.2.8}{2.2.8 Conclusion}{section.2.2}% 24
+\BOOKMARK [1][-]{section.2.3}{2.3 Java Card}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Language Specification}{section.2.3}% 26
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Transaction Integrity}{section.2.3}% 27
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Persistent Object and Transient Object}{section.2.3}% 28
+\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Java Card Applet}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Javacard Cryptography}{section.2.3}% 30
+\BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 Conclusion}{section.2.3}% 31
+\BOOKMARK [1][-]{section.2.4}{2.4 GlobalPlatform and Remote Application/File Management}{chapter.2}% 32
+\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 OPEN - GlobalPlatform Environment}{section.2.4}% 33
+\BOOKMARK [1][-]{section.2.5}{2.5 OpenMobileAPI}{chapter.2}% 34
+\BOOKMARK [1][-]{section.2.6}{2.6 Android}{chapter.2}% 35
+\BOOKMARK [2][-]{subsection.2.6.1}{2.6.1 Overview}{section.2.6}% 36
+\BOOKMARK [2][-]{subsection.2.6.2}{2.6.2 Android Software Stack}{section.2.6}% 37
+\BOOKMARK [2][-]{subsection.2.6.3}{2.6.3 Android, Dalvik and Java}{section.2.6}% 38
+\BOOKMARK [2][-]{subsection.2.6.4}{2.6.4 Android Application Overview}{section.2.6}% 39
+\BOOKMARK [2][-]{subsection.2.6.5}{2.6.5 Intent}{section.2.6}% 40
+\BOOKMARK [1][-]{section.2.7}{2.7 Conclusion}{chapter.2}% 41
+\BOOKMARK [0][-]{chapter.3}{3 State of Art}{}% 42
+\BOOKMARK [1][-]{section.3.1}{3.1 Smart Home Research}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Overview}{section.3.1}% 44
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Smart Home Optimized for Energy Services}{section.3.1}% 45
+\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Smart Health Home}{section.3.1}% 46
+\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Agent-based Smart Home}{section.3.1}% 47
+\BOOKMARK [2][-]{subsection.3.1.5}{3.1.5 Conclusion}{section.3.1}% 48
+\BOOKMARK [1][-]{section.3.2}{3.2 OPC UA Application and Security policy}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 OPC UA applications}{section.3.2}% 50
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 OPC UA secure policies}{section.3.2}% 51
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 OPC UA design consideration}{section.3.2}% 52
+\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 Conclusion}{section.3.2}% 53
+\BOOKMARK [1][-]{section.3.3}{3.3 Smart Card Security}{chapter.3}% 54
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Smart Card in Access Control}{section.3.3}% 55
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Key Management}{section.3.3}% 56
+\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Threaten and countermeasures}{section.3.3}% 57
+\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Smart Card Secure Applications}{section.3.3}% 58
+\BOOKMARK [2][-]{subsection.3.3.5}{3.3.5 Conclusion}{section.3.3}% 59
+\BOOKMARK [1][-]{section.3.4}{3.4 Secure Android Design}{chapter.3}% 60
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Android Security Mechanism}{section.3.4}% 61
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Security Design}{section.3.4}% 62
+\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Conclusion}{section.3.4}% 63
+\BOOKMARK [1][-]{section.3.5}{3.5 Embedded System Secure Design}{chapter.3}% 64
+\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Overview}{section.3.5}% 65
+\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Embedded System Secure Requirements}{section.3.5}% 66
+\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 Software Security during Software Design Life Cycle}{section.3.5}% 67
+\BOOKMARK [2][-]{subsection.3.5.4}{3.5.4 Secure Architectures}{section.3.5}% 68
+\BOOKMARK [0][-]{chapter.4}{4 Implementation Scenario}{}% 69
+\BOOKMARK [1][-]{section.4.1}{4.1 Overview}{chapter.4}% 70
+\BOOKMARK [1][-]{section.4.2}{4.2 Component Structure}{chapter.4}% 71
+\BOOKMARK [1][-]{section.4.3}{4.3 Communication Flow}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 CommunicationStack Applet}{section.4.3}% 73
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 OPC UA appliation Functionalities}{section.4.3}% 74
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Cell Phone Side Software Structure}{section.4.3}% 75
+\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Housing Device Software Structure}{section.4.3}% 76
+\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Implementation Tool Support}{section.4.3}% 77
+\BOOKMARK [0][-]{chapter.5}{5 System Design}{}% 78
+\BOOKMARK [1][-]{section.5.1}{5.1 UICC Applet}{chapter.5}% 79
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Overview}{section.5.1}% 80
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Work Flow}{section.5.1}% 81
+\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Commands: Interface between Applet and CAD}{section.5.1}% 82
+\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 Classes}{section.5.1}% 83
+\BOOKMARK [1][-]{section.5.2}{5.2 Android Application}{chapter.5}% 84
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Utility Classes}{section.5.2}% 85
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Layout}{section.5.2}% 86
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Activity Classes}{section.5.2}% 87
+\BOOKMARK [1][-]{section.5.3}{5.3 Smart Home Web Server}{chapter.5}% 88
+\BOOKMARK [0][-]{chapter.6}{6 Implementation Test}{}% 89
+\BOOKMARK [1][-]{section.6.1}{6.1 Remote Management Testing}{chapter.6}% 90
+\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 UTE Test Case}{section.6.1}% 91
+\BOOKMARK [1][-]{section.6.2}{6.2 Android Application Testing}{chapter.6}% 92
+\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 PIN Verification}{section.6.2}% 93
+\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Communication with Web server}{section.6.2}% 94
+\BOOKMARK [1][-]{section.6.3}{6.3 Conclusion}{chapter.6}% 95
+\BOOKMARK [0][-]{chapter.7}{7 System Security Analysis}{}% 96
+\BOOKMARK [1][-]{section.7.1}{7.1 Attack Tree Overview}{chapter.7}% 97
+\BOOKMARK [1][-]{section.7.2}{7.2 Smart Card Security Compromise}{chapter.7}% 98
+\BOOKMARK [2][-]{subsection.7.2.1}{7.2.1 Sub Attack Tree and its Content}{section.7.2}% 99
+\BOOKMARK [2][-]{subsection.7.2.2}{7.2.2 Analysis and Countermeasures}{section.7.2}% 100
+\BOOKMARK [1][-]{section.7.3}{7.3 Application Level Security Compromise}{chapter.7}% 101
+\BOOKMARK [2][-]{subsection.7.3.1}{7.3.1 Sub Attack Tree and its Content}{section.7.3}% 102
+\BOOKMARK [2][-]{subsection.7.3.2}{7.3.2 Analysis and Countermeasures}{section.7.3}% 103
+\BOOKMARK [1][-]{section.7.4}{7.4 conclusion}{chapter.7}% 104
+\BOOKMARK [0][-]{chapter.8}{8 Summary and Future Work}{}% 105
+\BOOKMARK [0][-]{chapter*.134}{Bibliography}{}% 106

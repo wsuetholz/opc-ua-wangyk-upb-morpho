@@ -413,9 +413,9 @@ In total six handlers are designed:
 \begin{itemize}
 \item \emph{doVerifyPIN}. As already introduced, this handler performs the verify PIN operation. If wrong PIN input reaches 3 times before a successful verification, \emph{doVerfiyPIN} will block the PIN.
 \item \emph{doResetPIN}.This handler in charge of reset PIN operation.
-\item \emph{doUnlockPIN}. \emph{doUnlockPIN} operation will be and only be invoked by card issuer.
+\item \emph{doUnlockPIN}. \emph{doUnlockPIN} operation will be and only be invoked by card issuer for the purpose of unlock blocked PIN.
 \item \emph{doGetPublicKey}. This operation queries target public key from \emph{Public Key infrastructure} which is integrated in OTA server in my scenario.
-\item \emph{doNotification}. After receiving command data, \emph{communicationStack} applet will invoke this handler in order to inform corresponding Android application to fetch that command data. 
+\item \emph{doNotification}. After receiving command data, \emph{communicationStack} applet will invoke this handler in order to inform corresponding subscriber to fetch that command data. 
 \item \emph{doAppendMsg}.  This handler configures the outgoing response remote APDU.
 \end{itemize}
 Except from statue words, if other information is expected to be transmitted back to the command APDU sender,  the return data can be appended at the end of existing response data buffer using following schema.

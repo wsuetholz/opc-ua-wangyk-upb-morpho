@@ -93,6 +93,22 @@ As already introduced, in order to use functionalities provided by Smart Home, p
 \subsection{Communication with Web server}
 After a successful identification, Android application user now can enjoy functions provided by Smart Home application, such as remote housing device management and querying historical data, as shown in following figures.
 
+Moreover, as shown in figure~\ref{fig:housing-device}, house holder can select the name of housing device in the first drop-down menu and  according functions in the second one, To be more specifically, following housing devices and functions are simulated,
+\begin{itemize}
+\item Temperature Sensor, which provides get current sensor value, set subscription functions.
+\item Coffee Maker,  which offers add water, add coffee and make coffee services.
+\item Digital Door Lock, which can receive  open door, close door and  grant  access  to  others commands.
+\end{itemize}
+
+Meanwhile the four buttons in the bottom of  Smart Home Android application screen in figure~\ref{fig:housing-device} provides  following functionalities,
+\begin{itemize}
+\item \emph{OPEN}, which is used to create secure  channel with  the remote administrator sever.
+\item \emph{GETPK}, which is used to query public key of desired housing device selected  by the first drop-down menu.
+\item \emph{RESET}, which is used to reset the current state of Android Application
+\item \emph{RECORD},which is used to achieve Smart Home historical records as shown in figure~\ref{fig:record-query}.
+\end{itemize}
+
+
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.85\textwidth]{Images/impl/housing-device.jpg}
@@ -108,4 +124,4 @@ After a successful identification, Android application user now can enjoy functi
 \end{figure}
 
 \section{Conclusion}
-In conclusion, as the result tests show, my proposal is practical and secure. My demonstration system is able to create secure connection between communication partners, to perform successful secure messaging. Moreover, all exchanged messages are well-formed and carefully encrypted. My applications take care of the integrity, confidentiality of user credentials and at the same time provides traceability records.
+In conclusion, as the result tests show, my proposal is practical and secure. My demonstration system is able to create secure connection, which is  in compliance with communication stack standardized by OPC UA protocol sets, between communication partners with the help of smart card, Javacard Applet and RAM/RFM standards from GlobalPlatform, to perform successful secure messaging. Moreover, all exchanged messages are well-formed and carefully encrypted. My applications take care of the integrity, confidentiality of user credentials and at the same time provides traceability records.

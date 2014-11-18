@@ -5,26 +5,26 @@
 \contentsline {table}{\numberline {\relax 2.2}{\ignorespaces ISO/IEC 7816\cite {handbuch}\relax }}{13}{table.caption.14}
 \contentsline {table}{\numberline {\relax 2.3}{\ignorespaces Command APDU Structure\relax }}{16}{table.caption.22}
 \contentsline {table}{\numberline {\relax 2.4}{\ignorespaces Command APDU Structure\relax }}{17}{table.caption.23}
-\contentsline {table}{\numberline {\relax 2.5}{\ignorespaces package:\emph {javacardx.crypto}\relax }}{22}{table.caption.28}
-\contentsline {table}{\numberline {\relax 2.6}{\ignorespaces package: \emph {javacard.security}\relax }}{23}{table.caption.29}
-\contentsline {table}{\numberline {\relax 2.7}{\ignorespaces Minimum Android Recommendations\cite {android_vm}\relax }}{27}{table.caption.38}
+\contentsline {table}{\numberline {\relax 2.5}{\ignorespaces package:\emph {javacardx.crypto}\relax }}{22}{table.caption.27}
+\contentsline {table}{\numberline {\relax 2.6}{\ignorespaces package: \emph {javacard.security}\relax }}{22}{table.caption.28}
+\contentsline {table}{\numberline {\relax 2.7}{\ignorespaces Minimum Android Recommendations\cite {android_vm}\relax }}{27}{table.caption.37}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces key data stored in smart card\cite {handbook}\relax }}{40}{table.caption.53}
+\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces key data stored in smart card\cite {handbook}\relax }}{40}{table.caption.52}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces SELECT command APDU\relax }}{67}{table.caption.88}
-\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces SELECT response APDU\relax }}{67}{table.caption.89}
-\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Verify PIN command \relax }}{68}{table.caption.91}
-\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Verify PIN response APDU\relax }}{68}{table.caption.92}
-\contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Reset PIN command \relax }}{68}{table.caption.94}
-\contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Reset PIN response APDU\relax }}{68}{table.caption.95}
-\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Communication session creation command APDUs\relax }}{69}{table.caption.97}
-\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Trigger Session Return Code\relax }}{69}{table.caption.98}
-\contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Close Session command APDU\relax }}{69}{table.caption.100}
-\contentsline {table}{\numberline {\relax 5.10}{\ignorespaces Close Session Return Code\relax }}{69}{table.caption.101}
-\contentsline {table}{\numberline {\relax 5.11}{\ignorespaces Process data command APDUs\relax }}{69}{table.caption.103}
-\contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process data Return Code\relax }}{70}{table.caption.104}
-\contentsline {table}{\numberline {\relax 5.13}{\ignorespaces Command data Type-Length-Value structure\relax }}{70}{table.caption.105}
+\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces SELECT command APDU\relax }}{67}{table.caption.87}
+\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces SELECT response APDU\relax }}{67}{table.caption.88}
+\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Verify PIN command \relax }}{68}{table.caption.90}
+\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Verify PIN response APDU\relax }}{68}{table.caption.91}
+\contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Reset PIN command \relax }}{68}{table.caption.93}
+\contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Reset PIN response APDU\relax }}{68}{table.caption.94}
+\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Communication session creation command APDUs\relax }}{69}{table.caption.96}
+\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Trigger Session Return Code\relax }}{69}{table.caption.97}
+\contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Close Session command APDU\relax }}{69}{table.caption.99}
+\contentsline {table}{\numberline {\relax 5.10}{\ignorespaces Close Session Return Code\relax }}{69}{table.caption.100}
+\contentsline {table}{\numberline {\relax 5.11}{\ignorespaces Process data command APDUs\relax }}{69}{table.caption.102}
+\contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process data Return Code\relax }}{70}{table.caption.103}
+\contentsline {table}{\numberline {\relax 5.13}{\ignorespaces Command data Type-Length-Value structure\relax }}{70}{table.caption.104}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

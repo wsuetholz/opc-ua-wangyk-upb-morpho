@@ -66,9 +66,9 @@ As shown in figure~\ref{fig:smart-home-agent}, agents which are employed by MavH
 Prediction algorithm is the core component of MavHome project. Several Strategies are presented on the first IEEE international conference on pervasive computes and communication, they are SHIP algorithm that is based on sequence matching, compression-based prediction algorithm ALZ and Task-based Markov model\cite{smart_home_agent}.
 
 \subsection{Conclusion}
-Also described above, Smart Home is the representative application which is based on industrial automation, remote control, management and coordination system. Despite the decision making algorithms and application level components from above mentioned smart buildings are different from the other, but they all are integrated upon or connected with housing devices. The management and cooperation with those devices must take place under a secure system environment. None of householders are willing to be monitored by a strange third party using his own camera or to expose their daily life related information to public. Therefore one common request for the design of such intelligent buildings is to ensure the system security.
+As described above, Smart Home is the representative application which is based on industrial automation, remote control, management and coordination system. Despite the decision making algorithms and application level components from above mentioned smart buildings are different from the other, but they all are integrated upon or connected with housing devices. The management and cooperation with those devices must take place under a secure system environment. None of householders are willing to be monitored by a strange third party using his own camera or to expose their daily life related information to public. Therefore one common request for the design of such intelligent buildings is to ensure the system security.
 
-Based on the fact, that home devices applied by Smart Home are manufactured by various vendors,  Smart Home designers also must take it into account, that how to realize the system interoperability. Considered those two requirements, the idea of this thesis applying OPC UA standards with smart card technology came into world. 
+Based on the fact, that home devices applied by Smart Home are manufactured by various vendors,  Smart Home designers also must take it into account, that how to realize the system interoperability. Considered those two requirements, the proposal of this thesis is proofed as practical and desired.
 
 \section{OPC UA Application and Security policy }
 
@@ -76,7 +76,7 @@ Based on the fact, that home devices applied by Smart Home are manufactured by v
 OPC UA, as explained in former paragraphs,  is understood as a platform independent, well designed, secure concerned, IEC standard compliant, promising industry standards set, which provides a service oriented architecture and is being widely applied in industry application such as critical control system and industrial automation. Application examples are given in following paragraphs, each of which has different focuses. To be more specifically, the charming demonstrated characteristics of OPU UA standard set are: secure consideration, real time data exchange and management, scalability. 
 
 \subsubsection{OPC UA and ICS}
-With the develop of industrial automation, Industrial control system (ICS) has became a hot topic, but most manufactures putted much more effort in designing automation and manufacturing process and neglected the communication security issues. As a consequence, Cyber security of ICS now is drawing more and more attentions from industry. OPC UA offers manufactures who are applying ICS system not only object oriented modeling rules, which can be extremely helpful for developers to design domain specific model and manufacturing process, but also provides them a reliable and robust security model\cite{opc_ics}, that has various secure arrangements in each communication protocol stack layer.
+With the develop of industrial automation, Industrial control system (ICS) has became a hot topic, but most manufactures putted much more effort in designing automation and manufacturing process and neglected the communication security issues. As a consequence, Cyber security of ICS now is drawing more and more attentions from industry. OPC UA offers manufactures who are applying ICS system not only sophisticated object oriented modeling rules, which can be extremely helpful for developers to design domain specific model and manufacturing process, but also provides them a reliable and robust security model\cite{opc_ics}, that has various secure arrangements in each layer of software architecture.
 
 
 \subsubsection{OPC UA and  Smart Grid}
@@ -275,9 +275,9 @@ Even though a huge number of third party applications exist on Android market an
 \subsection{Security Design}
 With the acknowledgment form previous subsection, we can conclude that Android system is designed with consideration of security, especially in the domain of access control and permission management. But still ill-developed application is vulnerable. For instance, when an application carelessly sends an intent, which has none explicit target, this implicit intent can be intercepted by a Malware. As a result, this malicious application may manage to access to sensitive data and perform attacks such as \emph{activity hijacking} and \emph{service hijacking}\cite{android_secure_inter}.
 
-Therefore it it necessary for application developers to apply protection techniques  in oder to to protect their application from attacker and revers engineering. 
+Therefore it it necessary for application developers to apply protection techniques  in oder to to protect their application from attacker and revers engineering.  In the following, several secure Android design guide lines are summarized.
 \subsubsection{Application Components Secure}
-In order to restrict the number of applications, which have access rights to our Android application components described in subsection~\ref{secAppComponents}. We should explicitly claim the access control policies in \emph{AndroidManifest.xml} from our project. In extreme case that none applications are expected to invoke the secured component, following rule should be add in \emph{AndroidManifest.xml}\cite{android_secure_cook}.
+In order to restrict the number of applications, which have access rights to Android application components described in subsection~\ref{secAppComponents}. Android application designer  should explicitly claim the access control policies in \emph{AndroidManifest.xml} from their project. In extreme case that none applications are expected to invoke the secured component, following rule should be add in \emph{AndroidManifest.xml}\cite{android_secure_cook}.
 \begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{Component Securing}}]
 <[component name] android:exported='false'>
 </[component name]>
@@ -307,7 +307,7 @@ Moreover four categories of protection level are supported\cite{android_secure_c
 \item \emph{signatureOrSystem} In addition to \emph{signature} level, this level of permission will be also automatically granted to the application that is part of system image.
 \end{itemize}
 \subsubsection{Securing Content Provider}
-Last secure approach that I want to present is the content provider path  secure mechanism. Since content provider handles mostly the exchanged data between applications, therefor it always becomes the first victim of a system attack. Application developer must ensure the security of content provider especially the content  provider path, which is in nature an uniform recourse identifiers that is related  to sensitive information such as datasets\cite{android_secure_cook}. Content provide path may look like \emph{content://com.provider.android/account/balance}.
+Last secure approach that I want to present is the content provider path  secure mechanism. Since content provider handles mostly the exchanged data between applications, therefor it frequently becomes the first victim of a system attack. Application developer must ensure the security of content provider especially the content  provider path, which is in nature an uniform recourse identifiers that is related  to sensitive information such as datasets\cite{android_secure_cook}. Content provide path may look like \emph{content://com.provider.android/account/balance}.
 
 It is highly recommended that application developer explicitly defines the permission rules at path level, to be more specifically\cite{android_secure_cook}, 
 \begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{'Content Path Securing}}]
@@ -316,7 +316,7 @@ It is highly recommended that application developer explicitly defines the permi
 </provider>
 \end{Verbatim} 
 \subsection{Conclusion}
-In conclusion Android is  a secure-designed platform with sophistical access control mechanisms and other security polices. But still Android  application developers should apply security techniques to protect their project from malicious ill-formed applications.
+In conclusion Android is  a secure-designed platform with sophisticated access control mechanisms and other security polices. But still Android  application developers should apply security techniques to protect their project from malicious ill-formed applications.
 \section{Embedded System Secure Design}
 \subsection{Overview}
 In this last section,  a generic guide for the embedded system secure design is introduced. As already in previous sections described, low level components that build the embedded system compared with traditional  computer software have additional security requirement. For instance, low end devices are normally dependent on battery as electricity supplement and have limited computing capacities. Those two constrains must be taken into account during the design phase of a secure embedded system.
@@ -351,5 +351,5 @@ In oder to keep an embedded system from malicious parities' attack, especially w
 When the hardware architecture characteristics of an embedded system are confirmed. Following two secure aspect as shown in last two rows in figure~\ref{fig:design-space} should be considered
 \begin{itemize}
 \item \emph{Security Processing Features} Various fundamental secure protocols and algorithms could be selected by system designer. But some of them may offer the same security services. Therefore in this layer, the choice of cryptographic algorithms should be made with consideration from hardware and software specific aspect. For instance, the full implementation of SSL protocol for a simple low end PAD device might not be a wise decision\cite{embedded_secure}.
-\item \emph{Attack Resistant Features} When general security mechanisms used to ensure confidentiality, integrity and authentication are provided by embedded system, attempts to prevent such as denial of service attack also should be made.
+\item \emph{Attack Resistant Features} When general security mechanisms used to ensure confidentiality, integrity and authentication are provided by embedded system, attempts to prevent other kinds of security attacks such as denial of service attack also should be made.
 \end{itemize}
