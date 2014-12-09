@@ -1,25 +1,25 @@
 \chapter{Implementation Scenario}
- \begin{figure}[!htbp]
+
+In this chapter, I will briefly describe my implementation scenario, including the system architecture overview, system component structures as well as functionalities and communication flows. Also the implementation tool support will be introduced.
+\section{Overview}
+ \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\textwidth]{homeoverview.jpg}
 		\caption{Smart Home}
 	\label{fig:SmartHome}
 \end{figure}
-In this chapter, I will briefly describe my implementation scenario, including the system architecture overview, system components' structure as well as functionalities, communication flows. Also the implementation tool support will be introduced.
-\section{Overview}
 
-
-Figure~\ref{fig:SmartHome} describes the basic structure and functionalities provided by implementation scenario - Smart Home. In the above-pictured housing scenario, following devices are introduced.
+Figure~\ref{fig:SmartHome} describes the basic structure and functionalities provided by implementation scenario  -  Smart Home. In the above-pictured automated home, following devices are introduced.
 \begin{itemize}
-\item Housing devices. Such as temperature sensors, coffee machine and digital door lock. They provide house holder a comfortable living condition by offering services such as:
+\item Housing devices. Such as temperature sensors, coffee machine and digital door lock. They are integrated with OPC UA server application and provide house holder a comfortable and secure living condition by offering services such as:
 \begin{itemize}
 \item General device state query functionality.
 \item Door lock access control management.
 \item Home temperature and luminance management and coordination.
 \item Notification and alert.
 \end{itemize}
-\item Smart Phone. The house holder with the help of smart phone is able to manage housing devices.
-\item Remote Administrator server, whose duties are authenticate communication partners, public key management and secure messing.
+\item Smart Phone. With the help of the on smart phone installed  Android  Application, \emph{Smart Home App}, which provides OPC UA client functions, the house holder is able to remotely manage housing devices.
+\item Remote Administrator server/Over The Air Server and smart cards. Smart cards, which are integrated in housing devices and smart phones, are installed with Java card applet \emph{CommunicationStack}, that realizes the communication stack of OPC UA architecture. The duties of smart card and remote server peers are  communication partner authentication and identification, public key management as well as  secure message transmitting.
 \end{itemize}
 
 \section {Component Structure}
@@ -29,12 +29,12 @@ Figure~\ref{fig:SmartHome} describes the basic structure and functionalities pro
 		\caption{Smart Home System Component Structure}
 	\label{fig:SmartHomeComponent}
 \end{figure}
-With inspiration offered by application described  in section~\ref{secAgent}, in order to provide a generic application platform for vendor specific devices, my demonstration Smart Home system consists of components, \footnote{All housing devices that build the system and  smart phone are generically referred as system components.} whose basic structure is illustrated in figure~\ref{fig:SmartHomeComponent}.  As can be seen, components are composed of device specific application and the generic communication platform, which includes three layers. From bottom to top, they are:
+With inspiration offered by application described in section~\ref{secAgent}, in order to provide a generic application platform for devices manufactured by various vendors, my demonstration Smart Home system consists of components, \footnote{Housing devices and smart phone are generically referred as Smart Home system components.} whose basic structure is illustrated in figure~\ref{fig:SmartHomeComponent}.  As can be seen, components are composed of a device specific application and a generic communication platform, which includes three layers. From bottom to top, they are:
 
 \begin{itemize}
-\item Physical layer. In this layer secure electronic devices and facilities are deployed. Alternatively lower level component could be also in this layer of higher level component.
-\item Communication layer. Smart card, the on card integrated Communication stack applet and corresponding remote file/application management protocols together form this layer. The main responsibility of communication layer is to create a secure communication environment for application layer.
-\item Application layer. OPC UA client application (installed on smart phone) and OPC UA server application (installed on other homing devices) are placed in this layer and provide a common interface for higher layer device specific application. 
+\item Physical layer. In this layer secure electronic devices and facilities hardwares are deployed. Alternatively lower level component could be also in this layer of higher level component.
+\item Communication layer. Smart card, the on card integrated Communication stack applet and corresponding remote file/application management protocols together form this layer. The main responsibility of communication layer is to create a secure communication environment for OPC UA application layer.
+\item OPC UA Application layer. OPC UA client application (installed on smart phone) and OPC UA server application (installed on other homing devices) are placed in this layer and provide a common communication and connectivity interface for higher layer device specific applications. 
 \end{itemize}
 
 Moreover this component platform also emphasizes the importance of secure messaging, peer authentication as well as authorization and provides corresponding secure mechanisms, which will be discussed in upcoming paragraphs.
@@ -47,47 +47,47 @@ Moreover this component platform also emphasizes the importance of secure messag
 \end{figure}
 
 \section{Communication Flow}
-Figure~\ref{fig:softwareStructure} pictures the communication flow between two system components. OPC UA Client and Server application communicate with each other with the help of an OTA server. And the communication stack is in charge of creation and managing secure communications between OTA server and secure devices. Moreover OPC UA client application is able to communicate with OPC UA server application using Short Message Service(SMS) or TCP/IP based network connection. One demonstration case is given as below:
+Figure~\ref{fig:softwareStructure} pictures the communication flow between two system components. OPC UA client and server application communicate with each other with the help of an OTA server. And the \emph{CommunicationStack} applet is in charge of creating and managing secure communications between OTA server and secure devices. Moreover OPC UA client application is able to communicate with OPC UA server application using Short Message Service(SMS) or TCP/IP based network connection. One demonstration case is given as below:
 
 When the householder wants to make some coffee, he will send the \emph{makeCoffee} command to coffee maker with his cell phone in following steps as pictured in figure~\ref{fig:softwareStructure}. 
 \begin{enumerate}
-\item OPC UA Client application installed on cell phone initially generates the \emph{makeCoffee} request and forwards it to the internal API
-\item The internal API translates the request into remote APDU object, and the \emph{CommunicationStack} applet will firstly try to connect with remote OTA/administrator server and to require the target coffee maker information.
-\item The server will then in this step firstly check the identification of the message sender.
-\item After a successful identification, OTA server is able to confirm the cardholder's identify and to grant necessary information to him and help cardholder transmit his request to targeted message receiver.
-\item  At last the \emph{makeCoffee} command will be received and performed by OPC UA server application installed on coffee maker. Alternatively it also generates a response message and notifies the phone user that his job is successful  finished. 
+\item Phone user touches his screen and selects the make coffee command. Then OPC UA client application installed on cell phone initially generates the \emph{makeCoffee} request and forwards it to the internal API
+\item The internal API translates the request into remote APDU object, and the \emph{CommunicationStack} applet will firstly try to connect with remote OTA server and to require the target coffee maker information.
+\item The server will then in this step firstly exam the identify of the message sender.
+\item After a successful identification, OTA server is able to confirm the card-holder's identify and to grant necessary information to him and helps card-holder to transmit his request to target message receiver.
+\item  In the last step, the \emph{makeCoffee} command will be received and performed by OPC UA server application installed on the coffee maker. Alternatively it also generates a response message and notifies the phone user that his job is successful  finished. 
 \end{enumerate}
 The two core system parts involved in above described scenario are \emph{CommunicationStack applet} and \emph{OPC UA client/server application code} 
 
 \subsection{CommunicationStack Applet}
 Communication stack is integrated in UICC smart card, whose duties are realizing secure channel as well as session management, transporting data to receiver using TCP/IP connections or SMS. To be more specifically, the Communication stack's responsibilities are:
 \begin{itemize}
-  \item initiate Http session based on TLS(proactive)
-  \item trigger Http session based on trigger SMS send by OTA server(passive)
+  \item initiate session based Http connection, which is protected by TLS 1.2 protocol  (proactive)
+  \item trigger Http session based on received trigger SMS, that is proposed and send by OTA server (passive)
   \item rebuild broken communication channel
   \item message encryption as well as decryption
   \item message transmit
 \end{itemize}
 
-Moreover thanks to the self-containment structure, smart card itself does not dependent on other external resources, which could be extreme vulnerable to potential secure attack, and therefore provides a better hardware security and OS security. 
+\subsection{OPC UA Application Functionalities}\label{secFunction}
+In this paragraph, a brief introduction about functionalities offered by  the OPC UA  client and server application code is presented.
 
-\subsection{OPC UA appliation Functionalities}\label{secFunction}
 In conclusion, OPC UA server on secure housing device provides following services:
  \begin{itemize}
   \item processing client subscription/publishing environment data.
-  \item secure message exchange with client.
-  \item authority management.
+  \item secure message exchange with OPC UA client.
+  \item client authority management.
   \item historical data record.
-  \item execution client's command.
-  \item Managing corresponding homing device.
+  \item execution of client's command.
+  \item managing the homing device on which the OPC UA server runs.
 \end{itemize}
-Basic OPC UA client functions as following are provided by smart phone:
+Basic OPC UA client functions as following are provided by smart phone applications:
  \begin{itemize}
   \item submitting subscription/receiving published data.
-  \item secure message exchange with server.
-  \item sending command/configuration data.
-  \item querying system historical data.
-  \item providing user friendly interface.
+  \item secure message exchange with OPC UA server.
+  \item sending command and configuration data.
+  \item querying system historical record.
+  \item providing user friendly GUI interface.
 \end{itemize}
 
 
@@ -98,8 +98,8 @@ Basic OPC UA client functions as following are provided by smart phone:
 	\label{fig:clientStructure}
 \end{figure}
 
-\subsection{Cell Phone Side Software Structure}
-As described in figure~\ref{fig:clientStructure}, the smart phone introduced in my application scenario consists of OPC UA client application code that realizes client application level functions, internal API, communication stack applet, smart card and phone hardware.
+\subsection{Cell Phone Component Software Structure}
+As described in figure~\ref{fig:clientStructure}, the smart phone introduced in my application scenario consists of OPC UA client application code that realizes client application level functions, internal API, \emph{CommunicationStack} applet, smart card and phone hardware.
 
 \begin{figure}[!htb]
 	\centering
@@ -107,15 +107,15 @@ As described in figure~\ref{fig:clientStructure}, the smart phone introduced in 
 		\caption{Communication Flow between an AP and corresponding APSD\cite{ramGP}}
 	\label{fig:apsd}
 \end{figure}
-The remote communication flow applied in my application scenario is compliant with the one provided by GlobalPlatform as shown in figure~\ref{fig:apsd}. GlobalPlatform defines the mechanisms for secure information exchange between a remote entity and a terminal, which is also known as Remote Application Management/File(RAM/RFM) over Http protocol and PSK TLS security. 
+The remote communication flow applied in my application scenario is compliant with the one provided by GlobalPlatform as shown in figure~\ref{fig:apsd}. GlobalPlatform defines the mechanisms for secure information exchange between a remote entity and a terminal, which is also known as Remote Application/File Management(RAM/RFM) over Http protocol and PSK TLS security. 
 
-Application Security Domain(APSD) issued by GloablPlatform represents the terminal device in the realm of RAM/RFM and the aforementioned remote entity  is also referred as Remote Administration Server. 
+Application Security Domain (APSD) issued by GloablPlatform represents the terminal device in the realm of RAM/RFM and the aforementioned remote entity  is also referred as Remote Administration Server. 
 
-With these two concepts, smart card holding the appropriate Security Domain can act as Http client and is capable of packing APDU formate information into Http POST message and transmitting Http message to OTA server, which will then forward this Http message to target receiver.\cite{ramGP}
+With these two concepts, smart card holding the appropriate Security Domain can act as a Http client and is capable of packing APDU formated information into Http POST message and transmitting this Http message to OTA server, who will forward the message to the target receiver \cite{ramGP}. Moreover in oder to protect the confidentiality and integrity of exchanged information, I proposal that a \emph{public key infrastructure} is also integrated in the OTA server, which manages the public keys of Smart Home housing devices and adds additional security protection to my system.
  
-Figure~\ref{fig:apsd} illustrates a typical RAM communication flow between administration server and corresponding security domain (Application Security Domain) on smart card. As can be seen, the request for open communication channel is usually initialized by security domain, which represents the phone user. After a successful secure handshake, the remote administration server and security domain are able to based on Http connection exchange request and response strings, which encapsulate APDU instructions. GlobalPlatform has also provided  a lists of API used to initialize authentication process, to configure algorithm and keys used for message encryption and decryption, to perform secure messaging and etc.
+Figure~\ref{fig:apsd} illustrates a typical RAM communication flow between administration server and corresponding security domain (Application Security Domain) on smart card. As can be seen, the request for open communication channel is usually initialized by security domain, which represents the phone user. After a successful secure handshake, the remote administration server and security domain are able to based on Http connection exchange request and response strings, which encapsulate APDU instructions. GlobalPlatform has also provided  a list of APIs used to initialize authentication process, to configure algorithm and keys used for message encryption and decryption, to perform secure messaging and etc.
 
-\subsection{Housing Device Software Structure}
+\subsection{Housing Device Component Software Structure}
 
 \begin{figure}[!htb]
 	\centering
@@ -123,17 +123,21 @@ Figure~\ref{fig:apsd} illustrates a typical RAM communication flow between admin
 		\caption{Server Structure}
 	\label{fig:serverStructure}
 \end{figure}
-Housing Device here refers to sensors, electric device as well digital locks that together build up the smart home. Each secure device provides services described in ~\ref{secFunction}. The device software structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic functionalities like subscription and notification mentioned before, an internal API, an on smart card integrated communication stack and device specific functions as well as device data.
+Housing Device here refers to sensors, household electrical appliances as well digital locks that together build up the Smart Home system. Each secure device provides services described in section~\ref{secFunction}. The device software structure is pictured as figure~\ref{fig:serverStructure} and it consists of OPC UA server application code, which offers basic functionalities like subscription and notification mentioned before, an internal API, an on smart card integrated \emph{CommunicationStack} applet and device specific functions as well as device data.
 
-\subsection{Implementation Tool Support}
+\subsection{Implementation Tool Support} \label{secTS}
+In this paragraph, I will shortly present the tools that I applied to design, program and test my Smart Home demonstrating system.
 \subsubsection{Java Card Application Design and Debug Tool}
-Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class APIs and software modules, that can be applied to design complete Java Card Applet as well as to debug Java source. 
+Morpho presents JACADE with full name, Java Card Applet Develop Environment, which is more than just a IDE but a complex selection of various class APIs and software modules, that can be applied to design complete Java Card Applet as well as to debug Java Card source. 
 \subsubsection{Java Card Applet Testing Environment}
 When it comes to running test with Java Card Applet, tester has two options. Firstly, he can install the to be tested Applet on a smart card and then connect this chip card with test computer using \emph{Morpho Card Reader (MCR)}. Alternatively \emph{Java virtual card} which is integrated with test Applet also could be applied. 
 
 In either way, as next step \emph{Universal Test Environment (UTE)} will be applied. \emph{UTE} provided by Morpho uses Java languages developed test cases
- and test scenarios\footnote{Test scenario is a collection of relative test cases.} to simulate desired use cases and observes corresponding smart card reactions. With the observed test result, tester will be able to analyze Applet's performance and debug corresponding application code. For instance \emph{UTE} can integrate software models used to simulate security domain offered by \emph{Globalplatform} and perform the sophisticate user authentication simulation process.
+ and test scenarios\footnote{Test scenario is a collection of relative test cases.} to simulate desired use cases and observes corresponding smart card reactions. With the observed test result, tester will be able to analyze applet performance and debug corresponding application code. For instance \emph{UTE} can integrate software models used to simulate security domain standardized and provided by \emph{Globalplatform} and perform the sophisticated user authentication process.
 \subsubsection{Android Application Design Tool}
-Eclipse IDE for Java Developer of version 3.7.1, together with Android SDK \emph{seek-for-android} and ADT plug-in,are applied as Android Application development environment. Moreover Android of version 2.3.5 is simulated and chosen as demonstration platform.
+Eclipse IDE for Java Developer of version 3.7.1, together with Android SDK \emph{seek-for-android} and ADT plug-in, are applied as Android application development environment. Moreover Android of version 2.3.5 is simulated and chosen as platform for the \emph{Smart Home App}.
 \subsubsection{Smart Home Simulation Environment}
-In order to simulate data manged by home electronic device, \emph{MySQL} database is introduced. And together with \emph{PHP of version 5.5.12}, \emph{Apache of version 2.4.9}, the web server for Smart Home is created. Android Application from previous subsection will then communication with this web server for the purpose of scenario demonstration.
+In order to simulate data manged by home electronic device, \emph{MySQL} database is introduced. And together with \emph{PHP of version 5.5.12}, \emph{Apache of version 2.4.9}, the web server for Smart Home is created. Android application \emph{Smart Home App} will then communicate with this web server for the purpose of scenario testing and demonstration.
+
+\section{Conclusion}
+In this chapter, I briefly described the concept of my demonstration scenario and discussed the system components architecture as well as adapted communication flow. Moreover the supporting programming and testing tools are also presented. In the next chapter, I will detailedly describe how I design my \emph{CommunicationStack} applet, \emph{Smart Home App} and Smart Home web application.
