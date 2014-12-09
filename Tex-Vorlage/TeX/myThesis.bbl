@@ -29,6 +29,11 @@
 \newblock \emph{Language-Based Security on Android}.
 \newblock 2009
 
+\bibitem[{Bar}13]{malware}
+\textsc{{Bartlomiej Uscilowski}}:
+\newblock \emph{Security Response: Mobile Adware and Malware Analysis}.
+\newblock October,2013
+
 \bibitem[{Bru}99]{smart_card_attack1}
 \textsc{{Bruce Schneier, Adam Shostack}}:
 \newblock \emph{Breaking Up Is Hard To Do: Modeling Security Threats for Smart
