@@ -1,9 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: myThesis.aux
 The style file: alphadin.bst
 Database file #1: myThesis.bib
-Warning--entry type for "Ref3" isn't style-file defined
---line 41 of file myThesis.bib
 Warning--empty publisher in smart_card_access
+Warning--empty year in Ref3
 Warning--empty year in android_manifest
 Warning--empty publisher in smart_card_contactless
 Warning--empty publisher in opc_ics

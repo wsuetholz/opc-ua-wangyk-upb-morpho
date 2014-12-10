@@ -24,6 +24,11 @@
 \newblock \emph{OPC UA Connects your Systems}.
 \newblock 2013
 
+\bibitem[{A.T}13]{last}
+\textsc{{A.T. Kearney}}:
+\newblock \emph{Mobile Economy 2013}.
+\newblock 2013
+
 \bibitem[{Avi}09]{android_secure_language}
 \textsc{{Avik Chaudhuri}}:
 \newblock \emph{Language-Based Security on Android}.
@@ -48,6 +53,14 @@
 \textsc{{David Ehringer}}:
 \newblock \emph{The Dalvik virtual machine architecture}.
 \newblock March 2010
+
+\bibitem[{Den}]{Ref3}
+\textsc{{Dennis A. Seidel}}:
+\newblock \emph{{MQTT vs OPC-UA: Das HTTP der Industrie 4.0?}}
+\newblock
+  \url{http://dennisseidel.de/the-http-for-industrie-4-0-mqtt-vs-opc-ua-german},
+  . --
+\newblock [update;September,2013]
 
 \bibitem[{Dia}03]{smart_home_agent}
 \textsc{{Diane J. Cook, Michael Youngblood, Edwin O. Heierman, Karthik
@@ -195,13 +208,6 @@
 \newblock \emph{Smart Home für ältere Menschen}.
 \newblock February 2008
 
-\bibitem[SID13]{Ref3}
-\textsc{SID}:
-\newblock \emph{MQTT vs OPC-UA : Das HTTP der Industrie 4.0?}
-\newblock
-  \url{http://dennisseidel.de/the-http-for-industrie-4-0-mqtt-vs-opc-ua-german}.
-\newblock \,Version:\,2013
-
 \bibitem[{sim}14]{open}
 \textsc{{simalliance}}:
 \newblock \emph{Open Mobile API specification}.
@@ -234,7 +240,7 @@
 \newblock \emph{{Constrained Application Protocol}}.
 \newblock \url{http://en.wikipedia.org/wiki/Constrained_Application_Protocol},
   . --
-\newblock [update;Februray 8,2014]
+\newblock [update;February 8,2014]
 
 \bibitem[{Wol}08]{handbuch}
 \textsc{{Wolfgang Rankl und Wolfgang Effing}}:
@@ -245,11 +251,6 @@
 \textsc{{Wolfgang Rankl and Wolfgang Effing}}:
 \newblock \emph{Smart Card Handbook Fourth Edition}.
 \newblock 2010
-
-\bibitem[{Yaj}11]{android_malware}
-\textsc{{Yajin Zhou, Xuxian Jiang}}:
-\newblock \emph{Dissecting Android Malware: Characterization and Evolution}.
-\newblock September, 2011
 
 \bibitem[{Zhi}00]{chen}
 \textsc{{Zhiqun Chen}}:

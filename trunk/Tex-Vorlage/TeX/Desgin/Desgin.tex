@@ -1,39 +1,39 @@
 \chapter{System Design} \label{secDesign}
 
 
-In this chapter, I will present the crucial information about how I designed and programmed my system. To be more specifically, I am going to describe the design of my UICC applet \emph{CommunicationStack}, Android application \emph{Smart Home App} as well as Smart Home web server.
+In this chapter, I will present the crucial information about how I designed and programmed my demonstration system. 
 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{whole-structure}
-		\caption{Message Exchange}
+		\caption{Request and Response Message Exchange Demonstration}
 	\label{fig:whole-structure}
 \end{figure}
 
-Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange process that occurs in the demonstration system. In my scenario, OTA server is also integrated with a \emph{public key infrastructure},  in order to perform secure peer identification and messaging. Therefor this OTA server can be also generically referred as remote administrator server.
+Figure~\ref{fig:whole-structure} illustrates the request and corresponding response message exchange process that occurs in the demonstration system. In my scenario, OTA server is also integrated with a \emph{public key infrastructure},  in order to perform secure peer identification and messaging. Therefor this OTA server can also be  generically referred as remote administrator server.
 
 
 \section{UICC Applet}
 \subsection{Overview}
-The generic request and response message exchange shown in figure~\ref{fig:whole-structure} consists of following steps,
+The generic request and response message exchange process shown in figure~\ref{fig:whole-structure} consists of following steps,
 \begin{itemize}
-\item \emph{Request Initialization}. As the first step of communication flow, OPC UA client application usually generates the request message and forwards it to the smart card.
+\item \emph{Request Initialization}. As the first step of communication flow, OPC UA client application usually generates the request message and forwards it to the smart card applet \emph{CommunicationStack}.
 \item \emph{Open Channel Phase.} Request sender initializes the \emph{open-channel} command and sends this command to the remote administrator server.
-\item \emph{TSL Handshake with Remote Server.} After a successful creation of communication channel, a mutual peer identification through TLS handshake between remote server and aforementioned Smart Home housing component will be performed. Consequently, a master key \emph{MK1} is generated. All messages, which are transmitted in this newly created communication channel, are going to be encrypted using this master key.
-\item \emph{Require target's public key.} When remote server identifies the connected communication partner, it will grant him the expected target's public key. 
-\item \emph{secure messaging.} Message sender will in this phase encrypt the message with target's public key and send this encrypted message through remote server to the message receiver.
-\item \emph{Request Forwarding.} In this step, remote server will send message receiver a push SMS to trigger a communication channel and use it to forward the request message.
-\item \emph{Request processing.} Upon receiving the request, message receiver decrypts the message using his private key and performs actions based on the in request encapsulated commands. Alternatively, he will also send a response message to the requester.
+\item \emph{TSL Handshake with Remote Server.} After a successful TLS 1.2 based peer identification, a secure communication channel between remote server and message sender is created. And the master key, which is generated during the TLS handshake, is applied to encrypt message exchanged between the aforementioned peers.
+\item \emph{Require Target's Public Key.} When remote server identifies the connected communication partner, it will grant him the expected target's public key. 
+\item \emph{Secure Messaging.} Message sender will in this phase encrypt the request message with target's public key and send this encrypted message through remote server to the message receiver.
+\item \emph{Request Forwarding.} In this step, remote server will send the request receiver a SMS to trigger the construction of a communication channel and use the newly created  secure connection to forward the request message. 
+\item \emph{Request Processing.} Upon receiving the request, message receiver decrypts the message using his private key and performs actions based on the in request encapsulated commands. Alternatively, he will also send a response message to the requester.
 \end{itemize}
 \subsection {Work Flow}
 
 The components involved in this scenario are:
  \begin{itemize}
-  \item \emph{CommunicationStack} applet and associated Security Domain from Globalplatform (APSD  for short)
+  \item \emph{CommunicationStack} applet and associated Security Domain defined by Globalplatform (APSD  for short)
   \item OTA-PKI server which is also known as Remote Administration Server (RAS for short)
 \end{itemize}
 
-The communication between\emph{CommunicationStack} and Remote Administration Server involves following steps:
+The communication between \emph{CommunicationStack} and Remote Administration Server involves following steps:
 
  \begin{itemize}
   \item Open Communication Channel and Create Communication Session
@@ -47,7 +47,7 @@ This process as shown in figure~\ref{fig:communication-flow} could be either ini
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\textwidth]{communication-flow}
-		\caption{Handshake and message exchange between SD and Remote Server}
+		\caption{Handshake and Message Exchange between SD and Remote Server}
 	\label{fig:communication-flow}
 \end{figure}
 
@@ -91,10 +91,10 @@ The filed \emph{X-Admin-Script-Status} could contain one of following values:
 \end{itemize}
 
 \subsubsection{Close Communication Session}
-Whenever the communication channel is about to be closed, either because of session security issue, or due to the successful finish of communication, remote server will send target applet Http message with one of the following parameters:
+Whenever the communication channel is about to be closed, either because of session security issue, or due to the successful finish of communication, remote server will send the target applet a Http message with one of the following parameters:
  \begin{itemize}
   \item No \emph{X-Admin-Next-URI} field is present in this Http message and message body is empty. This message will be recognized as final message from remote server and then the associating session will be closed.
-  \item No \emph{X-Admin-Next-URI} filed is presented but in the Http message body is not empty. The receiver will process the data in body and close the communication session appropriately. But no response message will be generated.
+  \item No \emph{X-Admin-Next-URI} filed is presented but the body of this Http message is not empty. The receiver will process the data in body and close the communication session appropriately. But no response message will be generated.
 \end{itemize}
 
 \subsection {Commands: Interface between Applet and CAD} \label{secAPDU}
@@ -202,8 +202,7 @@ No data       & 0x9000      & Successful processing                      \\ \hli
 \subsubsection{Communication Session Creation}\label{secSessionOpen}
 
 
-This APDU command and response set is employed to enable \emph{CommunicationStack} applet to initiate the request to establish communication channel and to create communication session above it. Commands listed in table~\ref{trigger-session-apdu} are supported. To be more precisely, designed commands are: 
-
+This APDU command and response set is employed to enable the \emph{CommunicationStack} applet to establish communication channel with the remote administrator server. Commands listed in table~\ref{trigger-session-apdu} are supported. To be more precisely,
 \begin{itemize}
 \item \emph{INS-0x01}. This command is applied to declare communication session variables.
 \item \emph{INS-0x02}. This command is introduced to configure communication session parameters.
@@ -211,7 +210,7 @@ This APDU command and response set is employed to enable \emph{CommunicationStac
 \item \emph{INS-0x04}. This command is  employed to retrieve session states.
 \end{itemize}
 \begin{table}[!htb]
-\caption{Communication session creation command APDUs}
+\caption{Communication Session Creation Command APDUs}
 \scalebox{0.75}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
@@ -229,7 +228,7 @@ CLA  & INS  & P1   & P2   & Lc   & Data field  & Le \\ \hline
 Following return codes as shown in table~\ref{trigger-session-response-apdu} are expected in response APDU:
 
 .\begin{table}[!htb]
-\caption{Trigger Session Return Code}
+\caption{Trigger Session Return Codes}
 \label{trigger-session-response-apdu}
 \scalebox{0.8}{%
 \begin{tabular}{|l|l|l|}
@@ -246,7 +245,7 @@ Following return codes as shown in table~\ref{trigger-session-response-apdu} are
 
 
 \subsubsection{Close Communication Session}\label{secSessionClose}
-This APDU command and response set is used to correctly and appropriately close communication channel.
+This APDU command and response set is used to correctly and appropriately close the communication channel.
 
 
 \begin{table}[!htb]
@@ -289,7 +288,7 @@ CLA  & INS  & P1   & P2   & Lc   & Data field  & Le \\ \hline
 }
 \label{process-data-cmd-apdu}
 \end{table}
-This APDU command and response set is used to provide functionality to perform command processing between cellphone and other Smart Home devices. Two types of commands as shown in table~\ref{process-data-cmd-apdu} as designed. The first command is applied in order to query target's public key from remote administrator server, and the second one is implemented to translate and process inputed command data.
+This APDU command and response set is used to perform command processing between cellphone and other Smart Home devices. Two types of commands as shown in table~\ref{process-data-cmd-apdu} as designed. The first command is applied in order to query target's public key from remote administrator server, and the second one is implemented to translate and process inputed command data.
 Moreover \emph{command data} in data filed of command APDU adopts following TLV format as shown in table~\ref{tlv}. 
 
 \begin{table}[!htb]
@@ -347,11 +346,11 @@ Tag & Length & \multicolumn{7}{l|}{Name} & Presence \\ \hline
 \multicolumn{2}{|l|}{} & \multicolumn{2}{l|}{} & \multicolumn{2}{l|}{} & ''A0' & 1-256 & historical data &  \\ \hline
 \end{tabular}
 }
-\caption{Command data Type-Length-Value structure}
+\caption{Command Data Type-Length-Value Structure}
 \label{tlv}
 \end{table}
 
-Based on the in table~\ref{process-data-cmd-apdu} defined command structure, following APDU \emph{A0210000129010910892069C040102030402}\label{remote-apdu-example} can be understood as a command APDU,  which has \emph{class byte} as \emph{A0}, \emph{instruction byte} equals \emph{21}, none \emph{status words}, encapsulates a command data \emph{9010910892069C0401020304} and expects 2 bytes response. The command data can be translated according to table~\ref{tlv} as a command sent by smart phone to the sensor whose unique id is \emph{01020304}, for the purpose of querying current sensor value. Moreover any ill-formed command data will be ignored by the receiver.
+Based on the in table~\ref{process-data-cmd-apdu} defined command structure, following APDU \emph{A0210000129010910892069C040102030402}\label{remote-apdu-example} can be understood as a command APDU,  which has \emph{class byte} as \emph{A0}, \emph{instruction byte} equals \emph{21}, none \emph{status words}, encapsulates a command data \emph{9010910892069C0401020304} and expects 2 bytes response. The command data can be translated according to table~\ref{tlv} as a command sent by smart phone to the sensor whose unique id is \emph{0x01 0x02 0x03  0x04}, for the purpose of querying current sensor value. Moreover any ill-formed command data will be ignored by the receiver.
 
 \subsection{Classes}\sloppy
 My UICC applet shown in figure~\ref{fig:class} is integrated in Morpho \emph{SC5-01OS07} LTE SAT product and contains following classes:
@@ -421,7 +420,7 @@ private void doVerifyPIN(APDU apdu) {
 \end{Verbatim}
 In total six handlers are designed:
 \begin{itemize}
-\item \emph{doVerifyPIN}. As already introduced, this handler performs the verify PIN operation. If number of wrong PIN input reaches 3 times before a successful verification, \emph{doVerfiyPIN} will block the PIN.
+\item \emph{doVerifyPIN}. As already introduced, this handler performs the verify PIN operation. If the number of wrong PIN input reaches 3 times before a successful verification, \emph{doVerfiyPIN} will block the PIN.
 \item \emph{doResetPIN}. This handler realizes PIN change operation.
 \item \emph{doUnlockPIN}. \emph{doUnlockPIN} operation will be and only be invoked by card issuer for the purpose of unlock blocked PIN.
 \item \emph{doGetPublicKey}. This operation queries target public key from \emph{Public Key infrastructure} which is integrated in OTA server in my scenario.
@@ -444,7 +443,7 @@ anApdu.appendResponse(resBuff,(short)resOffset, (short)length, true);
 Byte array \emph{result} represents the appended data and \emph{resBuff} is the outgoing buffer. 
 
 \subsubsection{Class SessionTrigger}
-\emph{sessionTrigger} class extends \emph{HTTPReportListener} interface in order to receive notification upon completion of an session.
+\emph{sessionTrigger} class extends \emph{HTTPReportListener} interface in order to receive notification upon completion of a session.
 \emph{triggerSession} method as shown below provides core mechanism to create a communication session configured by input parameter \emph{byte[] data}.
 \begin{Verbatim}[fontsize=\relsize{-2}, frame=lines,framesep=4mm, label=\fbox{\small\emph{Trigger Session}}]
 public void triggerSession(byte[] data, short dataOffset, short dataLength )
@@ -499,9 +498,9 @@ Activity class extends \emph{android.app.Activity} and implements interface \emp
 \subsubsection{Seek for Android} \label{secSFA}
 Seek for Android is a smart card API that implements Simalliance OpenMobileAPI standards which grants Android application the ability to communicate with secure elements such as smart card. Package \emph{org.simalliance.openmobileapi} is the code realization of aforementioned specifications.
 
-In order to connect with the smart card, the \emph{SEService} constructor must be generated, which provides the method \emph{getReaders} returning a list of available connected secure elements. If one \emph{reader} is selected, then with the help of \emph{openSession} method, one particular session will be created between the selected secure element and the application. At last this \emph{session} is capable of getting access to a logical channel on the connected secure element by applying \emph{openLogicalChannel} method with AID as input parameter. Following code snippet demonstrates the service and logical channel creation process \cite{open}.
+In order to communicate with the smart card, the \emph{SEService} constructor must be generated, which provides the method \emph{getReaders} returning a list of available connected secure elements. If one \emph{reader} is selected, then with the help of \emph{openSession} method, one particular session will be created between the selected secure element and the application. At last this \emph{session} is capable of getting access to a logical channel on the connected secure element by applying \emph{openLogicalChannel} method with AID as input parameter. Following code snippet demonstrates the service and logical channel creation process \cite{open}.
 
-\begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{Service and logical channel Creation}}]
+\begin{Verbatim}[fontsize=\relsize{-1},frame=lines,framesep=4mm, label=\fbox{\small\emph{Service and Logical Channel Creation}}]
 void performSelectOpt(SEService service) {
 Reader[] readers = service.getReaders();
 cardreader = readers[0].getName();
@@ -512,7 +511,7 @@ logicalChannel = session.openLogicalChannel(hellosimcard);
 performOpenOpt(service);
 }
 \end{Verbatim}
-After a successful creation of logical channel, one Android application is able to send command to and get response from a secure element using \emph{bytep[] result = logicalChannel.tramsmit(cmdApdu)}.
+After a successful creation of the logical channel, one Android application is able to send command to and get response from a secure element using \emph{bytep[] result = logicalChannel.tramsmit(cmdApdu)}.
 \subsubsection{Layout Adoption}
 Activity class adopts the layout defined in section~\ref{secLayout} during the activity creation phase.
 
@@ -554,7 +553,7 @@ finish(); }
 \subsubsection{Activities Overview}
 Following four activities together build my Android application.
 \begin{itemize}
-\item \emph{ValidationActivity}. Whose major task is to perform user authentication based on inputted user-name and password.
+\item \emph{ValidationActivity}. Whose major task is to perform user authentication based on input user-name and password.
 \item \emph{BlockActivity}. After three times of failed user identification, my application will invoke this \emph{BlockActivity} and accordingly block the PIN.
 \item \emph{MainActivity}. This class realizes client functions defined in section~\ref{secFunction}
 \item \emph{RecordActivity}. With the help of \emph{RecordActivity}, user is capable of querying and viewing system historical data.
@@ -590,7 +589,7 @@ Following four activities together build my Android application.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.55\textwidth]{logo.png}
-		\caption{Logo image used for my web applications}
+		\caption{Logo Image Designed for Web Applications}
 	\label{fig:logo}
 \end{figure}
 
@@ -605,7 +604,7 @@ Smart Home web application is also designed for the purpose of testing my smart 
 \end{figure}
 
 Figure~\ref{fig:logo} is the logo that I designed for my web application. And Figure~\ref{fig:smart-home-frontpage} illustrates the web page that shows state information of three housing devices. Each housing device has its own table in MySQL database. Moreover, user can navigate to other pages by clicking the blue tabs on top right of this page. For instance, by clicking \emph{Record} button, user is able to bowser historical record of each home device. 
-Detailed design process has limited relation with the subject of this thesis, therefor will not be presented.
+Detailed design information has limited relation with the subject of this thesis, therefor will not be presented.
 
 \section{Conclusion}
 
