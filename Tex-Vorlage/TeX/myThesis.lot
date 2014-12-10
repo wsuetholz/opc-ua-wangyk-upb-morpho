@@ -3,13 +3,13 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {\relax 2.1}{\ignorespaces OPC UA Specifications\relax }}{6}{table.caption.7}
 \contentsline {table}{\numberline {\relax 2.2}{\ignorespaces ISO/IEC 7816 \cite {handbuch}\relax }}{13}{table.caption.14}
-\contentsline {table}{\numberline {\relax 2.3}{\ignorespaces Command APDU Structure\relax }}{16}{table.caption.22}
+\contentsline {table}{\numberline {\relax 2.3}{\ignorespaces Command APDU Structure\relax }}{17}{table.caption.22}
 \contentsline {table}{\numberline {\relax 2.4}{\ignorespaces Response APDU Structure\relax }}{17}{table.caption.23}
 \contentsline {table}{\numberline {\relax 2.5}{\ignorespaces Package: \emph {javacardx.crypto}\relax }}{22}{table.caption.27}
 \contentsline {table}{\numberline {\relax 2.6}{\ignorespaces Package: \emph {javacard.security}\relax }}{22}{table.caption.28}
 \contentsline {table}{\numberline {\relax 2.7}{\ignorespaces Minimum Android Recommendations \cite {android_vm}\relax }}{28}{table.caption.37}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces key data stored in smart card\cite {handbook}\relax }}{42}{table.caption.52}
+\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces Key Data Stored in Smart Card\cite {handbook}\relax }}{42}{table.caption.52}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {\relax 5.1}{\ignorespaces SELECT Command APDU\relax }}{71}{table.caption.87}
@@ -18,13 +18,13 @@
 \contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Verify PIN Response APDU\relax }}{72}{table.caption.91}
 \contentsline {table}{\numberline {\relax 5.5}{\ignorespaces Reset PIN command \relax }}{72}{table.caption.93}
 \contentsline {table}{\numberline {\relax 5.6}{\ignorespaces Reset PIN Response APDU\relax }}{72}{table.caption.94}
-\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Communication session creation command APDUs\relax }}{73}{table.caption.96}
-\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Trigger Session Return Code\relax }}{73}{table.caption.97}
+\contentsline {table}{\numberline {\relax 5.7}{\ignorespaces Communication Session Creation Command APDUs\relax }}{73}{table.caption.96}
+\contentsline {table}{\numberline {\relax 5.8}{\ignorespaces Trigger Session Return Codes\relax }}{73}{table.caption.97}
 \contentsline {table}{\numberline {\relax 5.9}{\ignorespaces Close Session Command APDU\relax }}{73}{table.caption.99}
 \contentsline {table}{\numberline {\relax 5.10}{\ignorespaces Close Session Return Code\relax }}{74}{table.caption.100}
 \contentsline {table}{\numberline {\relax 5.11}{\ignorespaces Process Data Command APDUs\relax }}{74}{table.caption.102}
 \contentsline {table}{\numberline {\relax 5.12}{\ignorespaces Process Data Return Code\relax }}{74}{table.caption.103}
-\contentsline {table}{\numberline {\relax 5.13}{\ignorespaces Command data Type-Length-Value structure\relax }}{75}{table.caption.104}
+\contentsline {table}{\numberline {\relax 5.13}{\ignorespaces Command Data Type-Length-Value Structure\relax }}{75}{table.caption.104}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

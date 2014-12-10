@@ -4,13 +4,13 @@ In this chapter, I am going to give a brief introduction about technologies and 
 \begin{itemize}
 \item OPC UA Specifications and Overview
 \item Smart Card Technologies
-\item Javacard Language and Applet
+\item Java Card Language and Applet
 \item GlobalPlatform and Remote Application/File Management protocol
 \item OpenMobileAPI
 \item Android Platform and Application
 \end{itemize}
-\section{OPC Unified Architecture Structure Overview }
-Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the newly released industry standards from OPC Foundation, acts nowadays as the most promising candidate in industry M2M automation world, whose major duty is to build a secure communication interfaces for machines that participate in the automation system. 
+\section{OPC Unified Architecture Overview }
+Object Linking and Embedding for Process Control Unified Architecture, known as OPC UA is the newly released industry standards from OPC Foundation, acts nowadays as the most promising candidate in industry M2M automation world, whose major duty is to build a secure communication interface for machines that participate in the automation process. 
 
 \subsection{OPC UA Specifications} \label{secOPC}
 
@@ -45,18 +45,18 @@ The OPC Unified Architecture specifications are shown in table~\ref{table:opcua}
 
 
 \subsection{OPC UA Client-Server Structure}
-OPC UA standards apply the classic client-server architecture, where server is in charge of managing functionalities provided by a machine that is installed with the server implementation as well as data information gathered by that device. Examples of sever functions are reporting and monitoring temperature data measured by a remotely allocated sensor or the make coffee function offered by a coffee maker. Meanwhile client possesses the ability to query information from server, submit subscription and send command to server.
+OPC UA standards apply the classic client-server architecture, where server is in charge of managing functionalities and data information provided by a machine, which runs OPC UA server implementation. Examples of sever functions are reporting and monitoring temperature data measured by a remotely allocated sensor or the make coffee function offered by a coffee maker. Meanwhile client possesses the ability to query information from server, submit subscription and send command to server.
 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.00\textwidth]{cs.jpg}
-		\caption{OPC UA Client Server Structure \cite{O1}}
+		\caption{OPC UA Client-Server Structure \cite{O1}}
 	\label{fig:cs}
 \end{figure}
 Figure~\ref{fig:cs} illustrates a typical OPC UA client-server architecture and also describes an internal combined server-client structure. The routine communication between client and server consists of requests from client, corresponding responses sent by server and notifications which are generated because of client's early subscriptions.
 
 \subsection{OPC UA Terminologies}
-In OPC Unified Architecture, the on server stored information, that can be visited by clients, is defined as \emph{address space} \cite{O3}. There exists a set of \emph{services} \cite{O4}, which are provided by server and are introduced in order to apply operations on \emph{address space}. Information in \emph{address space} is organized as a set of in particular hierarchy structured \emph{Objects}. \emph{Object} here could refer to data gathered by sensor, server system parameters and etc. 
+In OPC Unified Architecture, the on server stored information, that can be browsed by clients, is defined as \emph{address space} \cite{O3}. There exists a set of \emph{services} \cite{O4}, which are provided by server and are introduced in order to apply operations on \emph{address space}. Information in \emph{address space} is organized as a set of in particular hierarchy structured \emph{Objects}. \emph{Object} here could refer to data gathered by sensor, server configurable system parameters and etc. 
 
 OPC UA clients can query and accept information provided by OPC UA servers in two major ways, \emph{binary structured data} and \emph{XML documents}, depending on the complexity of exchanged data, network quality and so on. In addition three kinds of transport protocol are already defined to support the client-server communication. They are: \emph{OPC UA TCP}, \emph{Http/SOAP} and \emph{Http}.    
 
@@ -71,8 +71,8 @@ One of the charming features provided by OPC UA is \emph{Event Notifications}. W
 \end{figure}
 
 \subsection{Standard OPC UA Server}
-In figure~\ref{fig:server}, the structure of one standard OPC UA server is described. It includes three main parts, server application, internal API and communication stack. In server application part,  functionalities and services which are offered by OPC UA standards are realized, such as \emph{Event Notification}, processing request from connected OPC UA client, data encryption and decryption. Moreover, \emph{Real object}  here refers to the device hardware and software application that is maintained and managed by OPC UA server application code. \emph{Node} in the \emph{Address Space} presents abstractly in previous paragraph mentioned \emph{Real Ojbect}. \emph{View}, which is pictured as a part of address space, presents \emph{Objects} that can be browsed by particular clients. The main task for communication stack  is to establish communication session, which is based on the secure channel between OPC UA client and server. 
-Communication messages which are exchanged frequently among OPC UA client and server are, request-, notification- message from client and corresponding  response-, publish message from server. At last, an internal API connects the server application and the communication stack.
+In figure~\ref{fig:server}, the structure of one standard OPC UA server is described. It includes an OPC UA server application, an internal API and a communication stack. The server application code realizes 	functionalities and services defined in OPC UA specifications, such as \emph{Event Notification}, processing request from connected OPC UA client, data encryption and decryption. Moreover, \emph{Real object}  here refers to the device hardware and device specific software application that is maintained and managed by OPC UA server application code. \emph{Node} in the \emph{Address Space} presents abstractly the in previous paragraph mentioned \emph{Real Ojbect}. \emph{View}, which is pictured as a part of address space, presents \emph{Nodes} that can be browsed by a particular client. The main task for communication stack is to establish a secure communication channel between OPC client and server. Upon on this secure channel, OPC client and server are able to construct an application session for messaging and command processing.
+Messages, which are frequently exchanged, include client request, server response, client subscription and server notification. The internal API connects the server application and the communication stack.
 
 \subsection{Standard OPC UA Client}
 \begin{figure}[!htbp]
@@ -82,7 +82,7 @@ Communication messages which are exchanged frequently among OPC UA client and se
 	\label{fig:client}
 \end{figure}
 
-Figure~\ref{fig:client} pictures one simple OPC UA client containing client application, an internal API, isolating the application code from communication stack, and a communication stack that converts API calls into messages and delivers them to OPC UA server.
+Figure~\ref{fig:client} pictures one simple OPC UA client containing client application, an internal API isolating the application code from communication stack, and a communication stack that converts API calls into messages and delivers them to OPC UA server.
 
 \subsection{Secure Channel and Session}
 
@@ -93,10 +93,10 @@ Figure~\ref{fig:client} pictures one simple OPC UA client containing client appl
 	\label{fig:opc_ua_cs_comm}
 \end{figure}
 
-Since data exchanged between client and server could be extremely precious and should be protected from other malicious third party, OPC UA defines a set of  \emph{security model}, with whose help the system developer is able to  configure the security level of the application to meet the need of reality. In the \emph{security model}, peer authentication as well as authorization, data integrity and confidentiality, auditability (also known as traceability) and availability of services are ensured. Also OPC UA  standard provides a set of countermeasures against attacks such as message flooding, eavesdropping, server profiling, session hijacking and so on \cite{O2}.
+Since data exchanged between client and server could be extremely precious and should be protected from other malicious third party, OPC UA defines a set of  \emph{security models}, with whose help the system developer is able to configure the application security level to meet the need of reality. In the \emph{security model},  peer authentication as well as authorization, data integrity and confidentiality, system auditability (also known as traceability) and availability of services are protected. Also OPC UA  standard provides a set of countermeasures against attacks such as message flooding, eavesdropping, server profiling and session hijacking \cite{O2}.
 
 
-Figure~\ref{fig:opc_ua_cs_comm} pictures the typical communication architecture between OPC UA client and server. As shown in~\ref{fig:opc_ua_cs_comm}, the communication between OPC UA client and server is established above a secure channel, which is active during the whole application session and in this session, the state information, such as algorithms used for authentication, user credentials, is maintained. The secure channel is established only after a successful validation of both client and server identities and it provides necessary mechanisms to support content confidentiality, message integrity and application authentication. On top of secure channel, is an application level session between OPC UA client and server, whose responsibility is to transmit data information and commands. It should be pointed out that, even a secure channel is out of work for some reasons, the session is still valid and OPC UA client and server involved in aforementioned session are able to re-establish the broken secure channel. A secured transport layer is guaranteed by encryption and signatures methods provided by the platform that supports and applies OPC UA structure.
+Figure~\ref{fig:opc_ua_cs_comm} pictures the typical communication architecture between OPC UA client and server. As shown in~\ref{fig:opc_ua_cs_comm}, the communication between OPC UA client and server is established above a secure channel, which is active during the whole application session and in this session, the state information, such as algorithms used for authentication, user credentials, is maintained. The secure channel is established only after a successful validation of both client and server identities and it provides necessary mechanisms to support content confidentiality, message integrity and application authentication. On the top of secure channel, an application level session between OPC UA client and server is created, whose responsibility is to transmit data and command information. It should be pointed out that, even a secure channel is out of work for some reasons, the session is still valid. Consequently, OPC UA client and server involved in the aforementioned session are able to re-establish the broken secure channel. A secured transport layer is guaranteed by encryption and signatures methods provided by the platform that supports and applies OPC UA structure.
 
 \begin{figure}[!htbp]
 	\centering
@@ -110,14 +110,14 @@ Security handshake as illustrated in figure~\ref{fig:opc_ua_cs_shs} explains wit
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\textwidth]{opc_ua_commstack.jpg}
-		\caption{OPC UA Client Server Communication Stack \cite{O2}}
+		\caption{OPC UA Client-Server Communication Stack \cite{O2}}
 	\label{fig:opc_ua_commstack}
 \end{figure}
 
 \subsection{OPC UA Communication stack}
 As described in figure~\ref{fig:opc_ua_commstack}, based on different responsibilities, OPC UA communication stack can be divided into three layer: serialization layer, secure channel layer and transport layer.  Figure~\ref{fig:opc_ua_commstack} also pictures a precise functionality overview of each layer. To be more precisely, from top to bottom,
 \begin{itemize}
-\item{Serialization Layer} and {Secure Channel Layer}.  Serialization layer together with secure channel layer build the communication layer of a OPC UA application and their jobs are, dividing long message into pieces referred as message chunk, encrypting each individual message chunk and forwarding encrypted message chunks to the transport layer. When receiving message chunks from others, the message receiver will firstly verify whether this message piece meets the security standard negotiated between him and the message sender. If not, message receiver will close the secure channel. After a successful verification of all message chunks, the original OPC UA message will be reconstructed and forwarded to the UA Application Code through an API. 
+\item{Serialization Layer} and {Secure Channel Layer}.  Serialization layer together with secure channel layer build the communication layer of an OPC UA application and their jobs are, dividing long message into pieces referred as message chunks, encrypting each individual message chunk using cipher suit which is negotiated between him and the message receiver, and forwarding the encrypted message chunk to the transport layer in a sequence. Upon receiving message chunks from others, the message receiver will firstly verify whether this message piece meets the security standard negotiated between him and the message sender. If not, message receiver will close the secure channel. After a successful verification of all message chunks, the original OPC UA message will be reconstructed and forwarded to the UA Application Code through an API. 
 
 \item{Transport Layer}. The transport layer provides mechanism for message transmitting.
 \end{itemize}
@@ -128,17 +128,17 @@ In this paragraph, I will shortly discuss the reason why I prefer OPC UA standar
 Message Queuing Telemetry Transport (MQTT) \cite{Ref3} is another machine to machine (M2M) Internet of Things communication and connectivity protocol. Compared with OPC UA standards, MQTT also supports UDP protocol in the transport layer. In OPC UA, only unidirectional, client to server, communication is provided. But  according to MQTT standard, server to client communication is also possible without server implements client code. Moreover the communication overhead of MQTT in comparison with OPC UA is relative small. 
 
 
-Even though MQTT protocol supports communication environment with low bandwidth and high latency, OPC UA provides complexer object modeling rules and supports more features including historical data record, alarm, notification as well as complete security policies. This is the reason why OPC UA is more suitable for the application system that handles sensitive data with complex structure and needs immediate response.
+Even though MQTT protocol supports communication environment with low bandwidth and high latency, OPC UA provides complexer object modeling rules and supports more features including historical data record, alarm, notification as well as sophisticated security policies. Therefor OPC UA is more suitable for the application system that handles sensitive data with complex structure and needs immediate response.
 
 
-Another member from Internet of Things is Constrained Application Protocol (CoAP) \cite{Ref5} which is designed for the extreme simple electronic device with less memory and computing power. The original CoAP only runs over UDP. Compared with OPC UA, simplicity from CoAP is its advantage, but apparently it should be considered that in most industrial products other transport protocols like TCP are frequently preferred. Moreover complexer functionalities and services other than pure message exchange between client and server are desired.
+Another member from Internet of Things is Constrained Application Protocol (CoAP) \cite{Ref5} which is designed for the extreme simple electronic device with less memory and computing power. The original CoAP only runs over UDP. Compared with OPC UA, simplicity from CoAP is its advantage. But apparently it should be considered that in most industrial products other transport protocols like TCP are frequently preferred. Moreover complexer functionalities and services other than pure message exchange between client and server are desired. This is the reason why I propose to apply OPC UA specification for complex industrial system.
 
 \section{Smart Card} \label{secSmartCard}
 For cyber devices, secure information storage and the security of communication play alway a signification role. In my proposal, I suggest to employ smart card in order to add additional protection to my system and let this magic bullet handle the device communication management as well as storage of credential data. In the following paragraphs, I am going to present the characteristics of smart card and discuss its security features.
 \subsection{Overview}
 Smart Card, whose characteristic feature is an integrated circuit that is embedded in a chip card, which is capable of performing data processing, information storage and message transmitting \cite{handbuch}. The most charming feature of smart card is that, sensitive user's credential data such as certificates, encryption keys, digital signatures along with other precious information can only be accessed though a serial interface, which stands under the strict control of the card operation system. This characteristic provides a strong protection against  unauthorized data access as well as illegal data modification and ensures the confidentiality of on card stored information. Therefor smart cards are widely applied in applications that require strong secure protection.
 
-With sophisticated communication protocol using Application Protocol Data Units (APDU for short), smart card and Card Accepting Device (CAD) are able to process secure message exchange. Smart card is also able to process cryptographic algorithms on its hardware. Nowadays, it supports symmetric key algorithms like DES, triple DES; standard public key cryptography for instance RSA, hash functions such as commonly applied SHA-1 \cite{handbuch}. More powerful microprocessor on chip card is, the computation speed performance is better.  
+With sophisticated communication protocol using Application Protocol Data Units (APDU for short), smart card and Card Accepting Device (CAD) are able to perform secure message exchange. Smart card is also able to process cryptographic algorithms on its hardware. Nowadays, it supports symmetric key algorithms like DES, triple DES; standard public key cryptography for instance RSA, hash functions such as commonly applied SHA-1 \cite{handbuch}. More powerful microprocessor on chip card is, the computation speed performance is better.  
 
 \begin{table}[!htb]
 \caption{ISO/IEC 7816 \cite{handbuch}}
@@ -167,20 +167,20 @@ In ISO/IEC 7816 standards family as shown in table~\ref{table:ISO7816}, the smar
 \end{figure}
 
 \subsection{Universal Integrated Circuit Card}
-The Universal Integrated Circuit Card is the smart card used in mobile terminals in GSM and UMTS networks. It enables authenticated subscriber to join the network with their mobile terminals and at the same time protects essential user data. UICC acts  also most time as the secure token, which stores and protects subscriber's confidential information. Moreover, as a 32 bit processor, UICC is also capable of processing necessary  encryption and  decryption algorithms \cite{uiccDef}.
+The Universal Integrated Circuit Card is the smart card used in mobile terminals in GSM and UMTS networks. It enables authenticated subscriber to join the network with their mobile terminals and at the same time protects essential user data. UICC acts  also most time as the secure token, that stores and protects subscriber's confidential information. Moreover, as a 32 bit processor, UICC is also capable of processing necessary  encryption and  decryption algorithms \cite{uiccDef}.
 
 \subsection{Smart Card Software Components}
 As illustrated in figure~\ref{fig:scc}, one typical smart card includes \cite{jcadg},
 \begin{itemize}
 \item Card Operation System.
 \item Native services such as I/O operation and memory management.
-\item Java Card Runtime Environment (JCRE) that consists of Java card Virtual Machine and the Framework, who is in charge of dispatching APDU as well as applet management.
+\item Java Card Runtime Environment (JCRE), that consists of Java card Virtual Machine and the Framework, who is in charge of dispatching APDU as well as applet management.
 \item Installed applets. 
 \item Other optional industry specific extensions.
 \end{itemize}
 
 \subsection{Smart Card File Management}
-As  a data storage media, in contrast with other traditional storage device, the most distinguishing feature provided by smart card file system is that, there exists none man-machine interface \cite{handbuch}, which means all data on smart card is addressed with help of hexadecimal codes and each single file processing command is strictly based on this schema.
+As a data storage media, in contrast with other traditional storage device, the most distinguishing feature provided by smart card file system is that, there exists none man-machine interface \cite{handbuch}, which means all data on smart card is addressed with help of hexadecimal codes and each single file processing command is strictly based on this schema.
 
 \begin{figure}[!htbp]
 	\centering
@@ -190,7 +190,7 @@ As  a data storage media, in contrast with other traditional storage device, the
 \end{figure}
 
 \subsubsection{File Structure}
-As pictured in figure~\ref{fig:file}, files on smart card consist of two parts,  the header, which encapsulates administrative information such as, file structure and access conditions. The body, that stores real user data and is linked with file header using a pointer. This file management mechanism has its own advantage. To be more specifically, since file header and body are separately located, therefore even when write/read error occurs in the file body, the file header, that is under normal circumstances never altered and saves essential access conditions, will not be affected, which in return provides better physical storage security.
+As pictured in figure~\ref{fig:file}, the file stored on smart card consists of two parts.  The file header, which encapsulates administrative information such as, file structure and access conditions. The body, that stores real user data and is linked with the file header using a pointer. This file management mechanism has its own advantage. To be more specifically, since file header and body are separately located, therefore even when write/read error occurs in the file body, the file header, that is under normal circumstances never altered and saves essential access conditions, will not be affected, which in return provides better physical storage security.
 
 \subsubsection{File Types}
 According to ISO/IEC 7816-4 specification, smart card offers two major file types, dedicated file (DF) and elementary file (EF). DF is also described as directory file, which contains lower-level DFs and EFs. And in EF, real user data is stored. Moreover there is a special DF, called master file (MF), which represents root directory of smart card file system and only can be selected by smart card OS. Figure~\ref{fig:file-structure} illustrates one possible architecture of smart card file system.
@@ -203,7 +203,7 @@ According to ISO/IEC 7816-4 specification, smart card offers two major file type
 \end{figure}
 
 \subsubsection{PKCS{\#}15}
-As already discussed, smart card not only is used as a storage media but also can act as a cryptographic token which offers enhanced security and privacy functionalities for other applications. The PKCS\#15 (Public key cryptography standards) specification \cite{pkcs}, which was proposed by RSA Inc. and is nowadays worldwide accepted, provides standards, that define how to store credential information such as cryptographic keys, certificates on smart card, and how to retrieve specified token with the help of a PKCS\#15 interpreter.
+As already discussed, smart card is not only used as a storage media but can also act as a cryptographic token which offers enhanced security and privacy functionalities for other applications. The PKCS\#15 (Public key cryptography standards) specification \cite{pkcs}, which was proposed by RSA Inc. and is nowadays worldwide accepted, provides standards, that define how to store credential information such as cryptographic keys, certificates on smart card, and how to retrieve specified token with the help of a PKCS\#15 interpreter.
  
 \subsection{Data Exchange with Smart Card}
 
@@ -215,7 +215,7 @@ As already discussed, smart card not only is used as a storage media but also ca
 \end{figure}
 The communication protocol between smart card and terminal is described as Master-Slave relationship \cite{handbuch}, that means the terminal device knowns as Master processes unidirectional control over its slave, namely the smart card. Once a Master-Slave relationship is established, each communication will be initialized by Master and Slave only reacts based on Master's command. 
 
-When a smart card is inserted into a terminal, Master will send its Slave a RESET command which causes the smart card to perform a Power-on-Reset behavior. After this Power-on-Reset, smart card informs its Master a Answer-to-Rest (ATR) message, which describes the card state and communication parameters. In the next step, if necessary terminal will generate a Protocol Type Select (PTS) command, which is used to choose a communication protocol and associating parameters suggested by smart card. After a successful negotiation, smart card and terminal are able to exchange data using Application Protocol Data Units.
+When a smart card is inserted into a terminal, Master will send its Slave a RESET command which causes the smart card to perform a Power-on-Reset behavior. After this Power-on-Reset, smart card informs its Master an Answer-to-Rest (ATR) message, which describes the card state and communication parameters. In the next step, if necessary terminal will generate a Protocol Type Select (PTS) command, which is used to choose a communication protocol and associating parameters suggested by smart card. After a successful negotiation, smart card and terminal are able to exchange data using Application Protocol Data Units.
   
 Application Protocol Data Unit, or APDU for short, is used  to perform data exchange between a smart card and a Card Accepting Device.  Its structure abides ISO 7816-4 specification \cite{chen}. There are two categories of APDU, namely command APDU and response APDU. Command APDU structure and response APDU structure are described in Table~\ref{table:capdu} and Table~\ref{table:rapdu} respectively \cite{handbuch}. 
 
@@ -252,23 +252,25 @@ Le field & length of the expected response data& optional \\
 \subsection{Secure Messaging} \label{secTLV}
 Since all communication between smart card and terminal is based on digital electrical pulse performed on card I/O line, adversary can easily record all communication information and recover it. Therefore secure messaging mechanism is proposed and used to protect against aforementioned message eavesdropping, to ensure authenticity and confidentiality of exchanged information.
 
-In secure message mechanism, both message sender and receiver must agree on the to be applied message cryptographic algorithms and corresponding pre-shared keys. In the realm of telecommunication, in accordance with ISO/IEC 7816-4 \cite{handbuch}, TLV (Type-length-value) formated data is used to perform secure messaging as data carrier.
+In the secure messaging mechanism, both message sender and receiver must negotiate the to be applied message cryptographic algorithms and possess corresponding pre-shared keys. In the realm of telecommunication, in accordance with ISO/IEC 7816-4 \cite{handbuch}, TLV (Type-Length-Value) format data is applied to perform secure messaging as the data carrier.
 
 \subsection{Life Cycle} \label{secLC}
 The typical life cycle of a smart card is described as following \cite{smart_card_contactless}:
 \begin{itemize}
-\item \emph{Fabrication Phase}. As the start of smart card life cycle, this process is taken by the card manufactures. One unique \emph{fabrication key}, \emph{KF} for short, which is derived from \emph{manufacturer key},  is applied in order to protect smart card from unauthorized modification. 
-\item \emph{Pre-personalization Phase}. After fabrication phase,  smart card chip is gonging to be integrated on plastic frame by card suppliers. Moreover \emph{fabrication key} will be replaced by a \emph{personalization key}, which is also known as \emph{KP},  for the purpose of secure smart card delivery to card issuer. In order to protect smart card from fraudulent changes, \emph{KP} is locked by a \emph{personalization lock}.
+\item \emph{Fabrication Phase}. As the start of smart card life cycle, this process takes place under the strict control of smart card manufacturers. One unique \emph{fabrication key}, \emph{KF} for short, which is derived from a \emph{manufacturer key},  is applied in order to protect smart card from unauthorized modification. 
+\item \emph{Pre-personalization Phase}. After fabrication phase,  smart card chip is gonging to be integrated on a plastic frame by card suppliers. Moreover \emph{fabrication key} will be replaced by a \emph{personalization key}, which is also known as \emph{KP},  for the purpose of secure smart card delivery to card issuer. In order to protect smart card from malicious adversaries, \emph{KP} is locked by a \emph{personalization lock}.
 \item \emph{Personalization Phase}. In this phase,  card issuer will write complete data files on the card including card PIN, card holder identity and so on. When the card issuer finishes this phase, he will add an \emph{utilization lock} and the life cycle of smart card will come to next \emph{utilization phase}.
 \item \emph{Utilization Phase}. Card holder will be able to use his smart card in this phase. 
-\item \emph{Invalidation Phase}. Smart card operation system will block the smart card in this phase. To be more specifically, operations such as data writing and update will be disabled. There are two reasons that why a smart card lands this phase. Reason one is that both \emph{smart card PIN} and \emph{smart card unblock PIN} reach its limited  try counts, which indicates someone is trying to force brute guess PIN.  The other reason is that a particular application adds a \emph{invalidation lock} on the \emph{master file} of smart card.
+\item \emph{Invalidation Phase}. Smart card operation system will block the smart card in this phase. To be more specifically, operations such as data writing and update will be disabled. There are two reasons that why a smart card is locked by the card system. Reason one is that both \emph{smart card PIN} and \emph{smart card unblock PIN} reach their limited  try counts, which indicates someone is trying to force brute guess PIN.  The other reason is that an application adds a \emph{invalidation lock} on the \emph{master file} of the disabled card.
 \end{itemize}
 
 \subsection {Conclusion}
-From the above described smart card characteristics and life cycle, it is not hard to find out that from the very begin of smart card's design, manufacturing and deliver phases, card manufacturers and issuers have taken it into account, that a secure card design, production, utilization and delivery must be guaranteed. Therefore nowadays smart card with its outstanding tamper resistant feature is widely employed as secure token in various industrial fields. Moreover when applying standardized industrial protocols, which will be introduced in section~\ref{secGP}, smart card is also capable of performing remote peer authentication and secure remote message exchange.
+From the above described smart card security characteristics and life cycle, it can be concluded that, smart card manufacturers and issuers have managed to develop a secure card system protected by various robust security mechanisms during the card design, production and delivery phases.
+
+Nowadays, smart card with its outstanding tamper resistant feature is widely employed as the secure token in various industrial fields. Moreover, by adapting standardized industrial system frameworks, which will be introduced in section~\ref{secGP}, smart card is also capable of supporting remote peer authentication and remote application as well as file management.
 
 \section{Java Card} \label{secJAVACARD}
-Nowadays Java Card is widely applied to write secure java-based applications on smart cards. Java Card technology not only inherits the distinguishing features from Java, such as productivity, security and portability \cite{jcadg}, but also makes Java technology available on smart card, where programmer must be faced with more harsh conditions including limited memory resource and computing capacity.
+Java Card is widely applied to write secure java-based applications on smart cards. Java Card technology not only inherits the distinguishing features from Java, such as productivity, security and portability \cite{jcadg}, but also makes Java technology available on smart card, where programmer must be faced with more harsh conditions including limited memory resource and computing capacity.
 
  \begin{figure}[!htb]
 	\centering
@@ -279,15 +281,15 @@ Nowadays Java Card is widely applied to write secure java-based applications on 
 
 Moreover, in contrast with Java VM, Java Card VM consists of two parts, the on-card part, which is in charge of bytecode execution, class as well as object management and secure data exchange. Secondly the off-card part, which is the real Java Converter.
 
-As illustrated in figure~\ref{fig:jcvm}, a complied Java Card applet (.cap file) is generated by off-card Converter based on inputed Java Card class file and executed by on-card Java Card Runtime Environment (JCRE). 
+As illustrated in figure~\ref{fig:jcvm}, a complied Java Card applet (.cap file) is generated by off-card Converter based on the input Java Card class file and executed by the on-card Java Card Runtime Environment (JCRE). 
 
 
 
 
 
 \subsection{Language Specification}
-Apart from above mentioned Java Card VM, compared with the original Java language, Java Card has many unique features. For instance,
-since current smart card OS does not support multitasking, therefore threads are not backed up in Java Card. Garbage collection is performed by Java Card VM, as a result, function \emph{finalize()} is not provided by Java Card. Moreover, since on smart card, the memory space and processing ability are limited, programmer can only use three main primitive types, namely \emph{byte}, \emph{short} and \emph{boolean}. Furthermore only one-dimensional array is offered. Nonetheless Java Card language supports all features of inheritance and provides all Java language security mechanisms, for example, private access modifiers as well as bytecode verification \cite{jcadg}.
+Apart from the above mentioned Java Card VM, compared with the original Java language, Java Card has many unique features. For instance,
+since current smart card OS does not support multitasking, therefore threads are not backed up in Java Card. Moreover garbage collection is automatically performed by Java Card VM, as a result, function \emph{finalize()} is not provided. Since the memory space and processing ability provided by smart card are limited, programmer can only use three main primitive types, namely \emph{byte}, \emph{short} and \emph{boolean}. Furthermore only one-dimensional array is offered. Nonetheless Java Card language supports all features of inheritance and provides all Java language security mechanisms, such as private access modifiers and byte-code verification mechanism \cite{jcadg}.
 
 \subsection{Transaction Integrity}
 One of the most import features of Java Card technology is that Java Card Runtime Environment ensures the integrity of transaction, which means even an unexpected loss of power occurs on smart card, the integrities of ongoing transactions are protected with the help of following schema \cite{handbuch}:
@@ -333,12 +335,12 @@ Figure~\ref{fig:applet-execution-states} pictures execution states transaction o
 
 
 \subsection{Java Card Cryptography}
-Java Card provides a list of APIs to support not only smart card application and data exchange security but also to reinforce other system's security by acting as essential security token. 
-In order to ensure secure messaging between smart card and terminal following three aspects must be considered:
+Java Card provides a list of APIs to protect smart card applet security and to reinforce the system security of other high level applications by acting as essential security token. 
+In order to ensure secure messaging between smart card and terminal, following three aspects must be considered:
 \begin{itemize}
 \item \emph{Entity Authentication:} Usually mutual authentication is applied to exam the identities of both communication partners.
-\item \emph{Message Confidentiality:} The transfered information is encrypted using algorithms negotiated between two communication entities to ensure data privacy and security.
-\item \emph{Message Integrity:} In order to protect exchanged message from unauthorized modification and to provide authenticity assurance, message authentication code (MAC) is calculated based on the to be transfered data and integrated in that message.
+\item \emph{Message Confidentiality:} The transfered information is encrypted using encryption algorithms negotiated between two communication entities to ensure data privacy and security.
+\item \emph{Message Integrity:} In order to protect exchanged message from unauthorized modification and to provide authenticity assurance, message authentication code (MAC) is calculated and integrated in that message.
 \end{itemize}
 Packages \emph{javacard.security} and \emph{javacardx.crypto} support aforementioned security mechanisms with following classes and interfaces \cite{chen}:
 
@@ -383,29 +385,31 @@ CrptoException& Exception class\\
 \end{table}
 
 \subsection{Conclusion}
-In a short conclusion, Java Card is a for embedded secure element such as smart card specifically designed programming language, which emphasizes the concept of portability and security. Many Java Card applications are compliant with GlobalPlatform specifications, that are going to be introduced in following paragraphs.
+In a short conclusion, Java Card is a for embedded secure elements such as smart card specifically designed programming language, which emphasizes the concept of portability and security. A great number of Java Card applications are compliant with GlobalPlatform specifications, which are going to be introduced in following paragraphs.
 
 \section{GlobalPlatform and Remote Application/File Management}\label{secGP}
-
+GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. The  GlobalPlatform's protocols are now widely accepted and applied as industry standards for managing Java Card applet based applications in many industrial domains, for instance in telecommunication industry and payment company \cite{gp}. 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\textwidth]{gp_1.jpg}
 		\caption{GlobalPlatform Smart Card OS Architecture \cite{gp}}
 	\label{fig:gp_1}
 \end{figure}
-GlobalPlatform is an international non-profit organization that provides standardized specifications for multiple smart card applications. The  GlobalPlatform's protocols are now widely accepted and applied as industry standards for managing Java Card applet based applications in several domains, for instance in telecommunication industry and payment company \cite{gp}. 
 
-As shown in figure~\ref{fig:gp_1},  the GlobalPlatform smart card OS architecture contains four essential parts. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offer customers various functionalities and services. The security domain (SD), that is usually associated with particular application and known as on-card representative  of off-card  authority. SD is in charge of message encryption as well as decryption, creation and validation of digital signature and handling keys used in cryptographic processes. The last component is OPEN framework \cite{gp}.
+
+As shown in figure~\ref{fig:gp_1},  the GlobalPlatform proposed smart card operation system contains four essential components. The runtime environment, that provides hardware-neutral API for card application  and manages card memory spaces. The on card installed applications, which offer customers various functionalities and services. The security domain (SD), that is usually associated with particular application and known as on-card representative  of off-card  authority. SD is in charge of message encryption as well as decryption, creation and validation of digital signature and handling keys used in cryptographic processes. The last component is OPEN framework \cite{gp}.
 
 \subsection{OPEN - GlobalPlatform Environment}
-OPEN provides various sets of APIs offering functionalities such as entity authentication, remote data exchange, secure channel configuration and remote application management. This framework also performs APDU dispatching as well as application selection and logical channel management \cite{gp}. Logical channel is designed to enable the data exchange between multi applications and one terminal. Each opened logical channel will handle messages regard of one application. Moreover the special logic channel named basic channel is always opened. In order to ensure system security, OPEN supports secure mechanisms such as,  user authentication and secure channel protocol.
+OPEN provides various sets of APIs offering functionalities such as entity authentication, remote data exchange, secure channel configuration and remote application management. This framework also performs APDU dispatching as well as application selection and logical channel management \cite{gp}. Logical channel is designed to enable the data exchange between multi applications and one terminal. Each opened logical channel will handle messages regard of one application. Moreover, a special logic channel named basic channel is always opened.
+
+In order to ensure system security, OPEN supports secure mechanisms such as,  user authentication and secure channel protocol.
 
 \paragraph{Secure Channel Protocol}
-In particular, GlobalPlatform has designed the secure mechanism: secure channel protocol, to guarantee a secure remote communication between smart card and authenticated remote entity. It ensures confidentiality of exchanged information and offers data integrity check.  Moreover Secure Channel Protocol also introduces  a cryptographic exchange process to enable smart card and off-card entities to perform entity authentication with each other. 
+In particular, GlobalPlatform has designed the secure mechanism: secure channel protocol, to guarantee a secure remote communication between smart card and authenticated remote entity. It ensures confidentiality of exchanged information and offers data integrity check. Secure Channel Protocol also introduces  a cryptographic exchange process to enable smart card and off-card entities to perform mutual peer authentication. 
 
 
 \subsection{Conclusion}
-The emphasized secure channel protocol, to be more specifically the remote application and file management standards, will be employed in my proposal, in order to enable smart card and remote administrator server to perform secure messaging and mutual authentication.
+The emphasized secure channel protocol, to be more specifically the remote application and file management standards, will be employed in my proposal, in order to enable smart card and remote administrator server to perform secure messaging and peer identification.
  \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{open-architecture.jpg}
@@ -413,28 +417,30 @@ The emphasized secure channel protocol, to be more specifically the remote appli
 	\label{fig:open-architecture}
 \end{figure}
 \section{OpenMobileAPI} \label{secOMA}
-OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal and chip card, which can be used by on terminal installed mobile application to access recourse stored on smart card as well as to call functions provided by smart card applets. Moreover OpenMobileAPI offers security mechanisms such as access control, that can be applied for mutual authentication between application and secure element. Figure~\ref{fig:open-architecture} presents an architecture overview of OpenMobileAPI, which consist of three functional layers:
+OpenMobileAPI, provided by SIMalliance, constructs an interface between terminal and chip card, which can be used by the on terminal installed mobile application to access recourse stored on smart card as well as to call functions provided by smart card applets.  
+
+Figure~\ref{fig:open-architecture} presents an architecture overview of OpenMobileAPI, which consist of three functional layers:
 
  \begin{itemize}
-  \item \emph{Transport Layer:} This layer is in charge of providing secure elements access control services using APDUs and acts as cornerstone for other two layers.
+  \item \emph{Transport Layer:} This layer is in charge of constructing  secure connection between application and secure element.
   \item \emph{Service Layer:} Abstract interfaces, that provide various functions such as secure storage and cryptographic services, are offered by this layer.
   \item \emph{Application Layer:} Mobile applications which benefit from OpenMobileAPI stay in this layer.
 \end{itemize}
 
-In my demonstration system, I will apply the OpenMobileAPI to perform the secure data exchange between my Java card Applet named \emph{CommunicationStack} and the simulated OPC UA client application which is coded as a Android application, as presented in section~\ref{secSFA}.
+In my demonstration system, I will apply the OpenMobileAPI to perform the secure data exchange between my Java Card applet named \emph{CommunicationStack} and the simulated OPC UA client which is coded as a Android application, as presented in section~\ref{secSFA}.
 
 \section{Android} \label{secAndroid}
 \subsection{Overview}
 Android is an open source platform, that is based on Linux, modified by Google, designed for mobile devices. As a comprehensive platform, Android manages to create a separation between hardware and software that runs on it.  At the same time, being an open source project means its entire stack is open. Android developers are able to deploy their Android systems on any specific hardwares as well as to learn the system to the fundamental level \cite{learn_android}.
 Moreover, Android system provides a list of attracting software and hardware features to its customers, such as:
 \begin{itemize}
-\item \emph{Security:} Linux, as the cornerstone of Android, has been proved to be a secure system through many harsh tests over the years, which in return guarantees the Android system security \cite{learn_android}.
-\item \emph{Multi-Media:} A wide range of media formats are supported by Android. For instance: MPEG4, ACC, PNG, GIF and so on \cite{android_media}. As a result Android customers are able to enjoy a more comfortable user experiences and better entertainment functionalities.
+\item \emph{Security:} Linux, as the cornerstone of Android, has proved to be a secure system through many harsh tests over the years, which in return guarantees the Android system security \cite{learn_android}.
+\item \emph{Multi-Media:} A wide range of media formats are supported by Android. For instance: MPEG4, ACC, PNG, GIF and so on \cite{android_media}. As a result, Android customers are able to enjoy a comfortable user experience and entertainment functionalities.
 \item \emph{Designed for Online:} One outstanding core feature of Android system is the ability to stay Online \cite{android_forensics}. Under various conditions such as Wi-Fi network, GSM/CDMA and so on, Android device always provides its end user qualified network connection.
 \item \emph{Variety of applications :}As one of the most popular platform,  Android, with the help of Android Market and a great number of talent Android application developers, offers its customers the possibility to extend  functionalities of their Android devices \cite{android_forensics}. Android user is capable of downloading and installing various innovative applications from Android Market and enhancing the user experience.
 \end{itemize}
 
-In the following four paragraphs I am going to briefly introduce the Android software stack, Dalvik and Android Application.
+In the following four paragraphs I am going to briefly introduce the Android software stack, Dalvik and an overview of Android application.
 
 \subsection{Android Software Stack}
 \begin{figure}[!htb]
@@ -446,7 +452,7 @@ In the following four paragraphs I am going to briefly introduce the Android sof
 Android stack is composed of four different layers as shown in figure~\ref{fig:android-stack}.
 
 \subsubsection{Linux Kernel Layer:}This fundamental layer separates other three layers  from  device hardware and provides core functions such as  power and hardware driver management.
-\subsubsection{Libraries Layer:}As the second layer of Android stack,  libraries layer supports Android runtime environment by applying various C/C++ core libs.  Also in this layer, the for Android specifically designed virtual machine, namely Dalvik \cite{learn_android} is deployed. There exist two reasons for not using standard Java VM \cite{learn_android}. First of all, since Java VM is a generally developed virtual machine, therefore some constrains from mobile systems and devices are not concerned, such as \emph{processing gap} and \emph{battery gap} \cite{embedded_secure}. Processing and battery gap refer to the limited process capabilities and battery lifetime of mobile device. Secondly, when the Android project was being carried out, Java VM didn't belong to the open source projects. For these reasons Dan Bornstein and his group developed this license-free and mobile platform specific virtual machine, Dalvik. 
+\subsubsection{Libraries Layer:}As the second layer of Android stack,  libraries layer supports Android runtime environment by applying various C/C++ core libs.  Also in this layer, the for Android specifically designed virtual machine, namely Dalvik \cite{learn_android} is deployed. There exist two reasons for not using standard Java VM \cite{learn_android}. First of all, since Java VM is a generally developed virtual machine, therefore the constrains from mobile systems and devices are not concerned, such as \emph{processing gap} and \emph{battery gap} \cite{embedded_secure}. Processing and battery gap refer to the limited process capabilities and battery lifetime of mobile device. Secondly, when the Android project was being carried out, Java VM didn't belong to the open source projects. For these reasons Dan Bornstein and his group developed this license-free and mobile platform specific virtual machine, Dalvik. 
 
 Moreover, other libraries which provide services to application framework layer are also included in this libraries layer,  they are for instance:
 \begin{itemize}
@@ -488,14 +494,14 @@ As introduced above, Dalvik VM compared with the general Java virtual machine, t
 \end{figure}
 When Dalvik virtual machine is applied, the compiling process is different from what is taken by Java VM. Figure~\ref{fig:vm-compare} clearly pictures the difference. In Android runtime environment, after the first compilation of Java source code, the newly generated Java byte code will be compiled by Dalvik Dex complier, as a result, Dalvik byte code is created, which is going to be executed by Dalvik VM.
 
-As pictured in figure~\ref{fig:class-vs-dex}, compared with \emph{.class} Java byte code, \emph{.dex} code adopts shared and type specific constant pools with the main purpose of conserving memory \cite{android_vm}. To be more specifically,  the constant pool in Java byte code, which is colored blue in left side of above-mentioned figure, is heterogeneous, which means all kinds of constant pools are included in this heterogeneous constant pool, even if they could be unnecessary. As a consequence, duplication may occur in Java byte code.    
+As pictured in figure~\ref{fig:class-vs-dex}, compared with \emph{.class} Java byte code, \emph{.dex} Dalvik byte code adopts shared and type specific constant pools with the main purpose of conserving memory \cite{android_vm}. To be more specifically,  the constant pool in Java byte code, which is painted blue in the left side of above-mentioned figure, is heterogeneous, which means all kinds of constant pools are included, even if they might be unnecessary. As a consequence, duplication may occur in Java byte code.    
 
 Another obvious distinguish between Java VM and Delvik is that, the former one adopts stack-based architecture and  the later one uses register-based architecture, that in comparison with stack-based architecture needs on average 32.3\% less execution time \cite{android_vm}, which is obviously the better choice for the system that runs on mobile devices with limited battery life.
 
  \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.85\textwidth]{clas-vs-dex.jpg}
-		\caption{Comparison between Java Byte Code and Dalvik Executable File \cite{android_vm}}
+		\caption{Comparison between Java and Dalvik byte code \cite{android_vm}}
 	\label{fig:class-vs-dex}
 \end{figure}
 
@@ -512,7 +518,7 @@ One Android application consists	 of four categories of components, they are act
 For the purpose of inter- and intra- application communication, Android applies \emph{intent}, which is in nature a self-contained object, that includes the target application reference and alternatively the to be shared data.  Intent can be also understood as a well-formed message format that constructs the Android message passing system \cite{android_secure_inter}.
 
 \section{Conclusion}
-With the acknowledgment of all above-introduced technologies and standards, I now have gather theoretical   supports for my proposal. To be more precisely, my demonstration \emph{Smart Home} system will adopt OPC UA architecture discussed in section~\ref{secOPC} to build a common connectivity interface for various housing devices and cell phone.  In this system, housing devices and associating OPC UA server applications will be simulated as web services, whose design and implementation will be shown in section~\ref{secWEB}. Also an Android Application named \emph{Smart Home App} will be presented to simulate application level functions provided by OPC UA client. This \emph{Smart Home App} will run on the Android platform introduced in section~\ref{secAndroid}. And with the help of OpenMobileAPI introduced in section~\ref{secOMA}, this application is capable of secure exchanging data with smart card. The smart card employed in my scenario is integrated with the \emph{CommunicationStack} applet, which is designed by me using Java Card technology introduced in section~\ref{secJAVACARD} and applying GlobalPlatform remote application and file management protocols introduced in section~\ref{secGP}.
+With the acknowledgment of above-introduced technologies and standards, I now have gather theoretical   supports for my proposal. To be more precisely, my demonstration \emph{Smart Home} system will adopt OPC UA architecture discussed in section~\ref{secOPC} to build a common connectivity interface for various housing devices and cell phone.  In this system, housing devices and associating OPC UA server applications will be simulated as web services, whose design and implementation will be shown in section~\ref{secWEB}. Also an Android application named \emph{Smart Home App} will be presented to simulate application level functions provided by OPC UA client. This \emph{Smart Home App} will run on the Android platform introduced in section~\ref{secAndroid}. And with the help of OpenMobileAPI introduced in section~\ref{secOMA}, this application is capable of secure exchanging data with smart card. The smart card employed in my scenario is integrated with the \emph{CommunicationStack} applet, which is designed by me using Java Card technology introduced in section~\ref{secJAVACARD} and applying GlobalPlatform remote application and file management protocols introduced in section~\ref{secGP}.
 
 The concrete design as well as implementation of my demonstration system will be introduced in chapter~\ref{secDesign} and~\ref{secImpl}.
 
