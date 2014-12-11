@@ -1,5 +1,5 @@
 \chapter{Implementation Test} \label{secImpl}
-In this chapter, a brief description of demonstration testing cases as well as test results is presented. To be more specifically, two test scenarios related with \emph{CommunicationStack} Javacard applet and simulated remote administrator server are designed. Also, the test cases demonstrating communication between Smart Home web server and Android application \emph{Smart Home App} are introduced.
+In this chapter, a brief description of demonstration testing cases as well as test results is presented. To be more specifically, two test scenarios related with \emph{CommunicationStack} Java Card applet and simulated remote administrator server are designed. Also, the test cases demonstrating communication between Smart Home web server and Android application \emph{Smart Home App} are introduced.
 
 \section{Javacard Applet and Remote Administrator Server Tests}
 The aim of this testing scenario is to prove the reliability of applying Smart Card and Globalplatform standardized remote application/file management protocols to provide a secure dual authentication mechanism and messaging platform for other high-level applications. My Java Card Applet - \emph{CommunicationStack} together with correspondingly designed \emph{UTE} test cases are employed and build the testing environment. For reference, \emph{UTE} is introduced in section~\ref{secTS} together with other testing tools.
@@ -22,8 +22,8 @@ In this test suit, \emph{UTE} testing case acts as the remote administrator serv
 \end{figure}
 \begin{itemize}
 \item \emph{Connection Parameters}, which includes network access name, bearer description and other parameters describing the simulated remote server.
-\item \emph{Smart Card Keysets}, that consists of key identifiers as well as indicator used for the select of cipher keys and signature keys. As described in section~\ref{labelKeyManagement}, in order to retrieve a particular cipher key from Smart Card  key management system, information such as key identifier must be provided.
-\item \emph{Http connection parameters}. Also parameters such as retry counter, timeout values are included in this short message.
+\item \emph{Smart Card Keysets}, that consist of key identifiers as well as indicator used for the select of cipher keys and signature keys. As described in section~\ref{labelKeyManagement}, in order to retrieve a particular cipher key from Smart Card  key management system, information such as key identifier must be provided.
+\item \emph{Http connection parameters}. Parameters such as retry counter, timeout values are included in this short message.
 \end{itemize}
 After a successful receiving and processing of aforementioned push \emph{TriggerPushSMS}, \emph{CommunicationStack} will preform TLS handshake with the remote server. 
 
@@ -59,7 +59,7 @@ Based on the in previous test created secure channel and Http Connection, in thi
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=1.2\textwidth]{q1.png}
+	\includegraphics[width=1.1\textwidth]{q1.png}
 		\caption{Screen-shot of Http message configuration in test case}
 	\label{fig:q1}
 \end{figure}
@@ -82,7 +82,7 @@ The Http header I applied in those test cases are compliant with the ones introd
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=1.2\textwidth]{Images/impl/cmd.png}
+	\includegraphics[width=1\textwidth]{Images/impl/cmd.png}
 		\caption{Screen-shot of {cmd} Buffer in \emph{CommunicationStack} applet}
 	\label{fig:remote1}
 \end{figure}
@@ -96,7 +96,7 @@ The Http header I applied in those test cases are compliant with the ones introd
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.85\textwidth]{q4.png}
+	\includegraphics[width=1\textwidth]{q4.png}
 		\caption{Screen-shot of translation of Http content of figure~\ref{fig:q3}}
 	\label{fig:q4}
 \end{figure}
@@ -127,7 +127,7 @@ After a successful identification, Android application user now can enjoy functi
 Moreover, as shown in figure~\ref{fig:housing-device}, house holder can select the name of housing device in the first drop-down menu and  choose associating functions from the second drop-down menu. To be more precisely, following housing devices and functions are simulated,
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.85\textwidth]{Images/impl/housing-device.jpg}
+	\includegraphics[width=1\textwidth]{Images/impl/housing-device.jpg}
 		\caption{Using Android application remotely managing home devices}
 	\label{fig:housing-device}
 \end{figure}
@@ -149,7 +149,7 @@ Meanwhile the four buttons in the bottom of  \emph{Smart Home App} main screen a
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.85\textwidth]{Images/impl/record-query.jpg}
+	\includegraphics[width=1\textwidth]{Images/impl/record-query.jpg}
 		\caption{Historical Record Overview}
 	\label{fig:record-query}
 \end{figure}
