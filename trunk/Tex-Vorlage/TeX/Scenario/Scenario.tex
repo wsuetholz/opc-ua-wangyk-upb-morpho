@@ -25,7 +25,7 @@ Figure~\ref{fig:SmartHome} describes the basic structure and functionalities pro
 \section {Component Structure}
  \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=1.1\textwidth]{component}
+	\includegraphics[width=1\textwidth]{component}
 		\caption{Smart Home System Component Structure}
 	\label{fig:SmartHomeComponent}
 \end{figure}
@@ -41,17 +41,17 @@ Moreover this component platform also emphasizes the importance of secure messag
 
  \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=1.1\textwidth]{csoverview}
+	\includegraphics[width=1\textwidth]{csoverview}
 		\caption{Smart Home Component Communication}
 	\label{fig:softwareStructure}
 \end{figure}
 
 \section{Communication Flow}
 Figure~\ref{fig:softwareStructure} pictures the communication flow between two system components.
-The device hardware stands for the aforementioned component's \emph{physical layer} \emph{CommunicationStack} together with the {internal API} construct the \emph{communication layer}.  
+The device hardware stands for the aforementioned component's \emph{physical layer}. \emph{CommunicationStack} together with the {internal API} construct the \emph{communication layer}.  
 
 
-OPC UA client and server application communicate with each other with the help of an OTA server. And the \emph{CommunicationStack} applet is in charge of creating and managing secure communications between OTA server and secure devices. Moreover OPC UA client application is able to communicate with OPC UA server application using Short Message Service(SMS) or TCP/IP based network connection. A demonstration case is given as below:
+OPC UA client and server application communicate with each other with the help of an OTA server. And the \emph{CommunicationStack} applet is in charge of creating and managing secure communications between OTA server and secure devices. A demonstration case is given as below:
 
 When the householder wants to make some coffee, he will send the \emph{makeCoffee} command to coffee maker with his cell phone in following steps as pictured in figure~\ref{fig:softwareStructure}. 
 \begin{enumerate}
@@ -98,7 +98,7 @@ Basic OPC UA client functions as following are provided by smart phone applicati
 
  \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.78\textwidth]{clientStructure}
+	\includegraphics[width=1\textwidth]{clientStructure}
 		\caption{Cell Phone Component Architecture}
 	\label{fig:clientStructure}
 \end{figure}
@@ -108,7 +108,7 @@ As described in figure~\ref{fig:clientStructure}, the smart phone introduced in 
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=1.2\textwidth]{apsd.jpg}
+	\includegraphics[width=1\textwidth]{apsd.jpg}
 		\caption{Communication Flow between AP and APSD \cite{ramGP}}
 	\label{fig:apsd}
 \end{figure}
@@ -124,7 +124,7 @@ Figure~\ref{fig:apsd} illustrates a typical RAM communication flow between admin
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.85\textwidth]{serverStructure}
+	\includegraphics[width=1\textwidth]{serverStructure}
 		\caption{Housing Device Component Architecture}
 	\label{fig:serverStructure}
 \end{figure}

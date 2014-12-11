@@ -12,13 +12,13 @@
 \contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces File Tree on Smart Card \cite {handbuch}\relax }}{15}{figure.caption.19}
 \contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces Communication between Smart Card and CAD \cite {handbuch}\relax }}{16}{figure.caption.21}
 \contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces Java Card VM Components\cite {jcadg}\relax }}{19}{figure.caption.24}
-\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces Javacard Applet Execution States \cite {handbuch}\relax }}{20}{figure.caption.25}
+\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces Javacard Applet Execution States \cite {handbuch}\relax }}{21}{figure.caption.25}
 \contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces APDU Command Processing by JCRE \cite {handbuch}\relax }}{21}{figure.caption.26}
 \contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces GlobalPlatform Smart Card OS Architecture \cite {gp}\relax }}{23}{figure.caption.29}
 \contentsline {figure}{\numberline {\relax 2.15}{\ignorespaces OpenMobileAPI Architecture Overview \cite {open}\relax }}{25}{figure.caption.31}
 \contentsline {figure}{\numberline {\relax 2.16}{\ignorespaces Android Stack Overview \cite {learn_android}\relax }}{27}{figure.caption.32}
-\contentsline {figure}{\numberline {\relax 2.17}{\ignorespaces Compiling Process Comparison \cite {learn_android}\relax }}{28}{figure.caption.38}
-\contentsline {figure}{\numberline {\relax 2.18}{\ignorespaces Comparison between Java and Dalvik byte code \cite {android_vm}\relax }}{29}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 2.17}{\ignorespaces Compiling Process Comparison \cite {learn_android}\relax }}{29}{figure.caption.38}
+\contentsline {figure}{\numberline {\relax 2.18}{\ignorespaces Comparison between Java and Dalvik byte code \cite {android_vm}\relax }}{30}{figure.caption.39}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces DER Scheduler in Smart Home optimized for energy\cite {smart_home_for_energy}\relax }}{34}{figure.caption.41}
 \contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Overview of Smart Health Home structure \cite {smart_home_for_health} (RCC: Remote Control Center)\relax }}{35}{figure.caption.42}
@@ -34,7 +34,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Smart Home Scenario\relax }}{57}{figure.caption.71}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Smart Home System Component Structure\relax }}{58}{figure.caption.72}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Smart Home Component Communication\relax }}{60}{figure.caption.73}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Smart Home Component Communication\relax }}{59}{figure.caption.73}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Cell Phone Component Architecture\relax }}{62}{figure.caption.74}
 \contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Communication Flow between AP and APSD \cite {ramGP}\relax }}{63}{figure.caption.75}
 \contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Housing Device Component Architecture\relax }}{64}{figure.caption.76}
@@ -61,8 +61,8 @@
 \contentsline {figure}{\numberline {\relax 6.12}{\ignorespaces Using Android application remotely managing home devices\relax }}{91}{figure.caption.132}
 \contentsline {figure}{\numberline {\relax 6.13}{\ignorespaces Historical Record Overview\relax }}{92}{figure.caption.133}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Attack Tree Overview\relax }}{93}{figure.caption.134}
-\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Smartcard Security Compromise\relax }}{94}{figure.caption.135}
-\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces OPC UA Application Security Compromise\relax }}{97}{figure.caption.136}
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Attack Tree Overview\relax }}{95}{figure.caption.134}
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Smartcard Security Compromise\relax }}{96}{figure.caption.135}
+\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces OPC UA Application Security Compromise\relax }}{99}{figure.caption.136}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

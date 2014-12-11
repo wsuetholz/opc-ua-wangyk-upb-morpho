@@ -1,5 +1,5 @@
 \chapter{State of Art}
-In this chapter, I firstly discussed the current researches in the realm of home automation system, in order to achieve inspiration materials for my demonstration scenario. Also after studying the industrial smart home application cases listed in this thesis, I have concluded that present-day automation systems commonly require a well-defined communication interface among all the housing devices, system as well as information security is still strongly demanded, which in return proofs that my proposal is meaningful and promising.  
+In this chapter, I firstly discussed the current researches in the realm of home automation system, in order to achieve inspiration materials for my demonstration scenario. Also after studying the industrial smart home application cases listed in this thesis, I have concluded that present-day automation systems commonly require a well-defined communication interface among all the housing devices, system as well as information security is still strongly demanded, which in return proves that my proposal is meaningful and promising.  
 
 The second topic covered by this chapter is the study of security. In more details, I have studied security   technologies and mechanisms employed in OPC UA standards as well as Smart Card system and Android applications. With the acknowledgment of aforementioned studies, I have learned the potential threads to my application system as well as how to provide corresponding countermeasures. Moreover, in the last paragraph, I introduced  the general guild-line for the development of a secure embedded system, which enlightened me about how to design my demonstration system.
  
@@ -131,7 +131,7 @@ Whenever an user intends to use one smart card, he must input a \emph{personal I
 
  \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.45\textwidth]{smart-card-key.jpg}
+	\includegraphics[width=0.5\textwidth]{smart-card-key.jpg}
 		\caption{Keys Presented in Smart Card Description Language Developed by \emph{Morpho}}
 	\label{fig:smart-card-key}
 \end{figure}
@@ -327,7 +327,7 @@ In conclusion, Android is  a secure platform with sophisticated access control m
 \section{Embedded System Secure Design} \label{secESSD}
 \subsection{Overview}
 In this last section of this chapter, a generic guide for the embedded system secure design is introduced. As already in previous sections described, low level components that build the embedded system compared with traditional  computer software have additional security requirement. For instance, low end devices are normally dependent on battery as electricity supplement and have limited computing capacities. Those two constrains must be taken into account during the design phase of a secure embedded system.
-\subsection{Embedded System Secure Requirements}
+\subsection{Embedded System Security Requirements} \label{5}
 The \emph{Trinity of Trouble} \cite{embedded_secure} three factors, namely \emph{complexity},\emph{extensibility} and \emph{connectivity} contribute together to make the embedded system more vulnerable and complicate the system security requirement.
 In the following a brief discussion about embedded system security requirements and corresponding solutions are presented \cite{embedded_secure}.
 \begin{itemize}
@@ -362,6 +362,7 @@ When the hardware architecture characteristics of an embedded system are confirm
 \end{itemize}
 
 \section{Conclusion}
-In this chapter, I presented industrial application cases in the realm of home automation, OPC UA specifications and smart card products. At the same time, I emphasized the importance and significance of security in those applications. Moreover, I summarized the security mechanisms employed by smart card and OPC UA applications. A generic developer guide line for secure Android application design as well secure embedded system development is provided. Especially, based on the concept presented in section~\ref{secESSD}, during the development of my application system, I have firstly analyzed the security requirements in my scenario and set clear security objectives in each layer of my system components.
+In this chapter, I presented industrial application cases in the realm of home automation, OPC UA specifications and smart card products. At the same time, I emphasized the importance and significance of security in those applications. Moreover, I summarized the security mechanisms employed by smart card and OPC UA applications. A generic developer guide line for secure Android application design as well secure embedded system development is provided. Especially, based on the concept presented in section~\ref{secESSD}, before the development of my application system, I have firstly analyzed the security requirements in my scenario and set clear security objectives in each layer of my system components. The five in section~\ref{5} mentioned security requirements are satisfied in my system. The \emph{user authentication} is protected by the PIN as well as password-login mechanism employed by smart card and my \emph{CommunicationStack} applet. Moreover, the applied TLS 1.2 secure handshake process provides not only a \emph{secure network connection} to my system, it also can exam the identify of a communication peer. Furthermore, the during secure handshake generated master key together with the secure  messaging approaches integrated in my system  ensure the \emph{content security}. Also I have applied smart card as the secure token, which perfectly serves the \emph{secure storage}. At last, the \emph{avalability} of services is protected by message rate control mechanism introduce by OPC UA specifications.
+
 
 In next chapter, I am going to present the concept of my Smart Home system and the demonstration scenario.
